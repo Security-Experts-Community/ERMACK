@@ -1,0 +1,24 @@
+title: Блокировка внешнего IP-адреса на Check Point
+id: RAI3101_0001
+linked_response_actions: RA3101
+description: Блокировка внешнего IP-адреса на Check Point
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/27
+modification_date: 2022/10/27
+linked_software:
+  - S1001
+tags:
+  - block.ip
+linked_artifacts:
+  - A1007
+requirements:
+  software:
+    means_of_action:
+    - ID: S1001
+      cpe-fs: 'cpe:2.3:h:checkpoint:quantum_security_gateway:-:*:*:*:*:*:*:*'    
+    targets_of_action:
+    - ID: S1001
+      cpe-fs: 'cpe:2.3:h:checkpoint:quantum_security_gateway:-:*:*:*:*:*:*:*'
+extended_description: |
+  Для ограничения доступа внутренних узлов к внешнему IP-адресу, настраиваем сетевые политики на Check Point.
+  Далее должно быть подробное описание с картинками и схемами.

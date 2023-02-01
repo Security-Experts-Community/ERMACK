@@ -1,0 +1,10 @@
+title: PostgreSQL Server
+id: S3012
+description: PostgreSQL Server
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:
+  - DomainAuthenticationCapability

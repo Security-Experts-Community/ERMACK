@@ -1,0 +1,12 @@
+title: Хост
+id: A1005
+description: Этот артефакт описывает сущность хост
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/25
+modification_date: 2022/10/25
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Host
+mapping:
+  - d3f:Host
+extended_description: |
+  Хост - это компьютер или другое устройство, обычно подключенное к компьютерной сети. Сетевой хост может предоставлять информационные ресурсы, сервисы и приложения другим пользователям или узлам сети.

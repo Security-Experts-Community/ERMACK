@@ -1,0 +1,12 @@
+title: Process
+id: A4001
+description: This artifact describes process entity
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/25
+modification_date: 2022/10/25
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Process/
+mapping:
+  - d3f:Process
+extended_description: |
+  A process is an instance of a computer program that is being executed. It contains the program code and its current activity. Depending on the operating system (OS), a process may be made up of multiple threads of execution that execute instructions concurrently. A computer program is a passive collection of instructions, while a process is the actual execution of those instructions. Several processes may be associated with the same program; for example, opening up several instances of the same program often means more than one process is being executed.

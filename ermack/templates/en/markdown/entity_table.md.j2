@@ -1,0 +1,11 @@
+# {{ entity_name }}
+
+| ID | Title | Brief Description |
+|:--------------------:|:------------------------:|---------------------------------|
+{%- for entity in entities_list -%}
+	{{ '\n' }}| [{{ entity['id'] }}][{{ entity['link_id'] }}] | [{{ entity['title'] }}][{{ entity['link_id'] }}] | {{entity['description'].strip()}} |
+{%- endfor -%}
+{{ '\n' }}
+{%- for entity in entities_list -%}
+	{{ '\n' }} [{{ entity['link_id'] }}]: {{entity['filename']}}
+{%- endfor -%}

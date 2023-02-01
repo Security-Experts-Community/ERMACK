@@ -1,0 +1,91 @@
+# oooooooooooo ooooooooo.   ooo        ooooo   .oo.       .oooooo.   oooo    oooo
+# `888'     `8 `888   `Y88. `88.       .888' .88' `8.    d8P'  `Y8b  `888   .8P'
+#  888          888   .d88'  888b     d'888  88.  .8'   888           888  d8'
+#  888oooo8     888ooo88P'   8 Y88. .P  888  `88.8P     888           88888[
+#  888    "     888`88b.     8  `888'   888   d888[.8'  888           888`88b.
+#  888       o  888  `88b.   8    Y     888  88' `88.   `88b    ooo   888  `88b.
+# o888ooooood8 o888o  o888o o8o        o888o `bodP'`88.  `Y8bood8P'  o888o  o888o
+# -------------------------------------------------------------------------------
+# Enterprise Response Model & Common Knowledge
+
+
+# Project supplied default configuration.  
+# Add a new configuration file 'config.yml' where you can overwrite any settings depicted below.
+# config.yml is not tracked by the version management system, while config.default.yml is.
+
+# General settings
+templates_base_dir: 'ermack/templates'
+data_base_dir: 'data'
+
+## General entities settings
+usecases_dir: 'usecases'
+software_dir: 'software'
+artifacts_dir: 'artifacts'
+response_stages_dir: 'response_stages'
+response_actions_dir: 'response_actions'
+response_playbooks_dir: 'response_playbooks'
+infrastructure_profiles_dir: 'infrastructure_profiles'
+response_actions_implementations_dir: 'response_actions_implementations'
+default_infrastructure_profile: '76f22b30-922b-4b31-94fc-c7ddd80fe67'
+
+## Localization settings
+# default_localization_lang: 'ru'
+default_localization_lang: 'en'
+
+## Mappings part
+### ATT&CK
+attack_json_url: 'https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json'
+attack_mapping_path: 'ermack/utils/attack_mapping.py'
+
+## Other settings
+
+## Title formatting rules
+titlefmtrules:
+  # will be capitalized: unix -> Unix
+  capitalizeWords: ["unix", "windows", "proxy", "firewall", "mach-o"]
+  # will be completely converted to uppercase lan -> LAN
+  abbreviations: ["ip", "dns", "ms", "ngfw", "ips", "url", "pe", "pdf", "elf", "dhcp", "vpn", "smb", "ftp", "http", "lan", "wan", "av", "fqdn", "dfs", "soc"]
+
+
+
+# Confluence settings
+## General Confluence settings
+confluence_space_name: 'ERMACK'
+confluence_space_home_page_name: 'ERMACK Home'
+confluence_name_of_root_directory: 'ERMACK'
+# confluence_url: 
+# confluence_viewpage_url:
+
+## Confluence entities settings
+usecase_confluence_template: 'usecase.html.j2'
+software_confluence_template: 'software.html.j2'
+artifact_confluence_template: 'artifact.html.j2'
+response_stage_confluence_template: 'response_stage.html.j2'
+response_action_confluence_template: 'response_action.html.j2'
+response_playbook_confluence_template: 'response_playbook.html.j2'
+infrastructure_profile_confluence_template: 'infrastructure_profile.html.j2'
+response_action_impl_confluence_template: 'response_action_implementation.html.j2'
+entities_table_confluence_template: 'entity_table.html.j2' 
+
+
+
+# Markdown/MKDocs settings
+## Markdown/MKDocs general settings
+base_output_dir: 'build/'
+md_name_of_root_directory: 'docs'
+mkdocs_template: 'mkdocs.yml.j2'
+
+## MKDocs Theme
+#['material', 'readthedocs']
+mkdocs_theme: 'material'
+
+## Markdown/MKDocs entities settings
+usecase_md_template: 'usecase.md.j2'
+software_md_template: 'software.md.j2'
+artifact_md_template: 'artifact.md.j2'
+response_stage_md_template: 'response_stage.md.j2'
+response_action_md_template: 'response_action.md.j2'
+response_playbook_md_template: 'response_playbook.md.j2'
+infrastructure_profile_md_template: 'infrastructure_profile.md.j2'
+response_action_impl_md_template: 'response_action_implementation.md.j2'
+entities_table_md_template: 'entity_table.md.j2'

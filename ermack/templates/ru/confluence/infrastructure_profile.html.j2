@@ -1,0 +1,47 @@
+<p class="auto-cursor-target"><br /></p>
+<ac:structured-macro ac:name="details" ac:schema-version="1" ac:macro-id="28b7d879-550c-4376-96ff-fdbdfddf710b">
+   <ac:rich-text-body>
+      <p class="auto-cursor-target"><br /></p>
+      <table class="wrapped confluenceTable">
+         <colgroup>
+            <col />
+            <col />
+         </colgroup>
+         <tbody>
+            <tr>
+               <th class="confluenceTh">Название конфигурации</th>
+               <td class="confluenceTd">{{ configuration_name|e }}<br /></td>
+            </tr>
+            <tr>
+               <th class="confluenceTh">Название компании</th>
+               <td class="confluenceTd">{{ company|e }}<br /></td>
+            </tr>
+{% if creation_date is not none and creation_date|length %}
+            <tr>
+               <th class="confluenceTh">Дата создания</th>
+               <td class="confluenceTd">{{ creation_date|e }}<br /></td>
+            </tr>
+{% endif %}
+{% if modification_date is not none and modification_date|length %}
+            <tr>
+               <th class="confluenceTh">Дата последнего изменения</th>
+               <td class="confluenceTd">{{ modification_date|e }}<br /></td>
+            </tr>
+{% endif %}
+{%- if software_profile is not none and software_profile|length -%}
+            <tr>
+               <th class="confluenceTh">Профиль доступного ПО</th>
+               <td class="confluenceTd">
+                  <ul style="list-style: none">
+                     {%- for soft in software_profile -%}
+                        <li><a href="{{confluence_viewpage_url}}{{soft['link_id']}}">{{ soft['title'] }}</a></li>
+                     {% endfor %}
+                  </ul>
+               </td>
+            </tr>
+{% endif %}
+         </tbody>
+      </table>
+      <p class="auto-cursor-target"><br /></p>
+   </ac:rich-text-body>
+</ac:structured-macro>

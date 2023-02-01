@@ -1,0 +1,18 @@
+title: Название действия реагирования                 # Название действия
+id: RA0000                                            # Уникальный идентификатор действия
+description: Краткое описание действия реагирования   # Краткое описание действия реагирования
+author: '@ERMACK_COMMUNITY'                           # Автор name/nickname/twitter
+creation_date: YYYY/MM/DD
+stage: identification                                 # preparation / containment / eradication / recovery / lessons_learned
+references:
+  - https://example.com
+requirements:
+  software:
+    means_of_action:
+      - ID: S2000                                         # Тип продукта, который нужен для выполнения действия
+    targets_of_action:
+      - ID: S1000                                         # Тип продукта, на который производится воздействие
+  actions:
+    - ID: RA0001
+extended_description: |
+  Расширенное описание действия реагирования

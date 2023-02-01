@@ -1,0 +1,32 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set response_action_implementation_icon = icons.response_action_implementation-%}
+{%- else -%}
+    {%- set response_action_implementation_icon = '' -%}
+{%- endif -%}
+
+
+# {{ id }}: {{ title }}
+
+{{ description }}
+
+{%- if actions_tree is not none and actions_tree|length -%}
+{{ '\n' }}## Stage Actions
+
+| ID | Title  | Brief Description |
+|:-----------------------|:-------------------------|---------------------------------|
+{%- for action in actions_tree -%}
+    {{ '\n' }}| [{{ action['id'] }}][{{action['link_id']}}] | [{{ action['title'] }}][{{action['link_id']}}] | {{ action['description'].strip() }} |
+    {%- for impl in action['implementations'] -%}
+    {{ '\n' }}| [{{ impl['id'] }}][{{impl['link_id']}}] | [{{ response_action_implementation_icon }}{{ impl['title'] }}][{{impl['link_id']}}] | {{ impl['description'].strip() }} |
+    {%- endfor -%}
+{%- endfor -%}
+{{ '\n\n' }}
+{%- for action in actions_tree -%}
+    {{ '\n' }}[{{ action['link_id'] }}]: ../../../response_actions/{{action['filename']}}/entity
+    {%- for impl in action['implementations'] -%}
+    {{ '\n' }}[{{ impl['link_id'] }}]: ../../../response_actions_implementations/{{impl['filename']}}/entity
+    {%- endfor -%}
+{%- endfor -%}
+{%- endif -%}

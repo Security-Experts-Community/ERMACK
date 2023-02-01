@@ -1,0 +1,48 @@
+title: Удаление письма c MS Exchange через PT XDR
+id: RAI_4201_0003
+description: PT XDR предоставляет модуль exchange_connector для выполнения операций с почтовым сервером MS Exchange
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/27
+linked_software:
+  - S3001
+  - S0002
+tags:
+  - delete.email
+linked_response_actions: RA4201
+linked_artifacts:
+  - A3001
+requirements:
+  'rigths: Mailbox Search':
+  'rigths: Mailbox Import Export':
+  software:
+    means_of_action:
+    - ID: S0002
+      cpe-fs: "cpe:2.3:a:positive_technologies:pt_xdr:1.*:*:*:*:*:*:*:*"
+    targets_of_action:
+    - ID: S3001
+      cpe-fs: "cpe:2.3:a:microsoft:exchange_server:*:*:*:*:*:*:*:*"
+extended_description: |
+
+  Скрипт удаления почты с проверкой на параметры удержания, логированием и запуском на конкретном сервере.Вынесу отдельно реализацию неявного выполнения кода. Сетевой обмен в примере происходит по TCP 443.
+
+  Алгоритм реализации:
+  1. Открыть оснастку модули в PT XDR
+  2. Выбрать модуль `exchange_connector`
+  3. Отправить запрос к модулю с параметрами команды
+
+
+  ## Вызов REST API XDR
+  ### Параметры POST-запроса
+
+  <details>
+    <summary>XDR_POST_COMMAND</summary>
+
+  ``` json
+      {
+        "command": "delete.email"
+        "sender": "a@example.com",
+        "subject": "Important News"
+      }
+  ```
+  </details>

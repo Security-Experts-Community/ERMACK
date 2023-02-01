@@ -1,0 +1,78 @@
+<ac:layout>
+   <ac:layout-section ac:type="two_equal">
+      <ac:layout-cell>
+         <p class="auto-cursor-target"><br /></p>
+         <ac:structured-macro ac:name="details" ac:schema-version="1" ac:macro-id="28b7d879-550c-4376-96ff-fdbdfddf710b">
+            <ac:rich-text-body>
+               <p class="auto-cursor-target"><br /></p>
+               <table class="wrapped confluenceTable">
+                  <colgroup>
+                     <col />
+                     <col />
+                  </colgroup>
+                  <tbody>
+         {% include 'standard_summary.html.j2' %}
+
+         {%- if linked_software is not none and linked_software|length > 1 -%}
+                     <tr>
+                        <th class="confluenceTh">Linked Software</th>
+                        <td class="confluenceTd">
+                           <ul style="list-style: none">
+                              {%- for soft in linked_software -%}
+                                 <li><a href="{{confluence_viewpage_url}}{{soft['link_id']}}">{{ soft['title'] }}</a></li>
+                              {% endfor %}
+                           </ul>
+                        </td>
+                     </tr>
+         {% endif %}
+         {%- if linked_response_actions is not none and linked_response_actions|length -%}
+                     <tr>
+                        <th class="confluenceTh">Linked Response Actions</th>
+                        <td class="confluenceTd">
+                           <ul style="list-style: none">
+                              <li><a href="{{confluence_viewpage_url}}{{linked_response_actions[0]['link_id']}}">{{ linked_response_actions[0]['title'] }}</a></li>
+                           </ul>
+                        </td>
+                     </tr>
+         {% endif %}
+         {%- if linked_artifacts is not none and linked_artifacts|length > 1 -%}
+                     <tr>
+                        <th class="confluenceTh">Linked Artifacts</th>
+                        <td class="confluenceTd">
+                           <ul style="list-style: none">
+                              {%- for art in linked_artifacts -%}
+                                 <li><a href="{{confluence_viewpage_url}}{{art['link_id']}}">{{ art['title'] }}</a></li>
+                              {% endfor %}
+                           </ul>
+                        </td>
+                     </tr>
+         {% endif %}
+                  </tbody>
+               </table>
+               <p class="auto-cursor-target"><br /></p>
+            </ac:rich-text-body>
+         </ac:structured-macro>
+         </ac:layout-cell>
+      <ac:layout-cell>
+         {% include 'toc_macros.html.j2' %}
+      </ac:layout-cell>
+   </ac:layout-section>
+   <ac:layout-section ac:type="single">
+      <ac:layout-cell>
+         {% if extended_description is not none and extended_description|length %}
+         <h1>Description</h1>
+         <pre><br/></pre>
+         <ac:structured-macro ac:name="markdown"><ac:plain-text-body>
+            <![CDATA[{{extended_description}}]]>
+         </ac:plain-text-body></ac:structured-macro>
+         {% endif %}
+         {% if workflow is not none and workflow|length %}
+         <h1>Workflow</h1>
+         <pre><br/></pre>
+         <ac:structured-macro ac:name="markdown"><ac:plain-text-body>
+         	<![CDATA[{{ workflow }}]]>
+         </ac:plain-text-body></ac:structured-macro>
+         {% endif %}
+      </ac:layout-cell>
+   </ac:layout-section>
+</ac:layout>

@@ -1,0 +1,102 @@
+{% if tactics is not none and tactics|length %}
+             <tr>
+                 <th class="confluenceTh">ATT&amp;CK Tactics</th>
+                 <td class="confluenceTd">
+                     <ul>
+                     {%- for tactic_name, tactic_id in tactics %}
+                         <li><a href="https://attack.mitre.org/tactics/{{tactic_id}}">{{tactic_id}}: {{ tactic_name }}</a></li>
+                     {%- endfor %}
+                     </ul>
+                 </td>
+             </tr>
+{% endif %}
+{% if techniques is not none and techniques|length %}
+             <tr>
+                 <th class="confluenceTh">ATT&amp;CK Techniques</th>
+                 <td class="confluenceTd">
+                      <ul>
+                      {%- for technique_name, technique_id in techniques %}
+                            <li><a href="https://attack.mitre.org/techniques/{{technique_id|replace('.','/')}}">{{ technique_id }}: {{technique_name}}</a></li>
+                      {%- endfor %}
+                      </ul>
+                 </td>
+             </tr>
+{% endif %}
+{%- if other_tags is not none and other_tags |length -%}
+<tr>
+   <th class="confluenceTh">Tags</th>
+   <td class="confluenceTd">
+      <ul style="list-style: none">
+         {%- for tag in other_tags-%}
+            <li>
+            {%- if 'link' in tag -%}
+                <a href="{{ tag['link'] }}">
+            {%- endif -%}
+            {%- if tag['type'] == 'Severity' -%}
+                {%- if tag['value'] == 'High' -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Red</ac:parameter>
+                        <ac:parameter ac:name="title">Severity: {{ tag['value'] }}</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+                {%- elif tag['value'] == 'Medium' -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Yellow</ac:parameter>
+                        <ac:parameter ac:name="title">Severity: {{ tag['value'] }}</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+                {%- else -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Gray</ac:parameter>
+                        <ac:parameter ac:name="title">Severity: {{ tag['value'] }}</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+                {%- endif -%}
+            {%- elif tag['type'] == 'Status' -%}
+                {%- if tag['value'] == 'Testing' -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Yellow</ac:parameter>
+                        <ac:parameter ac:name="title">Status: Testing</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+                {%- elif tag['value'] == 'Buggy' -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Red</ac:parameter>
+                        <ac:parameter ac:name="title">Status: Buggy</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+                {%- elif tag['value'] == 'Approved' -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Green</ac:parameter>
+                        <ac:parameter ac:name="title">Status: Approved</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+                {%- else -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Gray</ac:parameter>
+                        <ac:parameter ac:name="title">Status: {{tag['value']}}</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+                {%- endif -%}
+            {%- elif tag['type'] == 'Other' -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Gray</ac:parameter>
+                        <ac:parameter ac:name="title">{{tag['value']}}</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+            {%- else -%}
+                    <ac:structured-macro ac:name="status">
+                        <ac:parameter ac:name="colour">Gray</ac:parameter>
+                        <ac:parameter ac:name="title">{{ tag['type'] }}: {{tag['value']}}</ac:parameter>
+                        <ac:parameter ac:name="subtle">true</ac:parameter>
+                    </ac:structured-macro>
+            {%- endif -%}
+            {%- if 'link' in tag -%}
+            <ac:emoticon ac:name="information"/></a>
+            {%- endif -%}
+            </li>
+         {% endfor %}
+      </ul>
+   </td>
+</tr>
+{%- endif -%}

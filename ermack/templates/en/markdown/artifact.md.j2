@@ -1,0 +1,35 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set response_action_implementation_icon = icons.response_action_implementation -%}
+    {%- set external_link_icon = icons.external_link -%}
+    {%- set requirements_icon = icons.requirements -%}
+{%- else -%}
+    {%- set response_action_implementation_icon = '' -%}
+    {%- set external_link_icon = '' -%}
+	{%- set requirements_icon = '' -%}
+{%- endif -%}
+
+# {{ id}}: {{ title}}
+
+{% include 'standard_summary.md.j2' -%}
+
+{%- if mapping is not none and mapping|length > 0 -%}
+    {{ '\n' }}| **Ontology mappings** |<ul style="list-style: none">
+        {%- for entry in mapping -%}
+            <li>{{ entry }}</li>
+        {%- endfor -%}
+{%- endif -%}
+
+{%- if extended_description is not none and extended_description|length -%}
+{{'\n\n'}}## Description
+{{'\n\n'}}{{ extended_description }}
+{%- endif -%}
+
+{%- if response_actions_implementations is not none and response_actions_implementations|length -%}
+{{'\n\n'}}## Response Actions Implementations
+	{%- for rai in response_actions_implementations -%}
+		{{'\n'}}[{{ response_action_implementation_icon }} {{ rai['title'] }}](../../../response_actions_implementations/{{ rai['filename'] }}/entity){{ '  ' }}
+	{%- endfor -%}
+{%- endif -%}
+{{'\n\n'}}

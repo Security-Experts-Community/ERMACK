@@ -1,0 +1,34 @@
+title: Название сценария реагирования
+id: RP0001
+description: Краткое описание сценария реагирования
+author: '@ERMACK_COMMUNITY'
+creation_date: 2019/01/31
+severity: M                                             # Сохранено для обратной совместимости с RE&CT       
+tlp: AMBER                                              # Сохранено для обратной совместимости с RE&CT 
+pap: WHITE                                              # Сохранено для обратной совместимости с RE&CT 
+tags:
+  - attack.initial_access
+  - attack.t1566.001
+  - attack.t1566.002
+  - phishing
+  - severity.medium
+  - tlp.amber
+  - pap.white  
+linked_rp:                                                # Связанные сценарии реагирования (должны быть отражены в расширенном описании или алгоритме)
+  - RP0002
+preparation:
+  - RA_1001_practice
+identification:
+  - RA_2003_put_compromised_accounts_on_monitoring
+containment:
+  - RA_3101_block_external_ip_address
+eradication:
+  - RA_4001_report_incident_to_external_companies
+recovery:
+  - RA_5101_unblock_blocked_ip
+lessons_learned:
+  - RA_6001_develop_incident_report
+extended_description: |
+  Расширенное описание сценария реагирования
+workflow: |
+  Алгоритм или рекомендации по выполнению стадий реагирования

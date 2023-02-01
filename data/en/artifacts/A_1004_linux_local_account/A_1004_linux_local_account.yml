@@ -1,0 +1,12 @@
+title: Linux Local Account
+id: A1004
+description: This artifact describes Local Linux Account entity
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:LocalUserAccount/
+mapping:
+  - d3f:LocalUserAccount
+extended_description: |
+  A user account on a given Linux host is a local user account for that specific host.

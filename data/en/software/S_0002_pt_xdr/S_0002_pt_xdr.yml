@@ -1,0 +1,13 @@
+title: PT XDR
+id: S0002
+description: PT eXtended Detection and Response
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:
+  - AuthenticationLogsAnalysis
+  - NetworkSessionLogging
+  - LocalProsessControl
+  - LocalNetworkControl

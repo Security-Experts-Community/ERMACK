@@ -1,0 +1,34 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set artifact_icon = icons.artifact -%}
+    {%- set response_action_implementation_icon = icons.response_action_implementation-%}
+{%- else -%}
+    {%- set artifact_icon = '' -%}
+    {%- set response_action_implementation_icon = '' -%}
+{%- endif -%}
+
+# {{ id }}: {{ title }}
+
+{% include 'standard_summary.md.j2' -%}
+
+{%- if artifacts is not none and artifacts|length -%}
+	{{'\n'}}| **Artifacts** | <ul style="list-style: none">
+	{%- for art in artifacts %}
+		<li>[ {{ artifact_icon }} {{ art['title'] }}](../../../artifacts/{{ art['filename'] }}/entity)</li>
+	{%- endfor -%}
+	</ul>|
+{%- endif -%}
+
+{%- if extended_description is not none and extended_description|length -%}
+{{'\n\n'}}## Description
+{{'\n\n'}}{{ extended_description }}
+{%- endif -%}
+
+{%- if response_actions_implementations is not none and response_actions_implementations|length -%}
+{{'\n\n'}}## Response Actions Implementations
+	{%- for rai in response_actions_implementations -%}
+		{{'\n'}}[{{ response_action_implementation_icon }} {{ rai['title'] }}](../../../response_actions_implementations/{{ rai['filename'] }}/entity){{ '  ' }}
+	{%- endfor -%}
+{%- endif -%}
+{{'\n\n'}}

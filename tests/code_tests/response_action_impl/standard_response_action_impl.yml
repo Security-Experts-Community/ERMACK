@@ -1,0 +1,24 @@
+title: Название реализации действия реагирования                           # Обычно шаблон названия {абстрактное действие} на {target_of_action} при помощи {means_of_action}
+id: RAI_4201_0002
+description: Краткое описание реализации действия реагирования
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+category: Email                                                             # Категория действия (TODO: может быть перенести в метки)
+linked_response_actions: RA4201                                             # Реализуемое действие реагирования
+tags:                                                                       # Произвольные метки
+  - email.delete
+linked_artifacts:                                                           # Связанные артефакты. Хочется их разделить на пререквизиты и результаты (можно использовать метки для описания контекста ресурса)
+  - A1001
+requirements:                                                               # Требования для применимости
+  software:
+    means_of_action:
+    - ID: S0100
+      cpe-fs: "cpe:2.3:o:linux:*:*:*:*:*:*:*:*:*"
+    targets_of_action:
+    - ID: S3002
+      cpe-fs: "cpe:2.3:a:postfix:postfix:2.0.12:*:*:*:*:*:*:*"
+references:
+  - https://example.com
+extended_description: |
+
+  Подробное описание. Инструкции, алгоритмы, скриншоты и т.п.

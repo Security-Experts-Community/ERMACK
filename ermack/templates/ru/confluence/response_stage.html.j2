@@ -1,0 +1,39 @@
+<b>ID: </b>{{ id|e }}
+<pre><br/></pre>
+{{ description }}
+{%- if actions_tree is not none and actions_tree|length -%}
+	<h2>Действия Реагирования</h2>
+	<table data-layout="default"><colgroup><col /><col /><col /></colgroup>
+	<tbody>
+	<tr>
+	<th>
+	<p style="text-align: center;"><strong>ID</strong></p></th>
+	<th>
+	<p style="text-align: center;"><strong>Title</strong></p></th>
+	<th>
+	<p><strong>Короткое описание</strong></p>
+	</th>
+	</tr>
+	{%- for action in actions_tree -%}
+		<tr>
+		<td>
+		<p><a href="{{confluence_viewpage_url}}{{action['link_id']}}">{{action['id']}}</a></p></td>
+		<td>
+		<p><a href="{{confluence_viewpage_url}}{{action['link_id']}}">{{ action['title'] }}</a></p></td>
+		<td>
+		<p>{{ action['description'].strip() }}</p></td>
+		</tr>
+		{%- for impl in action['implementations'] -%}
+			<tr>
+			<td>
+			<p><a href="{{confluence_viewpage_url}}{{impl['link_id']}}">{{ impl['id'] }}</a></p></td>
+			<td>
+			<p><a href="{{confluence_viewpage_url}}{{impl['link_id']}}">{{ impl['title'] }}</a></p></td>
+			<td>
+			<p>{{ impl['description'].strip() }}</p></td>
+			</tr>
+		{%- endfor -%}
+	{%- endfor -%}
+	</tbody></table>
+	<p />
+{%- endif -%}

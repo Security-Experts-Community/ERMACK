@@ -1,0 +1,38 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set response_action_implementation_icon = icons.response_action_implementation -%}
+    {%- set external_link_icon = icons.external_link -%}
+    {%- set requirements_icon = icons.requirements -%}
+{%- else -%}
+    {%- set response_action_implementation_icon = '' -%}
+	{%- set requirements_icon = '' -%}
+    {%- set external_link_icon = '' -%}
+{%- endif -%}
+
+# {{ id }}: {{ title }}
+
+{% include 'standard_summary.md.j2' -%}
+
+{%- if response_stages is not none and response_stages|length -%}
+    {{'\n'}}| **Стадия реагирования** | [{{ response_stages['title'] }}](../../../response_stages/{{ response_stages['filename'] }}/entity)  |
+{%- endif -%}
+
+{%- if response_actions_implementations is not none and response_actions_implementations|length -%}
+	{{'\n'}}| **Реализация Действий Реагирования** |  <ul style="list-style: none">
+	{%- for rai in response_actions_implementations -%}
+		<li>[{{ response_action_implementation_icon }} {{ rai['title'] }}](../../../response_actions_implementations/{{ rai['filename'] }}/entity)</li>
+	{%- endfor -%}
+	</ul>|
+{%- endif -%}
+
+
+{%- if extended_description is not none and extended_description|length -%}
+{{'\n\n'}}## Описание
+{{'\n\n'}}{{ extended_description}}
+{%- endif -%}
+
+{%- if workflow is not none and workflow|length -%}
+{{'\n\n'}}## Алгоритм
+{{'\n\n'}}{{ workflow }}
+{%- endif -%}

@@ -1,0 +1,65 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set software_icon = icons.software -%}
+    {%- set response_action_icon = icons.response_action -%}
+    {%- set requirements_icon = icons.requirements -%}
+    {%- set external_link_icon = icons.external_link -%}
+    {%- set artifact_icon = icons.artifact -%}
+{%- else -%}
+	{%- set software_icon = '' -%}
+	{%- set response_action_icon = '' -%}
+	{%- set requirements_icon = '' -%}
+    {%- set external_link_icon = '' -%}
+    {%- set artifact_icon = '' -%}
+{%- endif -%}
+
+# {{ id }}: {{ title }}
+
+{% include 'standard_summary.md.j2' -%}
+
+{%- if linked_software is not none and linked_software|length > 1 -%}
+	{%- if 'means_of_action' in linked_software or 'targets_of_action' in linked_software -%}
+		{%- if 'means_of_action' in linked_software -%}
+			{{'\n'}}| **Средства воздействия** | <ul style="list-style: none">
+			{%- for soft in linked_software['means_of_action'] -%}
+				<li>[{{ software_icon }} {{ soft['title'] }}](../../../software/{{ soft['filename'] }}/entity){% if soft['cpe'] is defined and soft['cpe'] |length %}<br>`{{soft['cpe']}}`{% endif %}</li>
+			{%- endfor -%}</ul>|
+		{%- endif -%}
+		{%- if 'targets_of_action' in linked_software -%}
+			{{'\n'}}| **Цели воздействия** | <ul style="list-style: none">
+			{%- for soft in linked_software['targets_of_action'] -%}
+				<li>[{{ software_icon }} {{ soft['title'] }}](../../../software/{{ soft['filename'] }}/entity){% if soft['cpe'] is defined and soft['cpe'] |length %}<br>`{{soft['cpe']}}`{% endif %}</li>
+			{%- endfor -%}</ul>|
+		{%- endif -%}
+	{%- else -%}
+		{{'\n'}}| **Связанное ПО** | <ul style="list-style: none">
+		{%- for soft in linked_software -%}
+			<li>[{{ software_icon }} {{ soft['title'] }}](../../../software/{{ soft['filename'] }}/entity)</li>
+		{%- endfor -%}</ul>|
+	{%- endif -%}
+{%- endif -%}
+
+{%- if linked_response_actions is not none and linked_response_actions|length -%}
+	{{'\n'}}| **Связанные Действия Реагирования** | <ul style="list-style: none">
+	{%- for ra in linked_response_actions -%}
+		<li>[{{ response_action_icon }} {{ ra['title'] }}](../../../response_actions/{{ ra['filename'] }}/entity)</li>
+	{%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- if linked_artifacts is not none and linked_artifacts|length > 1 -%}
+	{{ '\n' }}| **Связанные Артефакты** | <ul style="list-style: none">
+	{%- for art in linked_artifacts -%}
+		<li>[{{ artifact_icon }} {{ art['title'] }}](../../../artifacts/{{ art['filename'] }}/entity)</li>
+	{%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- if extended_description is not none and extended_description|length -%}
+{{'\n\n'}}## Описание
+{{'\n\n'}}{{ extended_description }}
+{%- endif -%}
+
+{%- if workflow is not none and workflow|length -%}
+{{'\n\n'}}## Алгоритм
+{{'\n\n'}}{{ workflow }}
+{%- endif -%}

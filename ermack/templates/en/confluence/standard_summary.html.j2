@@ -1,0 +1,53 @@
+                  <tr>
+                     <th class="confluenceTh">ID</th>
+                     <td class="confluenceTd">{{  id|e }}<br /></td>
+                  </tr>
+      {% if description is not none and description|length %}
+                  <tr>
+                     <th class="confluenceTh">Brief Description</th>
+                     <td class="confluenceTd">{{  description|e }}<br /></td>
+                  </tr>
+      {% endif %}
+      {% if author is not none and author|length %}
+                  <tr>
+                     <th class="confluenceTh">Author</th>
+                     <td class="confluenceTd">{{  author|e }}<br /></td>
+                  </tr>
+      {% endif %}
+      {% if creation_date is not none and creation_date|length %}
+                  <tr>
+                     <th class="confluenceTh">Creation Date</th>
+                     <td class="confluenceTd">{{ creation_date|e }}<br /></td>
+                  </tr>
+      {% endif %}
+      {% if modification_date is not none and modification_date|length %}
+                  <tr>
+                     <th class="confluenceTh">Modification Date</th>
+                     <td class="confluenceTd">{{ modification_date|e }}<br /></td>
+                  </tr>
+      {% endif %}
+      {% if requirements is not none and requirements|length %}
+                  <tr>
+                     <th class="confluenceTh">Requirements</th>
+                     <td class="confluenceTd">
+                        <ul style="list-style: none">
+                           {% for req in requirements %}
+                              <li>{{ req |e }}</li>
+                           {% endfor %}
+                        </ul>
+                     </td>
+                  </tr>
+      {% endif %}
+      {% include 'tags.html.j2' %}
+      {% if references is not none and references|length %}
+                  <tr>
+                     <th class="confluenceTh">References</th>
+                     <td class="confluenceTd">
+                        <ul style="list-style: none">
+                           {% for ref in references %}
+                           <li><a href="{{ ref |e }}">{{ ref |e }}</a></li>
+                           {% endfor %}
+                        </ul>
+                     </td>
+                  </tr>
+      {% endif %}

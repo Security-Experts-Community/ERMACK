@@ -1,0 +1,71 @@
+title: Put AD accounts on monitoring via MP SIEM
+id: RAI2003_0001
+linked_response_actions: RA2003
+description: This response action is intended to obtain information about the activity of compromised accounts
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/27
+modification_date: 2022/10/27
+stage: identification
+tags:
+  - monitor.user
+linked_artifacts:
+  - A1001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0001
+      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
+    targets_of_action:
+extended_description: |
+  This response action is intended to obtain information about the activity of compromised accounts
+
+  ## Target system requirements
+  None
+
+  ## Requirements for means of action
+  1) MP SIEM version 23.1 and above  
+  1) Configured logging of the use of credentials in the infrastructure  
+  1) Configured event collection in MP SIEM  
+
+  ## Expected impact result
+  1) Obtaining information about what actions were performed on behalf of a compromised account  
+
+  ## Implementations
+  ### PDQL: Compromised account
+
+  #### Comments
+  Query all events in which the compromised account participated
+
+  #### Options
+  $USER - compromised account name
+
+  #### Inquiry
+
+  <details>
+  <summary><b>PDQL Query</b></summary>
+
+  ```python linenums="1"
+  subject.account.name = "$USER" or object.account.name = "$USER"
+  ```
+  </details>
+
+  #### Usage example
+
+  #### Result
+
+  <details>
+  <summary><b>Result</b></summary>
+
+  ```json linenums="1"
+  ```
+  </details>
+
+  #### Restrictions
+
+  ## Additional information
+  ### Tags
+  ### Artifacts
+  Domain User Account
+
+  ### Links to external resources
+  ### Compliance with classifications

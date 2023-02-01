@@ -1,0 +1,10 @@
+title: OWA Web Token
+id: A1006
+description: This artifact describes Outlook Web Access web token entity
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+tags:
+references:
+extended_description: |
+  This artifact describes Outlook Web Access web token entity

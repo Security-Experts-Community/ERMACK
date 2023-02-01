@@ -1,0 +1,61 @@
+<ac:layout>
+   <ac:layout-section ac:type="two_equal">
+      <ac:layout-cell>
+         <p class="auto-cursor-target"><br /></p>
+         <ac:structured-macro ac:name="details" ac:schema-version="1" ac:macro-id="28b7d879-550c-4376-96ff-fdbdfddf710b">
+            <ac:rich-text-body>
+               <p class="auto-cursor-target"><br /></p>
+               <table class="wrapped confluenceTable">
+                  <colgroup>
+                     <col />
+                     <col />
+                  </colgroup>
+                  <tbody>
+         {% include 'standard_summary.html.j2' %}
+         {%- if response_stages is not none and response_stages|length -%}
+                     <tr>
+                        <th class="confluenceTh">Response Stage</th>
+                        <td class="confluenceTd"><a href="{{confluence_viewpage_url}}{{response_stages['link_id']}}">{{response_stages['title']}}</a><br /></td>
+                     </tr>
+         {% endif -%}
+         {%- if response_actions_implementations is not none and response_actions_implementations|length > 1 -%}
+                     <tr>
+                        <th class="confluenceTh">Response Actions Implementations</th>
+                        <td class="confluenceTd">
+                           <ul style="list-style: none">
+                              {%- for rai in response_actions_implementations -%}
+                                 <li><a href="{{confluence_viewpage_url}}{{rai['link_id']}}"><font color="#00b067">⮩</font> {{ rai['title'] }}</a></li>
+                              {% endfor %}
+                           </ul>
+                        </td>
+                     </tr>
+         {% endif %}
+                  </tbody>
+               </table>
+               <p class="auto-cursor-target"><br /></p>
+            </ac:rich-text-body>
+         </ac:structured-macro>
+      </ac:layout-cell>
+      <ac:layout-cell>
+         {% include 'toc_macros.html.j2' %}
+      </ac:layout-cell>
+   </ac:layout-section>
+   <ac:layout-section ac:type="single">
+      <ac:layout-cell>
+         {% if extended_description is not none and extended_description|length %}
+         <h1>Description</h1>
+         <pre><br/></pre>
+         <ac:structured-macro ac:name="markdown"><ac:plain-text-body>
+            <![CDATA[{{extended_description}}]]>
+         </ac:plain-text-body></ac:structured-macro>
+         {% endif %}
+         {% if workflow is not none and workflow|length %}
+         <h1>Workflow</h1>
+         <pre><br/></pre>
+         <ac:structured-macro ac:name="markdown"><ac:plain-text-body>
+         	<![CDATA[{{ workflow }}]]>
+         </ac:plain-text-body></ac:structured-macro>
+         {% endif %}
+      </ac:layout-cell>
+   </ac:layout-section>
+</ac:layout>

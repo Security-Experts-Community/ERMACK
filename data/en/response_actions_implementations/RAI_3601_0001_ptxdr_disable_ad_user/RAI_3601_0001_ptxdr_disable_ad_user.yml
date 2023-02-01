@@ -1,0 +1,41 @@
+﻿title: Blocking a domain account via PT XDR
+id: RAI_3601_0001
+description: Blocking a domain account via PT XDR
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/11/01
+modification_date: 2022/11/01
+linked_response_actions: RA3601
+tags:
+  - block.user
+linked_artifacts:
+  - A1001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0002
+      cpe-fs: "cpe:2.3:a:positive_technologies:pt_xdr:1.*:*:*:*:*:*:*:*"
+    targets_of_action:
+    - ID: S6001
+      cpe-fs: "cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*"
+extended_description: |
+  ## Basic parameters
+  **Action:** `block_user`
+  **XDR module:** `ad_connector`
+
+  ## Domain ID blocking
+  ### Inquiry
+  **Input parameters:**
+  - `connection_id`: connection id of old o2 and xdr (rudiment will be removed soon)  
+  - `request_id`: connection id of old o2 and xdr (rudiment will be removed soon)  
+  - `user_name`: username to block  
+
+  ```json
+  {"timeout": 60000, "ip": "10.125.124.7"}
+  ```
+
+  Work logic:
+  For each AD server specified in the settings, a user search is performed in turn, and its status is updated to 514 (set in the settings) to block access.
+
+  ### Answer
+
+  The action will be considered successful if the user was successfully blocked at least on one of the presented ADs. If the user has not been locked out of any of the ADs, the status "false" will be returned.

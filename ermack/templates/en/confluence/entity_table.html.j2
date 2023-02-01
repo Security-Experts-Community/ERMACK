@@ -1,0 +1,25 @@
+{%- if entities_list is not none and entities_list|length -%}
+<table data-layout="default"><colgroup><col /><col /><col /></colgroup>
+<tbody>
+<tr>
+<th>
+<p style="text-align: center;"><strong>ID</strong></p></th>
+<th>
+<p style="text-align: center;"><strong>Title</strong></p></th>
+<th>
+<p><strong>Brief Description</strong></p>
+</th>
+</tr>
+{%- for entity in entities_list -%}
+<tr>
+<td>
+<p><a href="{{confluence_viewpage_url}}{{entity['link_id']}}">{{entity['id']}}</a></p></td>
+<td>
+<p><a href="{{confluence_viewpage_url}}{{entity['link_id']}}">{{entity['title']}}</a></p></td>
+<td>
+<p>{{ entity['description']}}</p></td>
+</tr>
+{%- endfor -%}
+</tbody></table>
+<p />
+{%- endif -%}

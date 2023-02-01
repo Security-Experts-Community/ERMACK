@@ -1,0 +1,129 @@
+site_name: ERM&CK (Enterprise Response Model & Common Knowledge)
+site_dir: site/
+docs_dir: docs/
+
+theme:
+    name: {% if theme == 'material' %}material{% else %}readthedocs{% endif %}
+    navigation_depth: 4
+    search_index_only: true
+    titles_only: true
+    {% if theme == 'material' -%}
+    palette:
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          accent: teal
+          toggle:
+            icon: material/toggle-switch
+            name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: teal
+          accent: indigo
+          toggle:
+            icon: material/toggle-switch-off-outline
+            name: Switch to light mode
+    custom_dir: theme
+    features:
+        - navigation.instant
+        - content.code.annotate
+        - navigation.top
+        - navigation.tracking
+
+    {% endif %}
+repo_url: https://github.com/ermack-project/ermack
+edit_uri: blob/master/docs/
+{% if theme == 'material' %}
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_css:
+  - stylesheets/extra.css
+{% endif %}
+plugins:
+{%- if theme == 'material' %}
+    - search:
+        lang:
+            - en
+            - ru
+    - localsearch
+
+{%- endif %}
+    - awesome-pages
+    - exclude:
+        glob:
+            - "*DS_Store"
+            - "*.git"
+            - "*.idea"
+            - "thehive_templates"
+nav:
+    - Home: README.md
+    - Getting Started:
+        - Installation: INSTALLATION.md
+        - ERM&CK Vision: VISION.md
+    - Framework Development:
+        - Contribution and Development: CONTRIBUTION.md
+    - Infrastructure Profile: infrastructure_profile.md
+
+{%- if usecases is not none and usecases|length -%}
+    {{'\n'}}    - Usecases:
+    {{'\n'}}        - '[Usecases List]': ./usecases.md
+    {%- for usecase_title, usecase_path in usecases['value'] -%}
+        {{'\n'}}        - "{{usecase_title}}": ./usecases/{{usecase_path}}/entity
+    {%- endfor -%}
+{% endif -%}
+
+{%- if response_playbooks is not none and response_playbooks|length -%}
+    {{'\n'}}    - Response Playbooks:
+    {{'\n'}}        - '[Playbooks List]': ./response_playbooks.md
+    {%- for playbook_title, playbook_path in response_playbooks['value'] -%}
+        {{'\n'}}        - "{{playbook_title}}": ./response_playbooks/{{playbook_path}}/entity
+    {%- endfor -%}
+{%- endif -%}
+
+{%- if stage_actions_trees is not none and stage_actions_trees|length -%}
+{{'\n'}}    - Response Actions:
+{{'\n'}}        - '[Stages List]': ./response_stages.md
+{%- for stage in stage_actions_trees['value'] -%}
+    {%- if stage['response_actions'] is not none and stage['response_actions']|length -%}
+        {{'\n'}}        - {{stage['title']}}:
+        {%- for response_action in stage['response_actions'] -%}
+            {%- if response_action['implementations'] is not none and response_action['implementations']|length -%}
+                {{'\n'}}            - "{{response_action['title']}}":
+                {{'\n'}}                - "💡 {{response_action['title']}}": ./response_actions/{{response_action['filename']}}/entity
+                {%- for action_implementation in response_action['implementations'] -%}
+                    {{'\n'}}                - "⮩ {{action_implementation['title']}}": ./response_actions_implementations/{{action_implementation['filename']}}/entity
+                {%- endfor -%}
+            {%- else -%}
+                {{'\n'}}            - "{{response_action['title']}}": ./response_actions/{{response_action['filename']}}/entity
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+{%- endfor %}
+{%- endif -%}
+
+{%- if software is not none and software|length -%}
+    {{'\n'}}    - Software:
+    {{'\n'}}        - '[Software List]': ./software.md
+    {%- for software_title, software_path in software['value'] -%}
+        {{'\n'}}        - "{{software_title}}": ./software/{{software_path}}/entity
+    {%- endfor -%}
+{%- endif -%}
+
+{%- if artifacts is not none and artifacts|length -%}
+    {{'\n'}}    - Artifacts:
+    {{'\n'}}        - '[Artifacts List]': ./artifacts.md
+    {%- for artifact_title, artifact_path in artifacts['value'] -%}
+        {{'\n'}}        - "{{artifact_title}}": ./artifacts/{{artifact_path}}/entity
+    {%- endfor -%}
+{%- endif -%}

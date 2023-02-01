@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--tb=short",
+    "--import-mode=append",
+]
+
+# TODO: Uncomment in the future
+#[tool.coverage.report]
+#exclude_lines = [
+#    "pragma: no cover",
+#    "def __repr__",
+#    "if __name__ == .__main__.:",
+#    "nocov",
+#    "if TYPE_CHECKING:",
+#]
+#
+#[tool.coverage.run]
+## Activating branch coverage is super important
+#branch = true
+#omit = [
+#  # add your files to omit here
+#	]

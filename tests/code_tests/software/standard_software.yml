@@ -1,0 +1,12 @@
+title: Название ПО
+id: S0002
+description: Краткое описание продукта или решения
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:                                           # Возможно есть смысл выделить иерархию возможностей для разных типов ПО
+  - AuthenticationLogsAnalysis
+  - NetworkSessionLogging
+  - LocalProsessControl
+  - LocalNetworkControl

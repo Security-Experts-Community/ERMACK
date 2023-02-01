@@ -1,0 +1,74 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set severity_high_icon = icons.severity_high -%}
+    {%- set severity_medium_icon = icons.severity_medium -%}
+    {%- set severity_other_icon = icons.severity_other -%}
+    {%- set status_testing_icon = icons.status_testing -%}
+    {%- set status_buggy_icon = icons.status_buggy -%}
+    {%- set status_approved_icon = icons.status_approved -%}
+    {%- set status_other_icon = icons.status_other -%}
+    {%- set tag_icon = icons.tag -%}
+    {%- set external_link_icon = icons.external_link -%}
+{%- else -%}
+    {%- set severity_high_icon = '' -%}
+    {%- set severity_medium_icon = '' -%}
+    {%- set severity_other_icon = '' -%}
+    {%- set status_testing_icon = '' -%}
+    {%- set status_buggy_icon = '' -%}
+    {%- set status_approved_icon = '' -%}
+    {%- set tag_icon = '' -%}
+    {%- set external_link_icon = '' -%}
+{%- endif -%}
+{%- if tactics is not none and tactics|length -%}
+    {{ '\n' }}| **ATT&CK Tactics**  |<ul style="list-style: none">
+    {%- for tactic_name, tactic_id in tactics -%}
+        <li>[{{external_link_icon}} {{ tactic_id }}: {{tactic_name}}](https://attack.mitre.org/tactics/{{tactic_id}})</li>
+    {%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- if techniques is not none and techniques|length -%}
+    {{ '\n' }}| **ATT&CK Techniques**  |<ul style="list-style: none">
+    {%- for technique_name, technique_id in techniques -%}
+        <li>[{{external_link_icon}} {{ technique_id }}: {{technique_name}}](https://attack.mitre.org/techniques/{{technique_id|replace('.','/')}})</li>
+    {%- endfor -%}</ul>|
+{%- endif -%}
+{%- if other_tags is not none and other_tags |length -%}
+    {{'\n'}}| **Tags** | <ul style="list-style: none">
+    {%- for tag in other_tags -%}
+        <li>
+        {%- if 'link' in tag -%}
+        [
+        {%- endif -%}
+        {%- if tag['type'] == 'Severity' -%}
+            {%- if tag['value'] == 'High' -%}
+                {{ severity_high_icon }}{{' '}}
+            {%- elif tag['value'] == 'Medium' -%}
+                {{ severity_medium_icon }}{{' '}}
+            {%- else -%}
+                {{ severity_other_icon }}{{' '}}
+            {%- endif -%}
+                                            {{ tag['type'] }}{{':'}}
+        {%- elif tag['type'] == 'Status' -%}
+            {%- if tag['value'] == 'Testing' -%}
+                {{ status_testing_icon }}{{' '}}
+            {%- elif tag['value'] == 'Buggy' -%}
+                {{ status_buggy_icon }}{{' '}}
+            {%- elif tag['value'] == 'Approved' -%}
+                {{ status_approved_icon }}{{' '}}
+            {%- else -%}
+                {{ status_other_icon }}{{' '}}
+            {%- endif -%}
+                                            {{ tag['type'] }}{{': '}}
+        {%- elif tag['type'] == 'Other' -%}
+            {{ tag_icon }}{{' '}}
+        {%- else -%}
+            {{ tag_icon }}{{' '}}{{ tag['type'] }}{{': '}}
+        {%- endif -%}
+                                                                        {{ tag['value'] }}
+        {%- if 'link' in tag -%}
+                                                                                            ]({{ tag['link'] }})
+        {%- endif -%}
+        </li>
+    {%- endfor -%}</ul> |
+{%- endif -%}

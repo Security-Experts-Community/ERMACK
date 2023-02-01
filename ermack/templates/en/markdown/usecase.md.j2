@@ -1,0 +1,44 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set response_playbook_icon = icons.response_playbook -%}
+    {%- set usecase_icon = icons.usecase -%}
+    {%- set artifact_icon = icons.artifact -%}
+    {%- set external_link_icon = icons.external_link -%}
+{%- else -%}
+    {%- set response_playbook_icon = '' -%}
+    {%- set usecase_icon = '' -%}
+    {%- set artifact_icon = '' -%}
+    {%- set external_link_icon = '' -%}
+{%- endif -%}
+
+# {{ id }}: {{ title }}
+
+{% include 'standard_summary.md.j2' -%}
+
+{%- if linked_response_playbooks is not none and linked_response_playbooks|length -%}
+	{{'\n'}}| **Linked Response Playbooks** | <ul style="list-style: none">
+	{%- for response_playbook in linked_response_playbooks -%}
+		<li>[ {{ response_playbook_icon }} {{ response_playbook['title'] }}](../../../response_playbooks/{{ response_playbook['filename'] }}/entity)</li>
+	{%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- if linked_usecases is not none and linked_usecases|length -%}
+	{{'\n'}}| **Usecases** | <ul style="list-style: none">
+	{%- for usecase in linked_usecases %}
+		<li>[ {{ usecase_icon }} {{ usecase['title'] }}](../../../{{ usecase['filename'] }}/entity)</li>
+	{%- endfor -%}
+	</ul>|
+{%- endif -%}
+
+{%- if linked_artifacts is not none and linked_artifacts|length -%}
+	{{'\n'}}| **Artifacts** | <ul style="list-style: none">
+	{%- for art in linked_artifacts -%}
+		<li>[ {{ artifact_icon }} {{ art['title'] }}](../../../artifacts/{{ art['filename'] }}/entity)</li>
+	{%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- if extended_description is not none and extended_description|length -%}
+{{'\n\n'}}## Description
+{{'\n\n'}}{{ extended_description }}
+{%- endif -%}

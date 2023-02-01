@@ -1,0 +1,77 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set threat_icon = icons.threat -%}
+    {%- set response_action_implementation_icon = icons.response_action_implementation-%}
+    {%- set response_playbook_icon = icons.response_playbook -%}
+    {%- set artifact_icon = icons.artifact -%}
+{%- else -%}
+    {%- set threat_icon = '' -%}
+    {%- set response_action_implementation_icon = '' -%}
+    {%- set response_playbook_icon = '' -%}
+    {%- set artifact_icon = '' -%}
+{%- endif -%}
+
+# {{ id}}: {{ title }}
+
+{% include 'standard_summary.md.j2' -%}
+
+{%- if usecases is not none and usecases |length -%}
+    {{'\n'}}| **Угрозы**  | <ul style="list-style: none">
+    {%- for uc in usecases -%}
+        <li>[{{ threat_icon }} {{ uc['title'] }}](../../../usecases/{{ uc['filename'] }}/entity)</li>
+    {%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- if linked_response_playbooks is not none and linked_response_playbooks|length -%}
+    {{'\n'}}| **Связанные Сценарии Реагирования** | <ul style="list-style: none">
+    {%- for response_playbook in linked_response_playbooks -%}
+        <li>[ {{ response_playbook_icon }} {{ response_playbook['title'] }}](../../{{ response_playbook['filename'] }}/entity)</li>
+    {%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- if extended_description is not none and extended_description|length -%}
+{{'\n\n'}}## Описание
+{{ extended_description }}
+{%- endif -%}
+
+{%- if workflow is not none and workflow|length -%}
+{{'\n\n'}}## Алгоритм
+{{ workflow }}
+{%- endif -%}
+
+{%- if response_stages is not none and response_stages|length -%}
+    {{'\n\n\n'}}## Действия Реагирования
+    {%- for stage in response_stages -%}
+        {%- if stage['response_actions'] is not none and stage['response_actions']|length -%}
+            {{'\n\n\n'}}### **[{{ stage['title'] }}][{{stage['link_id']}}]**{{'\n'}}
+            {%- for action in stage['response_actions'] -%}
+                {{'\n'}}[{{ action['title'] }}][{{ action['link_id'] }}]{{'  '}}
+                {%- if action['implementations'] is not none and action['implementations']|length -%}
+                    {%- for impl in action['implementations'] -%}
+                        {{'\n'}}[{{response_action_implementation_icon}} {{ impl['title'] }}][{{ impl['link_id'] }}]{{'  '}}
+                    {%- endfor -%}
+                {%- endif -%}
+            {%- endfor -%}
+            {{'\n\n'}}[{{ stage['link_id'] }}]: ../../../response_stages/{{ stage['filename'] }}/entity
+            {%- for action in stage['response_actions'] -%}
+                {{'\n'}}[{{ action['link_id'] }}]: ../../../response_actions/{{ action['filename'] }}/entity
+                {%- if action['implementations'] is not none and action['implementations']|length -%}
+                    {%- for impl in action['implementations'] -%}
+                        {{'\n'}}[{{ impl['link_id'] }}]: ../../../response_actions_implementations/{{ impl['filename'] }}/entity
+                    {%- endfor -%}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endif -%}
+
+
+{%- if linked_artifacts is not none and linked_artifacts|length -%}
+    ---
+## Артефакты
+    {{ '\n' }}
+    {%- for art in linked_artifacts -%}
+        {{'\n'}} - [{{artifact_icon}} {{ art['title'] }}](../../../artifacts/{{ art['filename'] }}/entity)
+    {%- endfor -%}
+{%- endif -%}

@@ -1,0 +1,12 @@
+title: MS Exchange Server
+id: S3001
+description: Почтовый сервер Microsoft Exchange Server 2019
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:
+  - AccessLoggingCapability
+  - MailDeletionCapability
+  - MailSearchingCapability

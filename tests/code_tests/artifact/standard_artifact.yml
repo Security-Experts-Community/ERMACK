@@ -1,0 +1,12 @@
+title: Название артефакта
+id: A1001
+description: Краткое описание артефакта
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+references:                                                         # Полезные ссылки
+  - http://www.example.com
+  - https://d3fend.mitre.org/dao/artifact/d3f:DNSNetworkTraffic/
+mapping:                                                            # Маппинг на публичные онтологии
+  - d3f:DNSNetworkTraffic
+extended_description: |
+  Расширенное описание артефакта

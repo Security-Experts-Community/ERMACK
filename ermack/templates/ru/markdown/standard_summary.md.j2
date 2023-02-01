@@ -1,0 +1,46 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set requirements_icon = icons.requirements -%}
+    {%- set external_link_icon = icons.external_link -%}
+{%- else -%}
+    {%- set requirements_icon = '' -%}
+    {%- set external_link_icon = '' -%}
+{%- endif -%}
+
+
+## Карточка
+| **Идентификатор**      | {{ id }}            |
+|:-----------:|:--------------------|
+
+{%- if description is not none and description|length -%}
+    {{'\n'}}| **Короткое описание** | {{ description }} |
+{%- endif -%}
+
+{%- if author is not none and author|length -%}
+    {{'\n'}}| **Автор** | {{ author }}  |
+{%- endif -%}
+
+{%- if creation_date is not none and creation_date|length -%}
+    {{'\n'}}| **Дата создания** | {{ creation_date }} |
+{%- endif -%}
+
+{%- if modification_date is not none and modification_date|length -%}
+    {{'\n'}}| **Дата последнего изменения** | {{ modification_date }} |
+{%- endif -%}
+
+{%- if requirements is not none and requirements|length > 0 -%}
+    {{ '\n' }}| **Требования** |<ul style="list-style: none">
+    {%- for requirement in requirements -%}
+        <li> {{ requirements_icon }} {{ requirement }}</li>
+    {%- endfor -%}</ul>|
+{%- endif -%}
+
+{%- include 'tags.md.j2' -%}
+
+{%- if references is not none and references|length > 0 -%}
+    {{ '\n' }}| **Ссылки** |<ul style="list-style: none">
+    {%- for ref in references -%}
+        <li>[{{ external_link_icon }} {{ ref }}]({{ ref }})</li>
+    {%- endfor -%}</ul>|
+{%- endif -%}

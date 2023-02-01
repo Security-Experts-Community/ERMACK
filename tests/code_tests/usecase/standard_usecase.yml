@@ -1,0 +1,18 @@
+title: Usecase Title                  # Название атаки
+id: UC0000
+description: Usecase Description      # Краткое описание атаки
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/26
+severity: M                           # Серьёзность атаки ['H' - высокая, 'M' - средняя, 'L' - низкая]
+tags:
+  - attack.credential_access          # MITRE ATT&CK Tactic
+  - attack.t1110.003                  # MITRE ATT&CK Technique
+  - brute                             # Произвольные теги
+linked_response_playbooks:
+  - RP0000                            # Идентификатор связанного сценария реагирования
+linked_artifacts:
+  - A1001
+  - A1006
+                                      # Расширенное описание атаки
+extended_description: |
+    Usecase Extended Description

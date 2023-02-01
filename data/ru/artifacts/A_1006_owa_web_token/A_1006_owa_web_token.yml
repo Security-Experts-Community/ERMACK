@@ -1,0 +1,8 @@
+title: Веб-токен OWA
+id: A1006
+description: Этот артефакт описывает сущность токена аутентификации в сервисе Outlook Web Access
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+extended_description: |
+  Этот артефакт описывает сущность токена аутентификации в сервисе Outlook Web Access

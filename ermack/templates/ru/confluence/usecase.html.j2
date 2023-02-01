@@ -1,0 +1,75 @@
+<ac:layout>
+   <ac:layout-section ac:type="two_equal">
+      <ac:layout-cell>
+         <p class="auto-cursor-target"><br /></p>
+         <ac:structured-macro ac:name="details" ac:schema-version="1" ac:macro-id="28b7d879-550c-4376-96ff-fdbdfddf710b">
+            <ac:rich-text-body>
+               <p class="auto-cursor-target"><br /></p>
+               <table class="wrapped confluenceTable">
+                  <colgroup>
+                     <col />
+                     <col />
+                  </colgroup>
+                  <tbody>
+         {% include 'standard_summary.html.j2' %}
+
+         {%- if linked_response_playbooks is not none and linked_response_playbooks|length > 1 -%}
+                     <tr>
+                        <th class="confluenceTh">Связанные Сценарии Реагирования</th>
+                        <td class="confluenceTd">
+                           <ul style="list-style: none">
+                              {%- for playbook in linked_response_playbooks -%}
+                                 <li><a href="{{confluence_viewpage_url}}{{playbook['link_id']}}">{{ playbook['title'] }}</a></li>
+                              {% endfor %}
+                           </ul>
+                        </td>
+                     </tr>
+         {% endif %}
+
+         {%- if linked_usecases is not none and linked_usecases|length > 1 -%}
+                     <tr>
+                        <th class="confluenceTh">Связанные Угрозы</th>
+                        <td class="confluenceTd">
+                            <ul style="list-style: none">
+                              {%- for usecase in linked_usecases -%}
+                                 <li><a href="{{confluence_viewpage_url}}{{usecase['link_id']}}">{{ usecase['title'] }}</a></li>
+                              {% endfor %}
+                           </ul>
+                        </td>
+                     </tr>
+         {% endif %}
+
+         {%- if linked_artifacts is not none and linked_artifacts|length -%}
+                     <tr>
+                        <th class="confluenceTh">Связанные Артефакты</th>
+                        <td class="confluenceTd">
+                           <ul style="list-style: none">
+                              {%- for art in linked_artifacts -%}
+                                 <li><a href="{{confluence_viewpage_url}}{{art['link_id']}}">{{ art['title'] }}</a></li>
+                              {% endfor %}
+                           </ul>
+                        </td>
+                     </tr>
+         {% endif %}
+                  </tbody>
+               </table>
+               <p class="auto-cursor-target"><br /></p>
+            </ac:rich-text-body>
+         </ac:structured-macro>
+      </ac:layout-cell>
+      <ac:layout-cell>
+         {% include 'toc_macros.html.j2' %}
+      </ac:layout-cell>
+   </ac:layout-section>
+   <ac:layout-section ac:type="single">
+      <ac:layout-cell>
+      {% if extended_description is not none and extended_description|length %}
+         <h1>Описание</h1>
+         <pre><br/></pre>
+         <ac:structured-macro ac:name="markdown"><ac:plain-text-body>
+            <![CDATA[{{extended_description}}]]>
+         </ac:plain-text-body></ac:structured-macro>
+      {% endif %}
+      </ac:layout-cell>
+   </ac:layout-section>
+</ac:layout>

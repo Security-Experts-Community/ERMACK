@@ -1,0 +1,11 @@
+title: MS Sharepoint Server
+id: S3005
+description: Microsoft Sharepoint Server
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:
+  - DomainAuthenticationCapability
+  - DocumentStorageCapability

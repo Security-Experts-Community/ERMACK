@@ -1,0 +1,29 @@
+{%- if theme == 'material' -%}
+    {%- import 'visual_concepts.md.j2' as icons -%}
+
+    {%- set software_icon = icons.software -%}
+{%- else -%}
+    {%- set software_icon = '' -%}
+{%- endif -%}
+
+# Infrastructure Profile
+
+## Summary
+
+| **Configuration Name** | {{ configuration_name }} |
+|:----------------------:|:-------------------------|
+| **Company**            | {{ company }}            |
+{%- if creation_date is not none and creation_date|length -%}
+    {{'\n'}}| **Creation Date** | {{ creation_date }} |
+{%- endif -%}
+
+{%- if modification_date is not none and modification_date|length -%}
+    {{'\n'}}| ** Modification Date** | {{ modification_date }}  |
+{%- endif -%}
+
+{%- if software_profile is not none and software_profile|length -%}
+	{{'\n'}}| **Software Profile**    | <ul style="list-style: none">
+	{%- for soft in software_profile -%}
+		<li>[{{ software_icon }} {{ soft['title'] }}](../../software/{{ soft['filename'] }}/entity){% if soft['cpe'] is defined and soft['cpe'] |length %}<br>`{{soft['cpe']}}`{% endif %}</li>
+	{%- endfor -%}</ul>
+{%- endif -%}    |

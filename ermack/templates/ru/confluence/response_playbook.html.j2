@@ -1,0 +1,60 @@
+<ac:layout>
+   <ac:layout-section ac:type="two_equal">
+      <ac:layout-cell>
+      <p class="auto-cursor-target"><br /></p>
+      <ac:structured-macro ac:name="details" ac:schema-version="1" ac:macro-id="28b7d879-550c-4376-96ff-fdbdfddf710b">
+         <ac:rich-text-body>
+            <p class="auto-cursor-target"><br /></p>
+            <table class="wrapped confluenceTable">
+               <colgroup>
+                  <col />
+                  <col />
+               </colgroup>
+               <tbody>
+      {% include 'standard_summary.html.j2' %}
+               </tbody>
+            </table>
+            <p class="auto-cursor-target"><br /></p>
+         </ac:rich-text-body>
+      </ac:structured-macro>
+      </ac:layout-cell>
+      <ac:layout-cell>
+         {% include 'toc_macros.html.j2' %}
+      </ac:layout-cell>
+   </ac:layout-section>
+   <ac:layout-section ac:type="single">
+      <ac:layout-cell>
+         {%- if extended_description is not none and extended_description|length -%}
+         <h1>Описание</h1>
+         <ac:structured-macro ac:name="markdown"><ac:plain-text-body>
+            <![CDATA[{{extended_description}}]]>
+         </ac:plain-text-body></ac:structured-macro>
+         {%- endif -%}
+
+         {%- if workflow is not none and workflow|length -%}
+         <h1>Алгоритм</h1>
+         <ac:structured-macro ac:name="markdown"><ac:plain-text-body>
+             <![CDATA[{{ workflow }}]]>
+         </ac:plain-text-body></ac:structured-macro>
+         {%- endif -%}
+         {%- if response_stages is not none and response_stages|length > 1 -%}
+            {% for stage in response_stages %}
+               {%- if stage['response_actions'] is not none and stage['response_actions']|length -%}
+                  <h1><a href="{{confluence_viewpage_url}}{{stage['link_id']}}">{{ stage['title'] }}</a></h1>
+                  <ul style="list-style: none">
+                  {%- for action in stage['response_actions'] %}
+                     <li><a href="{{confluence_viewpage_url}}{{action['link_id']}}">{{ action['title'] }}</a></li>
+                     {%- if action['implementations'] is not none and action['implementations']|length -%}
+                        {%- for impl in action['implementations'] -%}
+                           <li><a href="{{confluence_viewpage_url}}{{impl['link_id']}}"><font color="#00b067">⮩</font> {{ impl['title'] }}</a></li>
+                        {%- endfor -%}
+                     {%- endif -%}
+                  {%- endfor -%}
+                  </ul>
+                  <pre><br/></pre>
+               {%endif%}
+            {% endfor %}
+         {% endif %}
+      </ac:layout-cell>
+   </ac:layout-section>
+</ac:layout>

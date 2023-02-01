@@ -1,0 +1,12 @@
+title: Linux
+id: S0100
+description: Any Linux distribution
+author: '@ACTION_COMMUNITY'
+creation_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:
+  - AuthenticationLogsAnalysis
+  - NetworkSessionLogging
+extended_description: |
+  Any Linux distribution with standard command line utilities

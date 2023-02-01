@@ -1,0 +1,10 @@
+title: Gitlab Server
+id: S3010
+description: Gitlab Server
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:
+  - DomainAuthenticationCapability

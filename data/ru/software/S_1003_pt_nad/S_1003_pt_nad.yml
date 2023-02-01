@@ -1,0 +1,10 @@
+title: PT NAD
+id: S1003
+description: PT Network Attack Discovery
+author: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2022/10/22
+references:
+  - http://www.example.com
+capabilities:
+  - NetworkProtocolsParsing

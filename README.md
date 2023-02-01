@@ -1,4 +1,4 @@
-# ERM&CK Enterprise Response Model & Common Knowledge
+# ERM&CK - Enterprise Response Model & Common Knowledge
 
 ## Введение
 

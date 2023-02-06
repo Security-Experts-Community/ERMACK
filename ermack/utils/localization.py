@@ -13,6 +13,15 @@ stages_mapping = {
     "lessons_learned": "RS0006",
 }
 
+stages_names_mapping = {
+    "RS0001": ["preparation", "подготовка"],
+    "RS0002": ["identification", "идентификация"],
+    "RS0003": ["containment", "сдерживание"],
+    "RS0004": ["eradication", "ликвидация"],
+    "RS0005": ["recovery", "восстановление"],
+    "RS0006": ["lessons_learned", "выводы"],
+}
+
 
 class Localization:
     """

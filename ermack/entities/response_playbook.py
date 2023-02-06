@@ -6,6 +6,7 @@ from pathlib import Path
 
 from ermack.render_knowledge_base import TemplateTypes
 from ermack.utils.cpe_wrapper import check_applicability_of_impl
+from ermack.utils.localization import stages_names_mapping
 from ermack.utils.utils import Utils as utils
 
 from .entity import Entity
@@ -74,6 +75,13 @@ class ResponsePlaybook(Entity):
         """Get entity short name (acronym)"""
         return "RP"
 
+    def __getStageByName(self, stages: list, field: str) -> dict:
+        for stage_id in stages:
+            if field not in stages_names_mapping[stage_id]:
+                continue
+            return stages[stage_id]
+        return None
+
     def enrich(self, template_type: TemplateTypes):
         """Enrich with information about linked entities
 
@@ -84,17 +92,13 @@ class ResponsePlaybook(Entity):
         data = self.data()
         stages = self.entities_map.entities["response_stages"]["instances"]
         response_actions = self.entities_map.entities["response_actions"]["instances"]
-        stages_with_titles_as_keys = {
-            stages[stage_id]
-            .get("title", "en")
-            .lower()
-            .replace(" ", "_"): stages[stage_id]
-            for stage_id in stages
-        }
+
         for field in data:
-            if field not in stages_with_titles_as_keys:
+            stage = self.__getStageByName(stages=stages, field=field)
+
+            if not stage:
                 continue
-            stage = stages_with_titles_as_keys[field]
+
             stage_view = {
                 "title": stage.get_title(),
                 "filename": stage.get("filename"),

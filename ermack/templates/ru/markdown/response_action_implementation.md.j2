@@ -20,13 +20,13 @@
 
 {%- if linked_software is not none and linked_software|length > 1 -%}
 	{%- if 'means_of_action' in linked_software or 'targets_of_action' in linked_software -%}
-		{%- if 'means_of_action' in linked_software -%}
+		{%- if linked_software['means_of_action'] is defined and linked_software['means_of_action']| length -%}
 			{{'\n'}}| **Средства воздействия** | <ul style="list-style: none">
 			{%- for soft in linked_software['means_of_action'] -%}
 				<li>[{{ software_icon }} {{ soft['title'] }}](../../../software/{{ soft['filename'] }}/entity){% if soft['cpe'] is defined and soft['cpe'] |length %}<br>`{{soft['cpe']}}`{% endif %}</li>
 			{%- endfor -%}</ul>|
 		{%- endif -%}
-		{%- if 'targets_of_action' in linked_software -%}
+		{%- if linked_software['targets_of_action'] is defined and linked_software['targets_of_action']| length -%}
 			{{'\n'}}| **Цели воздействия** | <ul style="list-style: none">
 			{%- for soft in linked_software['targets_of_action'] -%}
 				<li>[{{ software_icon }} {{ soft['title'] }}](../../../software/{{ soft['filename'] }}/entity){% if soft['cpe'] is defined and soft['cpe'] |length %}<br>`{{soft['cpe']}}`{% endif %}</li>

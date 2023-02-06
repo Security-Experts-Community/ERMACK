@@ -26,7 +26,7 @@
 {%- if linked_response_playbooks is not none and linked_response_playbooks|length -%}
     {{'\n'}}| **Связанные Сценарии Реагирования** | <ul style="list-style: none">
     {%- for response_playbook in linked_response_playbooks -%}
-        <li>[ {{ response_playbook_icon }} {{ response_playbook['title'] }}](../../{{ response_playbook['filename'] }}/entity)</li>
+        <li>[ {{ response_playbook_icon }} {{ response_playbook['title'] }}](../../../{{ response_playbook['filename'] }}/entity)</li>
     {%- endfor -%}</ul>|
 {%- endif -%}
 

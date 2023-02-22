@@ -1,0 +1,19 @@
+title: Define Teams and Roles
+id: RA1015
+description: Define your IR-related teams
+author: '@ermack_community'
+creation_date: 2020/04/08
+tags:
+  - operational
+stage: preparation
+extended_description: |
+  Your IR-related teams contains main stakeholders and IR experts (internal or external)
+  Determine:
+  - Vulnerability Manager
+  - Threat Manager
+  - Risk Manager
+  - Executive Lead
+  - Professional Services Lead
+  - Response Support (Legal, PR, etc.)
+workflow: |
+  Make actions plan for every role

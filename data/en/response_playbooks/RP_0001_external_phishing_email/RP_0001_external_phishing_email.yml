@@ -24,7 +24,7 @@ preparation:
   - RA_1001_practice
   - RA_1002_take_trainings
   - RA_1004_make_personnel_report_suspicious_activity
-  - RA_1003_raise_personnel_awareness
+  - RA_1003_raise_personn,el_awareness
   - RA_1101_access_external_network_flow_logs
   - RA_1104_access_external_http_logs
   - RA_1106_access_external_dns_logs

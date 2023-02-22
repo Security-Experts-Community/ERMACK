@@ -172,6 +172,7 @@ class DataRenderer:
         """Populate Response Playbooks"""
         response_playbooks = self.entities_map.get_response_playbooks()
         self.data_provider.render_entities_table(response_playbooks)
+        self.data_provider.render_sub_table(response_playbooks)
         artifacts = self.entities_map.get_artifacts()
         usecases = self.entities_map.get_usecases()
         response_playbooks = self.entities_map.get_response_playbooks()

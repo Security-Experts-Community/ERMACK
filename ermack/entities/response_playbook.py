@@ -92,6 +92,9 @@ class ResponsePlaybook(Entity):
         data = self.data()
         stages = self.entities_map.entities["response_stages"]["instances"]
         response_actions = self.entities_map.entities["response_actions"]["instances"]
+        response_playbooks = self.entities_map.entities["response_playbooks"][
+            "instances"
+        ]
 
         for field in data:
             stage = self.__getStageByName(stages=stages, field=field)
@@ -108,29 +111,66 @@ class ResponsePlaybook(Entity):
             counter += 1
             for response_action in data[field]:
                 action_id = self.extract_id(response_action)
-                response_action = response_actions[action_id]
-                response_action_view = {
-                    "title": response_action.get_title(),
-                    "filename": response_action.get("filename"),
-                    "link_id": counter,
-                    "implementations": [],
-                }
-                counter += 1
-                mapping = self.entities_map.entities_relations_mapping["RA->RAI"]
-                if action_id in mapping:
-                    response_action_impls = mapping[action_id]
-                    response_action_view["implementations"] = []
-                    for impl in response_action_impls:
-                        if self.cpe_soft_identification(impl):
-                            response_action_view["implementations"].append(
-                                {
-                                    "title": impl.get_title(),
-                                    "filename": impl.get("filename"),
-                                    "link_id": counter,
-                                }
-                            )
-                            counter += 1
-                stage_view["response_actions"].append(response_action_view)
+                if action_id.startswith("RP"):
+                    if action_id not in response_playbooks:
+                        response_playbook_view = {
+                            "title": "[Unimplemented] " + response_action,
+                            "filename": "",
+                            "link_id": counter,
+                            "type": "unimplemented_playbook",
+                            "implementations": [],
+                        }
+                        counter += 1
+                        stage_view["response_actions"].append(response_playbook_view)
+                    else:
+                        nested_response_playbook = response_playbooks[action_id]
+                        response_playbook_view = {
+                            "title": nested_response_playbook.get_title(),
+                            "filename": nested_response_playbook.get("filename"),
+                            "link_id": counter,
+                            "type": "playbook",
+                            "implementations": [],
+                        }
+                        counter += 1
+                        stage_view["response_actions"].append(response_playbook_view)
+                else:
+                    if action_id not in response_actions:
+                        response_action_view = {
+                            "title": "[Unimplemented] " + response_action,
+                            "filename": "",
+                            "link_id": counter,
+                            "type": "unimplemented_action",
+                            "implementations": [],
+                        }
+                        counter += 1
+                        stage_view["response_actions"].append(response_action_view)
+                    else:
+                        response_action = response_actions[action_id]
+                        response_action_view = {
+                            "title": response_action.get_title(),
+                            "filename": response_action.get("filename"),
+                            "link_id": counter,
+                            "type": "action",
+                            "implementations": [],
+                        }
+                        counter += 1
+                        mapping = self.entities_map.entities_relations_mapping[
+                            "RA->RAI"
+                        ]
+                        if action_id in mapping:
+                            response_action_impls = mapping[action_id]
+                            response_action_view["implementations"] = []
+                            for impl in response_action_impls:
+                                if self.cpe_soft_identification(impl):
+                                    response_action_view["implementations"].append(
+                                        {
+                                            "title": impl.get_title(),
+                                            "filename": impl.get("filename"),
+                                            "link_id": counter,
+                                        }
+                                    )
+                                    counter += 1
+                        stage_view["response_actions"].append(response_action_view)
             self.stages.append(stage_view)
             self.update({"response_stages": self.stages})
 

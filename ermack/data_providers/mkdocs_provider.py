@@ -90,6 +90,7 @@ class MkdocsProvider(MarkdownProvider):
                 (
                     self.__get_value(entities, entity_id, "title"),
                     self.__get_value(entities, entity_id, "filename"),
+                    self.__get_value(entities, entity_id, "tags"),
                 )
             )
         return result

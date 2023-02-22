@@ -77,7 +77,7 @@ nav:
 {%- if usecases is not none and usecases|length -%}
     {{'\n'}}    - Угрозы:
     {{'\n'}}        - '[Список Угроз]': ./usecases.md
-    {%- for usecase_title, usecase_path in usecases['value'] -%}
+    {%- for usecase_title, usecase_path, usecase_tags in usecases['value'] -%}
         {{'\n'}}        - "{{usecase_title}}": ./usecases/{{usecase_path}}/entity
     {%- endfor -%}
 {% endif -%}
@@ -85,8 +85,11 @@ nav:
 {%- if response_playbooks is not none and response_playbooks|length -%}
     {{'\n'}}    - Сценарии реагирования:
     {{'\n'}}        - '[Список Сценариев]': ./response_playbooks.md
-    {%- for playbook_title, playbook_path in response_playbooks['value'] -%}
-        {{'\n'}}        - "{{playbook_title}}": ./response_playbooks/{{playbook_path}}/entity
+    {{'\n'}}        - '[Cисок Подсценариев]': ./sub_response_playbooks.md
+    {%- for playbook_title, playbook_path, playbook_tags in response_playbooks['value'] -%}
+        {%- if "sub-playbook" not in playbook_tags -%}
+            {{'\n'}}        - "{{playbook_title}}": ./response_playbooks/{{playbook_path}}/entity
+        {%- endif -%}
     {%- endfor -%}
 {%- endif -%}
 
@@ -114,7 +117,7 @@ nav:
 {%- if software is not none and software|length -%}
     {{'\n'}}    - Программное Обеспечение:
     {{'\n'}}        - '[Список ПО]': ./software.md
-    {%- for software_title, software_path in software['value'] -%}
+    {%- for software_title, software_path, software_tags in software['value'] -%}
         {{'\n'}}        - "{{software_title}}": ./software/{{software_path}}/entity
     {%- endfor -%}
 {%- endif -%}
@@ -122,7 +125,7 @@ nav:
 {%- if artifacts is not none and artifacts|length -%}
     {{'\n'}}    - Артефакты:
     {{'\n'}}        - '[Список Артефактов]': ./artifacts.md
-    {%- for artifact_title, artifact_path in artifacts['value'] -%}
+    {%- for artifact_title, artifact_path, artifact_tags in artifacts['value'] -%}
         {{'\n'}}        - "{{artifact_title}}": ./artifacts/{{artifact_path}}/entity
     {%- endfor -%}
 {%- endif -%}

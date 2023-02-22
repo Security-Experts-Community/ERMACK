@@ -4,11 +4,13 @@
     {%- set threat_icon = icons.threat -%}
     {%- set response_action_implementation_icon = icons.response_action_implementation-%}
     {%- set response_playbook_icon = icons.response_playbook -%}
+    {%- set unimplemented_icon = icons.unimplemented -%}
     {%- set artifact_icon = icons.artifact -%}
 {%- else -%}
     {%- set threat_icon = '' -%}
     {%- set response_action_implementation_icon = '' -%}
     {%- set response_playbook_icon = '' -%}
+    {%- set unimplemented_icon = '' -%}
     {%- set artifact_icon = '' -%}
 {%- endif -%}
 
@@ -46,20 +48,36 @@
         {%- if stage['response_actions'] is not none and stage['response_actions']|length -%}
             {{'\n\n\n'}}### **[{{ stage['title'] }}][{{stage['link_id']}}]**{{'\n'}}
             {%- for action in stage['response_actions'] -%}
-                {{'\n'}}[{{ action['title'] }}][{{ action['link_id'] }}]{{'  '}}
-                {%- if action['implementations'] is not none and action['implementations']|length -%}
-                    {%- for impl in action['implementations'] -%}
-                        {{'\n'}}[{{response_action_implementation_icon}} {{ impl['title'] }}][{{ impl['link_id'] }}]{{'  '}}
-                    {%- endfor -%}
+                {%- if action['type'] is not none and action['type'] == 'playbook' -%}
+                    {{'\n'}}[{{response_playbook_icon}} {{ action['title'] }}][{{ action['link_id'] }}]{{'  '}}
+                {%- elif action['type'] is not none and action['type'] == 'unimplemented_playbook' -%}
+                    {{'\n'}}[{{unimplemented_icon}} {{ action['title'] }}][{{ action['link_id'] }}]{{'  '}}
+                {%- elif action['type'] is not none and action['type'] == 'unimplemented_action' -%}
+                    {{'\n'}}[{{unimplemented_icon}} {{ action['title'] }}][{{ action['link_id'] }}]{{'  '}}
+                {%- else -%}
+                    {{'\n'}}[{{ action['title'] }}][{{ action['link_id'] }}]{{'  '}}
+                    {%- if action['implementations'] is not none and action['implementations']|length -%}
+                        {%- for impl in action['implementations'] -%}
+                            {{'\n'}}[{{response_action_implementation_icon}} {{ impl['title'] }}][{{ impl['link_id'] }}]{{'  '}}
+                        {%- endfor -%}
+                    {%- endif -%}
                 {%- endif -%}
             {%- endfor -%}
             {{'\n\n'}}[{{ stage['link_id'] }}]: ../../../response_stages/{{ stage['filename'] }}/entity
             {%- for action in stage['response_actions'] -%}
-                {{'\n'}}[{{ action['link_id'] }}]: ../../../response_actions/{{ action['filename'] }}/entity
-                {%- if action['implementations'] is not none and action['implementations']|length -%}
-                    {%- for impl in action['implementations'] -%}
-                        {{'\n'}}[{{ impl['link_id'] }}]: ../../../response_actions_implementations/{{ impl['filename'] }}/entity
-                    {%- endfor -%}
+                {%- if action['type'] is not none and action['type'] == 'playbook' -%}
+                    {{'\n'}}[{{ action['link_id'] }}]: ../../../response_playbooks/{{ action['filename'] }}/entity
+                {%- elif action['type'] is not none and action['type'] == 'unimplemented_playbook' -%}
+                    {{'\n'}}[{{ action['link_id'] }}]: ../../../response_playbooks/unimplemented/entity
+                {%- elif action['type'] is not none and action['type'] == 'unimplemented_action' -%}
+                    {{'\n'}}[{{ action['link_id'] }}]: ../../../response_actions/unimplemented/entity
+                {%- else -%}
+                    {{'\n'}}[{{ action['link_id'] }}]: ../../../response_actions/{{ action['filename'] }}/entity
+                    {%- if action['implementations'] is not none and action['implementations']|length -%}
+                        {%- for impl in action['implementations'] -%}
+                            {{'\n'}}[{{ impl['link_id'] }}]: ../../../response_actions_implementations/{{ impl['filename'] }}/entity
+                        {%- endfor -%}
+                    {%- endif -%}
                 {%- endif -%}
             {%- endfor -%}
         {%- endif -%}

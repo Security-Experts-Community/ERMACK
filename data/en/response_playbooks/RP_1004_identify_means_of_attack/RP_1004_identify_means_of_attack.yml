@@ -1,0 +1,16 @@
+title: Identify means of attack
+id: RP1004
+description: Identify the means through which the malware or attacker gained access
+author: '@ermack_community'
+creation_date: 2019/01/31
+modification_date: 2019/01/31
+severity: M
+tlp: AMBER
+pap: WHITE
+tags:
+  - sub-playbook
+identification:
+  - RA_2002_list_host_vulnerabilities
+  - RA_2121_identiry_useful_security_systems
+workflow: |
+  1. TODO: create workflow

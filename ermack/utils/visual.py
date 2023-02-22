@@ -1,4 +1,4 @@
-logo = """
+logo2 = """
                                        ▄
                                       ██░
                                      ███░░
@@ -45,6 +45,19 @@ o888ooooood8 o888o  o888o o8o        o888o `bodP'`88.  `Y8bood8P'  o888o  o888o
 Enterprise Response Model & Common Knowledge"""
 
 
+logo = """
+
+oooooooooooo ooooooooo.   ooo        ooooo   .oo.       .oooooo.   oooo    oooo
+`888'     `8 `888   `Y88. `88.       .888' .88' `8.    d8P'  `Y8b  `888   .8P'
+ 888          888   .d88'  888b     d'888  88.  .8'   888           888  d8'
+ 888oooo8     888ooo88P'   8 Y88. .P  888  `88.8P     888           88888[
+ 888    "     888`88b.     8  `888'   888   d888[.8'  888           888`88b.
+ 888       o  888  `88b.   8    Y     888  88' `88.   `88b    ooo   888  `88b.
+o888ooooood8 o888o  o888o o8o        o888o `bodP'`88.  `Y8bood8P'  o888o  o888o
+-------------------------------------------------------------------------------
+Enterprise Response Model & Common Knowledge"""
+
+
 material_icons_style = """
 .response_action_impl {
   color: #00b067;
@@ -59,6 +72,9 @@ material_icons_style = """
 }
 .response_playbook {
   color: #00b067;
+}
+.unimplemented {
+  color: #d40641;
 }
 .threat {
   color: #d40641;

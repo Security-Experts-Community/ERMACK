@@ -9,7 +9,7 @@
 # Enterprise Response Model & Common Knowledge
 
 
-# Project supplied default configuration.  
+# Project supplied default configuration.
 # Add a new configuration file 'config.yml' where you can overwrite any settings depicted below.
 # config.yml is not tracked by the version management system, while config.default.yml is.
 
@@ -53,7 +53,7 @@ titlefmtrules:
 confluence_space_name: 'ERMACK'
 confluence_space_home_page_name: 'ERMACK Home'
 confluence_name_of_root_directory: 'ERMACK'
-# confluence_url: 
+# confluence_url:
 # confluence_viewpage_url:
 
 ## Confluence entities settings
@@ -65,7 +65,7 @@ response_action_confluence_template: 'response_action.html.j2'
 response_playbook_confluence_template: 'response_playbook.html.j2'
 infrastructure_profile_confluence_template: 'infrastructure_profile.html.j2'
 response_action_impl_confluence_template: 'response_action_implementation.html.j2'
-entities_table_confluence_template: 'entity_table.html.j2' 
+entities_table_confluence_template: 'entity_table.html.j2'
 
 
 

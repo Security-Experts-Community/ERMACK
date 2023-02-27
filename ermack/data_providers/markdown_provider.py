@@ -183,11 +183,12 @@ Sorry, this {entity_name} is not implemented yet!""",
                 "tags"
             ) is not None and "sub-playbook" not in entity.view_get("tags"):
                 continue
+            filename = f"../{entity_name}/{entity.view_get('filename')}/entity"
             entities_list.append(
                 {
                     "id": entity.view_get("id"),
                     "title": entity.get_title(),
-                    "filename": f"{entity.view_get('filename')}/entity",
+                    "filename": filename,
                     "description": entity.view_get("description"),
                     "link_id": len(entities_list) + 1,
                     "parent_title": entity.entity_name,

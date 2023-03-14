@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 """Module that handle rendering KB as mkdocs site"""
-
 import os
+import re
 import shutil
 from collections import OrderedDict
 from pathlib import Path
@@ -200,6 +200,27 @@ class MkdocsProvider(MarkdownProvider):
             tree.append(stage_view)
         return tree
 
+    def __markup_artifacts(self, text_with_markup: str) -> str:
+        pattern = r"<\[.*?\]>\((A_?\d+)\)"
+        artifacts = self.entities_map.get_artifacts()
+        markuped_text = text_with_markup
+        for artifact_id in re.findall(pattern, markuped_text):
+            try:
+                identifier = artifacts[artifact_id.replace("_", "")].view["filename"]
+                markuped_text = re.sub(
+                    rf"<(\[.*?\])>\({artifact_id}\)",
+                    rf"\1(../../../artifacts/{identifier}/entity)",
+                    markuped_text,
+                )
+            except BaseException:
+                pass
+        markuped_text = re.sub(
+            r"<(\[.*?\])>",
+            r"\1(../../../artifacts/unimplemented/entity)",
+            markuped_text,
+        )
+        return markuped_text
+
     def write_entity(self, entity, title_with_id=False):
         """Write entity to a markdown file
 
@@ -215,6 +236,12 @@ class MkdocsProvider(MarkdownProvider):
         template_type = TemplateTypes.markdown
         template = env.get_template(entity.get_template_name(template_type))
         entity.enrich(template_type)
+        description = entity.view_get("extended_description")
+        if description:
+            entity.view["extended_description"] = self.__markup_artifacts(description)
+        workflow = entity.view_get("workflow")
+        if workflow:
+            entity.view["workflow"] = self.__markup_artifacts(workflow)
         entity.render_template(template, template_type)
         base = os.path.basename(entity.yaml_file)
         file_name = os.path.splitext(base)[0]

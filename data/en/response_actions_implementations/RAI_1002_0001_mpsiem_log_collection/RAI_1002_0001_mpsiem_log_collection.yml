@@ -1,0 +1,38 @@
+title: Collect log monitoring via MP SIEM
+id: RAI1002_0001
+linked_response_actions: RA1005
+description: This response action is intended to set up log colletion to SIEM
+author: Alex@Cyberok
+creation_date: 2023/03/02
+modification_date: 2023/03/02
+stage: identification
+tags:
+  - log.colletction
+linked_artifacts:
+  - A1008
+requirements:
+  software:
+    means_of_action:
+    - ID: S0001
+      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
+    targets_of_action:
+extended_description: |
+  This response action is intended to set up log collection via MP SIEM.
+
+  ## Target system requirements
+  None
+
+  ## Requirements for means of action
+  1) MP SIEM version 23.1 and above  
+  1) Configured logging of the use of credentials in the infrastructure  
+  1) Configured event collection in MP SIEM  
+
+  ## Expected impact result
+  1) Obtaining ability to analyze log activity
+
+  ## Implementations
+  ### PDQL: Collecting logs
+
+  #### Comments
+  
+

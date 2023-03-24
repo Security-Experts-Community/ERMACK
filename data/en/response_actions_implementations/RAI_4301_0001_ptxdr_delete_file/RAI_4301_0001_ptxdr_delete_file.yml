@@ -1,25 +1,22 @@
-﻿title: Deleting a file from Windows via PT XDR
-id: RAI_4301_0001
-description: Removing a file from a Windows system through the PT XDR agent
-author: '@ERMACK_COMMUNITY'
-creation_date: 2022/11/01
-modification_date: 2022/11/01
+﻿title: Deleting a file from Windows via SOLDR
+id: RAI4301_0001
+description: Removing a file from a Windows system through the SOLDR agent
+author: Alex@Cyberok
+creation_date: 2023/03/22
+modification_date: 2023/03/22
 linked_software:
   - S0002
 linked_response_actions: RA4301
 tags:
-  - delete.file
+  - delete_file
 linked_artifacts:
   - A3002
-  - A0003
 requirements:
   software:
     means_of_action:
     - ID: S0002
-      cpe-fs: 'cpe:2.3:a:positive_technologies:pt_xdr:1.*:*:*:*:*:*:*:*'    
+      cpe-fs: 'cpe:2.3:a:positive_technologies:pt_xdr:1.2:*:*:*:*:*:*:*'    
     targets_of_action:
-    - ID: S0003
-      cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
 extended_description: |
   ## Basic parameters
 
@@ -27,6 +24,7 @@ extended_description: |
   `timer_timeout` - time interval in milliseconds after which the module checks for the presence of the hash that we want to remove from the cache.  
 
   In addition to the basic parameters, for the correct operation of the module, two more modules must be installed in the policy:
+  
   - *Sysmon installer*  
   - *Data collector from Windows Event Log*  
 

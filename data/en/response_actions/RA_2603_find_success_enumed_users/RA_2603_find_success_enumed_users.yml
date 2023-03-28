@@ -1,0 +1,11 @@
+title: RA_2603_find_success_enumed_users
+id: RA2603
+description: >
+  Find success enumed users
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+stage: identification
+references:
+  - Account Discovery, https://attack.mitre.org/techniques/T1087/
+workflow: |
+  Find on logs or on network traffick usernames which success enumed

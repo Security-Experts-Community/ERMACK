@@ -4,22 +4,21 @@ linked_response_actions: RA2311
 description: This response action is intended to obtain file from remote host
 author: 'Cyberok'
 creation_date: 2023/02/03
-modification_date: 2023/02/03
-stage: identification
+modification_date: 2023/03/30
 tags:
   - collect_file
   - linux
   - windows
   - macOS
 linked_software:
-  - S0002
+  - S0005
 linked_artifacts:
   - A3002
 requirements:
   software:
     means_of_action:
-    - ID: S0002
-      cpe-fs: 'cpe:2.3:a:positive_technologies:pt_xdr:1.2:*:*:*:*:*:*:*'
+    - ID: S0005
+      cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'
     targets_of_action:
 extended_description: |
   File sender module lets you collect objects directly from the SOLDR (XDR) interface.

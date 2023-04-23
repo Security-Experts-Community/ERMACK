@@ -9,7 +9,7 @@ tags:
   - attack.t1546.001
   - windows
 linked_response_playbooks:
-  - RP3007
+  - RP2005
 linked_artifacts:
   - A1005
   - A3002
@@ -69,10 +69,14 @@ extended_description: |
     Opening the test.txt file by double clikcing it opens the file itself, but a reverse shell is thrown to the attacking system as well:
     ![Demo](22.gif)
     
+    2) This persistence trick is used by [SILENTTRINITY framework](https://attack.mitre.org/software/S0692/) and [Kimsuky cyber espionage group](https://attack.mitre.org/groups/G0094/). This malware was used in a 2019 campaign against Croatian government agencies by unidentified cyber actors. SILENTTRINITY can conduct an image hijack of an .msc file extension as part of its UAC bypass process.
+    
     ## Attack diagram
     ![Diagram](35.svg)
     
     ## References 
     [Hijacking Default File Extension](https://www.ired.team/offensive-security/persistence/hijacking-default-file-extension)
+    
+    [Malware development: persistence - part 9. Default file extension hijacking. Simple C++ example.](https://cocomelonc.github.io/malware/2022/08/26/malware-pers-9.html)
     
     

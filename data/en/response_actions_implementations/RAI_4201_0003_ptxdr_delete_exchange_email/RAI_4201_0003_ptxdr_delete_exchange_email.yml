@@ -1,5 +1,5 @@
 title: Deleting an email from MS Exchange via PT XDR
-id: RAI_4201_0003
+id: RAI4201_0003
 description: PT XDR provides the exchange_connector module to perform operations with the MS Exchange mail server
 author: '@ERMACK_COMMUNITY'
 creation_date: 2022/10/22

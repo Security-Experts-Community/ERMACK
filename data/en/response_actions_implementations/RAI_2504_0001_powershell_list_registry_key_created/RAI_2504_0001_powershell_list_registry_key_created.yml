@@ -5,7 +5,6 @@ description: This response action about working with registry keys
 author: 'Alex@Cyberok'
 creation_date: 2023/02/03
 modification_date: 2023/02/03
-stage: identification
 tags:
   - powershell
   - windows
@@ -19,6 +18,8 @@ requirements:
     - ID: S0004
       cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
     targets_of_action:
+    - ID: S0003
+      cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
 extended_description: |
   List registry keys with Powershell.
 

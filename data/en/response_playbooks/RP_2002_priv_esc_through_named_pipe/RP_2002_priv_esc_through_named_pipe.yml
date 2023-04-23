@@ -2,7 +2,7 @@ title: Privilege escalation via named pipe impersonation
 id: RP2002
 author: '@Cyberok'
 creation_date: 2023/02/03
-modification_date: 2023/02/03
+modification_date: 2023/04/23
 linked_artifacts:
   - A1005
   - A1009
@@ -26,6 +26,7 @@ identification:
 containment:
   - RA_3601_lock_user_account
 eradication:
+  - RA_4603_reset_authentication_credentials 
   - RA_4601_revoke_authentication_credentials
 recovery:
   - RA_5601_unlock_locked_user_account

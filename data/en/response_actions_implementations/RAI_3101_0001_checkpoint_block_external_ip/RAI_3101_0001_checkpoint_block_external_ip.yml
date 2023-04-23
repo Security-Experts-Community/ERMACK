@@ -8,6 +8,8 @@ modification_date: 2022/10/27
 stage: containment
 tags:
   - block.ip
+linked_software:
+  - S1001  
 linked_artifacts:
   - A1007
 requirements:

@@ -9,7 +9,7 @@ tags:
   - attack.t1003.005
   - windows
 linked_response_playbooks:
-  - RP3002
+  - RP2003
 linked_artifacts:
   - A1005
   - A3002

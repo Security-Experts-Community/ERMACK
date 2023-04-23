@@ -1,14 +1,14 @@
 ﻿title: Remove Windows registry key with Powershell
 id: RAI4501_0001
-description: Removing a hive,key or value from windows registry through the SOLDR agent
-author: Alex@Cyberok
+description: Removing a hive, key or value from windows registry through the Powershell
+author: 'Alex@Cyberok'
 creation_date: 2023/03/22
 modification_date: 2023/03/22
-linked_software:
-  - S0002
 linked_response_actions: RA4501
 tags:
   - remove_registry
+linked_software:
+  - S0004  
 linked_artifacts:
   - A5002
 requirements:
@@ -17,6 +17,8 @@ requirements:
     - ID: S0004
       cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
     targets_of_action:
+    - ID: S0003
+      cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
 extended_description: |
   To delete the registry key using PowerShell, we can use the ***Remove-Item*** command. Remove-Item command removes the registry key from the path specified. For example, we have the registry key name NodeSoftware stored at the path HKLM, under the Software key.
   
@@ -32,7 +34,7 @@ extended_description: |
   PS HKCU:\Software\MyCompany\MyApp> Remove-ItemProperty -Path . -Name "Options" -Confirm
   ```
   The first command uses the ***Set-Location*** cmdlet to change the current location to the HKEY_CURRENT_USER drive (HKCU:) and the Software\MyCompany\MyApp subkey.
-
+  
   The second command uses ***Remove-ItemProperty*** to remove the "Options" registry value, and its data, from the "MyApp" subkey. Because Path is required, the command uses a dot (.) to indicate the current location. The Confirm parameter requests a user prompt before deleting the value.
   
   This command deletes the "NoOfEmployees" registry value, and its data, from the HKLM\Software\MyCompany registry key.

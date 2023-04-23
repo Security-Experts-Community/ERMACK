@@ -1,11 +1,11 @@
-﻿title: Deleting a file from Windows via PT XDR
-id: RAI4301_0001
-description: Removing a file from a Windows system through the PT XDR agent
-author: '@ERMACK_COMMUNITY'
+﻿title: Deleting a file from Windows via SOLDR
+id: RAI4301_0002
+description: Removing a file from a Windows system through the SOLDR agent
+author: 'Cyberok'
 creation_date: 2023/03/22
-modification_date: 2023/03/22
+modification_date: 2023/03/30
 linked_software:
-  - S0002
+  - S0005                
 linked_response_actions: RA4301
 tags:
   - delete_file
@@ -14,8 +14,8 @@ linked_artifacts:
 requirements:
   software:
     means_of_action:
-    - ID: S0002
-      cpe-fs: 'cpe:2.3:a:positive_technologies:pt_xdr:1.2:*:*:*:*:*:*:*'    
+    - ID: S0005
+      cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'
     targets_of_action:
 extended_description: |
   ## Basic parameters
@@ -50,14 +50,14 @@ extended_description: |
        },
        "start_time": "05.05.22 12:06:21",
        "actions": [
-           "esc_file_remover.PTEDR_ESC_Respond_Action_FileRemove_ByName"
+           "file_remover.SOLDR_Respond_Action_FileRemove_ByName"
        ],
        "event": "****"
     }
   ```
   Depending on the success of the action, event can take the following values:  
-  - `PTEDR_ESC_Respond_Event_FileRemove_Success`: The file was removed successfully  
-  - `PTEDR_ESC_Respond_Event_FileRemove_Fail`: An error occurred while deleting a file   
+  - `SOLDR_Respond_Event_FileRemove_Success`: The file was removed successfully  
+  - `SOLDR_Respond_Event_FileRemove_Fail`: An error occurred while deleting a file   
 
 
 
@@ -81,15 +81,15 @@ extended_description: |
        },
        "start_time": "05.05.22 12:06:21",
        "actions": [
-           "esc_file_remover.PTEDR_ESC_Respond_Action_FileRemove_ByHash"
+           "file_remover.SOLDR_Respond_Action_FileRemove_ByHash"
        ],
        "event": "****"
     }
   ```
   Depending on the success of the action, event can take the following values:  
-  - `PTEDR_ESC_Respond_Event_FileRemove_Pending`: hash was not found in cache but queued to pending hash  
-  - `PTEDR_ESC_Respond_Event_FileRemove_Success`: The file was removed successfully  
-  - `PTEDR_ESC_Respond_Event_FileRemove_Fail`: An error occurred while deleting a file  
+  - `SOLDR_Respond_Event_FileRemove_Pending`: hash was not found in cache but queued to pending hash  
+  - `SOLDR_Respond_Event_FileRemove_Success`: The file was removed successfully  
+  - `SOLDR_Respond_Event_FileRemove_Fail`: An error occurred while deleting a file  
 
   ### Restrictions
   1. Sysmon does not look at all files, but at those for which it is configured: exe files, special directories, etc. All this is tuned in the sysmon's config in the desired policy. Therefore, we can pass a hash of a file that sysmon will never see with the current config and we will never know about it.  

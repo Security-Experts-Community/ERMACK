@@ -2,7 +2,7 @@ title: RA_2504_list_registry_keys_created
 id: RA2504
 description: >
   List registry keys that have been created at a particular time in the past
-author: Alex@Cyberok
+author: 'Alex@Cyberok'
 creation_date: 2023/03/22
 stage: identification
 references:
@@ -10,6 +10,4 @@ references:
 requirements:
 workflow: |
   ## Working with registry keys
-  Because registry keys are items on PowerShell drives, working with them is very similar to working with files and folders. One critical difference is that every item on a registry-based PowerShell drive is a container, just like a folder on a file system drive. However, registry entries and their associated values are properties of the items, not distinct items.
-  
-  You can show all items directly within a registry key using Get-ChildItem. Add the optional Force parameter to display hidden or system items. For example, [powershell command]() displays the items directly within PowerShell drive HKCU.
+  You need to get information about all the created Windows registry nags for the required period of time.

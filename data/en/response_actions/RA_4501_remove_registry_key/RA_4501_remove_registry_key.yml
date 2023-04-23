@@ -2,7 +2,7 @@ title: RA_4501_remove_registry_key
 id: RA4501
 description: >
   Remove a registry key
-author: Alex@Cyberok
+author: 'Alex@Cyberok'
 creation_date: 2023/03/22
 stage: eradication
 references:
@@ -11,18 +11,4 @@ requirements:
   - none
 workflow: |
   ## Deleting Registry Keys and Values
-  To delete a registry key with a .reg file, put a hyphen (-) in front of the RegistryPath in the .reg file. 
-  
-  For example, to delete the Test subkey from the following registry key:
-
-  **HKEY_LOCAL_MACHINE\Software** put a hyphen in front of the following registry key in the .reg file:
-
-  **HKEY_LOCAL_MACHINE\Software\Test** The following example has a .reg file that can perform this task.
-
-  **[-HKEY_LOCAL_MACHINE\Software\Test]** To delete a registry value with a .reg file, put a hyphen (-) after the equals sign following the DataItemName in the .reg file. For example, to delete the TestValue registry value from the following registry key:
-
-  **HKEY_LOCAL_MACHINE\Software\Test** put a hyphen after the "TestValue"= in the .reg file. The following example has a .reg file that can perform this task.
-
-  **HKEY_LOCAL_MACHINE\Software\Test**
-  
-  "TestValue"=- To create the .reg file, use Regedit.exe to export the registry key that you want to delete, and then use Notepad to edit the .reg file and insert the hyphen.
+  You need to remove the registry keys that are the result of malicious activity.

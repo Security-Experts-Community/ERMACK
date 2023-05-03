@@ -8,4 +8,4 @@ stage: identification
 references:
   - Account Discovery, https://attack.mitre.org/techniques/T1087/
 workflow: |
-  Find on logs or on network traffick usernames which success enumed
+  Find on network traffick usernames which success enumed

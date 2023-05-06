@@ -1,0 +1,102 @@
+title: Lateral movement using SCM
+id: RP2006
+author: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/04/23
+linked_artifacts:
+  - A3002
+  - A5006
+  - A5012
+  - A5010
+  - A5011
+tags:
+  - status.stable|(https://example.com)
+  - severity.high
+  - TLP.amber
+  - pap.white|(https://example.com)
+  - windows
+preparation:
+  - RP_1001_operational_preparations
+identification:
+  - RA_2503_list_registry_keys_accessed
+  - RA_2501_list_registry_keys_modified
+  - RA_2401_list_processes_executed
+  - RA_2406_find_process_by_executable_content_pattern
+  - RA_2116_find_data_transferred_by_content_pattern
+  - RA_2102_list_hosts_communicated_with_internal_ip
+  - RP_1004_identify_means_of_attack
+  - RP_1002_identify_affected_systems_and_users
+  - RA_2999_examine_content
+  - RA_2003_put_compromised_accounts_on_monitoring
+containment:
+  - RA_3102_block_internal_ip_address
+  - RA_3111_block_data_transferring_by_content_pattern
+  - RA_3601_lock_user_account
+eradication:
+  - RA_4502_remove_service
+  - RA_4603_reset_authentication_credentials   
+  - RA_4601_revoke_authentication_credential
+recovery:
+  - RA_5601_unlock_locked_user_account
+  - RA_5101_unblock_blocked_ip
+lessons_learned:
+  - RA_6001_develop_incident_report
+  - RA_6002_conduct_lessons_learned_exercise
+
+description: Response playbook for detected lateral movement by abusing service configuration manager by changing the service binpath.
+extended_description: |
+   To realize the lateral movement tactic, adversaries will have to use tools that let them manipulate the host and system (it will be significantly more challenging to do without them). 
+   
+   Basically, defenders can identify use of sc.exe to create, modify, or start services on remote hosts. This could be indicative of adversary lateral movement but will be noisy if commonly done by admins.
+workflow: |
+    *For better triage and response actions result you need to identify and analyze artifacts from use case.*
+    
+    1. Identify means of attack. Both tools rely on ChangeServiceConfigA API call to change the Image Path of the service configuration :
+    ```
+    result = ChangeServiceConfig(serviceInfo.serviceHandle, SERVICE_NO_CHANGE, SERVICE_DEMAND_START, 0, options.payload, null, IntPtr.Zero, null, null, null, null);
+    ```
+    SharpNoPSExec will query all services and randomly pick one with a start type disable or manual, the current status stopped and with LocalSystem privileges to reuse them.
+    2. More likely, successful attack attempt will leave traces. Examine specific events to extract useful artifacts like: <br>
+        - [win event id 5145](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-5145) - **Relative Target Name, Share Name** fields
+        - [sysmon event id 13](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90013) - **TargetObject** field
+        - [sysmon event id 1](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90001) - **Process Name, Process Parent Name** fields
+    
+    3. Try to collect and analyse network logs with any network security monitoring tool. For example, used Zeek event logs to observe network events generated such an attack:
+    ```
+    DCERPC Protocol :
+      DCE-RPC Operation : QueryServiceConfigA followed by ChangeServiceConfigA
+      DCE-RPC Endpoint : svcctl
+    ```
+    4. Take any containment action depending on the situation and level of asset's criticality. <br> For example, if lateral movement is successful and it can be still used over infrastructure, it will be reasonable to limit access by IP or by DCE-RPC content pattern:
+        - block internal ip address
+        - block data transferring by content pattern
+    
+    5. Take any eradication action depending on the situation and level of asset's criticality. <br> For example, this attack assumes some service to be injected, so after defining the compromised service it's need to be removed and replaced with original one:
+        - Remove service
+        
+    6. Take recovery action depending on previous containment and eradication actions:
+        - Recover modification
+        
+    7. Report incident, remove security breaches, conduct lessons learned exercises. 
+    
+    ## Response discovery mapping
+    
+    | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                   |
+    | ------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+    | [File](/artifacts/A_3002_file/entity/)                  | [Identify means of attack]() <br> *Look for well-known tool observables* | Lateral movement tool |
+    | [RPC Network Traffic](/artifacts/A_5011_RPC_network_traffic/entity/)            | [List hosts communicated with internal ip]() <br>[Find data transferred by content pattern]() <br>[Identify affected systems and users]() <br>*Look for attacker's destination host* | Compromised host |
+    | [Service Application](/artifacts/A_5010_service_application/entity/)            | [Examine content]() <br>[Remove service]() <br>*Look for injected service, examine changing BinPath services* | Lateral movement artifact |
+    | [Credentials](/artifacts/A_5006_credential/entity)                              | [Reset password]() <br> *Find compromised credentials from lateral movent artifacts and reset them* | Compromised/Clean password |
+    
+    *P.S. Artifacts from "Attack Prerequisites" section ( in this case : [Host]() and [Remote Procedure Call]() ) should be used in [Operational Preparations]() and as incoming arguments for other response actions, for example*
+    <details>
+    <summary><b>response action: find process by executable content pattern</b></summary>
+    ```
+    find_process_by_executable_content_pattern (enabled=True, host, process_content)
+    ```
+    </details>
+    
+    ## Response mindmap diagram
+    ![Mindmap](06.svg)
+    
+    

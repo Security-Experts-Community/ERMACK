@@ -2,13 +2,13 @@ title: RA_4501_remove_registry_key
 id: RA4501
 description: >
   Remove a registry key
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+author: 'Alex@Cyberok'
+creation_date: 2023/03/22
 stage: eradication
 references:
-  - https://example.com
+  - https://support.microsoft.com/en-us/topic/how-to-add-modify-or-delete-registry-subkeys-and-values-by-using-a-reg-file-9c7f37cf-a5e9-e1cd-c4fa-2a26218a1a23#:~:text=Deleting%20Registry%20Keys%20and%20Values,RegistryPath%20in%20the%20.reg%20file.
 requirements:
-  - DN_zeek_conn_log # placeholder
+  - none
 workflow: |
-  Description of the workflow for single Response Action in markdown format.
-  Here newlines will be saved.
+  ## Deleting Registry Keys and Values
+  You need to remove the registry keys that are the result of malicious activity.

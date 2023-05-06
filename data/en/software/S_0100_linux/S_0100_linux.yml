@@ -8,5 +8,6 @@ references:
 capabilities:
   - AuthenticationLogsAnalysis
   - NetworkSessionLogging
+  - CommandExecution
 extended_description: |
   Any Linux distribution with standard command line utilities

@@ -1,0 +1,87 @@
+title: Dumping mscash
+id: RP2003
+author: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/04/23
+linked_artifacts:
+  - A1005
+  - A3002
+  - A5002
+  - A5005
+  - A5008
+tags:
+  - status.stable|(https://example.com)
+  - severity.high
+  - tlp.amber
+  - pap.white|(https://example.com)
+  - windows
+preparation:
+  - RP_1001_operational_preparations
+identification:
+  - RA_2301_list_files_created
+  - RA_2302_list_files_modified
+  - RA_2304_list_files_downloaded
+  - RA_2401_list_processes_executed
+  - RA_2406_find_process_by_executable_content_pattern
+  - RA_2503_list_registry_keys_accessed
+  - RP_1003_identify_compromised_data
+  - RP_1004_identify_means_of_attack
+containment:
+  - RA_3405_block_process_by_executable_content_pattern
+  - RA_3601_lock_user_account
+eradication:
+  - RA_4603_reset_authentication_credentials 
+  - RA_4601_revoke_authentication_credentials
+recovery:
+  - RA_5601_unlock_locked_user_account
+lessons_learned:
+  - RA_6001_develop_incident_report
+  - RA_6002_conduct_lessons_learned_exercise
+
+description: Response playbook for detected dumping MScash activity.
+extended_description: |
+   Adversaries may attempt to dump credentials to obtain account login information in the form of a hash. These hashes can be cracked or leveraged for lateral movement. 
+   
+   These stored credentials do not expire, but they **cannot** be used for pass-the-hash attacks, so attackers must crack the password hash to recover the plaintext passwords
+workflow: |
+    *For better triage and response actions result you need to identify and analyze artifacts from use case.*
+    
+    1. Identify detected IOCs (programms, tools, commands) used in credential dumping, it helps to find specific artifacts. List created/modified/downloaded file and search processes executed with "specific" flags. For example:
+    
+        - processes started with processes args:(ShadowHashData or "-dump")
+        - processes accessed *hklm\sam hklm\system hklm\security* registry hives
+        - processes with well-known flags (*privilege::debug, token::elevate, lsadump::cache*)
+    
+    2. As said this hash cannot be used in PTH attack, so more likely file with credentials should be created and dropped to attackers machine for further cracking. List created/modified/downloaded file to identify source of attack (ip, host, etc...).
+    3. Take any containment action depending on the situation and level of asset's criticality. For example if privilege escalation suspected to be succesfull, initiate procedure to block compromised users or use block process action in automatic scenarios:
+        - Block process by executable content pattern 
+        - Lock user account
+    4. Take any eradication action depending on the situation and level of asset's criticality. For example credential can be used as arguments to malicous commands:
+        - Revoke authentication credentials
+    5. Take recovery action depending on previous containment and eradication actions:
+        - Unblock blocked user (if needed)
+        - Change user's credential
+    6. Report incident, remove security breaches, conduct lessons learned exercises. 
+    
+    ## Response discovery mapping
+    
+    | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                    |
+    | ------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+    | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | [List registry key accessed]() <br> *Look for reg save commands*                | Credential dump attempt |
+    | [Process](/artifacts/A_4001_process/entity) | [Find process by executable content pattern]() <br>*Search possible tool's artifacts to define fact of credential dump* | Identified credential dump tool |
+    | [Encrypted Credential](A_5005_encrypted_credential/entity/) | [Examine content]() <br>*Define which user credentials were dumped, it depends on how much users credential were cached at the compomised host.* | List potentially compromised users |
+    | [Password](/artifacts/A_5008_password/entity/) | [Revoke authentication credentials]() <br>[Reset password]() <br>*Depends on needed context.* | Compomised/New password |
+    
+    
+    *P.S. Artifacts from "Attack Prerequisites" section ( in this case : [Host]() and [File]() ) should be used in [Operational Preparations]() and as incoming arguments for other response actions, for example*
+    <details>
+    <summary><b>response action: list processes executed</b></summary>
+    ```
+    List_processes_executed (enabled=True, host)
+    ```
+    </details>
+    
+    ## Response mindmap diagram
+    ![Mindmap](03.svg)
+    
+    

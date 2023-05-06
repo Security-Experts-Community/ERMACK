@@ -1,0 +1,13 @@
+title: Pipe
+id: A5003
+description: This artifact describes pipeline entity
+author: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Pipe/
+mapping:
+  - d3f:Pipe
+extended_description: |
+  Unix-like computer operating systems, a pipeline is a mechanism for inter-process communication using message passing. In the strictest sense, a pipe is a single segment of a pipeline, allowing one process to pass information forward to another. Network pipes allow processes on different hosts to interact.
+  Named Pipe - mechanisms that allow inter-process communication locally or over the network. A named pipe is usually found as a file and processes attach to it

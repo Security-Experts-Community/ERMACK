@@ -1,0 +1,12 @@
+title: Service Application
+id: A5010
+description: This artifact describes service entity
+author: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:ServiceApplication/
+mapping:
+  - d3f:ServiceApplication
+extended_description: |
+  An application that provides a set of software functionalities so that multiple clients who can reuse the functionality, provided they are authorized for use of the service.

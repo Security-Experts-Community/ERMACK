@@ -1,0 +1,12 @@
+title: Authentication service
+id: A1010
+description: This artifact describes authentication service
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+modification_date: 2023/03/13
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:AuthenticationService/
+mapping:
+  - d3f:AuthenticationService
+extended_description: |
+  Authentication service is a service, which provides an authentication mechanism

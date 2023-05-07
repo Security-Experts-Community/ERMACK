@@ -17,7 +17,7 @@ requirements:
   software:
     means_of_action:
     - ID: S0002
-      cpe-fs: 'cpe:2.3:a:positive_technologies:pt_xdr:1.*:*:*:*:*:*:*:*'    
+      cpe-fs: "cpe:2.3:a:positive_technologies:pt_xdr:1.*:*:*:*:*:*:*:*"
     targets_of_action:
     - ID: S0003
       cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'

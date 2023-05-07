@@ -4,18 +4,19 @@ linked_response_actions: RA2003
 description: This response action is intended to obtain information about the activity of compromised accounts
 author: '@ERMACK_COMMUNITY'
 creation_date: 2022/10/27
-modification_date: 2022/10/27
-stage: identification
+modification_date: 2023/04/23
 tags:
   - monitor.user
+linked_software:
+  - S0001  
 linked_artifacts:
   - A1001
 requirements:
   software:
     means_of_action:
     - ID: S0001
-      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
-    targets_of_action:
+      cpe-fs: 'cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*'
+    targets_of_action:  
 extended_description: |
   This response action is intended to obtain information about the activity of compromised accounts
 

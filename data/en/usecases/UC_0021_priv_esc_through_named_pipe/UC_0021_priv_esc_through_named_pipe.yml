@@ -1,0 +1,77 @@
+title: 'Privilege escalation via named pipe impersonation'
+id: UC0021
+author: '@Cyberok'
+creation_date: 2023/02/28
+modification_date: 2023/02/28
+severity: M
+tags:
+  - privilege_escalation
+  - attack.t1134
+  - windows
+linked_response_playbooks:
+  - RP2002
+linked_artifacts:
+  - A1005
+  - A1009
+  - A5003
+  - A5004
+description: Privilege escalation attempt via named pipe impersonation, an adversary may abuse this technique by utilizing a framework such Metasploit’s meterpreter getsystem command.
+extended_description: |
+    
+    A [pipe](/artifacts/A_5003_windows_pipe/entity) is a block of shared memory that processes can use for communication and data exchange.
+    Named Pipes is a Windows mechanism that enables two unrelated processes to exchange data between themselves, even if the processes are located on two different networks. It's very similar to client/server architecture as notions such as a named pipe server and a named pipe client exist.
+     
+    An adversary may abuse Privilege escalation attempt via named pipe impersonation by utilizing a framework such Metasploit’s meterpreter getsystem command. Attack mechanism is described in details below.
+
+    ## Attack mapping
+    
+    | ARTIFACT                                                                        | OBJECT                   | DESCRIPTION                                                                               |
+    |---------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------|
+    |  **Attack Prerequisites**                                                       |
+    | [Host](/artifacts/A_1005_host/entity)                                       | Compromised host           | A host to which an attacker has a primal unprivileged access      |
+    | [Privileged User Account](/artifacts/A_1009_privileged_user_account/entity) | Privileged user | Any account in domain found on any previous stages of attack, which has "domain administrator" privileges or any other "special rights" |
+    | **Side Observables**                                                  |
+    | [Pipe](/artifacts/A_5003_windows_pipe/entity)                               | Named pipe                 | A named pipe server can open a named pipe with some predefined name and then a named pipe client can connect to that pipe via the known name |
+    | [Access Token](/artifacts/A_5004_access_token/entity)                                       | Privileged user's authentication credential | These credentials used to obtain privileges of domain administrator |
+    
+
+    ## Attack results
+    
+    Get an [access token](/artifacts/A_5004_access_token/entity) of [privileged user](/artifacts/A_1001_windows_domain_account/entity) to spawn any [processes](/artifacts/A_4001_process/entity).
+    
+    | RESOURCE                                                              | DESCRIPTION                                                                               |
+    |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+    | **Attack Prerequisites**                                              |                                                                                           |
+    | [Access]()                                                            | Compromised host with "unprivileged domain" access, attacker may be local administrator for example |
+    | **Result Consequences**                                               |                                                                                           |
+    | [Privileged access]()                                                 | Possibility to execute action with privileged access, for example "domain administrator" shell |
+
+    ## Attack progress
+    1) To successfully execute the attack an attacker needs to perform communication between "pipe server" and "pipe client".
+    
+    Below image shows the named pipe server and named pipe client working as expected
+    ![Working_example](13.JPG)
+    
+    Checking how the process maintains a handle to our [named pipe](/artifacts/A_5003_windows_pipe/entity) *mantvydas-first-pipe*
+    ![Pipe_serv](11.JPG)
+    
+    Similary, we can see the client having an open handle to [the named pipe](/artifacts/A_5003_windows_pipe/entity "mantvydas-first-pipe")
+    ![Pipe_client](12.JPG)
+    
+    2) It is possible for the named pipe server to impersonate the named pipe client's security context by leveraging a ImpersonateNamedPipeClient API call which in turn changes the named pipe server's [current thread's token](/artifacts/A_5004_access_token/entity "domain administrator's access token") with that of the named pipe client's token.
+    
+    Running the server and connecting to it with the client that is running under administrator@alpha.local security context, we can see that the main thread of the named server pipe assumed the token of the named pipe client - ALPHA\administrator, although the PipeServer.exe itself is running under ALPHA\aegorov security context. 
+    
+    ## Possible usage
+    
+    1) This technique allows to gain privileged shell. 
+    ![POC](14.JPG)
+    
+    ## Attack diagram
+    ![Diagram](37.svg)
+    
+    ## References 
+    
+    [Interprocess Communications](https://learn.microsoft.com/en-us/windows/win32/ipc/interprocess-communications)
+    
+    

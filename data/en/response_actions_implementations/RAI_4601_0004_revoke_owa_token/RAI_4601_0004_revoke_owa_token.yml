@@ -1,13 +1,16 @@
 title: Revocation of the OWA cookie
-id: RA4601_0004
+id: RAI4601_0004
 linked_response_actions: RA4601
 description: >
   Revocation of the OWA cookie
 author: '@ERMACK_COMMUNITY'
 creation_date: 2022/10/27
-modification_date: 2022/10/27
+modification_date: 2023/03/30
 tags:
   - revoke.token
+linked_software:
+  - S3001
+  - S0004  
 linked_artifacts:
   - A1006
 requirements:

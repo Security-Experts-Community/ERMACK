@@ -1,0 +1,13 @@
+title: Privileged User Account
+id: A1009
+description: This artifact describes Privileged User Account entity
+author: 'Alex@Cyberok'
+creation_date: 2023/03/21
+modification_date: 2023/03/22
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:PrivilegedUserAccount/
+  - https://www.ssh.com/iam/user/privileged-account
+mapping: 
+  - d3f:PrivilegedUserAccount
+extended_description: |
+  A privileged account is a user account that has more privileges than ordinary users. Privileged accounts might, for example, be able to install or remove software, upgrade the operating system, or modify system or application configurations. They might also have access to files that are not normally accessible to standard users. Typical examples are root and administrator accounts. But there also service accounts, system accounts, etc. Privileged accounts are especially powerful, and should be monitored especially closely.

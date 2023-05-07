@@ -1,0 +1,85 @@
+title: 'Windows Logon Helper Persistense'
+id: UC0051
+author: 'Alex@Cyberok'
+creation_date: 2023/02/28
+modification_date: 2023/02/28
+severity: M
+tags:
+  - persistence
+  - attack.t1547.004
+  - windows
+linked_response_playbooks:
+  - RP2008
+linked_artifacts:
+  - A1005
+  - A3002
+  - A5002
+description: Boot or Logon Autostart Execution - Winlogon Helper DLL.
+extended_description: |
+    
+    Adversaries may abuse features of [Winlogon]() to execute [DLLs and/or executables]() when a [user]() logs in. [Winlogon.exe]() is a Windows component responsible for actions at logon/logoff as well as the secure attention sequence (SAS) triggered by Ctrl-Alt-Delete.
+    
+    [Registry entries]() in 
+    ```
+    HKLM\Software[\Wow6432Node\]\Microsoft\Windows NT\CurrentVersion\Winlogon\
+    HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\
+    ``` 
+    are used to manage additional helper programs and functionalities that support Winlogon.
+    
+    ## Attack mapping
+    
+    | ARTIFACT                                                                        | OBJECT                   | DESCRIPTION                                                                               |
+    |---------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------|
+    |  **Attack Prerequisites**                                                       |
+    | [Host](/artifacts/A_1005_host/entity)                                           | Compromised host         | A host to which an attacker has privileged access                                         |
+    | [File](/artifacts/A_3002_file/entity)                                           | File with malicious code   | Code execution to gain persistense                                 |
+    | **Side Observables**                                                            |
+    | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | Userinit subkey          | Registry subkeys have been known to be possibly vulnerable to abuse|
+    
+    
+    ## Attack results
+    
+    Adversaries may take advantage of these features to repeatedly execute [malicious code]() and establish [persistence](). 
+    
+    | RESOURCE                                                              | DESCRIPTION                                                                               |
+    |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+    | **Attack Prerequisites**                                              |                                                                                           |
+    | [Privileged Access]()                                                 | Compromised host with privileged access |
+    | **Result Consequences**                                               |                                                                                           |
+    | [Remote Code Execution]()                                             | Attacker gets an ability to execute commands on the remote host |
+    | [Persistense]()                                                       | Attacker can use reverse shell as a payload to establish access to the host |
+
+    ## Attack progress
+    1) Commonly abused Winlogon registry keys and value for persistence are:
+    ```
+    HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit
+    HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify 
+    HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\shell
+    ```
+    
+    HKCU can also be replaced with HKLM for a system wide persistence, if you have [admin privileges]().
+    
+    2) Let's run through the techqnique abusing the userinit subkey.
+    Let's see what's currently held at the userinit:
+    ```
+    reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v userinit
+    ```
+    Let's now add an additional item shell.cmd (a simple reverse netcat shell) to the list that we want to be launched when the compromised machine reboots:
+    ```
+    reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v userinit /d C:\Windows\system32\userinit.exe,C:\tools\shell.cmd /t reg_sz /f
+    ```
+    ![Pwsh](23.JPG)
+    
+    ## Possible usage
+    
+    ### Reverse shell
+    1) Rebooting the compromised system executes the c:\tools\shell.cmd, which in turn establishes a reverse shell to the attacking system:
+    ![Pwsh](24.JPG)
+    
+    ## Attack diagram
+    ![Diagram](34.svg)
+    
+    ## References 
+    [Windows Logon Helper](https://www.ired.team/offensive-security/persistence/windows-logon-helper)
+    
+    

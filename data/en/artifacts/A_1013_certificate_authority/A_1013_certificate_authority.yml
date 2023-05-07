@@ -1,0 +1,11 @@
+title: Certificate authority
+id: A1013
+description: Certificate authority is an entity that stores, signs and issues certificates
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/04
+modification_date: 2023/05/04
+references:
+  - https://en.wikipedia.org/wiki/Certificate_authority
+mapping:
+extended_description: |
+  Certificates authority is a part of Public key infrastructure (PKI). Certificate authority is an entity that stores, signs and issues certificates

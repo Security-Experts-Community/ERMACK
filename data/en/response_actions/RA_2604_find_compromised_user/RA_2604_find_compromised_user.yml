@@ -1,0 +1,8 @@
+title: RA_2604_find_compromised_user
+id: RA2604
+description: Find compromised user
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/07
+stage: identification
+workflow: |
+  Find user with suspicious activity. Check it on logs or on network traffic

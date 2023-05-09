@@ -1,0 +1,10 @@
+title: Directory Service object attribute
+id: A1015
+description: This artifact describes Directory Service object attribute
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/04
+modification_date: 2023/05/04
+references:
+mapping:
+extended_description: |
+  Directory Service object attribute is a attribute of the certain object. 

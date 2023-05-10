@@ -1,0 +1,10 @@
+title: Kerberos Ticket Granting Tickets
+id: A1016
+description: This artifact describes Kerberos Ticket Granting Tickets
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/10
+modification_date: 2023/05/10
+references: https://dbpedia.org/page/Ticket_Granting_Ticket
+mapping: d3f:KerberosTicketGrantingTicket
+extended_description: |
+  In Kerberos authentication, a Ticket Granting Ticket (TGT) is a user authentication token issued by the Key Distribution Center (KDC) that is used to request access tokens from the Ticket Granting Service (TGS) for specific resources/systems joined to the domain.

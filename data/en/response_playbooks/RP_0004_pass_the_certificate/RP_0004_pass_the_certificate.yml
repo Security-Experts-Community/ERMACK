@@ -40,7 +40,7 @@ workflow: |
     2. On containment stage, when you found an <[account]>(A_1001) that was attacked lock this account and go to <[Compromised user]> response playbook
     3. On containment stage, when you found the <[host]>(A_1005) from which attack occur go to <[Compromised host]> response playbook
     4. On eradication stage, if certificate has been stolen (this means certificate authority known this certificate) revoke that certificate
-    5. On recovery stage, unlock previously locked account
+    5. On recovery stage, unlock previously locked account and reissue revoked previously certificate
     6. Save all <[timestamps]> of implemented actions in Incident Report draft on the fly, it will save a lot of time
 
     ## Response discovery mapping

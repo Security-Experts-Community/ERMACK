@@ -28,6 +28,7 @@ eradication:
   - RA_4605_revoke_certificate
 recovery:
   - RA_5601_unlock_locked_user_account
+  - RA_5602_reissue_revoked_certificate
 lessons_learned:
   - RA_6001_develop_incident_report
   - RA_6002_conduct_lessons_learned_exercise

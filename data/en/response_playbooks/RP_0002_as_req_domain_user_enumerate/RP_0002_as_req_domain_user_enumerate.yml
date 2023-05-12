@@ -37,12 +37,7 @@ lessons_learned:
   - RA_6001_develop_incident_report
   - RA_6002_conduct_lessons_learned_exercise
 extended_description: |
-  | ARTIFACT                                | RESPONSE ACTION                                                                                                                                                                                     | RESPONSE ACTION OBSERVABLES                                                                                                 |
-  | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :--------------------------------------------------------------------------------------------------------------------------|
-  | <[Domain account]>(A_1001) username     | Find the usernames to which the Authentication service returned KDC_ERR_PREAUTH_REQUIRED message. Check that these accounts have not been compromised                                                                                                 | Enumed usernames                           |
-  | <[Host]>(A_1005)                        | Look on hosts with suspicious activity (attack tools to carry out an attack or suspicious external network connections) and go to <[Compromised Host]> response playbook  | Host from which the attack is being carried out (potentially)                                            |
-  | <[IP Address]>(A_1007)                  | Look on IP Address with suspicious network activity (KRB_AS_REQ messages without pre-authentication and with atypical usernames for this IP Address or non-existent username) and go to <[Compromised Host]> response playbook | IP address from which the attack is being carried out (potentially)    |
-  | <[Kerberos network traffic]>(A_1009)    | Look on suspiciously large number KRB_AS_REQ messages without pre-authentication and KDC_ERR_C_PRINCIPAL_UNKNOWN messages. Spot host from with sends this message and go to <[Compromised Host]>    | IP address from which the attack is being carried out (potentially)                               |
+  Attackers may attempt to enumerate domain users using this attack. Successfully listed users are likely to be attacked, such as password spraying or other
 
 workflow: |
     1. On identification stage need find <[host or hosts]>(A_1005) from which the attack occur. This is can be hosts with suspicious external network connections or attackers footprints (such as attack tools). This is can be <[IP Addreses]>(A_1007) with many KRB_AS_REQ messages without pre-authentication and with atypical usernames for this IP Address or non-existent username
@@ -50,3 +45,12 @@ workflow: |
     3. After the successfully enumerated users have been found, put this accounts on monitoring
     4. After the compromised hosts have been found, go to <[Compromised Host]> Response Playbook
     5. Save all <[timestamps]> of implemented actions in Incident Report draft on the fly, it will save a lot of time
+
+    ## Response discovery mapping
+
+    | ARTIFACT                                | RESPONSE ACTION                                                                                                                                                                                     | RESPONSE ACTION OBSERVABLES                                                                                                 |
+    | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :--------------------------------------------------------------------------------------------------------------------------|
+    | <[Domain account]>(A_1001) username     | Find the usernames to which the Authentication service returned KDC_ERR_PREAUTH_REQUIRED message. Check that these accounts have not been compromised                                                                                                 | Enumed usernames                           |
+    | <[Host]>(A_1005)                        | Look on hosts with suspicious activity (attack tools to carry out an attack or suspicious external network connections) and go to <[Compromised Host]> response playbook  | Host from which the attack is being carried out (potentially)                                            |
+    | <[IP Address]>(A_1007)                  | Look on IP Address with suspicious network activity (KRB_AS_REQ messages without pre-authentication and with atypical usernames for this IP Address or non-existent username) and go to <[Compromised Host]> response playbook | IP address from which the attack is being carried out (potentially)    |
+    | <[Kerberos network traffic]>(A_1009)    | Look on suspiciously large number KRB_AS_REQ messages without pre-authentication and KDC_ERR_C_PRINCIPAL_UNKNOWN messages. Spot host from with sends this message and go to <[Compromised Host]>    | IP address from which the attack is being carried out (potentially)                               |

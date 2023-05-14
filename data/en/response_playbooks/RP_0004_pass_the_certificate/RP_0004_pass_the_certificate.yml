@@ -3,17 +3,15 @@ description: Response playbook for pass the certificate attack
 id: RP0004
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/11
-modification_date: 2023/05/11
+modification_date: 2023/05/14
 linked_artifacts:
   - A1008
   - A1001 
   - A1005
   - A1007
 tags:
-  - status.buggy|(https://example.com)
-  - severity.medium
-  - tlp.amber
-  - pap.white|(https://example.com)
+  - status.stable
+  - severity.high
 preparation:
   - RP_1001_operational_preparations
   - RA_1602_get_ability_to_lock_user_account

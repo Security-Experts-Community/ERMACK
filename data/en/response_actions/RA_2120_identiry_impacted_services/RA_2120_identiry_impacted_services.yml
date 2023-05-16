@@ -1,9 +1,0 @@
-title: Identiry impacted services
-id: RA2120
-description: >
-  Identify the IT services being impacted
-author: "@ermack_community"
-creation_date: 2019/01/31
-stage: identification
-workflow: |
-  Identify services by IP and DNS, their owners and impact.

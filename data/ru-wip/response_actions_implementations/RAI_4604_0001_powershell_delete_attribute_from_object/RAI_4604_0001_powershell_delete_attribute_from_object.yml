@@ -1,0 +1,31 @@
+title: Powershell clear attribute from object
+id: RAI4604_0001
+description: Clearing a attribute from object through the Powershell
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/07
+modification_date: 2023/05/07
+linked_response_actions: RA4604
+tags:
+linked_software:
+  - S0004
+linked_artifacts:
+  - A1015
+requirements:
+  software:
+    means_of_action:
+    - ID: S0004
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S6001
+      cpe-fs: 'cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*'
+extended_description: |
+  To clear the attribute from object, we can use ***Set-ADObject*** command from ***ActiveDirectory*** module.
+
+  For example, we have a user ermac for whom we want to clear the msDS-KeyCredentialLink attribute.
+
+  To clear the attribute use the bellow command.
+  ```
+  Set-ADObject -Identity 'CN=ermack,CN=Users,DC=contoso,DC=local' -Clear 'msDS-KeyCredentialLink'
+  ```
+
+  [Set-ADObject](https://learn.microsoft.com/en-us/powershell/module/activedirectory/set-adobject?view=windowsserver2019-ps)

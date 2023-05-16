@@ -29,7 +29,6 @@ response_actions_implementations_dir: 'response_actions_implementations'
 default_infrastructure_profile: '76f22b30-922b-4b31-94fc-c7ddd80fe67'
 
 ## Localization settings
-# default_localization_lang: 'ru'
 default_localization_lang: 'en'
 
 ## Mappings part

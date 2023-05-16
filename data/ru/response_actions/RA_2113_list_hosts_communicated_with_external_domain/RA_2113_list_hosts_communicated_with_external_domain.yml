@@ -1,9 +1,9 @@
 title: RA_2113_list_hosts_communicated_with_external_domain
 id: RA2113
 description: >
-  List hosts communicated with an external domain
-author: '@atc_project'
-creation_date: 2020/05/06
+  Найти все внутренние хосты, с которых были обращения к внешнему подозрительному домену
+author: enikulina
+creation_date: 2023/02/06
 stage: identification
 requirements:
   - DN_zeek_conn_log
@@ -13,4 +13,8 @@ requirements:
   - DN_proxy_log
   - DN_network_flow_log
 workflow: |
-  List hosts communicated with an external domain using the most efficient way.
+  Найти все внутренние хосты, с которых были обращения к внешнему подозрительному домену.
+ 
+  Внимание:
+  Для хостов, на которых были обнаружены обращения, необходимо запустить сценарии реагирования RP9001. Подозрительное сетевое соединение.
+

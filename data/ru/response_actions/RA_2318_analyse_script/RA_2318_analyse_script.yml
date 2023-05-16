@@ -1,14 +1,27 @@
 title: RA_2318_analyse_script
 id: RA2318
 description: >
-  Analyse a script file (i.e. Python, PowerShell, Bash src etc)
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Проанализировать запускаемые скрипты (Powershell, Batch, VBSript, Bash, Python и т.д.)
+author: enikulina
+creation_date: 2023/02/06
 stage: identification
 references:
-  - https://example.com
-linked_analytics:
-  - DN_zeek_conn_log # placeholder
+  - https://www.base64decode.org/
+  - https://www.virustotal.com
 workflow: |
-  Description of the workflow for single Response Action in markdown format.
-  Here newlines will be saved.
+  Извлечь запускаемые скрипты доступным способом и проанализировать их:
+  
+  - При наличии обфускации и закодированных команд выполнить деобфускацию и декодирование (например, для [b64] https://www.base64decode.org/).
+  - Выявить возможные вредоносные действия, инициируемые командами в теле скрипта:
+           - загрузка внешнего содержимого
+           - манипуляции с файлами и папками (в этом случае необходимо получить сам файл и его хеш, после чего перейти к анализу в рамках соответствующих RA)
+           - создание запланированной задачи
+           - редактирование реестра
+           - создание файлов в автозагрузке
+           - т.д.
+  - Извлечь из тела скрипта все артефакты для дальнейшего расследования и реагирования:
+    - URL/IP-адреса
+    - имена учетных записей/пароли
+    - имена файлов/папок
+    - ключи реестра
+    - т.д.

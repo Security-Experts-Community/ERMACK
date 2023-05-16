@@ -1,14 +1,9 @@
 title: RA_3601_lock_user_account
 id: RA3601
 description: >
-  Lock an user account
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Заблокировать учетную запись пользователя
+author: enikulina
+creation_date: 2023/02/03
 stage: containment
-references:
-  - https://example.com
-requirements:
-  - DN_zeek_conn_log # placeholder
 workflow: |
-  Description of the workflow for single Response Action in markdown format.
-  Here newlines will be saved.
+  Заблокировать учетную запись пользователя с разрывом всех активных сессий и обязательной сменой пароля.

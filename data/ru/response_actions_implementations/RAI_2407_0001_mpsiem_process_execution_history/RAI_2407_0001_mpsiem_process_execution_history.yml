@@ -1,0 +1,80 @@
+title: Проверка истории запусков процесса по ключевым полям в MP SIEM
+id: RAI2407_0001
+linked_response_actions: RA2407
+description: Проверка истории запусков процесса по ключевым полям в MP SIEM
+author: enikulina
+creation_date: 2022/02/08
+modification_date: 2022/02/08
+linked_software:
+  - S0001
+tags:
+  - process.created
+linked_artifacts:
+  - A1001
+  - A4001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0001
+      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
+    targets_of_action:
+extended_description: |
+  Данное действие реагирования предназначено для ретро-поиска (проверки истории) запусков процесса с помощью MP SIEM
+  ## Требования к целевой системе
+  Отсутствуют
+
+  ## Требования к средствам воздействия
+  1) MP SIEM версии 23 и выше
+  2) Настроенное логирование в инфраструктуре
+  3) Настроенный сбор событий в MP SIEM
+
+  ## Ожидаемый результат воздействия
+  Получение информации о запусках целевого процесса с ключевыми полями
+
+  ## Реализации
+  ### PDQL: Имя исполняемого файла процесса\Хеш исполняемого файла процесса, имя учетной записи пользователя, путь к исполняемому файлу процесса
+
+  #### Комментарии
+  Запрос всех событий запуска процесса по указанному пути, в которых участвовали указанная учетная запись
+
+  #### Параметры
+  $NAME - имя исполняемого файла, $HASH - хэш исполняемого файла, $USER - имя учетной записи, $PATH - путь к исполняемому файлу процесса
+
+  #### Запрос
+
+  <details>
+  <summary><b>PDQL Запрос</b></summary>
+
+  ```python linenums="1"
+  (object.name = "$NAME" AND object.path = "$PATH" AND subject.name = "$USER") -> за период не менее 30 дней
+
+  (object.process.name = "$NAME" AND object.process.path = "$PATH" AND subject.account.name = "$USER") -> за период не менее 30 дней
+
+  (object.hash = "$HASH" AND object.path = "$PATH" AND subject.name = "$USER") -> за период не менее 30 дней
+
+  (object.process.hash = "$HASH" AND object.process.path = "$PATH" AND subject.account.name = "$USER") -> за период не менее 30 дней
+
+  ```
+  </details>
+
+  #### Пример использования
+
+  #### Результат
+
+  <details>
+  <summary><b>Результат</b></summary>
+
+  ```json linenums="1"
+  ```
+  </details>
+
+  #### Ограничения
+
+  ## Дополнительные сведения
+  ### Метки
+  ### Артефакты
+  Process
+  Windows Domain Account
+
+  ### Ссылки на внешние ресурсы
+  ### Соответствие классификациям

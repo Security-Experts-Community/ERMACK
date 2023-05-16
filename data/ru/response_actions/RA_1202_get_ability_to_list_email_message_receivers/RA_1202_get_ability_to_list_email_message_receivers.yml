@@ -1,13 +1,13 @@
 title: RA_1202_get_ability_to_list_email_message_receivers
 id: RA1202
 description: >
-  Make sure you have the ability to list receivers of a particular email message
-author: '@atc_project'
-creation_date: 2020/05/06
+  Убедиться, что у вас есть возможность найти всех потенциальных получателей письма электронной почты
+author: enikulina
+creation_date: 2023/02/02
 stage: preparation
 references:
   - https://docs.microsoft.com/en-us/powershell/module/exchange/mail-flow/get-messagetrackinglog?view=exchange-ps
 requirements:
   - MS_email_server
 workflow: |
-  Make sure you have the ability to list receivers of a particular email message using the Email Server's functionality.
+ Убедиться, что у вас есть возможность найти всех потенциальных получателей письма электронной почты с помощью встроенных функций почтового сервера либо специализированных СЗИ.

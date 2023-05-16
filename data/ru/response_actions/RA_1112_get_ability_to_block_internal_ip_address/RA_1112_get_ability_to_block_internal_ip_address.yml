@@ -1,12 +1,10 @@
 title: RA_1112_get_ability_to_block_internal_ip_address
 id: RA1112
 description: >
-  Make sure you can block an internal IP address from being accessed by corporate assets
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Убедитесь, что у вас есть возможность изолировать внутренний узел от корпоративной и внешней сетей
+author: enikulina
+creation_date: 2023/02/02
 stage: preparation
-references:
-  - https://example.com
 requirements:
   - MS_intranet_firewall
   - MS_intranet_proxy
@@ -14,5 +12,4 @@ requirements:
   - MS_intranet_ngfw
   - MS_host_firewall
 workflow: |
-  Description of the workflow for the Response Action in markdown format.
-  Here newlines will be saved.
+  Убедитесь, что у вас есть возможность изолировать внутренний узел от корпоративной и внешней сетей.

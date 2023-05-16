@@ -1,9 +1,9 @@
 title: RA_1115_get_ability_to_block_external_url
 id: RA1115
 description: >
-  Make sure you have the ability to block an external URL from being accessed by corporate assets
-author: '@atc_project'
-creation_date: 2020/05/06
+  Убедиться, что у вас есть возможность заблокировать внешний URL для доступа из корпоративной сети
+author: enikulina
+creation_date: 2023/05/06
 stage: preparation
 references:
   - https://wiki.squid-cache.org/SquidFaq/SquidAcl
@@ -12,8 +12,5 @@ requirements:
   - MS_border_ips
   - MS_border_ngfw
 workflow: |
-  Make sure you have the ability to create a policy rule or a specific configuration in one of the listed Mitigation Systems that will you to block an external URL from being accessed by corporate assets.
+  Убедиться, что у вас есть возможность заблокировать внешний URL для доступа из корпоративной сети (путем добавления в "черный список", "зануления" домена в адрес 127.0.0.1 или создания соответствующего правила в 1 из перечисленных систем).
 
-  Warning:
-
-  - Make sure that using the listed systems (1 or multiple) you can control access to the internet of all assets in the infrastructure. In some cases, you will need a guaranteed way to block an external URL from being accessed by corporate assets completely. If some of the assets are not under the management of the listed Mitigation Systems, (so they can access the internet bypassing these systems), you will not be able to fully achieve the final objective of the Response Action.

@@ -1,9 +1,9 @@
 title: RA_1205_get_ability_to_delete_email_message
 id: RA1205
 description: >
-  Make sure you have the ability to delete an email message
-author: '@atc_project'
-creation_date: 2020/05/07
+  Убедиться, что у вас есть возможность удалить письмо электронной почты
+author: enikulina
+creation_date: 2023/02/02
 stage: preparation
 references:
   - https://docs.microsoft.com/en-us/microsoft-365/compliance/search-for-and-delete-messages-in-your-organization?view=o365-worldwide
@@ -11,4 +11,4 @@ references:
 requirements:
   - MS_email_server
 workflow: |
-  Make sure you have the ability to delete an email message from an Email Server and users' email boxes using its native functionality.
+  Убедиться, что у вас есть возможность удалить письмо электронной почты с почтового сервера и из почтовых ящиков пользователей.

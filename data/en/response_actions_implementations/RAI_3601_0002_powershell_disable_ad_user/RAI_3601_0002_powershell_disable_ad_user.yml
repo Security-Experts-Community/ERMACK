@@ -1,0 +1,32 @@
+title: Powershell disable AD user
+id: RAI3601_0002
+description: Disable AD user through the Powershell
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/10
+modification_date: 2023/05/10
+linked_response_actions: RA3601
+tags:
+  - block.user
+linked_software:
+  - S0004  
+linked_artifacts:
+  - A1001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0004
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S6001
+      cpe-fs: 'cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*'
+extended_description: |
+  To disable user, we can use ***Disable-ADAccount*** command from ***ActiveDirectory*** module.
+
+  For example, we have a user ermac whose account we want to disable.
+
+  To disable the account use the bellow command.
+  ```
+  Disable-ADAccount -Identity 'CN=ermack,CN=Users,DC=contoso,DC=local'
+  ```
+
+  [Disable-ADAccount](https://learn.microsoft.com/en-us/powershell/module/activedirectory/disable-adaccount?view=windowsserver2019-ps)

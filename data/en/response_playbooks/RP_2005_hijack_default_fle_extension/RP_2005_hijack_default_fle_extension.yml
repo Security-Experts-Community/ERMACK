@@ -40,7 +40,7 @@ extended_description: |
 
    Defenders may want to monitor registry for file extension command changes, especially if the data field contains binaries located in unusual places.
 workflow: |
-    ![WORKFLOW](RP2005.png)
+    <img src="../RP2005.png" alt="WORKFLOW"/>
 
 
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
@@ -49,12 +49,12 @@ workflow: |
     ```
     HKEY_CLASSES_ROOT
     ```
-    ![pic1](41.JPG) <br>
+    <img src="../41.JPG" alt="pic1"/> <br>
     …and local – that are defined for a particular user, i.e.:
     ```
     HKEY_USERS\S-1-5-21-1929933236-2258453022-3626796957-1000_Classes
     ```
-    ![pic2](42.JPG) <br>
+    <img src="../42.JPG" alt="pic2"/> <br>
     Their hierarchy of execution goes like this: if no local extension/extension handler is defined, then the global one  is executed. Obviously, without Administrator privileges we cannot modify the keys under HKEY_CLASSES_ROOT – but still we can read them. Also, we can modify the keys belonging to the current user.<br> So, basic activity in this attack – read the extensions handlers defined globally, rewrite them locally and then install the hijack.
     2. Search for malware file which is refered by found hijacked extension on previous step. List proccess executed by malware file or their child proccess. Try to understand "impact" of this malware, what have it done, which resources were accessed.
     3. Take any containment action depending on the situation and level of asset's criticality. <br> For example, if persistence attempt was successful, it may be reasonable to block suspicious proccess (this can be automated action in response rule) :
@@ -84,4 +84,4 @@ workflow: |
     </details>
 
     ## Response mindmap diagram
-    ![Mindmap](05.svg)
+    <img src="../05.svg" alt="Mindmap"/>

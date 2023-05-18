@@ -6,7 +6,7 @@ creation_date: 2023/05/11
 modification_date: 2023/05/14
 linked_artifacts:
   - A1008
-  - A1001 
+  - A1001
   - A1005
   - A1007
 tags:
@@ -34,7 +34,7 @@ lessons_learned:
 extended_description: |
   Attackers can use pass the certificate attack with certificate which they created themselves (Golden Certificate or Shadow Credentials) or with a stolen certificate. Certificate created by attackers cannot be revoked
 workflow: |
-    ![WORKFLOW](RP0004.png)
+    <img src="../RP0004.png" alt="WORKFLOW"/>
 
 
     1. On identification stage need find <[domain account]>(A_1001) which was attacked and <[host]>(A_1005) from which attack occur. This information can be taken from <[Windows Security event log]>(A_1008) 4768 - A Kerberos authentication ticket (TGT) was requested
@@ -52,4 +52,3 @@ workflow: |
     | <[Log]>(A_1008)                                | Find Windows Security event log 4768 - A Kerberos authentication ticket (TGT) was requested | Event log with info about requesting user, requesting IP Address and certificate |
     | <[Host]>(A_1005)                               | Find host from which TGT was requested. The IP Address of this host will be in the network information section of the event log | Host from which the attack is occur |
     | <[IP Address]>(A_1007)                         | Find IP Address from which TGT was requested. The IP Address will be in the network information section of the event log | IP Address from which the attack is occur |
-

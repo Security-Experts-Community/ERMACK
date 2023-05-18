@@ -58,13 +58,13 @@ extended_description: |
     ```
     .\scshell.exe ws01 XblAuthManager "C:\windows\system32\cmd.exe /c echo 'lateral hello' > c:\temp\lat.txt" username domain password
     ```
-    ![SCshell](20.gif)
+    <img src="../20.gif" alt="SCshell"/>
 
     From the defensive side, you may want to consider about monitoring services that change their binPaths "too often" as this may not be normal in your environment, especially if the binPath is "very" [different](https://en.wikipedia.org/wiki/Levenshtein_distance "Levenshtein") to the previously known good value and if the service configuration is being changed over the network:
-    ![Example](28.JPG)
+    <img src="../28.JPG" alt="Example"/>
 
     ## Attack diagram
-    ![Diagram](32.svg)
+    <img src="../32.svg" alt="Diagram"/>
 
     ## References
 

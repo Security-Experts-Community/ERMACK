@@ -50,13 +50,13 @@ extended_description: |
     1) To successfully execute the attack an attacker needs to perform communication between "pipe server" and "pipe client".
 
     Below image shows the named pipe server and named pipe client working as expected
-    ![Working_example](13.JPG)
+    <img src="../13.JPG" alt="Working_example"/>
 
     Checking how the process maintains a handle to our [named pipe](/artifacts/A_5003_windows_pipe/entity) *mantvydas-first-pipe*
-    ![Pipe_serv](11.JPG)
+    <img src="../11.JPG" alt="Pipe_serv"/>
 
     Similary, we can see the client having an open handle to [the named pipe](/artifacts/A_5003_windows_pipe/entity "mantvydas-first-pipe")
-    ![Pipe_client](12.JPG)
+    <img src="../12.JPG" alt="Pipe_client"/>
 
     2) It is possible for the named pipe server to impersonate the named pipe client's security context by leveraging a ImpersonateNamedPipeClient API call which in turn changes the named pipe server's [current thread's token](/artifacts/A_5004_access_token/entity "domain administrator's access token") with that of the named pipe client's token.
 
@@ -65,10 +65,10 @@ extended_description: |
     ## Possible usage
 
     1) This technique allows to gain privileged shell.
-    ![POC](14.JPG)
+    <img src="../14.JPG" alt="POC"/>
 
     ## Attack diagram
-    ![Diagram](37.svg)
+    <img src="../37.svg" alt="Diagram"/>
 
     ## References
 

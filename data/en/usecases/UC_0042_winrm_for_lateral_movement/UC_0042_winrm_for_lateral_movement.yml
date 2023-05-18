@@ -15,24 +15,24 @@ linked_artifacts:
   - A5006
 description: WinRM or PowerShell remoting for lateral movement.
 extended_description: |
-    
+
     WinRM is the name of both a [Windows service]() and a [protocol]() that allows a [user]() to interact with a [remote system]() (e.g., run an executable, modify the Registry, modify services) It may be called with the winrm command or by any number of programs such as [PowerShell](). WinRM can be used as a method of remotely interacting with Windows Management Instrumentation.
-    
+
     Lateral movement combines two techniques: **extraction of confidential**; and **information after gaining access**.
-    
+
     ## Attack mapping
-    
+
     | ARTIFACT                                                                        | OBJECT                   | DESCRIPTION                                                                               |
     |---------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------|
     |  **Attack Prerequisites**                                                       |
     | [Credentials](/artifacts/A_5006_credential/entity)                              | User's credentials (login and password) | It's used as arguments for lateral movent actions    |
     | **Side Observables**                                                            |
     | [Remote Session](/artifacts/A_5011_RPC_network_traffic/entity/)                 | Remote session           | Open remote powershell session via WinRM |
-    
-    
+
+
     ## Attack results
-    Successfull attack allows to execute commands on a [remote host]() with [remote session](). 
-    
+    Successfull attack allows to execute commands on a [remote host]() with [remote session]().
+
     | RESOURCE                                                              | DESCRIPTION                                                                               |
     |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
     | **Attack Prerequisites**                                              |                                                                                           |
@@ -53,28 +53,28 @@ extended_description: |
     PS C:\Users\mantvydas> Enter-PSSession 3
     [a-dc01]: PS C:\Users\aegorov\Documents> hostname
     ```
-    ![WinRM](22.JPG)
-    
-    2) Note the process ancestry: on the host that initiated the connection, a 4648 logon attempt is logged, showing what process initiated it, the hostname where it connected to and which account was used. 
-    
+    <img src="../22.JPG" alt="WinRM"/>
+
+    2) Note the process ancestry: on the host that initiated the connection, a 4648 logon attempt is logged, showing what process initiated it, the hostname where it connected to and which account was used.
+
     Additionally, %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-WinRM%4Operational.evtx on the host that initiated connection to the remote host, logs some interesting data for a task WSMan Session initialize :
-    ![Example](29.JPG)
-    
+    <img src="../29.JPG" alt="Example"/>
+
     Since we entered into a PS Shell on the remote system (Enter-PSSession) , there is another interesting log showing the establishment of a remote shell - note that the ShellID corresponds to the earlier observed Correlation ActivityID:
-    
-    ![Example](30.JPG)
-    
+
+    <img src="../30.JPG" alt="Example"/>
+
     ## Possible usage
-    
+
     ### Empire
     For engagements that utilize Empire there is a [PowerShell module](https://www.powershellempire.com/?page_id=126) which can execute code remotely over WinRM in order to expand access inside a network. Requirements for usage of this module are: local administrator credentials, a listener, an agent and a target host.
     ```
     usemodule lateral_movement/invoke_psremoting
     ```
-    ![Empire](51.JPG)
-    
+    <img src="../51.JPG" alt="Empire"/>
+
     Post exploitation commands can be executed on the host that has been compromised through the WinRM service.
-    ![Empire1](52.JPG)
+    <img src="../52.JPG" alt="Empire1"/>
 
     ## Additional Useful Commands
     ```
@@ -105,15 +105,13 @@ extended_description: |
     # Download file from remote session
     Copy-Item -Path C:\Users\Administrator\Desktop\test.txt -Destination C:\Temp\ -FromSession (Get-PSSession)
     ```
-    
+
     ## Attack diagram
-    ![Diagram](33.svg)
-    
-    ## References 
+    <img src="../33.svg" alt="Diagram"/>
+
+    ## References
     [MITRE](https://attack.mitre.org/techniques/T1021/006/)
-    
+
     [A look under the hood at Powershell Remoting through a cross plaform lens ](http://www.hurryupandwait.io/blog/a-look-under-the-hood-at-powershell-remoting-through-a-ruby-cross-plaform-lens)
-    
+
     [Pentestlab](https://pentestlab.blog/2018/05/15/lateral-movement-winrm/)
-    
-    

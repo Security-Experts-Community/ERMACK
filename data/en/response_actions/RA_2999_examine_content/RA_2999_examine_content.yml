@@ -22,4 +22,4 @@ extended_description: |
   For example:
 
   1) Examine content in windows registry key which can be used in investigation and find redirect to malware file;
-  ![Registry](25.JPG)
+  <img src="../25.JPG" alt="Registry"/>

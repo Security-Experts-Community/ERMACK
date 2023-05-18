@@ -45,7 +45,7 @@ extended_description: |
     Usually defenders see simple commands such as “winrm get config” or “winrm quickconfig.”
 
 workflow: |
-    ![WORKFLOW](RP2007.png)
+    <img src="../RP2007.png" alt="WORKFLOW"/>
 
 
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
@@ -88,4 +88,4 @@ workflow: |
     | [Remote Session](/artifacts/A_5011_RPC_network_traffic/entity/)     | [Examine content]() <br>[Block data transferring by content pattern]() <br>*Block remote session and possible execution action* | Execution artifacts <br>*Search for compromised remote session. collect possible execution artifacts.* |
 
     ## Response mindmap diagram
-    ![Mindmap](07.svg)
+    <img src="../07.svg" alt="Mindmap"/>

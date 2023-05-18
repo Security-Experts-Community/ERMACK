@@ -38,7 +38,7 @@ description: Response playbook for detected "Privilege escalation via named pipe
 extended_description: |
   Identifie a privilege escalation attempt via named pipe impersonation. An adversary may abuse this technique by utilizing a framework such Metasploit’s meterpreter getsystem command.
 workflow: |
-    ![WORKFLOW](RP2002.png)
+    <img src="../RP2002.png" alt="WORKFLOW"/>
 
 
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
@@ -73,4 +73,4 @@ workflow: |
     </details>
 
     ## Response mindmap diagram
-    ![Mindmap](02.svg)
+    <img src="../02.svg" alt="Mindmap"/>

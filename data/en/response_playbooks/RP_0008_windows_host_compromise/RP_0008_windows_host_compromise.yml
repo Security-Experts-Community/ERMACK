@@ -54,7 +54,7 @@ lessons_learned:
   - RA_6004_update_network_profile
   - RA_6005_update_process_profile
 workflow: |
-  ![WORKFLOW](RP0008.png)
+  <img src="../RP0008.png" alt="WORKFLOW"/>
 
 
     Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.

@@ -82,4 +82,4 @@ workflow: |
     </details>
 
     ## Response mindmap diagram
-    ![Mindmap](03.svg)
+    <img src="../03.svg" alt="Mindmap"/>

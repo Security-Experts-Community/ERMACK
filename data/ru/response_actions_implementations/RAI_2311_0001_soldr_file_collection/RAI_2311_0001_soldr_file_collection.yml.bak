@@ -36,12 +36,12 @@ extended_description: |
   **Set up module**
 
   1) First of all we need to enable module in our policy and fullfil general setings.
-  ![Turn On](5.JPG)
+  <img src="../5.JPG" alt="Turn On"/>
 
   **Module usage example**
 
   2) Then you should go to tab "Agents", choose disered agent and then click on button "Basic parameters".
-  ![Example](6.JPG)
+  <img src="../6.JPG" alt="Example"/>
 
   3) Define path to file and use of 2 options - send to external server or send to minio.
-  ![Server](7.JPG)
+  <img src="../7.JPG" alt="Server"/>

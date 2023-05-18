@@ -49,7 +49,7 @@ extended_description: |
 
    Basically, defenders can identify use of sc.exe to create, modify, or start services on remote hosts. This could be indicative of adversary lateral movement but will be noisy if commonly done by admins.
 workflow: |
-    ![WORKFLOW](RP2006.png)
+    <img src="../RP2006.png" alt="WORKFLOW"/>
 
 
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
@@ -100,4 +100,4 @@ workflow: |
     </details>
 
     ## Response mindmap diagram
-    ![Mindmap](06.svg)
+    <img src="../06.svg" alt="Mindmap"/>

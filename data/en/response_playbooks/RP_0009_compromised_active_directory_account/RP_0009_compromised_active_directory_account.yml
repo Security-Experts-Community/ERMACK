@@ -24,7 +24,7 @@ recovery:
   - RA_5105_unblock_blocked_user
 lessons_learned:
 workflow: |
-    ![WORKFLOW](RP0009.png)
+    <img src="../RP0009.png" alt="WORKFLOW"/>
 
 
     Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.

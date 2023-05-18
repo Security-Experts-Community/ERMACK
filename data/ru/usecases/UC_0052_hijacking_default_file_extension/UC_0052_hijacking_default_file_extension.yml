@@ -59,7 +59,7 @@ extended_description: |
     Once executed, c:\tools\shell.cmd will launch malicious code to the attacking system and also a notepad with the test.txt file as an argument.
 
     We are now ready to hijack the .txt file extension by modifying the value data of  Computer\HKEY_CLASSES_ROOT\txtfile\shell\open\command to c:\tools\shell.cmd %1 as shown below:
-    ![RegKey2](25.JPG)
+    <img src="../25.JPG" alt="RegKey2"/>
 
     ## Possible usage
 
@@ -67,12 +67,12 @@ extended_description: |
     1) Once executed, c:\tools\shell.cmd will launch a simple netcat reverse shell to the attacking system and also a notepad with the test.txt file as an argument.
 
     Opening the test.txt file by double clikcing it opens the file itself, but a reverse shell is thrown to the attacking system as well:
-    ![Demo](22.gif)
+    <img src="../22.gif" alt="Demo"/>
 
     2) This persistence trick is used by [SILENTTRINITY framework](https://attack.mitre.org/software/S0692/) and [Kimsuky cyber espionage group](https://attack.mitre.org/groups/G0094/). This malware was used in a 2019 campaign against Croatian government agencies by unidentified cyber actors. SILENTTRINITY can conduct an image hijack of an .msc file extension as part of its UAC bypass process.
 
     ## Attack diagram
-    ![Diagram](35.svg)
+    <img src="../35.svg" alt="Diagram"/>
 
     ## References
     [Hijacking Default File Extension](https://www.ired.team/offensive-security/persistence/hijacking-default-file-extension)

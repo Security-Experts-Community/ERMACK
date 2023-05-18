@@ -78,7 +78,7 @@ extended_description: |
 
     2) We can see that [the new COM object](/artifacts/A_3006_com_object/entity) got created successfully in the registry
 
-    ![REG_COM](1.JPG)
+    <img src="../1.JPG" alt="REG_COM"/>
 
     requesting a new instance of the ShellWindows (9BA05972-F6A8-11CF-A442-00A0C90A8F39) COM object, which actually applies to both explorer.exe and iexplore.exe, meaning with a handle to that object, we can interface with them using their exposed methods.
 
@@ -90,10 +90,10 @@ extended_description: |
     ## Possible usage
 
     1) [Malware dll file](/artifacts/A_3005_executable_binary/entity "DLL for Code Execution") may contains [reverse_shell](https://docs.metasploit.com/docs/using-metasploit/basics/how-to-use-a-reverse-shell-in-metasploit.html), so after [IExplore.exe](/artifacts/A_3003_operating_system_executable_file/entity "Explorer or IE") is launched we will get meterpeter session.
-    ![METER](3.JPG)
+    <img src="../3.JPG" alt="METER"/>
 
     ## Attack diagram
-    ![Diagram](36.svg)
+    <img src="../36.svg" alt="Diagram"/>
 
     ## References
 

@@ -70,4 +70,4 @@ workflow: |
     </details>
 
     ## Response mindmap diagram
-    ![Mindmap](21.svg)
+    <img src="../21.svg" alt="Mindmap"/>

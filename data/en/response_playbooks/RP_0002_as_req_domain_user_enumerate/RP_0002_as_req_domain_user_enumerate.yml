@@ -39,7 +39,7 @@ extended_description: |
   Attackers may attempt to enumerate domain users using this attack. Successfully listed users are likely to be attacked, such as password spraying or other
 
 workflow: |
-    ![WORKFLOW](RP0002.png)
+    <img src="../RP0002.png" alt="WORKFLOW"/>
 
 
     1. On identification stage need find <[host or hosts]>(A_1005) from which the attack occur. This is can be hosts with suspicious external network connections or attackers footprints (such as attack tools). This is can be <[IP Addreses]>(A_1007) with many KRB_AS_REQ messages without pre-authentication and with atypical usernames for this IP Address or non-existent username

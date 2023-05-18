@@ -44,7 +44,7 @@ extended_description: |
 
    These stored credentials do not expire, but they **cannot** be used for pass-the-hash attacks, so attackers must crack the password hash to recover the plaintext passwords
 workflow: |
-    ![WORKFLOW](RP2003.png)
+    <img src="../RP2003.png" alt="WORKFLOW"/>
 
 
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
@@ -85,4 +85,4 @@ workflow: |
     </details>
 
     ## Response mindmap diagram
-    ![Mindmap](03.svg)
+    <img src="../03.svg" alt="Mindmap"/>

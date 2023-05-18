@@ -16,18 +16,18 @@ linked_artifacts:
   - A5002
 description: Boot or Logon Autostart Execution - Winlogon Helper DLL.
 extended_description: |
-    
+
     Adversaries may abuse features of [Winlogon]() to execute [DLLs and/or executables]() when a [user]() logs in. [Winlogon.exe]() is a Windows component responsible for actions at logon/logoff as well as the secure attention sequence (SAS) triggered by Ctrl-Alt-Delete.
-    
-    [Registry entries]() in 
+
+    [Registry entries]() in
     ```
     HKLM\Software[\Wow6432Node\]\Microsoft\Windows NT\CurrentVersion\Winlogon\
     HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\
-    ``` 
+    ```
     are used to manage additional helper programs and functionalities that support Winlogon.
-    
+
     ## Attack mapping
-    
+
     | ARTIFACT                                                                        | OBJECT                   | DESCRIPTION                                                                               |
     |---------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------|
     |  **Attack Prerequisites**                                                       |
@@ -35,12 +35,12 @@ extended_description: |
     | [File](/artifacts/A_3002_file/entity)                                           | File with malicious code   | Code execution to gain persistense                                 |
     | **Side Observables**                                                            |
     | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | Userinit subkey          | Registry subkeys have been known to be possibly vulnerable to abuse|
-    
-    
+
+
     ## Attack results
-    
-    Adversaries may take advantage of these features to repeatedly execute [malicious code]() and establish [persistence](). 
-    
+
+    Adversaries may take advantage of these features to repeatedly execute [malicious code]() and establish [persistence]().
+
     | RESOURCE                                                              | DESCRIPTION                                                                               |
     |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
     | **Attack Prerequisites**                                              |                                                                                           |
@@ -53,12 +53,12 @@ extended_description: |
     1) Commonly abused Winlogon registry keys and value for persistence are:
     ```
     HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit
-    HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify 
+    HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify
     HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\shell
     ```
-    
+
     HKCU can also be replaced with HKLM for a system wide persistence, if you have [admin privileges]().
-    
+
     2) Let's run through the techqnique abusing the userinit subkey.
     Let's see what's currently held at the userinit:
     ```
@@ -68,18 +68,16 @@ extended_description: |
     ```
     reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v userinit /d C:\Windows\system32\userinit.exe,C:\tools\shell.cmd /t reg_sz /f
     ```
-    ![Pwsh](23.JPG)
-    
+    <img src="../23.JPG" alt="Pwsh"/>
+
     ## Possible usage
-    
+
     ### Reverse shell
     1) Rebooting the compromised system executes the c:\tools\shell.cmd, which in turn establishes a reverse shell to the attacking system:
-    ![Pwsh](24.JPG)
-    
+    <img src="../24.JPG" alt="Pwsh"/>
+
     ## Attack diagram
-    ![Diagram](34.svg)
-    
-    ## References 
+    <img src="../34.svg" alt="Diagram"/>
+
+    ## References
     [Windows Logon Helper](https://www.ired.team/offensive-security/persistence/windows-logon-helper)
-    
-    

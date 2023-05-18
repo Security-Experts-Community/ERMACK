@@ -20,55 +20,22 @@ localization = Localization()
 class Entity:
     """Class for an abstract entity"""
 
-    def __init2__(self, base_path: str, file_name: str, entity_name: str):
-        """
-         Create Entity from a file
-
-        :param base_path: Path to folder with entities
-        :type base_path: str
-        :param file_name: File name of the entity
-        :type file_name: str
-        :param entity_name: Entity name
-        :type entity_name: str
-        """
-        self.yaml_file = f"{base_path}/{file_name}/{file_name}.yml"
-        self.file_name = file_name
-        self.config = config
-        self.utils = utils
-        self.entity_name = entity_name
-
-        types = ("*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg")
-        image_file_patterns = [f"{base_path}/{file_name}/{ext}" for ext in types]
-        self.image_files = []
-        for pattern in image_file_patterns:
-            self.image_files.extend(glob(pattern))
-
-        # The name of the directory containing future markdown Response_Stages
-        self.parent_title = self.entity_name
-
-        self.parse_into_fields(self.yaml_file)
-        self.set_file_path(self.yaml_file)
-
-        self.view = self.parsed_file.copy()
-
-        self.entities_map = {}
-        self.templates = {}
-        self.update({"summary": None})
-        self.process_tags()
-
-        self.localization_mapping = localization.localization_mapping
-
-        fields_names = self.localization_mapping.keys()
-        tmp = {}
-        for key in fields_names:
-            tmp[f"linked_{key}"] = self.localization_mapping[key]
-        self.localization_mapping.update(tmp)
-
     def handle_path(self, relative_file_path: str) -> None:
         self.yaml_file = str(relative_file_path.absolute())
         self.file_name = relative_file_path.name
 
-        types = ("*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg")
+        types = (
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "*.svg",
+            "*.PNG",
+            "*.JPG",
+            "*.JPEG",
+            "*.GIF",
+            "*.SVG",
+        )
         parent_folder = str(relative_file_path.parent)
         image_file_patterns = [f"{parent_folder}/{ext}" for ext in types]
         self.image_files = []
@@ -85,7 +52,18 @@ class Entity:
         entity.yaml_file = str(relative_file_path.absolute())
         entity.file_name = relative_file_path.name
 
-        types = ("*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg")
+        types = (
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+            "*.svg",
+            "*.PNG",
+            "*.JPG",
+            "*.JPEG",
+            "*.GIF",
+            "*.SVG",
+        )
         parent_folder = str(relative_file_path.parent)
         image_file_patterns = [f"{parent_folder}/{ext}" for ext in types]
         entity.image_files = []

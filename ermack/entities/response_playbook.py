@@ -109,6 +109,9 @@ class ResponsePlaybook(Entity):
                 "response_actions": [],
             }
             counter += 1
+            if not data[field]:
+                continue
+
             for response_action in data[field]:
                 action_id = self.extract_id(response_action)
                 if action_id.startswith("RP"):

@@ -6,5 +6,5 @@ creation_date: 2023/03/13
 stage: identification
 references:
   - Account Discovery, https://attack.mitre.org/techniques/T1087/
-workflow: |
+extended_description: |
   Find out by network traffic which users were successfully enumerated

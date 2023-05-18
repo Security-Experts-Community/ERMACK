@@ -5,5 +5,5 @@ description: >
 author: "@ermack_community"
 creation_date: 2019/01/31
 stage: identification
-workflow: |
+extended_description: |
   Search IOCs in all your security systems.

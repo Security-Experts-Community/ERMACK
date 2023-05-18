@@ -43,7 +43,7 @@ titlefmtrules:
   # will be capitalized: unix -> Unix
   capitalizeWords: ["unix", "windows", "proxy", "firewall", "mach-o"]
   # will be completely converted to uppercase lan -> LAN
-  abbreviations: ["ip", "dns", "ms", "ngfw", "ips", "url", "pe", "pdf", "elf", "dhcp", "vpn", "smb", "ftp", "http", "lan", "wan", "av", "fqdn", "dfs", "soc"]
+  abbreviations: ["ntp", "siem", "edr", "soldr", "ip", "dns", "ms", "ngfw", "ips", "url", "pe", "pdf", "elf", "dhcp", "vpn", "smb", "ftp", "http", "lan", "wan", "av", "fqdn", "dfs", "soc"]
 
 
 

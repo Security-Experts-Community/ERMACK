@@ -9,11 +9,10 @@ stage: preparation
 extended_description: |
   Your IR-related teams contains main stakeholders and IR experts (internal or external)
   Determine:
-  - Vulnerability Manager
-  - Threat Manager
-  - Risk Manager
-  - Executive Lead
-  - Professional Services Lead
-  - Response Support (Legal, PR, etc.)
-workflow: |
+    - Vulnerability Manager
+    - Threat Manager
+    - Risk Manager
+    - Executive Lead
+    - Professional Services Lead
+    - Response Support (Legal, PR, etc.)
   Make actions plan for every role

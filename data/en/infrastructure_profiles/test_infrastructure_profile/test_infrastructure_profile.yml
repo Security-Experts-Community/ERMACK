@@ -24,8 +24,12 @@ software_profile:
   - role: Interpreter
     category: Process
     id: S0004
-    cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
+    cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
   - role: Workstations
     category: Host
     id: S0003
     cpe-fs: 'cpe:2.3:o:microsoft:windows_10:2019:*:*:*:enterprise_ltsc:*:*:*'
+  - role: EDR
+    category: Security
+    id: S0005
+    cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'

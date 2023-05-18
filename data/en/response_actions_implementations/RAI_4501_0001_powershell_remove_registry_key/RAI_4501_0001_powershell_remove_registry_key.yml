@@ -15,7 +15,7 @@ requirements:
   software:
     means_of_action:
     - ID: S0004
-      cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
     targets_of_action:
     - ID: S0003
       cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'

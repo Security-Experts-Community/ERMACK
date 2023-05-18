@@ -9,7 +9,7 @@ automation:
 references:
   - https://ubuntuincident.wordpress.com/2010/09/27/extract-email-attachments/
   - https://blog.thehive-project.org/2018/07/31/emlparser-a-new-cortex-analyzer-for-eml-files/
-workflow: |
+extended_description: |
   Extract the data for further response steps:
 
   - attachments (using munpack tool: `munpack email.eml`)

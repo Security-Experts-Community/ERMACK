@@ -1,0 +1,13 @@
+title: SOLDR
+id: S0005
+description: System of Orchestration, Lifecycle control, Detection and Response
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/30
+modification_date: 2023/03/30
+references:
+  - https://github.com/vxcontrol/soldr
+capabilities:
+  - AuthenticationLogsAnalysis
+  - NetworkSessionLogging
+  - LocalProsessControl
+  - LocalNetworkControl

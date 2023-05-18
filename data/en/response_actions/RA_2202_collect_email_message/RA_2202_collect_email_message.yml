@@ -7,7 +7,7 @@ stage: identification
 references:
   - https://www.lifewire.com/save-an-email-as-an-eml-file-in-gmail-1171956
   - https://eml.tooutlook.com/
-workflow: |
+extended_description: |
   Collect an email message using the most appropriate option:
 
   - Email Team/Email server: if there is such option

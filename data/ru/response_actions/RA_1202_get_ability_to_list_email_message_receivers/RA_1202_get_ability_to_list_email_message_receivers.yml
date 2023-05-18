@@ -9,5 +9,5 @@ references:
   - https://docs.microsoft.com/en-us/powershell/module/exchange/mail-flow/get-messagetrackinglog?view=exchange-ps
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Make sure you have the ability to list receivers of a particular email message using the Email Server's functionality.

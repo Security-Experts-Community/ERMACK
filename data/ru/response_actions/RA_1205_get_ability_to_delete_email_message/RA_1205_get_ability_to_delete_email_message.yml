@@ -10,5 +10,5 @@ references:
   - https://support.google.com/a/answer/7581662?hl=en
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Make sure you have the ability to delete an email message from an Email Server and users' email boxes using its native functionality.

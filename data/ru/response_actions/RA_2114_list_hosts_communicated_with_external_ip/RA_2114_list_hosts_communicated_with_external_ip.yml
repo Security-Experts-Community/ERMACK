@@ -8,5 +8,5 @@ stage: identification
 requirements:
   - DN_network_flow_log
   - DN_zeek_conn_log
-workflow: |
+extended_description: |
   List hosts communicated with an external IP address using the most efficient way.

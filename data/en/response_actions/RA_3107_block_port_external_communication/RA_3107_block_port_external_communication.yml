@@ -11,5 +11,5 @@ requirements:
   - MS_border_ips
   - MS_border_ngfw
   - MS_host_firewall
-workflow: |
+extended_description: |
   Block a network port for external communications, using the most efficient way.

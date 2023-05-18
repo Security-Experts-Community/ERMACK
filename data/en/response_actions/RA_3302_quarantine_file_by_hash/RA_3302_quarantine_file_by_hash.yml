@@ -9,11 +9,11 @@ automation:
   - siem/xdr/av/soar
 references:
   - https://www.blumira.com/glossary/quarantine/
-workflow: |
+extended_description: |
   Quarantine is a special isolated folder on a machine's hard disk where the suspicious files detected by Antivirus and Antimalware protection are placed to prevent further spread of threats.
-  
+
   For example:
-  
+
   Quarantine is an action taken by some antivirus scanners on a file infected with malware or a virus. When a file is quarantined, the file is moved to a location on disk where it cannot be executed. Users concerned about the contents or data in the infected file should quarantine the infected file, so any important data has a chance to be recovered.
 
   Also, a virus or infected data file may need to be quarantined if it cannot be removed or cleaned. In this case, the quarantine file that cannot be removed is moved to an area that prevents the virus from infecting other files.

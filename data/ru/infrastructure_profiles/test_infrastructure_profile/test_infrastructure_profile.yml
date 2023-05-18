@@ -17,14 +17,6 @@ software_profile:
     category: Email
     id: S3001
     cpe-fs: 'cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_8:*:*:*:*:*:*'
-  - role: Response
-    category: Commands
-    id: S0002
-    cpe-fs: 'cpe:2.3:a:positive_technologies:pt_xdr:1.2:*:*:*:*:*:*:*'
-  - role: LogManagement
-    category: Events
-    id: S0001
-    cpe-fs: 'cpe:2.3:a:positive_technologies:mp_siem:23.1:*:*:*:*:*:*:*'
   - role: DirectoryService
     category: Identity
     id: S6001

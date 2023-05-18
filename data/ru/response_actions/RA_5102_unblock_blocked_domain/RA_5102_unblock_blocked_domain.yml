@@ -13,5 +13,5 @@ requirements:
   - MS_intranet_ips
   - MS_intranet_ngfw
   - MS_dns_server
-workflow: |
+extended_description: |
   Unblock a blocked domain name in the system(s) used to block it.

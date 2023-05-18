@@ -1,0 +1,11 @@
+title: RA_1021_prepare_golden_image_comparsion_tool
+id: RA1021
+description: >
+  Prepare golden image vs system snapshot comparsion tool
+author: '@SEC'
+creation_date: 2023/05/20
+stage: preparation
+references:
+requirements:
+extended_description: |
+  Prepare golden image vs system snapshot comparsion tool

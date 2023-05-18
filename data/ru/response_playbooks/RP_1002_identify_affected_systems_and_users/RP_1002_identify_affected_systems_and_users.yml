@@ -1,0 +1,28 @@
+title: Identify affected systems and users
+id: RP1002
+description: Identify the system(s) and the user(s) that have been affected
+author: '@ermack_community'
+creation_date: 2019/01/31
+modification_date: 2019/01/31
+severity: M
+tlp: AMBER
+pap: WHITE
+tags:
+  - sub-playbook
+identification:
+  - RA_2001_list_victims_of_security_alert
+  - RA_2003_put_compromised_accounts_on_monitoring
+  - RA_2120_identiry_impacted_services
+# - Identify systems owners
+# - Identify systems administrators
+  - RA_2101_list_hosts_communicated_with_internal_domain
+  - RA_2102_list_hosts_communicated_with_internal_ip
+  - RA_2103_list_hosts_communicated_with_internal_url
+  - RA_2113_list_hosts_communicated_with_external_domain
+  - RA_2114_list_hosts_communicated_with_external_ip
+  - RA_2115_list_hosts_communicated_with_external_url
+  - RA_2104_analyse_domain_name
+  - RA_2105_analyse_ip
+  - RA_2106_analyse_uri
+workflow: |
+  1. TODO: create workflow

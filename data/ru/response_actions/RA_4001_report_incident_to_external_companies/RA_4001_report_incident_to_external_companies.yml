@@ -15,7 +15,7 @@ references:
   - https://www.sei.cmu.edu/education-outreach/computer-security-incident-response-teams/national-csirts/
   - https://www.crowdstrike.com/blog/indicators-attack-vs-indicators-compromise/
   - https://mitre.github.io/unfetter/about/
-workflow: |
+extended_description: |
   Report incident to external security companites, i.e. [National Computer Security Incident Response Teams (CSIRTs)](https://www.sei.cmu.edu/education-outreach/computer-security-incident-response-teams/national-csirts/).
   Provide all Indicators of Compromise and Indicators of Attack that have been observed.
 

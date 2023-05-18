@@ -1,0 +1,31 @@
+title: Block domain user account via Powershell
+id: RAI3602_0001
+linked_response_actions: RA3602
+description: Block user accounts using the Disable-ADAccount cmdlet
+author: '@SEC'
+creation_date: 2023/05/18
+modification_date: 2023/05/18
+tags:
+  - powershell
+  - windows
+  - active directory
+linked_artifacts:
+  - A1001
+references:
+  - https://blog.netwrix.com/2018/07/30/how-to-lock-unlock-enable-and-disable-ad-accounts-with-powershell/
+requirements:
+  software:
+    means_of_action:
+    - ID: S0004
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S6001
+      cpe-fs: 'cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*'
+extended_description: |
+  You can easily disable user accounts using the Disable-ADAccount cmdlet. Use the -Identity parameter
+  to specify which account to disable; you can supply its distinguished name, security identifier (SID),
+  globally unique identifier (GUID) or Security Account Manager (SAM) account name:
+  `Disable-ADAccount -Identity <DOMAIN_USER>`
+
+  Verify that everything was successful by requesting accounts information:
+  `Search-ADAccount -AccountDisabled | Select-Object Name, SamAccountName`

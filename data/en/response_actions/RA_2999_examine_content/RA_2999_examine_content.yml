@@ -7,19 +7,19 @@ creation_date: 2023/03/22
 stage: identification
 references:
   - https://en.wikipedia.org/wiki/Content_analysis
-workflow: |
+extended_description: |
   Content analysis is best understood as a broad family of techniques. Effective researchers choose techniques that best help them answer their substantive questions. That said, according to Klaus Krippendorff, six questions must be addressed in every content analysis:
-  
+
     1. Which data are analyzed?
     2. How are the data defined?
     3. From what population are data drawn?
     4. What is the relevant context?
     5. What are the boundaries of the analysis?
     6. What is to be measured?
-  
+
   In case of response action such action is used for extracting digital artifacts from different entities.
-  
+
   For example:
-  
+
   1) Examine content in windows registry key which can be used in investigation and find redirect to malware file;
   ![Registry](25.JPG)

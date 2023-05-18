@@ -1,0 +1,12 @@
+title: Удалёный сеанс
+id: A5007
+description: Этот ресурс описывает удалённый сеанс
+author: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:RemoteSession/
+mapping:
+  - d3f:RemoteSession
+extended_description: |
+  Сеанс удалённого входа - это сеанс входа при котором клиент авторизуется с одного сетевого узла на другом.

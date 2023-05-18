@@ -9,5 +9,5 @@ references:
   - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Unblock an email domain on an Email Server using its native functionality.

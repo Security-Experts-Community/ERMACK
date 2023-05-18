@@ -12,7 +12,7 @@ references:
   - https://deviceatlas.com/blog/user-agent-parsing-how-it-works-and-how-it-can-be-used
 requirements:
   - DN_zeek_http_log # placeholder
-workflow: |
+extended_description: |
   A User-Agent string is a piece of metadata associated with the header of a HTTP request and is used for content negotiation as outlined within [RFC1945](https://tools.ietf.org/html/rfc1945#page-46).  User-agents may often be overlooked by adversaries, and as such provide a valuable point of investigation.
 
   1. Retrieve the user-agent from the HTTP header.

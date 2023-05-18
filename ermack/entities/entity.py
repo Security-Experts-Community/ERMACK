@@ -37,8 +37,6 @@ class Entity:
         self.utils = utils
         self.entity_name = entity_name
 
-        # NOTE: If you would like to add extra extensions
-        # do not forget to add new file type to git lfs
         types = ("*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg")
         image_file_patterns = [f"{base_path}/{file_name}/{ext}" for ext in types]
         self.image_files = []
@@ -53,7 +51,6 @@ class Entity:
 
         self.view = self.parsed_file.copy()
 
-        # self.env = env
         self.entities_map = {}
         self.templates = {}
         self.update({"summary": None})
@@ -71,8 +68,6 @@ class Entity:
         self.yaml_file = str(relative_file_path.absolute())
         self.file_name = relative_file_path.name
 
-        # NOTE: If you want to add extra extensions
-        # do not forget to add new file type to git lfs
         types = ("*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg")
         parent_folder = str(relative_file_path.parent)
         image_file_patterns = [f"{parent_folder}/{ext}" for ext in types]
@@ -90,8 +85,6 @@ class Entity:
         entity.yaml_file = str(relative_file_path.absolute())
         entity.file_name = relative_file_path.name
 
-        # NOTE: If you want to add extra extensions
-        # do not forget to add new file type to git lfs
         types = ("*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg")
         parent_folder = str(relative_file_path.parent)
         image_file_patterns = [f"{parent_folder}/{ext}" for ext in types]
@@ -113,7 +106,6 @@ class Entity:
         self.entity_name = entity_name
         self.parent_title = self.entity_name
         self.parsed_file = content
-        # self.parse_from_string(content)
         self.view = self.parsed_file.copy()
         self.entities_map = {}
         self.templates = {}
@@ -318,19 +310,6 @@ class Entity:
             return entity["en"]
         return entity
 
-    # def update(self, kv_pairs):
-    #     lang = config.get("default_localization_lang")
-    #     for key in kv_pairs:
-    #         if key not in self.view:
-    #             self.view[key] = kv_pairs[key]
-    #             continue
-    #         entity = self.view.get(key)
-    #         if entity is not None and "type" in entity and entity["type"] == "text":
-    #             self.view[key][lang] = kv_pairs[key]
-    #         else:
-    #             self.view[key] = kv_pairs[key]
-    #     return
-
     def update(self, updated_values):
         for key in updated_values:
             self.view[key] = updated_values[key]
@@ -361,10 +340,6 @@ class Entity:
         entity = self.view.get(field)
         if entity is None:
             return None
-        if "type" in entity and entity["type"] == "text":
-            if lang in entity:
-                return entity[lang]
-            return entity["en"]
         return entity
 
     def get_localized_view(self):

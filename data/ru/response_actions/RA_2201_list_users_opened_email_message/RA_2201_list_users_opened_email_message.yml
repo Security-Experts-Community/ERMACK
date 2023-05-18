@@ -9,5 +9,5 @@ references:
   - https://practical365.com/exchange-server/tracking-read-email-messages-exchange-server/
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   List users who opened/read a particular email message using the Email Server's functionality.

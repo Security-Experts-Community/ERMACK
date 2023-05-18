@@ -1,0 +1,12 @@
+title: Канал
+id: A5003
+description: Этот ресурс представляет канал
+author: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Pipe/
+mapping:
+  - d3f:Pipe
+extended_description: |
+  Канал - это механизм для межпроцессного взаимодействия. Сетевые каналы позволяют взаимодействовать процессам, запущенным на разных сетевых узлах.

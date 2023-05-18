@@ -4,5 +4,5 @@ description: Find compromised user
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/07
 stage: identification
-workflow: |
+extended_description: |
   Find user with suspicious activity. Check it on logs or on network traffic

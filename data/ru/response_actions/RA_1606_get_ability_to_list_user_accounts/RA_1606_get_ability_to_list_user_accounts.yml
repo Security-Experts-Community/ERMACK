@@ -4,5 +4,5 @@ description: Make sure you have the ability to list user accounts on a particula
 author: '@atc_project'
 creation_date: 2021/06/27
 stage: preparation
-workflow: |
+extended_description: |
   Make sure you have the ability to list user accounts on a particular system.

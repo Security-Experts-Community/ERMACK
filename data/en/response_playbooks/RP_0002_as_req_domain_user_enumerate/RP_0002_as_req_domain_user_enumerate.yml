@@ -4,16 +4,12 @@ id: RP0002
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/03/12
 modification_date: 2023/03/12
+tags: []
 linked_artifacts:
   - A1001
   - A1005
   - A1007
   - A1009
-tags:
-  - status.buggy|(https://example.com)
-  - severity.medium
-  - tlp.amber
-  - pap.white|(https://example.com)
 preparation:
   - RP_1001_operational_preparations
   - RA_1102_access_internal_network_flow_logs

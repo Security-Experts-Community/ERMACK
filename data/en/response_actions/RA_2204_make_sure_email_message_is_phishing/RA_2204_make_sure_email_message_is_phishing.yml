@@ -7,7 +7,7 @@ stage: identification
 references:
   - https://en.wikipedia.org/wiki/Phishing
   - http://www.phishing.org/phishing-examples
-workflow: |
+extended_description: |
   Check an email and its metadata for evidences of phishing attack:
 
   - **Impersonalisation attempts**: sender is trying to identify himself as somebody he is not

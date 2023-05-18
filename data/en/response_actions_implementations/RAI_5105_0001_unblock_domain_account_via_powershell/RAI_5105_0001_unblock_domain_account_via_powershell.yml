@@ -1,0 +1,26 @@
+title: Unblock domain account via powershell
+id: RAI5105_0001
+linked_response_actions: RA5105
+description: Unblock user accounts using the Disable-ADAccount cmdlet
+author: '@SEC'
+creation_date: 2023/05/18
+modification_date: 2023/05/18
+tags:
+  - powershell
+  - windows
+  - active directory
+linked_artifacts:
+  - A1001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0004
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S6001
+      cpe-fs: 'cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*'
+extended_description: |
+  You can easily enable user accounts using the Enable-ADAccount cmdlet. Use the -Identity parameter
+  to specify which account to disable; you can supply its distinguished name, security identifier (SID),
+  globally unique identifier (GUID) or Security Account Manager (SAM) account name:
+  `Enable-ADAccount -Identity <DOMAIN_USER>`

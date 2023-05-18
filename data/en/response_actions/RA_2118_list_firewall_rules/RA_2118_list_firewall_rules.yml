@@ -6,5 +6,5 @@ creation_date: 2021/05/21
 stage: identification
 requirements:
   - DN_zeek_conn_log # placeholder
-workflow: |
+extended_description: |
   List firewall rules.

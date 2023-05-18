@@ -1,0 +1,70 @@
+title: 'Domain user enumeration attack using the Kerberos protocol without a domain account'
+id: UC0002
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/12
+modification_date: 2023/03/12
+severity: L
+tags:
+  - attack.discovery
+  - attack.t1087.002
+  - enumerate
+  - internal_attack
+linked_response_playbooks:
+  - RP0002
+linked_artifacts:
+  - A1001
+  - A1005
+  - A1007
+  - A1009
+  - A1010
+description: Attackers can carry out a Domain User Enumaration attack using Kerberos authentication protocol. Their purpose may be to obtain valid usernames for futher attacks (such as phishing or password spraying)
+extended_description: |
+  | Artifact                                | Object                                                      | Description                                                                               |
+  | :-------------------------------------- | :-----------------------------------------------------------| :-----------------------------------------------------------------------------------------|
+  | <[Windows domain account]>(A_1001)      | Attacked domain accounts                                    |    Domain accounts whose names the attackers are trying to find out                       |
+  | <[Host]>(A_1005)                        | Compromised host                                            |    Compromissed host from which the attack occur                                          |
+  | <[IP Address]>(A_1007)                  | Compromissed host IP Address                                |    IP Address from which the attack occur                                                 |
+  | <[Authentication Service]>(A_1010)      | Authentication service on domain controller                 |    Authentication service on domain controller on which attacker send KRB_AS_REQ messages |
+  | <[Kerberos network traffic]>(A_1009)    | Kerberos protocol messages                                  |    Kerberos protocol messages which generated during the attack                           |
+
+  In this attack, attackers use a pecularity of the Kerberos protocol, which allows them to find out if a user with any name exist in domain
+
+  ## Attack prerequisites
+  1. <[Authentication service]>(A_1010) network availability
+
+  ## Attack results
+  1. One or more <[domain account]>(A_1001) usernames
+
+  ## Attack progress
+  ### Study
+  #### Username pattern definition
+
+  1. Finding user email addresses (T1589.002)
+  2. Finding usernames (T1589.003)
+  3. Hypothesis about usernames pattern in domain
+
+  #### Choose usernames
+
+  1. Selecting usernames from a list of generally or created based information about username pattern
+
+  ### Exploitation
+  #### Username guessing
+  1. Attackers send KRB_AS_REQ message without pre-authentication and with username to <[Authentication service]>(A_1010)
+  2. If <[account]>(A_1001) exist in domain, then <[Authentication service]>(A_1010) return response with KDC_ERR_PREAUTH_REQUIRED message, which means user with specified name find, but for success authenticate need send KRB_AS_REQ message with pre-authenticate
+  3. If there is no user with this name in the domain, then <[Authentication service]>(A_1010) return response with KDC_ERR_C_PRINCIPAL_UNKNOWN mesasage.
+
+  ## Some tools for carry out this attack
+  1.
+  ```shell
+  ./kerbrute_linux_amd64 userenum --dc <domain_controller_ip_addr> -d contoso.local users.txt --output found_users.txt
+  ```
+  2.
+  ```shell
+  nmap -Pn -n -p88 --script krb5-enum-users --script-args krb5-enum-users.realm='contoso.local',userdb='users.txt' <domain_controller_ip_addr>
+  ```
+
+  ## References
+  1. <https://labs.hakaioffsec.com/kerberos-enum-purple-vision/>
+  2. <https://ardent101.github.io/posts/kerberos_general_attacks/>
+  3. <https://github.com/ropnop/kerbrute>
+  4. <https://github.com/nmap/nmap/blob/master/scripts/krb5-enum-users.nse>

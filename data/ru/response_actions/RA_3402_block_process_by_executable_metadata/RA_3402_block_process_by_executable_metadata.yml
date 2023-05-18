@@ -5,6 +5,5 @@ description: >
 author: bpopovich
 creation_date: 2023/04/27
 stage: containment
-workflow: |
+extended_description: |
   Блокировка выполнения процесса на основе его метаданных с помощью средств защиты информации и иных автоматизированных средств
-

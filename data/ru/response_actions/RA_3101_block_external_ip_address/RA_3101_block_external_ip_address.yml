@@ -11,7 +11,7 @@ requirements:
   - MS_border_ips
   - MS_border_ngfw
   - MS_host_firewall
-workflow: |
+extended_description: |
   Block an external IP address from being accessed by corporate assets, using the most efficient way.
 
   Warning:

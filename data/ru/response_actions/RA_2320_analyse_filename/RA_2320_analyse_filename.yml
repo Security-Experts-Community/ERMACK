@@ -9,6 +9,5 @@ references:
   - https://any.run
   - https://hybrid-analysis.com
   - https://www.virustotal.com
-workflow: |
+extended_description: |
   Проверить имя файла на доступных анализаторах.
-  

@@ -1,14 +1,11 @@
 title: RA_1207_get_ability_to_collect_email_message
 id: RA1207
 description: >
-  Make sure you have the ability to collect an email message
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Убедитесь, что у вас есть возможность выгрузить письмо электронной почты 
+author: enikulina
+creation_date: 2023/02/02
 stage: preparation
-references:
-  - https://example.com
 requirements:
-  - DN_zeek_conn_log # placeholder
-workflow: |
-  Description of the workflow for single Response Action in markdown format.
-  Here newlines will be saved.
+  - MS_email_server
+extended_description: |
+  Убедитесь, что у вас есть возможность выгрузить письмо электронной почты и собрать из него все необходимые сведения.

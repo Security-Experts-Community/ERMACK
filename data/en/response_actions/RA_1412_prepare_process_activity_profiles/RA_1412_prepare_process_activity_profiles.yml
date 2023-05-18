@@ -1,0 +1,23 @@
+title: RA_1412_prepare_process_activity_profiles
+id: RA1412
+description: >
+  Prepare process activity profiles
+author: '@SEC'
+creation_date: 2023/05/20
+stage: preparation
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf
+extended_description: |
+  A good knowledge of the usual services running on the machine can
+  be very helpful. Don't hesitate to ask a Windows Expert for his
+  assistance, when applicable. A good idea is also to have a map of all
+  services/running process of the machine.
+
+  It can be a real advantage to work in a huge corporate environment,
+  where all user machines are the same, installed from a master. Have a
+  map of all processes/services/applications. On such environment
+  where users are not allowed to install software, consider any
+  additional process/service/application as suspicious.
+
+  The more you know the machine in its clean state, the more
+  chances you have to detect any fraudulent activity running from it.

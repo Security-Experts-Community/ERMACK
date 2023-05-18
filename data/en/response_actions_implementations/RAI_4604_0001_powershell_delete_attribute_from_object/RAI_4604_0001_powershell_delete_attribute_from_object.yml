@@ -7,14 +7,14 @@ modification_date: 2023/05/07
 linked_response_actions: RA4604
 tags:
 linked_software:
-  - S0004  
+  - S0004
 linked_artifacts:
   - A1015
 requirements:
   software:
     means_of_action:
     - ID: S0004
-      cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
     targets_of_action:
     - ID: S6001
       cpe-fs: 'cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*'

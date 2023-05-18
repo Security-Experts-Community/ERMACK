@@ -5,6 +5,5 @@ description: >
 author: bpopovich
 creation_date: 2023/04/27
 stage: containment
-workflow: |
+extended_description: |
   Блокировать выполнение процесса по его контрольной сумме (хешу) средствами защиты информации или иными средствами автоматизации
-

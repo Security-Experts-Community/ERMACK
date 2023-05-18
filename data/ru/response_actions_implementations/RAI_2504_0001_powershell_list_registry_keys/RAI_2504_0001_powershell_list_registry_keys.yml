@@ -1,0 +1,84 @@
+title: Листинг ключей реестра при помощи Powershell
+id: RAI2504_0001
+linked_response_actions: RA2504
+description: Данное действие описывает получение листинга ключей реестра Windows при помощи Powershell
+author: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+tags:
+  - powershell
+  - windows
+linked_software:
+  - S0004
+linked_artifacts:
+  - A5002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0004
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S0003
+      cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
+extended_description: |
+  Листинг ключей реестра при помощи Powershell.
+
+  ## Требования к цели воздействия
+  Установленный Powershell.
+
+  ## Требования к средству воздействия
+  Разрешен запуск Powershell.
+
+  ## Ожидаемый результат
+  Листинг ключей согласно указанному пути
+
+  ## Implementations
+  Вы можете отобразить все значения, находящиеся в ключе реестра, используя командлет ***Get-ChildItem***. Добавьте необязательный параметр Force для отображения скрытых или системных элементов. Например, следующая команда выводит все элементы из виртуального раздела `HKCU:`, который соответствует кусту реестра **HKEY_CURRENT_USER**:
+  ```
+  Get-ChildItem -Path HKCU:\ | Select-Object Name
+  ```
+
+  Пример вывода:
+  ```
+  Hive: Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER
+
+  Name
+  ----
+  HKEY_CURRENT_USER\AppEvents
+  HKEY_CURRENT_USER\Console
+  HKEY_CURRENT_USER\Control Panel
+  HKEY_CURRENT_USER\DirectShow
+  HKEY_CURRENT_USER\dummy
+  HKEY_CURRENT_USER\Environment
+  HKEY_CURRENT_USER\EUDC
+  HKEY_CURRENT_USER\Keyboard Layout
+  HKEY_CURRENT_USER\MediaFoundation
+  HKEY_CURRENT_USER\Microsoft
+  HKEY_CURRENT_USER\Network
+  HKEY_CURRENT_USER\Printers
+  HKEY_CURRENT_USER\Software
+  HKEY_CURRENT_USER\System
+  HKEY_CURRENT_USER\Uninstall
+  HKEY_CURRENT_USER\WXP
+  HKEY_CURRENT_USER\Volatile Environment
+  ```
+
+  Эти ключи можно увидеть в кусте **HKEY_CURRENT_USER** при помощи утилиты Registry Editor (regedit.exe).
+
+  You can also specify this registry path by specifying the registry provider's name, followed by :: . The registry provider's full name is Microsoft.PowerShell.Core\Registry, but this can be shortened to just Registry. Any of the following commands will list the contents directly under HKCU:
+  ```
+  Get-ChildItem -Path Registry::HKEY_CURRENT_USER
+  Get-ChildItem -Path Microsoft.PowerShell.Core\Registry::HKEY_CURRENT_USER
+  Get-ChildItem -Path Registry::HKCU
+  Get-ChildItem -Path Microsoft.PowerShell.Core\Registry::HKCU
+  Get-ChildItem HKCU:
+  ```
+  These commands list only the directly contained items, much like using DIR in cmd.exe or ls in a UNIX shell. To show contained items, you need to specify the Recurse parameter. To list all registry keys in HKCU:, use the following command.
+  ```
+  Get-ChildItem -Path HKCU:\ -Recurse
+  ```
+  ***Get-ChildItem*** can perform complex filtering capabilities through its Path, Filter, Include, and Exclude parameters, but those parameters are typically based only on name. You can perform complex filtering based on other properties of items using the Where-Object cmdlet. The following command finds all keys within HKCU:\Software that have no more than one subkey and also have exactly four values:
+  ```
+  Get-ChildItem -Path HKCU:\Software -Recurse |
+    Where-Object {($_.SubKeyCount -le 1) -and ($_.ValueCount -eq 4) }
+  ```

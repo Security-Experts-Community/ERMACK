@@ -1,13 +1,13 @@
 title: RA_2203_list_email_message_receivers
 id: RA2203
 description: >
-  List receivers of a particular email message
-author: '@atc_project'
-creation_date: 2020/05/06
+  Найти всех потенциальных получателей письма
+author: enikulina
+creation_date: 2023/02/02
 stage: identification
 references:
   - https://docs.microsoft.com/en-us/powershell/module/exchange/mail-flow/get-messagetrackinglog?view=exchange-ps
 requirements:
   - MS_email_server
-workflow: |
-  List receivers of a particular email message using the Email Server's functionality.
+extended_description: |
+  Найти всех потенциальных получателей письма электронной почты с помощью встроенных функций почтового сервера либо специализированных СЗИ.

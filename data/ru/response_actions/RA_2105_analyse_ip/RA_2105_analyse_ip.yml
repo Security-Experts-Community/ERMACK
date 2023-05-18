@@ -11,7 +11,7 @@ references:
   - https://app.any.run
   - https://www.virustotal.com/
   - https://otx.alienvault.com/
-workflow: |
+extended_description: |
   Собрать и проанализировать информацию об обнаруженном ранее IP-адресе с помощью различных доступных ресурсов:
   
   - https://www.abuseipdb.com/

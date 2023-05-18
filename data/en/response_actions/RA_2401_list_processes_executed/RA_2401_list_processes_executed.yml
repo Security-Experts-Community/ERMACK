@@ -9,11 +9,11 @@ automation:
   - siem
 references:
   - https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/finding-the-process-id
-workflow: |
+extended_description: |
   Processes start every time you launch an application or run a command. While each command creates one process, applications create and run multiple processes for different tasks. By default, each new process starts as a foreground process. This means it must finish before a new process can begin. Running processes in the background allows you to perform other tasks at the same time.
-  
+
   This can be done with different ways : built in tools, administrative tools, automated tools (siem, log management) and etc...
-  
+
   ## Windows
   Use the built in Windows ***tasklist*** command from a command prompt to display all processes, their PIDs, and a variety of other details.
   ```
@@ -32,7 +32,6 @@ workflow: |
   ```
   ## Linux
   To list currently running processes, use the ***ps***, ***top***, ***htop***, and ***atop*** Linux commands. You can also combine the ps command with the pgrep command to identify individual processes.
-  
+
   ## Automation
   Having centralized log collection "to list processes" is a common task, you have an ability to search, filter, compare any content to find interested artifacts.
-  

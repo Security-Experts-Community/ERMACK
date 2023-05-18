@@ -1,0 +1,13 @@
+title: Сеанс входа
+id: A3007
+description: Этот ресурс описывает сеанс входа в некоторую систему
+author: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:LoginSession/
+  - http://dbpedia.org/resource/Login_session
+mapping:
+  - d3f:LoginSession
+extended_description: |
+  Сеанс входа - это активность пользователя между входом и выходом из многопользовательской системы.

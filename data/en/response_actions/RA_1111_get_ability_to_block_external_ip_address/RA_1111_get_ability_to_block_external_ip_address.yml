@@ -13,7 +13,7 @@ requirements:
   - MS_border_ips
   - MS_border_ngfw
   - MS_host_firewall
-workflow: |
+extended_description: |
   Make sure you have the ability to create a policy rule in one of the listed Mitigation Systems that will you to block an external IP address from being accessed by corporate assets.
 
   Warning:

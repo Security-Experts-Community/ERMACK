@@ -1,13 +1,13 @@
 title: RA_4201_delete_email_message
 id: RA4201
-description: Delete an email message from an Email Server and users' email boxes
-author: '@atc_project'
-creation_date: 2019/01/31
+description: Удалить письмо c почтового сервера и из почтовых ящиков пользователей
+author: enikulina
+creation_date: 2023/02/02
 stage: eradication
 requirements:
   - MS_email_server
 artifacts:
   - A3001_Email_Message
   - A1001_User_AD_Account
-workflow: |
-  Delete an email message from an Email Server and users' email boxes using its native functionality.
+extended_description: |
+  Удалить письмо c почтового сервера и из почтовых ящиков затронутых внутренних пользователей.

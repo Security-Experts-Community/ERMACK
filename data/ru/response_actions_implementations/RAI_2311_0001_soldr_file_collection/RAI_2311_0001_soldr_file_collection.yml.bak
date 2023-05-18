@@ -1,0 +1,47 @@
+title: Collect file via SOLDR
+id: RAI2311_0001
+linked_response_actions: RA2311
+description: This response action is intended to obtain file from remote host
+author: 'Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/03/30
+tags:
+  - collect_file
+  - linux
+  - windows
+  - macOS
+linked_software:
+  - S0005
+linked_artifacts:
+  - A3002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0005
+      cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'
+    targets_of_action:
+extended_description: |
+  File sender module lets you collect objects directly from the SOLDR (XDR) interface.
+
+  ## Target system requirements
+  Installed SOLDR agent.
+
+  ## Requirements for means of action
+  1) Enabled "File sender" module.
+
+  ## Expected impact result
+  1) Downloaded current file.
+
+  ## Implementations
+  **Set up module**
+
+  1) First of all we need to enable module in our policy and fullfil general setings.
+  ![Turn On](5.JPG)
+
+  **Module usage example**
+
+  2) Then you should go to tab "Agents", choose disered agent and then click on button "Basic parameters".
+  ![Example](6.JPG)
+
+  3) Define path to file and use of 2 options - send to external server or send to minio.
+  ![Server](7.JPG)

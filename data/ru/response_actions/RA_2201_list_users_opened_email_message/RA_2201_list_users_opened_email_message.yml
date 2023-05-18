@@ -1,13 +1,14 @@
 title: RA_2201_list_users_opened_email_message
 id: RA2201
 description: >
-  List users that have opened am email message
-author: '@atc_project'
-creation_date: 2020/05/06
+  Найти всех пользователей, открывших/прочитавших письмо электронной почты
+author: enikulina
+creation_date: 2023/02/02
 stage: identification
 references:
   - https://practical365.com/exchange-server/tracking-read-email-messages-exchange-server/
 requirements:
   - MS_email_server
-workflow: |
-  List users who opened/read a particular email message using the Email Server's functionality.
+extended_description: |
+  Найти всех пользователей, открывших/прочитавших письмо с помощью встроенных функций почтового сервера либо специализированных СЗИ.
+  Если в письме содержалась фишинговая ссылка или исполняемый файл, необходимо определить, с каких узлов сети были обращения на фишинговый домен.

@@ -1,0 +1,18 @@
+title: Identify compromised data
+id: RP1003
+description: Identify the data compromised
+author: '@ermack_community'
+creation_date: 2019/01/31
+modification_date: 2019/01/31
+severity: M
+tlp: AMBER
+pap: WHITE
+tags:
+  - sub-playbook
+identification:
+  - RA_2110_list_data_transferred
+  - RA_2111_collect_transferred_data
+  - RA_2112_identify_transferred_data
+  - RA_2304_list_files_downloaded
+workflow: |
+  1. TODO: create workflow

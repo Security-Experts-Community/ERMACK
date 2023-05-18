@@ -9,6 +9,6 @@ references:
   - https://example.com
 requirements:
   - DN_zeek_conn_log # placeholder
-workflow: |
-  Description of the workflow for single Response Action in markdown format.
+extended_description: |
+  Description of the extended_description for single Response Action in markdown format.
   Here newlines will be saved.

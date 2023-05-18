@@ -10,5 +10,5 @@ requirements:
   - MISP connection to other teams or working on the MISP instance of another institution
   - Mailing list
   - Slack channel
-workflow: |
+extended_description: |
   Contact other companies or information providers for getting on a ML or get connected to other MISP instances.

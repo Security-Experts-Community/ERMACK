@@ -1,0 +1,75 @@
+title: Поиск пользователей, запустивших вредоносное вложение, в MP SIEM
+id: RAI2321_0001
+linked_response_actions: RA2321
+description: Поиск пользователей, запустивших вредоносное вложение, в MP SIEM
+author: enikulina
+creation_date: 2022/02/02
+modification_date: 2022/02/06
+linked_software:
+  - S0001
+tags:
+  - file.opened
+linked_artifacts:
+  - A3001
+  - A3002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0001
+      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
+    targets_of_action:
+extended_description: |
+  Данное действие реагирования предназначено для выявления пользователей корпоративной сети, запустивших вредоносное вложение, с помощью MP SIEM
+  ## Требования к целевой системе
+  Отсутствуют
+
+  ## Требования к средствам воздействия
+  1) MP SIEM версии 23 и выше
+  2) Настроенное логирование в инфраструктуре
+  3) Настроенный сбор событий в MP SIEM
+
+  ## Ожидаемый результат воздействия
+  Получение информации об узлах сети, на которых был запущен исполняемый вредоносный файл
+
+  ## Реализации
+  ### PDQL: Имя исполняемого файла\Хеш исполняемого файла
+
+  #### Комментарии
+  Запрос всех событий, в которых участвовал вредоносный файл (его имя или хэш).
+
+  #### Параметры
+  $NAME - имя исполняемого файла, $HASH - хэш исполняемого файла
+
+  #### Запрос
+
+  <details>
+  <summary><b>PDQL Запрос</b></summary>
+
+  ```python linenums="1"
+  (msgid in [1,4688] and object.process.name = "$NAME") || (msgid in [1,4688] and object.name = "$NAME") || (msgid = 1 and object.hash = "$HASH") -> группировка по event_src.host
+    Linux:
+  action in ["acess", "modify", "create", "rename", "remove"] and object = "file_object" and object.name = "$NAME"
+  ```
+  </details>
+
+  #### Пример использования
+
+  #### Результат
+
+  <details>
+  <summary><b>Результат</b></summary>
+
+  ```json linenums="1"
+  ```
+  </details>
+
+  #### Ограничения
+
+  ## Дополнительные сведения
+  ### Метки
+  ### Артефакты
+  Email Message
+  File
+
+  ### Ссылки на внешние ресурсы
+  ### Соответствие классификациям

@@ -1,0 +1,75 @@
+title: Поиск выполненных скриптов на конкретном узле в MP SIEM
+id: RAI2318_0001
+linked_response_actions: RA2318
+description: Поиск выполненных скриптов на конкретном узле в MP SIEM
+author: enikulina
+creation_date: 2022/02/07
+modification_date: 2022/02/07
+linked_software:
+  - S0001
+tags:
+  - script.executed
+linked_artifacts:
+  - A1005
+  - A4001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0001
+      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
+    targets_of_action:
+extended_description: |
+  Данное действие реагирования предназначено для получения информации о запущенных скриптах на определенном активе с помощью MP SIEM
+  ## Требования к целевой системе
+  Отсутствуют
+
+  ## Требования к средствам воздействия
+  1) MP SIEM версии 23 и выше
+  2) Настроенное логирование в инфраструктуре
+  3) Настроенный сбор событий в MP SIEM
+
+  ## Ожидаемый результат воздействия
+  Получение информации о том, какие скрипты были выполнены интерпретатором на определенном узле 
+
+  ## Реализации
+  ### PDQL: FQDN узла
+
+  #### Комментарии
+  Запрос всех событий запуска скриптов на целевом узле.
+
+  #### Параметры
+  $HOST - FQDN узла
+
+  #### Запрос
+
+  <details>
+  <summary><b>PDQL Запрос</b></summary>
+
+  ```python linenums="1"
+  (event_src.host = $HOST and correlation_name = "Script_Files_Execution") -> группировка по object.process.cmdline
+
+  (event_src.host = $HOST and object.process.name = "python.exe" and msgid in [1,4688] and match(object.process.cmdline, ".*\.py.*")) -> группировка по object.process.cmdline
+  ```
+  </details>
+
+  #### Пример использования
+
+  #### Результат
+
+  <details>
+  <summary><b>Результат</b></summary>
+
+  ```json linenums="1"
+  ```
+  </details>
+
+  #### Ограничения
+
+  ## Дополнительные сведения
+  ### Метки
+  ### Артефакты
+  Email Message
+  File
+
+  ### Ссылки на внешние ресурсы
+  ### Соответствие классификациям

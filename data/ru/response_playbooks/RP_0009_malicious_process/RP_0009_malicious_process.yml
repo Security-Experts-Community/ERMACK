@@ -1,0 +1,69 @@
+title: Запуск вредоносного процесса
+id: RP0009
+description: Сценарий реагирования на запуск вредоносного процесса
+author: ayakovlev
+creation_date: 2023/02/13
+severity: M                  # L M H
+tlp: AMBER                   # WHITE GREEN AMBER RED
+pap: WHITE                   # WHITE GREEN AMBER RED
+tags:
+  - execution
+  - TA0002
+  - sub-playbook
+preparation:
+  - RA_1306_get_ability_to_find_file_by_path
+  - RA_1307_get_ability_to_find_file_by_metadata
+  - RA_1308_get_ability_to_find_file_by_hash
+  - RA_1310_get_ability_to_find_file_by_content_pattern
+  - RA_1316_get_ability_to_remove_file
+  - RA_1317_get_ability_to_analyse_file_hash
+  - RA_1323_get_ability_to_analyse_script
+  - RA_1325_get_ability_to_analyse_filename
+  - RA_1402_get_ability_to_find_process_by_executable_path
+  - RA_1403_get_ability_to_find_process_by_executable_metadata
+  - RA_1404_get_ability_to_find_process_by_executable_hash
+  - RA_1406_get_ability_to_find_process_by_executable_content_pattern
+  - RA_1407_get_ability_to_block_process_by_executable_path
+  - RA_1408_get_ability_to_block_process_by_executable_metadata
+  - RA_1409_get_ability_to_block_process_by_executable_hash
+  - RA_1411_get_ability_to_block_process_by_executable_content_pattern
+  - RA_1602_get_ability_to_lock_user_account
+  - RA_1604_get_ability_to_revoke_authentication_credentials
+identification:
+  - RA_2312_analyse_file_hash
+  - RA_2318_analyse_script
+  - RA_2320_analyse_filename
+  - RA_2322_analyse_file_behavior
+  - RA_2410_list_child_processes
+  - RA_2409_analyse_command_line_arguments
+  - RA_2408_analyse_parent_process
+  # - RA_2603_analyse_user_account_properties
+  - RA_2407_analyse_process_execution_history
+  - RA_2604_contact_user
+containment:
+  - RA_3102_block_internal_ip_address
+  - RA_3601_lock_user_account
+  - RA_3109_block_user_external_communication
+  - RA_3110_block_user_internal_communication
+  - RA_3405_block_process_by_executable_content_pattern
+  - RA_3111_block_data_transferring_by_content_pattern
+  - RA_3403_block_process_by_executable_hash
+  - RA_3402_block_process_by_executable_metadata
+  - RA_3502_run_antivirus_scan
+eradication:
+  - RA_4601_revoke_authentication_credentials
+  - RA_4301_remove_file
+recovery:
+  - RA_5001_reinstall_host_from_golden_image
+  - RA_5002_restore_data_from_backup
+  - RA_5101_unblock_blocked_ip
+  - RA_5105_unblock_blocked_user
+  - RA_5601_unlock_locked_user_account
+lessons_learned:
+  - RA_6001_develop_incident_report
+  - RA_6002_conduct_lessons_learned_exercise
+workflow: |
+  1. На этапе "Идентификация" необходимо определить имя процесса, командную строку, хэш процесса, родителей процесса, их командные строки и хэш-суммы, определить принадлежность процесса к интерпретатору. Проанализировать аргументы командной строки на наличие загрузки внешнего содержимого, манипуляции с системными файлами и папками, создания задачи, редактирования реестра, создания файлов в автозагрузке, манипуляции с каким-либо файлом и др. признаками вредоносной активности. Если в командной строке присутствуют обращение к файлу-скрипту, то необходимо определить степень вредоносности команд, указанных в тексте файла. При необходимости получения дополнительной информации рекомендуется отправить файл на анализ в тестовую среду. По собранным данным определить, является ли процесс вредоносным. Если установлено, что активность данного процесса легальна и не несет вредоносных действий, то переходите к выполнению шагов тюнинга на этапе "Выводы" и п.5 данного процесса.
+  2. Для оперативной локализации вредоносной активности необходимо выполнить шаги на этапе "Сдерживание": необходимо запустить полную антивирусную проверку, заблокировать атакующие ip-адреса, скомпрометированные учетных записей, внешние и внутренние коммуникаций скомпрометированного пользователя, ограничить запуск процессов по выявленным паттернам или по хэш-сумме, и др. метаданным. Выполняйте последующей этап "Ликвидация", для удаления выявленных вредоносных файлов, исходя из анализа на этапе "Идентификация", как на исследуемом хосте, так и на хостах, на которых была замечена подобная вредоносная активность. На этих этапах перечислены всевозможные способы сдерживания и ликвидации, поэтому выполнение некоторых шагов будут избыточно для Вашего реагирования. Если в ходе анализа вредоносной активности выявлены другие инциденты, то начните выполнение схемы реагирования для этих инцидентов.
+  3. Проведите восстановление нормального состояния системы, разблокируйте заблокированных пользователей, восстановите сетевые доступы и т.п.
+

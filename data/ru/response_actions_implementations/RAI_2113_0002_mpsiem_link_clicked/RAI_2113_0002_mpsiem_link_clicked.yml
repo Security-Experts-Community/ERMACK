@@ -1,0 +1,77 @@
+title: Поиск узлов, взаимодействовавших с доменом\\IP-адресом, в MP SIEM
+id: RAI2113_0002
+linked_response_actions: RA2113
+description: Поиск узлов, взаимодействовавших с доменом\\IP-адресом, в MP SIEM
+author: enikulina
+creation_date: 2022/02/02
+modification_date: 2022/02/02
+linked_software:
+  - S0001
+tags:
+  - link.clicked
+linked_artifacts:
+  - A3001
+  - A1002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0001
+      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
+    targets_of_action:
+extended_description: |
+  Данное действие реагирования предназначено для выявления узлов корпоративной сети, взаимодействоваших с определенным доменом\IP-адресом, с помощью MP SIEM
+  ## Требования к целевой системе
+  Отсутствуют
+
+  ## Требования к средствам воздействия
+  1) PT NAD версии 23 и выше
+  2) Настроенное логирование в инфраструктуре
+  3) Настроенный сбор событий в MP SIEM
+
+  ## Ожидаемый результат воздействия
+  Получение информации об узлах сети, взаимодействовавших с определенным доменом\IP-адресом
+
+  ## Реализации
+  ### PDQL: DNS-имя домена\IP-адрес домена
+
+  #### Комментарии
+  Запрос всех событий, в которых участвовал указанный ресурс.
+
+  #### Параметры
+  $DNS - имя домена, $IP - IP-адрес
+
+  #### Запросы
+
+  <details>
+  <summary><b>PDQL Запросы</b></summary>
+
+  ```python linenums="1"
+  object = "connection" and dst.ip = "$IP"
+  msgid = 3 and dst.ip = $IP
+  body contains "$DNS"
+  body contains "$IP" 
+  ```
+  </details>
+
+  #### Пример использования
+
+  #### Результат
+
+  <details>
+  <summary><b>Результат</b></summary>
+
+  ```json linenums="1"
+  ```
+  </details>
+
+  #### Ограничения
+
+  ## Дополнительные сведения
+  ### Метки
+  ### Артефакты
+  Email Message
+  DNS Network Traffic
+  IP Address
+
+  ### Ссылки на внешние ресурсы
+  ### Соответствие классификациям

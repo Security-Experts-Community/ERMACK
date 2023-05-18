@@ -1,0 +1,75 @@
+title: Определение дочерних процессов исследуемого процесса в MP SIEM
+id: RAI2410_0001
+linked_response_actions: RA2410
+description: Определение дочерних процессов исследуемого процесса в MP SIEM
+author: enikulina
+creation_date: 2022/02/09
+modification_date: 2022/02/09
+linked_software:
+  - S0001
+tags:
+  - process.created
+linked_artifacts:
+  - A4001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0001
+      cpe-fs: "cpe:2.3:a:positive_technologies:mp_siem:23.*:*:*:*:*:*:*:*"
+    targets_of_action:
+extended_description: |
+  Данное действие реагирования предназначено для определения процессов-потомков целевого процесса с помощью MP SIEM
+  ## Требования к целевой системе
+  Отсутствуют
+
+  ## Требования к средствам воздействия
+  1) MP SIEM версии 23 и выше
+  2) Настроенное логирование в инфраструктуре
+  3) Настроенный сбор событий в MP SIEM
+
+  ## Ожидаемый результат воздействия
+  Получение информации о дочерних процессах исследуемого процесса
+
+  ## Реализации
+  ### PDQL: PID\ProcessGUID процесса
+
+  #### Комментарии
+  Запрос всех событий запуска процессов, порожденных исследуемым процессом
+
+  #### Параметры
+  $PID - PID (можно получить из полей object.id и\или object.process.id события запуска исследуемого процесса), $GUID - ProcessGUID (можно получить из поля object.process.guid события запуска исследуемого процесса, полученного от Sysmon)
+
+  #### Запрос
+
+  <details>
+  <summary><b>PDQL Запрос</b></summary>
+
+  ```python linenums="1"
+  datafield2 = "$PID" and msgid in [1,4688]
+  
+  object.process.parent.id = "$PID" and msgid in [1,4688]
+  
+  object.process.parent.guid = "$GUID"
+  ```
+  </details>
+
+  #### Пример использования
+
+  #### Результат
+
+  <details>
+  <summary><b>Результат</b></summary>
+
+  ```json linenums="1"
+  ```
+  </details>
+
+  #### Ограничения
+
+  ## Дополнительные сведения
+  ### Метки
+  ### Артефакты
+  Process
+ 
+  ### Ссылки на внешние ресурсы
+  ### Соответствие классификациям

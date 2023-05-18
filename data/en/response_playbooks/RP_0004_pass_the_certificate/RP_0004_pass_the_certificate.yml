@@ -34,6 +34,9 @@ lessons_learned:
 extended_description: |
   Attackers can use pass the certificate attack with certificate which they created themselves (Golden Certificate or Shadow Credentials) or with a stolen certificate. Certificate created by attackers cannot be revoked
 workflow: |
+    ![WORKFLOW](RP0004.png)
+
+
     1. On identification stage need find <[domain account]>(A_1001) which was attacked and <[host]>(A_1005) from which attack occur. This information can be taken from <[Windows Security event log]>(A_1008) 4768 - A Kerberos authentication ticket (TGT) was requested
     2. On containment stage, when you found an <[account]>(A_1001) that was attacked lock this account and go to <[Compromised user]> response playbook
     3. On containment stage, when you found the <[host]>(A_1005) from which attack occur go to <[Compromised host]> response playbook

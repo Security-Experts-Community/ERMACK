@@ -37,6 +37,9 @@ description: Response playbook for detected "DLL load via COM object" activity.
 extended_description: |
   Successfull "Load a Malicious DLL via COM Abuse" attack may be a huge security hole, because an attacker gains ability to execute any "prepeared" code without direct interaction with malicious file.
 workflow: |
+    ![WORKFLOW](RP2001.png)
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
     
     1. List Windows registry modifications (create,change,rename,delete), pay attention to particular COM object's modifications. Whenever you find the one, it possibly contains reference to the object \: malicious dll file.

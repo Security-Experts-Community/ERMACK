@@ -45,6 +45,9 @@ extended_description: |
         - Winlogon\Shell - points to explorer.exe, the system shell executed when a user logs on
 
 workflow: |
+    ![WORKFLOW](RP2007.png)
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
 
     1. Identify changes to registry persistence keys that are not commonly used or modified by legitimate programs. This could be an indication of an adversary’s attempt to persist in a stealthy manner.

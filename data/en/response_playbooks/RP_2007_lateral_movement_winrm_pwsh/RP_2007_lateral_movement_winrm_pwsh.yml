@@ -45,6 +45,9 @@ extended_description: |
     Usually defenders see simple commands such as “winrm get config” or “winrm quickconfig.”
 
 workflow: |
+    ![WORKFLOW](RP2007.png)
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
 
     When a WinRM connection is initialised [Windows EventID 6](https://www.ired.team/offensive-security/enumeration-and-discovery/windows-event-ids-for-situational-awareness) will be recorded (the source host) and when a WinRM connection is received [Windows EventID 91](https://www.ired.team/offensive-security/enumeration-and-discovery/windows-event-ids-for-situational-awareness) is recorded (the target host). Both events will be logged in Microsoft-Windows-WinRM/Operational (Windows Remote Management through the GUI).

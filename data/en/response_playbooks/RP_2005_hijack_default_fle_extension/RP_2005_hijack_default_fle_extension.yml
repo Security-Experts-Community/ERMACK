@@ -40,6 +40,9 @@ extended_description: |
 
    Defenders may want to monitor registry for file extension command changes, especially if the data field contains binaries located in unusual places.
 workflow: |
+    ![WORKFLOW](RP2005.png)
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
 
     1. Look for windows registry modification commands. Search for specific objects in Windows Registry. <br> Extension handlers are defined at two levels: global, that are defined in the: <br>

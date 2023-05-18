@@ -38,6 +38,9 @@ description: Response playbook for detected "Privilege escalation via named pipe
 extended_description: |
   Identifie a privilege escalation attempt via named pipe impersonation. An adversary may abuse this technique by utilizing a framework such Metasploit’s meterpreter getsystem command.
 workflow: |
+    ![WORKFLOW](RP2002.png)
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
 
     1. List newly created pipes on the host, look for named pipes. You can use powershell comand from [usecase](/usecases/UC_0021_priv_esc_through_named_pipe/entity). Though if privelege escalation were made with automated tools with evasion techniques it is hard to find the searchable pipe.

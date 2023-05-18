@@ -24,6 +24,9 @@ recovery:
   - RA_5105_unblock_blocked_user
 lessons_learned:
 workflow: |
+    ![WORKFLOW](RP0009.png)
+
+
     Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
     You can put here anything you want, i.e. specific conditions/requirements or details on the order of Response Actions execution.
     Here newlines will be saved.

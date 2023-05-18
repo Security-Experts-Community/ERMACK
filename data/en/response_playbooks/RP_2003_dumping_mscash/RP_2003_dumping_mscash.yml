@@ -44,6 +44,9 @@ extended_description: |
 
    These stored credentials do not expire, but they **cannot** be used for pass-the-hash attacks, so attackers must crack the password hash to recover the plaintext passwords
 workflow: |
+    ![WORKFLOW](RP2003.png)
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
 
     1. Identify detected IOCs (programms, tools, commands) used in credential dumping, it helps to find specific artifacts. List created/modified/downloaded file and search processes executed with "specific" flags. For example:

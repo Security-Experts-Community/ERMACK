@@ -1,0 +1,52 @@
+title: Preparing to block user account via Powershell
+id: RAI1602_0001
+linked_response_actions: RA1602
+description: Install the necessary modules and check the functionality of the proposed instructions
+author: '@SEC'
+creation_date: 2023/05/18
+modification_date: 2023/05/18
+tags:
+  - powershell
+  - windows
+  - active directory
+linked_artifacts:
+  - A1001
+references:
+  - https://blog.netwrix.com/2018/07/30/how-to-lock-unlock-enable-and-disable-ad-accounts-with-powershell/
+requirements:
+  software:
+    means_of_action:
+    - ID: S0004
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S6001
+      cpe-fs: 'cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*'
+extended_description: |
+  Before you can run the Active Directory PowerShell cmdlets, you have to have
+  the Active Directory module for PowerShell installed on your computer.
+  If you are using Windows 10, download the Remote Server Administration Tools (RSAT)
+  for Windows 10 from Microsoft's website here and then install it.
+  Then enable the AD PowerShell module feature by opening a PowerShell prompt
+  with local administrator privileges and running the Enable-WindowsOptionalFeature cmdlet
+  as shown here:
+  `Enable-WindowsOptionalFeature -Online -FeatureName RSATClient-Roles-AD-Powershell`
+
+  Optionally, you can also update the help files using the Update-Help cmdlet:
+  `Update-Help -Module ActiveDirectory -Verbose -Force`
+
+  Be sure to close the PowerShell prompt, since you won't need the elevated privileges for anything else.
+  The instructions below can be run in the security context of any user that has permissions to perform
+  user account operations in Active Directory, like unlocking user accounts and enabling and disabling user,
+  computer and service accounts.
+
+  You can easily disable user accounts using the Disable-ADAccount cmdlet. Use the -Identity parameter
+  to specify which account to disable; you can supply its distinguished name, security identifier (SID),
+  globally unique identifier (GUID) or Security Account Manager (SAM) account name.
+  Check the possibility of blocking on a test account:
+  `Disable-ADAccount -Identity <DOMAIN_USER_FOR_TEST>`
+
+  Verify that everything was successful by requesting accounts information:
+  `Search-ADAccount -AccountDisabled -UsersOnly | Select-Object Name, SamAccountName`
+
+  Revert test account to its original state:
+  `Enable-ADAccount -Identity <DOMAIN_USER_FOR_TEST>`

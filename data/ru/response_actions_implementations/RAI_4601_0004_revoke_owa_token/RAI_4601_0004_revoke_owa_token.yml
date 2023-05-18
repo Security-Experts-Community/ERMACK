@@ -1,13 +1,16 @@
-title: Отзыв токена аутентификации OWA
-id: RA4601_0004
+title: Revocation of the OWA cookie
+id: RAI4601_0004
 linked_response_actions: RA4601
 description: >
-  Отзыв токена аутентификации OWA
+  Revocation of the OWA cookie
 author: '@ERMACK_COMMUNITY'
 creation_date: 2022/10/27
-modification_date: 2022/10/27
+modification_date: 2023/03/30
 tags:
   - revoke.token
+linked_software:
+  - S3001
+  - S0004
 linked_artifacts:
   - A1006
 requirements:
@@ -19,35 +22,36 @@ requirements:
     - ID: S3001
       cpe-fs: 'cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_8:*:*:*:*:*:*'
 extended_description: |
-  Данное действие реагирования предназначено для отзыва токена аутентификации OWA при помощи PowerShell скрипта
+  ## Description
+  This react action is designed to revoke an OWA token through a Powershell script
 
-  ## Требования к целевой системе
-  - Microsoft Exchange 2019 cumulative update 8  
+  ## Target system requirements
+  1) Microsoft Exchange 2019 cumulative update 8
 
-  ## Требования к средствам воздействия
-  - Windows PowerShell 5  
+  ## Requirements for means of influence
+  1) Windows PowerShell 5
 
-  ## Ожидаемый результат
-  Отзыв токена и невозможность аутентификации в OWA с использованием данного токена.
+  ## Expected impact result
+  1) Revocation of the token and the inability to access the web service with it
 
-  ## Реализации
-  ### Powershell: Отзыв всех OWA-токенов
+  ## Implementations
+  ### Powershell: Revocate ALL OWA tokens
 
 
-  #### Опции
-  $USER - Имя скомпрометированной учётной записи
+  #### Options
+  $USER - compromised account name
 
-  #### Код
+  #### Script
 
   <details>
-  <summary><b>Powershell</b></summary>
+  <summary><b>Powershell script</b></summary>
 
   ```powershell linenums="1"
     #Requires -Version 4.0
     <#
         .SYNOPSIS
             Connect to Microsoft Exchange Server and gets the address lists
-    
+
         .DESCRIPTION
         .NOTES
             This PowerShell script was developed and optimized for ScriptRunner. The use of the scripts requires ScriptRunner.
@@ -58,7 +62,7 @@ extended_description: |
             © ScriptRunner Software GmbH
         .COMPONENT
             ScriptRunner Version 4.x or higher
-          
+
         .LINK
             https://github.com/scriptrunner/ActionPacks/tree/master/Exchange/AddressLists
     #>
@@ -68,7 +72,7 @@ extended_description: |
 
     try{
         $res = Get-AddressList | Select-Object*
-      
+
         if($null -ne $res){
             if($SRXEnv) {
                 $SRxEnv.ResultMessage = $res
@@ -90,16 +94,18 @@ extended_description: |
         throw
     }
     finally{
-          
+
     }
 
   ```
   </details>
 
-  #### Пример запуска
+  #### Usage example
+
+  #### Result
 
   <details>
-  <summary><b>Пример запуска</b></summary>
+  <summary><b>Result</b></summary>
 
   ```powershell linenums="1"
   PS> Revocate-OWAToken.ps1 example\user
@@ -107,13 +113,12 @@ extended_description: |
   ```
   </details>
 
-  #### Ограничения
-  Отсутствуют
+  #### Restrictions
 
-  ## Дополнительная информация
-  ### Метки
-  ### Артефакты
+  ## Additional information
+  ### Tags
+  ### Artifacts
   Domain User Account
 
-  ### Ссылки на внешние ресурсы
-  ### Соответствие внешним классификациям
+  ### Links to external resources
+  ### Compliance with classifications

@@ -7,5 +7,5 @@ creation_date: 2023/02/05
 stage: preparation
 references:
   - https://attack.mitre.org/mitigations/M1017/
-workflow: |
+extended_description: |
   Регулярно проводить обучение сотрудников базовым мерам защиты от целевого фишинга, социальной инженерии и др. техник атакующих, направленных на взаимодействие с пользователями. 

@@ -9,5 +9,5 @@ requirements:
 artifacts:
   - A3001_Email_Message
   - A1001_User_AD_Account
-workflow: |
+extended_description: |
   Delete an email message from an Email Server and users' email boxes using its native functionality.

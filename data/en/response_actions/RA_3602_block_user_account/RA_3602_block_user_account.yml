@@ -1,0 +1,9 @@
+title: RA_3602_block_user_account
+id: RA3602
+description: >
+  Block an user account
+author: '@SEC'
+creation_date: 2023/05/18
+stage: containment
+extended_description: |
+  Block an user account

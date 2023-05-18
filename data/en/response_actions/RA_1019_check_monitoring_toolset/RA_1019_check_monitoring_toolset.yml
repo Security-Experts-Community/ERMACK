@@ -1,0 +1,11 @@
+title: RA_1019_check_monitoring_toolset
+id: RA1019
+description: >
+  Make sure monitoring tools are working and up to date
+author: '@SEC'
+creation_date: 2023/05/20
+stage: preparation
+references:
+requirements:
+extended_description: |
+  Make sure monitoring tools are working and up to date

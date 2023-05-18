@@ -1,60 +1,18 @@
 ta_mapping = {
-    "attack.credential_access": [
-        "Credential Access",
-        "TA0006"
-    ],
-    "attack.execution": [
-        "Execution",
-        "TA0002"
-    ],
-    "attack.impact": [
-        "Impact",
-        "TA0040"
-    ],
-    "attack.persistence": [
-        "Persistence",
-        "TA0003"
-    ],
-    "attack.privilege_escalation": [
-        "Privilege Escalation",
-        "TA0004"
-    ],
-    "attack.lateral_movement": [
-        "Lateral Movement",
-        "TA0008"
-    ],
-    "attack.defense_evasion": [
-        "Defense Evasion",
-        "TA0005"
-    ],
-    "attack.exfiltration": [
-        "Exfiltration",
-        "TA0010"
-    ],
-    "attack.discovery": [
-        "Discovery",
-        "TA0007"
-    ],
-    "attack.collection": [
-        "Collection",
-        "TA0009"
-    ],
-    "attack.resource_development": [
-        "Resource Development",
-        "TA0042"
-    ],
-    "attack.reconnaissance": [
-        "Reconnaissance",
-        "TA0043"
-    ],
-    "attack.command_and_control": [
-        "Command and Control",
-        "TA0011"
-    ],
-    "attack.initial_access": [
-        "Initial Access",
-        "TA0001"
-    ]
+    "attack.credential_access": ["Credential Access", "TA0006"],
+    "attack.execution": ["Execution", "TA0002"],
+    "attack.impact": ["Impact", "TA0040"],
+    "attack.persistence": ["Persistence", "TA0003"],
+    "attack.privilege_escalation": ["Privilege Escalation", "TA0004"],
+    "attack.lateral_movement": ["Lateral Movement", "TA0008"],
+    "attack.defense_evasion": ["Defense Evasion", "TA0005"],
+    "attack.exfiltration": ["Exfiltration", "TA0010"],
+    "attack.discovery": ["Discovery", "TA0007"],
+    "attack.collection": ["Collection", "TA0009"],
+    "attack.resource_development": ["Resource Development", "TA0042"],
+    "attack.reconnaissance": ["Reconnaissance", "TA0043"],
+    "attack.command_and_control": ["Command and Control", "TA0011"],
+    "attack.initial_access": ["Initial Access", "TA0001"],
 }
 te_mapping = {
     "T1055.011": "Extra Window Memory Injection",
@@ -66,6 +24,7 @@ te_mapping = {
     "T1047": "Windows Management Instrumentation",
     "T1156": "Malicious Shell Modification",
     "T1113": "Screen Capture",
+    "T1027.011": "Fileless Storage",
     "T1067": "Bootkit",
     "T1037": "Boot or Logon Initialization Scripts",
     "T1557": "Adversary-in-the-Middle",
@@ -125,6 +84,7 @@ te_mapping = {
     "T1548.003": "Sudo and Sudo Caching",
     "T1560.003": "Archive via Custom Method",
     "T1578": "Modify Cloud Compute Infrastructure",
+    "T1583.008": "Malvertising",
     "T1069": "Permission Groups Discovery",
     "T1114": "Email Collection",
     "T1003.002": "Security Account Manager",
@@ -165,9 +125,11 @@ te_mapping = {
     "T1600": "Weaken Encryption",
     "T1606.002": "SAML Tokens",
     "T1192": "Spearphishing Link",
+    "T1036.008": "Masquerade File Type",
     "T1489": "Service Stop",
     "T1587.001": "Malware",
     "T1121": "Regsvcs/Regasm",
+    "T1652": "Device Driver Discovery",
     "T1206": "Sudo Caching",
     "T1087.002": "Domain Account",
     "T1547.014": "Active Setup",
@@ -329,6 +291,7 @@ te_mapping = {
     "T1071.003": "Mail Protocols",
     "T1556.007": "Hybrid Identity",
     "T1595.002": "Vulnerability Scanning",
+    "T1059.009": "Cloud API",
     "T1596": "Search Open Technical Databases",
     "T1207": "Rogue Domain Controller",
     "T1553.006": "Code Signing Policy Modification",
@@ -348,7 +311,7 @@ te_mapping = {
     "T1027.001": "Binary Padding",
     "T1505.003": "Web Shell",
     "T1484.001": "Group Policy Modification",
-    "T1217": "Browser Bookmark Discovery",
+    "T1217": "Browser Information Discovery",
     "T1552.004": "Private Keys",
     "T1583.004": "Server",
     "T1021.006": "Windows Remote Management",
@@ -475,6 +438,7 @@ te_mapping = {
     "T1606.001": "Web Cookies",
     "T1134.001": "Token Impersonation/Theft",
     "T1567.001": "Exfiltration to Code Repository",
+    "T1021.007": "Cloud Services",
     "T1205.001": "Port Knocking",
     "T1583.006": "Web Services",
     "T1528": "Steal Application Access Token",
@@ -491,6 +455,7 @@ te_mapping = {
     "T1057": "Process Discovery",
     "T1562.003": "Impair Command History Logging",
     "T1053.004": "Launchd",
+    "T1556.008": "Network Provider DLL",
     "T1546.003": "Windows Management Instrumentation Event Subscription",
     "T1596.004": "CDNs",
     "T1497.002": "User Activity Based Checks",
@@ -504,6 +469,7 @@ te_mapping = {
     "T1606": "Forge Web Credentials",
     "T1621": "Multi-Factor Authentication Request Generation",
     "T1554": "Compromise Client Software Binary",
+    "T1552.008": "Chat Messages",
     "T1059.001": "PowerShell",
     "T1023": "Shortcut Modification",
     "T1546.001": "Change Default File Association",
@@ -592,6 +558,7 @@ te_mapping = {
     "T1547.002": "Authentication Package",
     "T1218.010": "Regsvr32",
     "T1002": "Data Compressed",
+    "T1567.003": "Exfiltration to Text Storage Sites",
     "T1081": "Credentials in Files",
     "T1592.002": "Software",
     "T1128": "Netsh Helper DLL",
@@ -605,6 +572,7 @@ te_mapping = {
     "T1102.002": "Bidirectional Communication",
     "T1203": "Exploitation for Client Execution",
     "T1595.003": "Wordlist Scanning",
+    "T1562.011": "Spoof Security Alerting",
     "T1137.004": "Outlook Home Page",
     "T1573.002": "Asymmetric Cryptography",
     "T1567.002": "Exfiltration to Cloud Storage",
@@ -668,6 +636,7 @@ te_mapping = {
     "T1059.003": "Windows Command Shell",
     "T1055.009": "Proc Memory",
     "T1223": "Compiled HTML File",
+    "T1650": "Acquire Access",
     "T1601.001": "Patch System Image",
     "T1558.002": "Silver Ticket",
     "T1213": "Data from Information Repositories",
@@ -684,11 +653,13 @@ te_mapping = {
     "T1537": "Transfer Data to Cloud Account",
     "T1027.006": "HTML Smuggling",
     "T1556.005": "Reversible Encryption",
+    "T1027.010": "Command Obfuscation",
     "T1130": "Install Root Certificate",
     "T1022": "Data Encrypted",
     "T1070.004": "File Deletion",
     "T1189": "Drive-by Compromise",
     "T1498": "Network Denial of Service",
+    "T1651": "Cloud Administration Command",
     "T1546.016": "Installer Packages",
     "T1595.001": "Scanning IP Blocks",
     "T1158": "Hidden Files and Directories",
@@ -793,7 +764,7 @@ te_mapping = {
     "T1218.014": "MMC",
     "T1564.010": "Process Argument Spoofing",
     "T1077": "Windows Admin Shares",
-    "T1574.012": "COR_PROFILER"
+    "T1574.012": "COR_PROFILER",
 }
 mi_mapping = {
     "M1031": "Network Intrusion Prevention",
@@ -838,5 +809,5 @@ mi_mapping = {
     "M1044": "Restrict Library Loading",
     "M1042": "Disable or Remove Feature or Program",
     "M1036": "Account Use Policies",
-    "M1041": "Encrypt Sensitive Information"
+    "M1041": "Encrypt Sensitive Information",
 }

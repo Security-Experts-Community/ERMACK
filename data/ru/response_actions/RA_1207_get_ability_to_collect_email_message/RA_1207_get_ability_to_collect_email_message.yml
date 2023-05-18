@@ -7,5 +7,5 @@ creation_date: 2023/02/02
 stage: preparation
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Убедитесь, что у вас есть возможность выгрузить письмо электронной почты и собрать из него все необходимые сведения.

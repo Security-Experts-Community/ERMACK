@@ -10,5 +10,5 @@ references:
   - https://support.google.com/a/answer/7581662?hl=en
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Убедиться, что у вас есть возможность удалить письмо электронной почты с почтового сервера и из почтовых ящиков пользователей.

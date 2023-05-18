@@ -5,11 +5,10 @@ description: >
 author: enikulina
 creation_date: 2023/02/02
 stage: preparation
-references:
 requirements:
   - MS_border_firewall
   - MS_border_proxy
   - MS_border_ips
   - MS_border_ngfw
-workflow: |
+extended_description: |
   Убедиться, что у вас есть возможность добавления внешних IP-адресов в "черный список" или создания запрещающих правил для входящего и исходящего трафика в 1 из перечисленных систем.

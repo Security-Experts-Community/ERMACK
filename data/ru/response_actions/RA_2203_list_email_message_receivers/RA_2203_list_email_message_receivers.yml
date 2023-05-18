@@ -9,6 +9,5 @@ references:
   - https://docs.microsoft.com/en-us/powershell/module/exchange/mail-flow/get-messagetrackinglog?view=exchange-ps
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Найти всех потенциальных получателей письма электронной почты с помощью встроенных функций почтового сервера либо специализированных СЗИ.
-

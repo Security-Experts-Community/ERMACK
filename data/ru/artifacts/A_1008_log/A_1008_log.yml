@@ -1,0 +1,12 @@
+title: Журнал событий
+id: A1008
+description: Место хранения определённого набора событий
+author: '@Cyberok'
+creation_date: 2023/03/02
+modification_date: 2023/03/02
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Log/
+mapping:
+  - d3f:Log
+extended_description: |
+  В журнале фиксируются события в порядке их появления. Обычно указывается временная метка и основная информация по каждому событию.

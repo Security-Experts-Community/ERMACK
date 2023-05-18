@@ -9,7 +9,6 @@ references:
   - https://practical365.com/exchange-server/tracking-read-email-messages-exchange-server/
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Найти всех пользователей, открывших/прочитавших письмо с помощью встроенных функций почтового сервера либо специализированных СЗИ.
   Если в письме содержалась фишинговая ссылка или исполняемый файл, необходимо определить, с каких узлов сети были обращения на фишинговый домен.
-

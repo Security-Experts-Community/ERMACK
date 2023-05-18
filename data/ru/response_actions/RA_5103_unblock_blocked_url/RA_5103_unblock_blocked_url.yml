@@ -12,5 +12,5 @@ requirements:
   - MS_intranet_proxy
   - MS_intranet_ips
   - MS_intranet_ngfw
-workflow: |
+extended_description: |
   Unblock a blocked URL in the system(s) used to block it.

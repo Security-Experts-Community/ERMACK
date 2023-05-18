@@ -7,7 +7,7 @@ stage: lessons_learned
 references:
   - http://shop.oreilly.com/product/0636920043614.do
   - https://www.amazon.com/Incident-Response-Computer-Forensics-Third/dp/0071798684
-workflow: |
+extended_description: |
   The Lessons Learned phase evaluates the team's performance through each step.
   The goal of the phase is to discover how to improve the incident response process.
   You need to answer some basic questions, using developed incident report:

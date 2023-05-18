@@ -1,0 +1,12 @@
+title: Токен доступа
+id: A5004
+description: Этот ресурс представляет токен доступа
+author: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:AccessToken/
+mapping:
+  - d3f:AccessToken
+extended_description: |
+  Этот ресурс представляет токен доступа

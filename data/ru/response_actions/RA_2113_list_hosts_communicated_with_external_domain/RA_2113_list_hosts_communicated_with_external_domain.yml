@@ -12,5 +12,5 @@ requirements:
   - DN_dns_log
   - DN_proxy_log
   - DN_network_flow_log
-workflow: |
+extended_description: |
   List hosts communicated with an external domain using the most efficient way.

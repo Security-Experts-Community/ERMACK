@@ -1,4 +1,4 @@
-title: Профиль доступного ПО
+title: Software profile
 creation_date: 2022/10/27
 modification_date: 2022/10/29
 id: 76f22b30-922b-4b31-94fc-c7ddd80fe67
@@ -17,14 +17,6 @@ software_profile:
     category: Email
     id: S3001
     cpe-fs: 'cpe:2.3:a:microsoft:exchange_server:2019:cumulative_update_8:*:*:*:*:*:*'
-  - role: Response
-    category: Commands
-    id: S0002
-    cpe-fs: 'cpe:2.3:a:positive_technologies:pt_xdr:1.2:*:*:*:*:*:*:*'
-  - role: LogManagement
-    category: Events
-    id: S0001
-    cpe-fs: 'cpe:2.3:a:positive_technologies:mp_siem:23.1:*:*:*:*:*:*:*'
   - role: DirectoryService
     category: Identity
     id: S6001
@@ -32,8 +24,12 @@ software_profile:
   - role: Interpreter
     category: Process
     id: S0004
-    cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
+    cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
   - role: Workstations
     category: Host
     id: S0003
     cpe-fs: 'cpe:2.3:o:microsoft:windows_10:2019:*:*:*:enterprise_ltsc:*:*:*'
+  - role: EDR
+    category: Security
+    id: S0005
+    cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'

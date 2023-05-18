@@ -14,7 +14,7 @@ requirements:
   - MS_dns_server
 artifacts:
   - A1002
-workflow: |
+extended_description: |
   Block an external domain name from being accessed by corporate assets, using the most efficient way.
 
   Warning:

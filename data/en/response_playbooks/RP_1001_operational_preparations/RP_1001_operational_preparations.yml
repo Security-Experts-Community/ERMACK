@@ -17,6 +17,5 @@ preparation:
   - RA_1003_raise_personnel_awareness
   - RA_1015_define_teams_and_roles
   - RA_1016_define_escalation_path
-  - RA_1000_custom_operational_action
 workflow: |
   1. Execute Response Actions step by step.

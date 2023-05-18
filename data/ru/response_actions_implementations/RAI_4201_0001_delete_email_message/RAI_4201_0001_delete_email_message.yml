@@ -1,9 +1,10 @@
-﻿title: Удаление письма с MS Exchange скриптом
+﻿title: Deleting an email with MS Exchange PowerShell script
 id: RAI_4201_0001
 description: Delete an email message from an Exchange Email Server and users' email boxes
-author: '@ACTION_COMMUNITY'
+author: '@ERMACK_COMMUNITY'
 creation_date: 2022/10/22
-modification_date: 2022/10/27
+modification_date: 2022/10/22
+category: Email
 linked_software:
   - S3001
   - S0004
@@ -15,93 +16,48 @@ linked_artifacts:
 requirements:
   'rigths: Mailbox Search':
   'rigths: Mailbox Import Export':
-  software: 
+  software:
     means_of_action:
     - ID: S0004
-      cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'  
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
     targets_of_action:
     - ID: S3001
       cpe-fs: 'cpe:2.3:a:microsoft:exchange_server:*:*:*:*:*:*:*:*'
 extended_description: |
-  Скрипт удаления почты с проверкой на параметры удержания, логированием и запуском на конкретном сервере.
-  Вынесу отдельно реализацию неявного выполнения кода. Сетевой обмен в примере происходит по TCP 443.
+  Mail deletion script with check for hold parameters, logging and running on a specific server.
+  The network exchange in the example takes place over TCP 443.
 
-  Алгоритм реализации:  
-  1. Настройка сессии  
-  2. Проверка версии Exchange  
-  3. Реализация удаления  
+  Implementation algorithm:
+    1. Session setup
+    2. Check the version of Exchange.
+    3. Implementation of removal
 
-  **Ограничения:**
-  1) Механизм ищет везде, но обрабатывает первые 500 ящиков
-  2) Механизм удаляет только 10 элементов в ящике за проход
-  3) Скрипт совмещен с блоком установки удаленной сессии
-  4) Скрипт подходит как для локального, так и для удаленного выполнения
-
-  Вышеуказанные параметры не меняются на лету и имеют задержку в 60 минут, поэтому такие ящики исключаются из области запроса на удаление.
 
   ## PowerShell
-  ### Код
+  Implementation of the functionality with the some search mechanisms have restrictions.
+
+  **Restrictions:**
+    1) The mechanism searches everywhere, but processes the first 500 boxes
+    2) The mechanism removes only 10 items in the box per pass
+    3) The script is combined with the remote session setup block
+    4) The script is suitable for both local and remote execution
+
+  ### Script
 
   <details>
     <summary>PowerShell</summary>
 
-    ```PowerShell
-    Function Delete-EMails
-    {
-    Param(
-          [parameter(Mandatory)]
-          [string]$SearchQuery
-          )
-          # Some useful script goes here
-    }
+    ```powershell linenums="1"
+
+      Function Delete-EMails
+      {
+      Param(
+            [parameter(Mandatory)]
+            [string]$SearchQuery
+            )
+
+            # Some useful script code
+      }
+
     ```
-
-  </details>
-
-  ### Использование скрипта
-  <details>
-    <summary>PowerShell</summary>
-
-    ```PowerShell
-    #Запуск сценария
-    Delete-EMails -SearchQuery 'Subject:"Query"'
-
-    #Результат работы (файл лога):
-    Mailboxes with Search Hits
-    Mailboxes Loop 1
-    GenrihNovikov@plat.form
-    Administrator@plat.form
-    Purge Loop 1
-    Purged ItemCount: 20
-    With TotalSize: 100508
-    Purge Loop 2
-    Purged ItemCount: 2
-    With TotalSize: 10249
-    Purge Loop 3
-    Purged ItemCount: 0
-    With TotalSize: 0
-
-    [Single Item Recovery Enabled]
-    CN=Boris Surkov,CN=Users,DC=external,DC=plat,DC=form
-    CN=Iulian Sitnikov,CN=Users,DC=external,DC=plat,DC=form
-    [In-Place Holds]
-    CN=AAndrejkin,CN=Users,DC=external,DC=plat,DC=form
-    [Litigation Hold]
-    CN=Daniela Krylova,CN=Users,DC=external,DC=plat,DC=form
-
-    Identity         : external.plat.form/Users/Administrator
-    TargetMailbox    : external.plat.form/Users/test1
-    Success          : True
-    TargetFolder     : \SearchAndDeleteLog\Administrator-20.04.2022 8:18:25
-    ResultItemsCount : 1
-    ResultItemsSize  : 3.203 KB (3,280 bytes)
-
-    Identity         : external.plat.form/Users/Genrih Novikov
-    TargetMailbox    : external.plat.form/Users/test1
-    Success          : True
-    TargetFolder     : \SearchAndDeleteLog\Genrih Novikov-20.04.2022 8:18:25
-    ResultItemsCount : 1
-    ResultItemsSize  : 7.113 KB (7,284 bytes)
-    ```
-
   </details>

@@ -9,5 +9,5 @@ requirements:
 artifacts:
   - A3001_Email_Message
   - A1001_User_AD_Account
-workflow: |
+extended_description: |
   Удалить письмо c почтового сервера и из почтовых ящиков затронутых внутренних пользователей.

@@ -11,5 +11,5 @@ requirements:
   - MS_intranet_ips
   - MS_intranet_ngfw
   - MS_host_firewall
-workflow: |
+extended_description: |
   Убедитесь, что у вас есть возможность изолировать внутренний узел от корпоративной и внешней сетей.

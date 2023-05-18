@@ -1,0 +1,22 @@
+title: Operational Preparations
+id: RP1001
+description: Response playbook fo operational preparations
+author: '@ermack_community'
+creation_date: 2019/01/31
+modification_date: 2019/01/31
+severity: M
+tlp: AMBER
+pap: WHITE
+tags:
+  - operational
+  - sub-playbook
+preparation:
+  - RA_1001_practice
+  - RA_1002_take_trainings
+  - RA_1004_make_personnel_report_suspicious_activity
+  - RA_1003_raise_personnel_awareness
+  - RA_1015_define_teams_and_roles
+  - RA_1016_define_escalation_path
+  - RA_1000_custom_operational_action
+workflow: |
+  1. Execute Response Actions step by step.

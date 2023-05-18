@@ -1,0 +1,44 @@
+title: Perform quarantine file via SOLDR
+id: RAI3302_0001
+linked_response_actions: RA3302
+description: This response action is intended to perform quarantine of choosen file
+author: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/03/30
+tags:
+  - quarantine
+  - linux
+  - windows
+  - macOS
+linked_software:
+  - S0005
+linked_artifacts:
+  - A3002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0005
+      cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S0003
+      cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
+extended_description: |
+  Quarantine module sends files to quarantine container directly from the SOLDR (XDR) interface.
+
+  ## Target system requirements
+  1) Installed SOLDR agent.
+
+  ## Requirements for means of action
+  1) Enabled "Quarantine" module.
+
+  ## Expected impact result
+  1) Suspucious file is isolated.
+
+  ## Implementations
+  **Set up module**
+
+  1) some info
+
+  **Module usage example**
+
+  2) more info

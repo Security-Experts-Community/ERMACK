@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  code-server:
+    image: aw350m3/ermack
+    container_name: ermack
+    ports:
+      - 8000:8000
+    volumes:
+      - ./ermack:/ermack/ermack
+      - ./data:/ermack/data
+      - ./assets:/ermack/assets

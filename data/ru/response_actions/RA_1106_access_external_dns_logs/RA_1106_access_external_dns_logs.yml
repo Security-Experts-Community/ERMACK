@@ -11,7 +11,7 @@ references:
 requirements:
   - MS_dns_server
   - DN_zeek_dns_log
-workflow: |
+extended_description: |
   Make sure that there is a collection of DNS logs for external communication (from corporate assets to the Internet) configured.
   If there is no option to configure it on a network device/DNS Server, you can install a special software on each endpoint and collect it from them.
 

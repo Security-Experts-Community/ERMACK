@@ -1,6 +1,6 @@
 title: 'Forcing load a malicious DLL via COM Abuse'
 id: UC0012
-author: '@Cyberok'
+author: 'Alex@Cyberok'
 creation_date: 2023/02/28
 modification_date: 2023/02/28
 severity: M
@@ -93,8 +93,10 @@ extended_description: |
     <img src="../3.JPG" alt="METER"/>
 
     ## Attack diagram
-    <img src="../36.svg" alt="Diagram"/>
+    ![Diagram_1](36.svg)
 
-    ## References
+    ## Attack-flow diagram
+    ![Diagram_2](UC0012.png)
 
+    ## References 
     [COM and the PowerThIEf](https://labs.nettitude.com/blog/com-and-the-powerthief/)

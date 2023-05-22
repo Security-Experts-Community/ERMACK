@@ -19,14 +19,10 @@ identification:
 containment:
   - RA_3602_block_user_account
 eradication:
-  - WAIT FOR CONTAINMENT AND ERADICATION OF PARENT PLAYBOOKS
+  - RA_4603_reset_authentication_credentials
+  - RA_4601_revoke_authentication_credentials
 recovery:
   - RA_5105_unblock_blocked_user
 lessons_learned:
 workflow: |
     <img src="../RP0009.png" alt="WORKFLOW"/>
-
-
-    Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
-    You can put here anything you want, i.e. specific conditions/requirements or details on the order of Response Actions execution.
-    Here newlines will be saved.

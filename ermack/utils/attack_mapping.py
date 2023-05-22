@@ -1,18 +1,60 @@
 ta_mapping = {
-    "attack.credential_access": ["Credential Access", "TA0006"],
-    "attack.execution": ["Execution", "TA0002"],
-    "attack.impact": ["Impact", "TA0040"],
-    "attack.persistence": ["Persistence", "TA0003"],
-    "attack.privilege_escalation": ["Privilege Escalation", "TA0004"],
-    "attack.lateral_movement": ["Lateral Movement", "TA0008"],
-    "attack.defense_evasion": ["Defense Evasion", "TA0005"],
-    "attack.exfiltration": ["Exfiltration", "TA0010"],
-    "attack.discovery": ["Discovery", "TA0007"],
-    "attack.collection": ["Collection", "TA0009"],
-    "attack.resource_development": ["Resource Development", "TA0042"],
-    "attack.reconnaissance": ["Reconnaissance", "TA0043"],
-    "attack.command_and_control": ["Command and Control", "TA0011"],
-    "attack.initial_access": ["Initial Access", "TA0001"],
+    "attack.credential_access": [
+        "Credential Access",
+        "TA0006"
+    ],
+    "attack.execution": [
+        "Execution",
+        "TA0002"
+    ],
+    "attack.impact": [
+        "Impact",
+        "TA0040"
+    ],
+    "attack.persistence": [
+        "Persistence",
+        "TA0003"
+    ],
+    "attack.privilege_escalation": [
+        "Privilege Escalation",
+        "TA0004"
+    ],
+    "attack.lateral_movement": [
+        "Lateral Movement",
+        "TA0008"
+    ],
+    "attack.defense_evasion": [
+        "Defense Evasion",
+        "TA0005"
+    ],
+    "attack.exfiltration": [
+        "Exfiltration",
+        "TA0010"
+    ],
+    "attack.discovery": [
+        "Discovery",
+        "TA0007"
+    ],
+    "attack.collection": [
+        "Collection",
+        "TA0009"
+    ],
+    "attack.resource_development": [
+        "Resource Development",
+        "TA0042"
+    ],
+    "attack.reconnaissance": [
+        "Reconnaissance",
+        "TA0043"
+    ],
+    "attack.command_and_control": [
+        "Command and Control",
+        "TA0011"
+    ],
+    "attack.initial_access": [
+        "Initial Access",
+        "TA0001"
+    ]
 }
 te_mapping = {
     "T1055.011": "Extra Window Memory Injection",
@@ -764,7 +806,7 @@ te_mapping = {
     "T1218.014": "MMC",
     "T1564.010": "Process Argument Spoofing",
     "T1077": "Windows Admin Shares",
-    "T1574.012": "COR_PROFILER",
+    "T1574.012": "COR_PROFILER"
 }
 mi_mapping = {
     "M1031": "Network Intrusion Prevention",
@@ -809,5 +851,5 @@ mi_mapping = {
     "M1044": "Restrict Library Loading",
     "M1042": "Disable or Remove Feature or Program",
     "M1036": "Account Use Policies",
-    "M1041": "Encrypt Sensitive Information",
+    "M1041": "Encrypt Sensitive Information"
 }

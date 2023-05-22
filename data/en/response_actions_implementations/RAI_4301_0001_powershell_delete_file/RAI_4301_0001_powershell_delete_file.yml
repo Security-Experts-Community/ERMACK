@@ -1,0 +1,36 @@
+﻿title: Deleting a file from Windows with Powershell
+id: RAI4301_0001
+description: Removing a file from a Windows system through the Powershell
+author: 'e6e6e@Cyberok'
+creation_date: 2023/03/22
+modification_date: 2023/03/30
+linked_software:
+  - S0004                
+linked_response_actions: RA4301
+tags:
+  - delete_file
+linked_artifacts:
+  - A3002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0004
+      cpe-fs: 'cpe:2.3:a:microsoft:powershell:5.0:*:*:*:*:*:*:*'
+    targets_of_action:
+    - ID: S0003
+      cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
+extended_description: |
+  To delete the file using PowerShell, we can use the ***Remove-Item*** command. Remove-Item command removes the file from the path specified. For example, we have the file with path: C:\Test\Test.txt.
+
+  To delete the file use the below command.
+  ```
+  Remove-Item 'C:\Test\test.txt'
+  ```
+  
+  This command deletes a file that's both hidden and read-only.
+  ```
+  Remove-Item -Path C:\Test\hidden-RO-file.txt -Force
+  ```
+
+  It uses the Path parameter to specify the file. It uses the Force parameter to delete it. Without Force, you can not delete read-only or hidden files
+  [Microsoft/Powershell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.3)

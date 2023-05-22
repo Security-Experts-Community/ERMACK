@@ -1,6 +1,6 @@
-title: Powershell clear attribute from object
+title: Powershell clear attribute from AD object
 id: RAI4604_0001
-description: Clearing a attribute from object through the Powershell
+description: Clearing a attribute from AD object through the Powershell
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/07
 modification_date: 2023/05/07

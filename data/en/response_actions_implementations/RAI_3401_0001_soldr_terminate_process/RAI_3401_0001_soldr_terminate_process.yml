@@ -1,0 +1,61 @@
+title: Terminate process via SOLDR
+id: RAI3401_0001
+linked_response_actions: RA3401
+description: This response action is intended to terminate process by it's executable path
+author: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/03/30
+tags:
+  - terminate
+  - linux
+  - windows
+linked_software:
+  - S0005
+linked_artifacts:
+  - A4001
+requirements:
+  software:
+    means_of_action:
+    - ID: S0005
+      cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'
+    targets_of_action:   
+extended_description: |
+  **Terminate process**
+  
+  You can remotely terminate processes using the Process terminator module in SOLDR. Processes can be injected with malicious code by an attacker or a legitimate process can be used to spawn a new malicious process or thread. Use this action to terminate specified processes on an endpoint.
+
+  ## Target system requirements
+  Installed SOLDR agent.
+
+  ## Requirements for means of action
+  Enabled "Process terminator" module.
+
+  ## Expected impact result
+  Suspucious process is terminated.
+
+  ## Implementations
+  **Set up module in policy**
+
+  1) In the main windows of policies choose "Process terminator" module, enable it.
+  
+  2) Define exlusions for policy module to avoid issues.
+  
+  ![terminator](55.JPG) 
+
+  **Module usage example**
+
+  1) Select needed agent and click on "Basic parameters" button.
+  
+  2) Select one of proveded terminate option:
+  
+  + Terminate all processes by object file path;
+  + Terminate all processes by path to an executable file of the object process;
+  + Terminate all processes by object process name;
+  + Terminate a process by object process name and ID;
+  + Terminate a process by path to an executable file of the object process and ID;
+  + Terminate process trees by object file path;
+  + and etc;
+    
+  3) Review log result of executed action.
+  
+  ![log](54.JPG)

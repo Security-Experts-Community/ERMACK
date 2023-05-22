@@ -7,8 +7,6 @@ creation_date: 2023/02/03
 stage: containment
 references:
   - https://docs.trellix.com/ru-RU/bundle/mvision-endpoint-detection-and-response-product-guide/page/GUID-4CF5D992-5315-4C2D-829A-5ADFA7A2559B.html
-requirements:
-  - 
 extended_description: |
   A process is a program in execution and it is more than a program code called as text section and this concept works under all the operating system because all the task perform by the operating system needs a process to perform the task. The process executes when it changes state. The state of a process is defined by the current activity of the process.
   

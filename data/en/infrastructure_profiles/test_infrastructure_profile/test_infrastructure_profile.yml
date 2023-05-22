@@ -28,7 +28,7 @@ software_profile:
   - role: Workstations
     category: Host
     id: S0003
-    cpe-fs: 'cpe:2.3:o:microsoft:windows_10:2019:*:*:*:enterprise_ltsc:*:*:*'
+    cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
   - role: EDR
     category: Security
     id: S0005

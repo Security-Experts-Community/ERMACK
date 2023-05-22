@@ -33,6 +33,16 @@ extended_description: |
   Get a registry hive.
 
   ## Implementations
+  To begin with, you must determine which registry keys have changed recently.
+  If you have Sysmon installed and auditing of registry keys is enabled, then search for Sysmon events.
+  This example searches for the last 24 hours, but you can set any time range.
+  <details>
+  <summary><b>Powershell command</b></summary>
+  ```
+  $Date = (Get-Date).AddDays(-1)
+  Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; StartTime=$Date; Id=12,13,14} | Select-Object TimeCreated, EventID, ProcessId, Image, TargetObject, NewName | Format-Table -AutoSize
+  ```
+  </details>
   You can show all items directly within a registry key using ***Get-ChildItem***. Add the optional Force parameter to display hidden or system items. For example, this command displays the items directly within PowerShell drive HKCU:, which corresponds to the **HKEY_CURRENT_USER** registry hive:
   ```
   Get-ChildItem -Path HKCU:\ | Select-Object Name

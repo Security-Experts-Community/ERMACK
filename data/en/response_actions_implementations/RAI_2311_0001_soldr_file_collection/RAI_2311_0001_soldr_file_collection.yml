@@ -2,7 +2,7 @@ title: Collect file via SOLDR
 id: RAI2311_0001
 linked_response_actions: RA2311
 description: This response action is intended to obtain file from remote host
-author: 'Cyberok'
+author: 'Alex@Cyberok'
 creation_date: 2023/02/03
 modification_date: 2023/03/30
 tags:

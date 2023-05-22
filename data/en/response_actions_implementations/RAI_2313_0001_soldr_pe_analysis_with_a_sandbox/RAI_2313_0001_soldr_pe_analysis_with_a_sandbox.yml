@@ -1,12 +1,12 @@
-title: Perform quarantine file via SOLDR
-id: RAI3302_0001
-linked_response_actions: RA3302
-description: This response action is intended to perform quarantine of choosen file
+title: Perform malware analysis via SOLDR
+id: RAI2313_0001
+linked_response_actions: RA2313
+description: This response action is intended to perform malware analysis of choosen file
 author: 'Alex@Cyberok'
 creation_date: 2023/02/03
 modification_date: 2023/03/30
 tags:
-  - quarantine
+  - malware_analysis
   - linux
   - windows
   - macOS
@@ -23,22 +23,24 @@ requirements:
     - ID: S0003
       cpe-fs: 'cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*'
 extended_description: |
-  Quarantine module sends files to quarantine container directly from the SOLDR (XDR) interface.
+  Sandbox module sends files for checking and malware analysis directly from the SOLDR (XDR) interface.
 
   ## Target system requirements
-  Installed SOLDR agent.
+  1) Installed SOLDR agent.
 
   ## Requirements for means of action
-  Enabled "Quarantine" module.
+  1) Enabled "Sandbox" module.
 
   ## Expected impact result
-  Suspucious file is isolated.
+  1) Get a file's verdict - (clean, suspicious, malware).
 
   ## Implementations
   **Set up module**
-
+  
   1) some info
-
+  
   **Module usage example**
-
+  
   2) more info
+  
+  

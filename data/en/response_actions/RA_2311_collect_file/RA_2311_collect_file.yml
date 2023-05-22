@@ -9,7 +9,7 @@ references:
   - https://cloudone.trendmicro.com/docs/workload-security/file-collection/
 requirements:
   - tool for transfer
-workflow: |
+extended_description: |
   File Collection lets you collect objects directly from any host. Basically there is dozen ways to collect file, conditionally , they can be divided into two groups:
 
   + manually performed

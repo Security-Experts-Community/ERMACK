@@ -1,14 +1,13 @@
 title: RA_2320_analyse_filename
 id: RA2320
 description: >
-  Analyse a filename
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Проанализировать имя файла
+author: ayakovlev
+creation_date: 2023/02/17
 stage: identification
 references:
-  - https://example.com
-linked_analytics:
-  - DN_zeek_conn_log # placeholder
-workflow: |
-  Description of the workflow for single Response Action in markdown format.
-  Here newlines will be saved.
+  - https://any.run
+  - https://hybrid-analysis.com
+  - https://www.virustotal.com
+extended_description: |
+  Проверить имя файла на доступных анализаторах.

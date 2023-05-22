@@ -12,5 +12,5 @@ requirements:
   - MS_border_proxy
   - MS_border_ngfw
   - DN_zeek_http_log
-workflow: |
+extended_description: |
   Make sure that there is a collection of HTTP connections logs for external communication (from corporate assets to the Internet) configured.

@@ -1,0 +1,62 @@
+title: Windows host compromise
+id: RP0008
+description: >
+  Live Analysis on a suspicious Windows system
+author: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/05/20
+severity: M                  # L M H
+tlp: AMBER                   # WHITE GREEN AMBER RED
+pap: WHITE                   # WHITE GREEN AMBER RED
+tags: []
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf
+preparation:
+  - RA_1017_prepare_golden_images
+  - RA_1018_deploy_an_edr_solution
+  - RA_1019_check_monitoring_toolset
+  - RA_1012_check_analysis_toolset
+  - RA_1015_define_teams_and_roles
+  - RA_1016_define_escalation_path
+  - RA_1129_make_sure_all_hosts_get_setting_on_same_ntp
+  - RA_1020_prepare_acquisition_profiles
+  - RA_1130_prepare_network_activity_profiles
+  - RA_1412_prepare_process_activity_profiles
+  - RA_1021_prepare_golden_image_comparsion_tool
+identification:
+  - RA_2005_make_a_volatile_memory_capture
+  - RA_2006_conduct_memory_analysis
+  - RP_0009_large_scale_compromise
+  - RP_0010_identify_persistence_mechanisms
+  - RA_2007_build_super_timeline
+  - RA_2008_prepare_iocs_list
+  - RA_2009_scan_with_iocs_and_rules
+  - RP_0011_make_sure_all_footholds_have_been_identified
+containment:
+  - RA_1008_make_sure_there_are_backups
+  - RA_3112_isolate_asset
+  - RA_3001_patch_vulnerability
+  - RA_3113_inspect_network_shares
+  - RP_0000_find_how_the_attacker_got_into_system
+  - RA_0000_make_sure_that_the_perimeter_well_scoped_up_and_contain
+eradication:
+  - RA_5001_reinstall_host_from_golden_image
+  - RP_0012_compromised_accounts
+  - RA_4301_remove_file
+  - RA_4503_remove_persistence_mechanisms
+  - RA_4002_apply_prevention_mode_for_iocs
+recovery:
+  - RA_5302_restore_modified_file
+lessons_learned:
+  - RA_6001_develop_incident_report
+  - RP_0013_improve_intrusion_management_processes
+  - RA_6003_update_acquisition_profiles
+  - RA_6004_update_network_profile
+  - RA_6005_update_process_profile
+workflow: |
+  <img src="../RP0008.png" alt="WORKFLOW"/>
+
+
+    Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
+    You can put here anything you want, i.e. specific conditions/requirements or details on the order of Response Actions execution.
+    Here newlines will be saved.

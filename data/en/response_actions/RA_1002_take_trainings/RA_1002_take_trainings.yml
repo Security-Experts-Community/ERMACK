@@ -4,7 +4,7 @@ description: Take training courses to gain relevant knowledge
 author: '@atc_project'
 creation_date: 2020/04/08
 stage: preparation
-workflow: |
+extended_description: |
   > We do not rise to the level of our expectations. We fall to the level of our training.
 
   Here are some relevant training courses that will help you in the Incident Response activities:

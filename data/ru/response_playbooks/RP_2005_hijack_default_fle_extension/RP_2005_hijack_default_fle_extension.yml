@@ -1,0 +1,84 @@
+title: Hijack default file extension
+id: RP2005
+author: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/02/03
+linked_artifacts:
+  - A1005
+  - A3002
+  - A5002
+tags:
+  - status.stable
+  - severity.high
+  - tlp.amber
+  - pap.white
+  - windows
+preparation:
+  - RP_1001_operational_preparations
+identification:
+  - RA_2503_list_registry_keys_accessed
+  - RA_2501_list_registry_keys_modified
+  - RA_2302_list_files_modified
+  - RA_2301_list_files_created
+  - RA_2401_list_processes_executed
+  - RA_2406_find_process_by_executable_content_pattern
+  - RP_1004_identify_means_of_attack
+  - RP_1002_identify_affected_systems_and_users
+containment:
+  - RA_3405_block_process_by_executable_content_pattern
+eradication:
+  - RA_4501_remove_registry_key
+recovery:
+  - Recover modification
+lessons_learned:
+  - RA_6001_develop_incident_report
+  - RA_6002_conduct_lessons_learned_exercise
+
+description: Response playbook for detected persistence by hijacking default file extension.
+extended_description: |
+   This attack can allow an adversary to evade defenses and better blend in with the environment. One way it occurs when file extension is manipulated as a means of tricking a user into executing what they think is a benign file type but is actually executable code.
+
+   Defenders may want to monitor registry for file extension command changes, especially if the data field contains binaries located in unusual places.
+workflow: |
+    *For better triage and response actions result you need to identify and analyze artifacts from use case.*
+
+    1. Look for windows registry modification commands. Search for specific objects in Windows Registry. <br> Extension handlers are defined at two levels: global, that are defined in the: <br>
+    ```
+    HKEY_CLASSES_ROOT
+    ```
+    <img src="../41.JPG" alt="pic1"/> <br>
+    …and local – that are defined for a particular user, i.e.:
+    ```
+    HKEY_USERS\S-1-5-21-1929933236-2258453022-3626796957-1000_Classes
+    ```
+    <img src="../42.JPG" alt="pic2"/> <br>
+    Their hierarchy of execution goes like this: if no local extension/extension handler is defined, then the global one  is executed. Obviously, without Administrator privileges we cannot modify the keys under HKEY_CLASSES_ROOT – but still we can read them. Also, we can modify the keys belonging to the current user.<br> So, basic activity in this attack – read the extensions handlers defined globally, rewrite them locally and then install the hijack.
+    2. Search for malware file which is refered by found hijacked extension on previous step. List proccess executed by malware file or their child proccess. Try to understand "impact" of this malware, what have it done, which resources were accessed.
+    3. Take any containment action depending on the situation and level of asset's criticality. <br> For example, if persistence attempt was successful, it may be reasonable to block suspicious proccess (this can be automated action in response rule) :
+        - block process by executable content pattern
+
+    4. Take any eradication action depending on the situation and level of asset's criticality. <br> For example, if you find modificated file extension and there is no need to qurantine host, it's reasonable to delete extra extension keys:
+        - Remove registry key
+
+    5. Take recovery action depending on previous containment and eradication actions:
+        - Recover modification
+
+    6. Report incident, remove security breaches, conduct lessons learned exercises.
+
+    ## Response discovery mapping
+
+    | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                   |
+    | ------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+    | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | [List registry key created]() <br>[List registry key modified]() <br> *Look for arguments in key values like: %1* | Persistence attempt artifact <br> *Examine argument and what it stands for* |
+    | [File](/artifacts/A_3002_file/entity) | [Identify means of attack]() <br>*Search for file from registry link* | Identified file to persistence |
+
+    *P.S. Artifacts from "Attack Prerequisites" section ( in this case : [Host]() ) should be used in [Operational Preparations]() and as incoming arguments for other response actions, for example*
+    <details>
+    <summary><b>response action: list registry keys created</b></summary>
+    ```
+    list_registry_keys_created (enabled=True, host)
+    ```
+    </details>
+
+    ## Response mindmap diagram
+    <img src="../05.svg" alt="Mindmap"/>

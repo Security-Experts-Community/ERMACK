@@ -1,0 +1,54 @@
+title: Pass the certificate
+description: Response playbook for pass the certificate attack
+id: RP0004
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/11
+modification_date: 2023/05/14
+linked_artifacts:
+  - A1008
+  - A1001
+  - A1005
+  - A1007
+tags:
+  - status.stable
+  - severity.high
+preparation:
+  - RP_1001_operational_preparations
+  - RA_1602_get_ability_to_lock_user_account
+identification:
+  - RA_2604_find_compromised_user
+  - RA_2004_find_compromised_host
+containment:
+  - RP_1005_compromised_host
+  - RA_3601_lock_user_account
+  - RP_1006_compromised_user
+eradication:
+  - RA_4605_revoke_certificate
+recovery:
+  - RA_5601_unlock_locked_user_account
+  - RA_5602_reissue_revoked_certificate
+lessons_learned:
+  - RA_6001_develop_incident_report
+  - RA_6002_conduct_lessons_learned_exercise
+
+extended_description: |
+  Attackers can use pass the certificate attack with certificate which they created themselves (Golden Certificate or Shadow Credentials) or with a stolen certificate. Certificate created by attackers cannot be revoked
+workflow: |
+    <img src="../RP0004.png" alt="WORKFLOW"/>
+
+
+    1. On identification stage need find <[domain account]>(A_1001) which was attacked and <[host]>(A_1005) from which attack occur. This information can be taken from <[Windows Security event log]>(A_1008) 4768 - A Kerberos authentication ticket (TGT) was requested
+    2. On containment stage, when you found an <[account]>(A_1001) that was attacked lock this account and go to <[Compromised user]> response playbook
+    3. On containment stage, when you found the <[host]>(A_1005) from which attack occur go to <[Compromised host]> response playbook
+    4. On eradication stage, if certificate has been stolen (this means certificate authority known this certificate) revoke that certificate
+    5. On recovery stage, unlock previously locked account and reissue revoked previously certificate
+    6. Save all <[timestamps]> of implemented actions in Incident Report draft on the fly, it will save a lot of time
+
+    ## Response discovery mapping
+
+    | ARTIFACT                                       | RESPONSE ACTION                                                                                                  | RESPONSE ACTION OBSERVABLES                                                                        |
+    | :----------------------------------------------| :----------------------------------------------------------------------------------------------------------------| :-------------------------------------------------------------------------------------------------|
+    | <[Domain account]>(A_1001)                     | Find account to which TGT was requested. The name of this account will be in the account information section of the event log | Attacked domain account |
+    | <[Log]>(A_1008)                                | Find Windows Security event log 4768 - A Kerberos authentication ticket (TGT) was requested | Event log with info about requesting user, requesting IP Address and certificate |
+    | <[Host]>(A_1005)                               | Find host from which TGT was requested. The IP Address of this host will be in the network information section of the event log | Host from which the attack is occur |
+    | <[IP Address]>(A_1007)                         | Find IP Address from which TGT was requested. The IP Address will be in the network information section of the event log | IP Address from which the attack is occur |

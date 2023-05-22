@@ -9,6 +9,6 @@ automation:
   - thehive/phantom/demisto/etc
 references:
   - https://example.com
-workflow: |
-  Description of the workflow for the Response Action in markdown format.
+extended_description: |
+  Description of the extended_description for the Response Action in markdown format.
   Here newlines will be saved.

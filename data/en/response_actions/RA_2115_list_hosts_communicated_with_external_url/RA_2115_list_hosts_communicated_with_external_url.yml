@@ -8,5 +8,5 @@ stage: identification
 requirements:
   - DN_zeek_http_log
   - DN_proxy_log
-workflow: |
+extended_description: |
   List hosts communicated with an external URL using the most efficient way.

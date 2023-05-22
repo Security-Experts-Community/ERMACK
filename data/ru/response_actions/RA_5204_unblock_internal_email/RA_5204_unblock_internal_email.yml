@@ -1,0 +1,11 @@
+title: RA_5204_unblock_internal_email
+id: RA5203
+description: >
+  Разблокировать скомпрометированный внутренний почтовый ящик для входа пользователя
+author: enikulina
+creation_date: 2023/02/02
+stage: containment
+requirements:
+  - MS_email_server
+workflow: |
+  Разблокировать скомпрометированный внутренний почтовый ящик для входа пользователя.

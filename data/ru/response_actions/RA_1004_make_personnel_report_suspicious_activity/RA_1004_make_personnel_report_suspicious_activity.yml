@@ -1,11 +1,10 @@
 title: RA_1004_make_personnel_report_suspicious_activity
 id: RA1004
 description: >
-  Make sure that personnel will report suspicious activity i.e. suspicious emails,
-  links, files, activity on their computers, etc
-author: '@atc_project'
-creation_date: 2020/05/06
+  Проинформировать сотрудников о необходимости сообщать о любой подозрительской активности (подозрительных письмах, файлах, ссылках, активности на АРМ и т.д.)
+author: enikulina
+creation_date: 2023/02/05
 stage: preparation
-workflow: |
-  Develop a simplified, company wide-known way to contact IR team in case of suspicious activity on the user system.
-  Make sure that the personnel is aware of it, can and will use it.
+extended_description: |
+  Организовать выделенный канал связи (например, специальный почтовый ящик) с SOC или службой ИБ и уведомить о нём всех сотрудников компании.
+  Проинформировать всех сотрудников о необходимости пересылки подозрительных сообщений, файлов и т.д. по выделенному каналу.

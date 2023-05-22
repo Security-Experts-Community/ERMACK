@@ -26,21 +26,19 @@ extended_description: |
   Quarantine module sends files to quarantine container directly from the SOLDR (XDR) interface.
 
   ## Target system requirements
-  1) Installed SOLDR agent.
+  Installed SOLDR agent.
 
   ## Requirements for means of action
-  1) Enabled "Quarantine" module.
+  Enabled "Quarantine" module.
 
   ## Expected impact result
-  1) Suspucious file is isolated.
+  Suspucious file is isolated.
 
   ## Implementations
   **Set up module**
-  
+
   1) some info
-  
+
   **Module usage example**
-  
+
   2) more info
-  
-  

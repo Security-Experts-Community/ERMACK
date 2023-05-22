@@ -100,10 +100,10 @@ License: MIT
 
 ---
 
-mkdocs-material-extensions
-Copyright (c) 2021 Isaac Muse
+mkdocs-glightbox
+Copyright (c) 2022 Blueswen
 
-This product uses software developed for mkdocs-material-extensions (https://github.com/facelessuser/mkdocs-material-extensions)
+This product uses software developed for mkdocs-glightbox (https://github.com/blueswen/mkdocs-glightbox)
 License: MIT
 
 ---

@@ -1,0 +1,11 @@
+title: Исследование данных
+id: RA2999
+description: >
+  Абстрактное действие для извлечения полезной информации
+author: Alex@Cyberok
+creation_date: 2023/03/22
+stage: identification
+references:
+  - https://en.wikipedia.org/wiki/Content_analysis
+extended_description: |
+  Абстрактное действие для извлечения полезной информации

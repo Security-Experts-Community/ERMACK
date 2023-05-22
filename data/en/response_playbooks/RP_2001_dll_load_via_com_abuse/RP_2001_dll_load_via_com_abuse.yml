@@ -37,30 +37,33 @@ description: Response playbook for detected "DLL load via COM object" activity.
 extended_description: |
   Successfull "Load a Malicious DLL via COM Abuse" attack may be a huge security hole, because an attacker gains ability to execute any "prepeared" code without direct interaction with malicious file.
 workflow: |
+    <img src="../RP2001.png" alt="WORKFLOW"/>
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
-    
+
     1. List Windows registry modifications (create,change,rename,delete), pay attention to particular COM object's modifications. Whenever you find the one, it possibly contains reference to the object \: malicious dll file.
     2. Collect required file. Analyse malicious dll with [tools](https://www.malwarebytes.com/blog/news/2014/05/five-pe-analysis-tools-worth-looking-at) you have: best of all if you have opportunity to test "static" analysis as well as "behaviour" analysis via sandbox, code inspection tools, etc. If you are lucky, you will find malicious influence on affected system.
     3. Build and analyse "process tree" (different child and parent processes). List processes executed by found dll or by one of it's child processes. Build timeline and filter interested events connected with discovered artifacts.
-    4. Take any containment action depending on the situation and level of asset's criticality: 
+    4. Take any containment action depending on the situation and level of asset's criticality:
         - Quarantine suspicious file
-        - Block processes spawned by found executable file 
+        - Block processes spawned by found executable file
     5. Take any eradication action depending on the situation and level of asset's criticality:
         - Remove malware file
         - Remove registry hives related to found artifacts
     6. Take recovery action depending on previous containment and eradication actions:
         - Unblock previously blocked processes (if needed)
         - Backup windows registry hives
-    7. Report incident, remove security breaches, conduct lessons learned exercises. 
-    
+    7. Report incident, remove security breaches, conduct lessons learned exercises.
+
     ## Response discovery mapping
-    
+
     | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                    |
     | ------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
     | [Windows Registry](/artifacts/A_5002_windows_registry/entity) | [List new created registry keys](#identification) <br> [List newly modified registry keys](#identification) <br> *Look for suspicious, non-random CLSID's values.* <br> | Created COM object |
     | [COM object](/artifacts/A_3006_com_object/entity) | [Examine content]() <br> *Examine found regkeys, look for any link to the registrated files.* | Malware referenced dll file |
     | [Execution Binary](/artifacts/A_3005_executable_binary/entity) | [Collect file]() <br> [Analyse windows PE]() <br> [List processes executed]() <br> *Analyse windows PE file with any tools to find out what "impact" has malware dll. These artifacts will be needed to respond appropriately to next steps. Examine proccess creation in sandbox and try to find out these artifacts in your environment.* | Code execution artifacts |
-    
+
     *P.S. Artifacts from "Attack Prerequisites" section ( in this case : [Host]() and [Operating system executable file]() ) should be used in [Operational Preparations]() and as incoming arguments for other response actions, for example*
     <details>
     <summary><b>response action: list registry key</b></summary>
@@ -68,9 +71,6 @@ workflow: |
     List_registry_key (enabled=True, host, path)
     ```
     </details>
-    
+
     ## Response mindmap diagram
-    ![Mindmap](21.svg)
-    
-    
-    
+    <img src="../21.svg" alt="Mindmap"/>

@@ -1,0 +1,19 @@
+title: RA_5101_unblock_blocked_internal_ip
+id: RA5101
+description: >
+  Ввести внутренний узел обратно в сеть
+author: enikulina
+creation_date: 2023/02/06
+stage: recovery
+requirements:
+  - MS_border_firewall
+  - MS_border_proxy
+  - MS_border_ips
+  - MS_border_ngfw
+  - MS_intranet_firewall
+  - MS_intranet_proxy
+  - MS_intranet_ips
+  - MS_intranet_ngfw
+  - MS_host_firewall
+workflow: |
+  Ввести изолированный ранее хост обратно в сеть, если угрозы были устранены.

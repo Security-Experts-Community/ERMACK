@@ -7,5 +7,5 @@ creation_date: 2020/05/06
 stage: recovery
 requirements:
   - MS_email_server
-workflow: |
+extended_description: |
   Unblock an email sender on an Email Server using its native functionality.

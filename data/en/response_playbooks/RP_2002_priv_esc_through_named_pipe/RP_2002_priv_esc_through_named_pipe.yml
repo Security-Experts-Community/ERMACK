@@ -10,10 +10,10 @@ linked_artifacts:
   - A5004
   - A4001
 tags:
-  - status.stable|(https://example.com)
+  - status.stable
   - severity.high
   - tlp.amber
-  - pap.white|(https://example.com)
+  - pap.white
   - windows
 preparation:
   - RP_1001_operational_preparations
@@ -26,7 +26,7 @@ identification:
 containment:
   - RA_3601_lock_user_account
 eradication:
-  - RA_4603_reset_authentication_credentials 
+  - RA_4603_reset_authentication_credentials
   - RA_4601_revoke_authentication_credentials
 recovery:
   - RA_5601_unlock_locked_user_account
@@ -38,12 +38,15 @@ description: Response playbook for detected "Privilege escalation via named pipe
 extended_description: |
   Identifie a privilege escalation attempt via named pipe impersonation. An adversary may abuse this technique by utilizing a framework such Metasploit’s meterpreter getsystem command.
 workflow: |
+    <img src="../RP2002.png" alt="WORKFLOW"/>
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
-    
+
     1. List newly created pipes on the host, look for named pipes. You can use powershell comand from [usecase](/usecases/UC_0021_priv_esc_through_named_pipe/entity). Though if privelege escalation were made with automated tools with evasion techniques it is hard to find the searchable pipe.
     2. Build and analyse "process tree" (different child and parent processes). List processes executed by found dll or by one of it's child processes. Build timeline and filter interested events connected with discovered artifacts. Look for any processes spawned by any handle from earlier found pipes.
     3. Especially examine events with action [started](https://kb.eventtracker.com/evtpass/evtpages/EventId_7040_ServiceControlManager_50628.asp#:~:text=This%20event%20is%20logged%20when,may%20be%20unable%20to%20start.&text=To%20perform%20this%20procedure%2C%20you,been%20delegated%20the%20appropriate%20authority.) for services. Look for specific values like ***"Cmd.Exe" OR "PowerShell.EXE"*** in [PE]() original file name with agruments like ***"echo" OR  ">"  OR "\\\\.\\pipe\\*" ***
-    4. Take any containment action depending on the situation and level of asset's criticality, for example if privilege escalation suspected to be succesfull, initiate procedure to block compromised users and revoke their authentication credentials: 
+    4. Take any containment action depending on the situation and level of asset's criticality, for example if privilege escalation suspected to be succesfull, initiate procedure to block compromised users and revoke their authentication credentials:
         - Lock user account
     5. Take any eradication action depending on the situation and level of asset's criticality, for example credential can be used as arguments to malicous commands:
         - Revoke authentication credentials
@@ -51,16 +54,16 @@ workflow: |
         - Unblock blocked user (if needed)
         - Change user's credential
     7. Collect artifacts of investigated attack to examine attacker's next goals and moves.
-    8. Report incident, remove security breaches, conduct lessons learned exercises. 
-    
+    8. Report incident, remove security breaches, conduct lessons learned exercises.
+
     ## Response discovery mapping
-    
+
     | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                    |
     | ------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
     | [Pipe](/artifacts/A_5003_windows_pipe/entity) | List new created/modified pipes <br>*Look for suspicious named pipes.* | Possible token impersonation |
     | [Process](/artifacts/A_4001_process/entity) | [Identify impacted sevices]() <br>[List processes executed]() <br>[Find process by executable content pattern]() <br>*Obviously in case of privilege escalation we need to find what process were launched with violations.* | Procces launched under Impersonated token context |
     | [Access token](/artifacts/A_5004_access_token/entity) | [Examine content]() <br>*Explore context of found process, if child process has any other user's context it may be privelege escalation indicator.* | User's compromised credentials |
-    
+
     *P.S. Artifacts from "Attack Prerequisites" section ( in this case : [Host]() ) should be used in [Operational Preparations]() and as incoming arguments for other response actions, for example*
     <details>
     <summary><b>response action: list processes executed</b></summary>
@@ -68,8 +71,6 @@ workflow: |
     List_processes_executed (enabled=True, host)
     ```
     </details>
-    
+
     ## Response mindmap diagram
-    ![Mindmap](02.svg)
-    
-    
+    <img src="../02.svg" alt="Mindmap"/>

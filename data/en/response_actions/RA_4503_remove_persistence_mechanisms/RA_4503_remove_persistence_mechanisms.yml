@@ -1,0 +1,11 @@
+title: RA_4503_remove_persistence_mechanisms
+id: RA4503
+description: >
+  Remove persistence mechanisms
+author: '@SEC'
+creation_date: 2023/05/20
+stage: eradication
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf
+extended_description: |
+  Remove persistence mechanisms

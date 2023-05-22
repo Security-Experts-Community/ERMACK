@@ -1,14 +1,9 @@
 title: RA_3403_block_process_by_executable_hash
 id: RA3403
 description: >
-  Block a process execution by its executable hash
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Блокировать выполнение процесса по его контрольной сумме (хешу)
+author: bpopovich
+creation_date: 2023/04/27
 stage: containment
-references:
-  - https://example.com
-requirements:
-  - DN_zeek_conn_log # placeholder
-workflow: |
-  Description of the workflow for single Response Action in markdown format.
-  Here newlines will be saved.
+extended_description: |
+  Блокировать выполнение процесса по его контрольной сумме (хешу) средствами защиты информации или иными средствами автоматизации

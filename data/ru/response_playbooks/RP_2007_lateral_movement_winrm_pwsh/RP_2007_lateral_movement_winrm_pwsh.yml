@@ -1,0 +1,88 @@
+title: Lateral Movement using WinRM or Powershell Remoting
+id: RP2007
+author: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/03/30
+linked_artifacts:
+  - A4003
+  - A5006
+tags:
+  - status.stable
+  - severity.high
+  - TLP.amber
+  - pap.white
+  - windows
+preparation:
+  - RP_1001_operational_preparations
+identification:
+  - RP_1004_identify_means_of_attack
+  - RP_1002_identify_affected_systems_and_users
+  - RA_2999_examine_content
+containment:
+  - RA_3102_block_internal_ip_address
+  - RA_3111_block_data_transferring_by_content_pattern
+  - RA_3601_lock_user_account
+eradication:
+  - RA_4603_reset_authentication_credentials
+  - RA_4601_revoke_authentication_credentials
+recovery:
+  - RA_5101_unblock_blocked_ip
+  - RA_5601_unlock_locked_user_account
+lessons_learned:
+  - RA_6001_develop_incident_report
+  - RA_6002_conduct_lessons_learned_exercise
+
+description: Response playbook for detected Lateral Movement using WinRM or Powershell Remoting.
+extended_description: |
+    WinRM stands for Windows Remote Management and is a service that allows administrators to perform management tasks on systems remotely. Communication is performed via HTTP (5985) or HTTPS SOAP (5986) and support Kerberos and NTLM authentication by default and Basic authentication. Usage of this service requires administrator level credentials.
+
+    By default it might not be possible to connect to another system over WinRM and additional configuration might needed. The following commands will assist to configure the service properly for HTTP access from any host.
+    ```
+    winrm quickconfig
+    winrm set winrm/config/Client @{AllowUnencrypted = "true"}
+    Set-Item WSMan:localhost\client\trustedhosts -value *
+    ```
+    Usually defenders see simple commands such as “winrm get config” or “winrm quickconfig.”
+
+workflow: |
+    *For better triage and response actions result you need to identify and analyze artifacts from use case.*
+
+    When a WinRM connection is initialised [Windows EventID 6](https://www.ired.team/offensive-security/enumeration-and-discovery/windows-event-ids-for-situational-awareness) will be recorded (the source host) and when a WinRM connection is received [Windows EventID 91](https://www.ired.team/offensive-security/enumeration-and-discovery/windows-event-ids-for-situational-awareness) is recorded (the target host). Both events will be logged in Microsoft-Windows-WinRM/Operational (Windows Remote Management through the GUI).
+
+    We can further investigate any activities by collating [Windows EventID 91](https://www.ired.team/offensive-security/enumeration-and-discovery/windows-event-ids-for-situational-awareness) (a WinRM connection has been received – i.e. the target host) with [PowerShell logging EventID 4103](https://www.ired.team/offensive-security/enumeration-and-discovery/windows-event-ids-for-situational-awareness) (Module Logging), to see what may have been executed after the connection was made.
+
+    To expand your detection functions for this attack, you’ll need to monitor processes spawning from “wmiprvse.exe” and suspicious network connections to “svchost.” For those interested in monitoring processes spawning from WMI, be warned! It gets noisy, and you’ll need to establish a baseline of what looks normal in your environment. Once you can outline legitimate activity from your admins, you can focus on spotting evil.
+
+    1. Define the attack details. Identify means of attack and identify affected systems and users based on previously found identification moves. Define list of compromised hosts and users.
+
+    2. Block lateral movement. It's better to stop attackers early, whether attempting to establish a beachhead inside the network or compromising identity data to move laterally, escalate privileges, and acquire targets.
+        - block internal ip address
+        - block data transferring by content pattern
+
+    3. Take any eradication action depending on the situation and level of asset's criticality. <br>The attacker steals valid credentials from a system and then uses those credentials to authenticate to other systems on the network. Look for credentials used in defined lateral movement attack:
+        - revoke authentication credentials
+
+    4. Take recovery action depending on previous containment and eradication actions:
+        - unblock qurantined host
+
+    5. Report incident, remove security breaches, conduct lessons learned exercises.
+    ## Mitigation
+    WinRM can be secured in a few different ways. First, system admins should establish a management network architecture that lends itself to increased security. This involves establishing a jumpbox that is only used for remote administration functions.<br>This strategy helps secure a network by forcing this privileged activity through a single controlled and hardened system, therefore not exposing sensitive credentials to attack. It also helps secure WinRM directly because we can limit the number of hosts trusted by the WinRM subsystem.
+
+    In an ideal environment, client computers in the organization should not trust one another, and they should only trust the jumpbox systems. To configure what trusted hosts are allowed to contact WinRM, we can execute the following command:
+    ```
+    winrm set winrm/config/client '@{TrustedHosts="JumpBox1,JumpBox2"}'
+    ```
+    This configuration can also be enforced using Group Policy objects in an Active Directory environment. This can be accomplished via a policy with the “Allow remote server management through WinRM” setting, and specifying a list of hosts to trust.
+
+    For authentication to WinRM for management, keep the defaults when possible as they don’t allow the less secure methods of authentication (Kerberos is default). Finally, WinRM default configurations establish both an HTTP and HTTPS listener. If you can, endeavor to disable the HTTP listener and only use WinRM over HTTPS. This may involve diving deeper into SSL/TLS certificates in your organization, so approach that with careful planning.
+
+    ## Response discovery mapping
+
+    | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                   |
+    | ------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+    | [Credentials](/artifacts/A_5006_credential/entity)                  | [Identify affected systems and users]() <br>[Revoke authentication credentials]() <br>*Look for used credentials in lateral movement* | Compomised credentials <br>*After you defined compomised credentials it's reasonable to block user owner. |
+    | [Remote Session](/artifacts/A_5011_RPC_network_traffic/entity/)     | [Examine content]() <br>[Block data transferring by content pattern]() <br>*Block remote session and possible execution action* | Execution artifacts <br>*Search for compromised remote session. collect possible execution artifacts.* |
+
+    ## Response mindmap diagram
+    <img src="../07.svg" alt="Mindmap"/>

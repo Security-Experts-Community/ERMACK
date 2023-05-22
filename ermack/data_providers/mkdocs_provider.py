@@ -14,6 +14,8 @@ from ermack.render_knowledge_base import TemplateTypes
 from ermack.utils.localization import Localization
 from ermack.utils.utils import Utils as utils
 from ermack.utils.visual import (
+    glightbox_min_css,
+    glightbox_min_js,
     material_icons_style,
     material_search_html,
     material_search_js,
@@ -66,6 +68,14 @@ class MkdocsProvider(MarkdownProvider):
             (docs_dir / "assets/javascripts").mkdir(parents=True, exist_ok=True)
             js_search_path = "assets/javascripts/iframe-worker.js"
             utils.write_file(docs_dir / js_search_path, self.__get_search_js())
+
+            (docs_dir / "assets/javascripts").mkdir(parents=True, exist_ok=True)
+            js_search_path = "assets/javascripts/glightbox.min.js"
+            utils.write_file(docs_dir / js_search_path, self.__get_image_script())
+
+            (docs_dir / "assets/stylesheets").mkdir(parents=True, exist_ok=True)
+            js_search_path = "assets/stylesheets/glightbox.min.css"
+            utils.write_file(docs_dir / js_search_path, self.__get_image_style())
 
             (root_folder / "theme").mkdir(parents=True, exist_ok=True)
             html_search_path = "theme/main.html"
@@ -274,6 +284,12 @@ class MkdocsProvider(MarkdownProvider):
 
     def __get_search_js(self):
         return material_search_js
+
+    def __get_image_script(self):
+        return glightbox_min_js
+
+    def __get_image_style(self):
+        return glightbox_min_css
 
     def render_infrastructure_profile(self, profile):
         """Render infrastructure profile as mkdocs page

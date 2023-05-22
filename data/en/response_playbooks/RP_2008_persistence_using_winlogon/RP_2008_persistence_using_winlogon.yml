@@ -8,10 +8,10 @@ linked_artifacts:
   - A3002
   - A5002
 tags:
-  - status.stable|(https://example.com)
+  - status.stable
   - severity.high
   - TLP.amber
-  - pap.white|(https://example.com)
+  - pap.white
   - windows
 preparation:
   - RP_1001_operational_preparations
@@ -38,41 +38,44 @@ lessons_learned:
 description: Response playbook for detected persistence using Windows Logon Helper.
 extended_description: |
     Registry entries in HKLM\Software{\Wow6432Node\}Microsoft\Windows NT\CurrentVersion\Winlogon and HKCU\Software\Microsoft\Windows NT\CurrentVersion\Winlogon are used to manage additional helper programs and functionalities that support Winlogon.
-    
+
     Malicious modifications to these Registry keys may cause Winlogon to load and execute malicious DLLs and/or executables. Specifically, the following subkeys have been known to be possibly vulnerable to abuse:
         - Winlogon\Notify - points to notification package DLLs that handle Winlogon events
         - Winlogon\Userinit - points to userinit.exe, the user initialization program executed when a user logs on
         - Winlogon\Shell - points to explorer.exe, the system shell executed when a user logs on
-        
+
 workflow: |
+    <img src="../RP2007.png" alt="WORKFLOW"/>
+
+
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*
-    
+
     1. Identify changes to registry persistence keys that are not commonly used or modified by legitimate programs. This could be an indication of an adversary’s attempt to persist in a stealthy manner.
     2. Look for abnormal process behavior that may be due to a process loading a malicious DLL. Data and events should not be viewed in isolation, but as part of a chain of behavior that could lead to other activities, such as network connections made for Command and Control, learning details about the environment through Discovery, and Lateral Movement.
         - examine content
         - analyse malware file
-        
+
     3. Take any containment action depending on the situation and level of asset's criticality. <br> For example, block potentially malicious software that may be executed through the Winlogon helper process by using application control tools like [AppLocker](https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/applocker/applocker-overview) that are capable of auditing and/or blocking unknown DLLs:
         - block internal ip address
         - quarantine file by hash
-    
+
     4. Take any eradication action depending on the situation and level of asset's criticality. <br> For example, tools such as [Sysinternals Autoruns](https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns) may also be used to detect system changes that could be attempts at persistence, including listing current Winlogon helper values:
         - remove file
         - remove registry key
-        
+
     5. Take recovery action depending on previous containment and eradication actions:
         - recover modification
         - unblock quarantined host
-        
-    6. Report incident, remove security breaches, conduct lessons learned exercises. 
-    
+
+    6. Report incident, remove security breaches, conduct lessons learned exercises.
+
     ## Response discovery mapping
-    
+
     | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                   |
     | ------------------------- | ---------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
     | [Windows Registry](/artifacts/A_5002_windows_registry/entity)            | [List registry keys accessed]() <br>[List registry keys modified]() <br> [Examine content]() <br>*Look for specific registry hives values* | Malicious file |
     | [File](/artifacts/A_3002_file/entity/)                  | [Identify means of attack]() <br> [Analyse Windows PE file]() <br> *Look for code execution and persistence artifacts* | Code execution artifacts |
-    
+
     *P.S. Artifacts from "Attack Prerequisites" section ( in this case : [Host]() ) should be used in [Operational Preparations]() and as incoming arguments for other response actions, for example*
     <details>
     <summary><b>response action: list registry keys accessed</b></summary>
@@ -80,8 +83,6 @@ workflow: |
     list_registry_keys_accessed (enabled=True, host)
     ```
     </details>
-    
+
     ## Response mindmap diagram
-    ![Mindmap](08.svg)
-    
-    
+    <img src="../08.svg" alt="Mindmap"/>

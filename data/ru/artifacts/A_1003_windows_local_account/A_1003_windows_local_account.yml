@@ -6,7 +6,7 @@ creation_date: 2022/10/22
 modification_date: 2022/10/22
 references:
   - https://d3fend.mitre.org/dao/artifact/d3f:LocalUserAccount/
-mapping: 
+mapping:
   - d3f:LocalUserAccount
 extended_description: |
   Локальная учётная запись на конкретном Windows-узле.

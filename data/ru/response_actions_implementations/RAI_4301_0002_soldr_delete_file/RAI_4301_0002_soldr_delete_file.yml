@@ -1,0 +1,96 @@
+﻿title: Deleting a file from Windows via SOLDR
+id: RAI4301_0002
+description: Removing a file from a Windows system through the SOLDR agent
+author: 'Cyberok'
+creation_date: 2023/03/22
+modification_date: 2023/03/30
+linked_software:
+  - S0005
+linked_response_actions: RA4301
+tags:
+  - delete_file
+linked_artifacts:
+  - A3002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0005
+      cpe-fs: 'cpe:2.3:a:soldr:soldr:*:*:*:*:*:*:*:*'
+    targets_of_action:
+extended_description: |
+  ## Basic parameters
+
+  `max_cache_elements` - cache size for hashes. The hash of each created file goes into this cache. When overflowing, the cache begins to rotate according to the FIFO rule. It is recommended to set this value to >= 1000.
+  `timer_timeout` - time interval in milliseconds after which the module checks for the presence of the hash that we want to remove from the cache.
+
+  In addition to the basic parameters, for the correct operation of the module, two more modules must be installed in the policy:
+
+  - *Sysmon installer*
+  - *Data collector from Windows Event Log*
+
+  > For the `Data collector from Windows Event Log` module, add the sysmon log (*Microsoft-Windows-Sysmon/Operational*) to the log channels
+  > Modules that receive raw events from the Windows event log must include the `esc_file_remover` module.
+
+  ## Delete by name
+  ### Inquiry
+  **Input parameters:**
+  - `filepath`: full path to the file. Backslashes should be escaped with another escape.
+  - `ip`: ipv4 endpoint address
+
+  ```json
+    {"filepath": "C:\\Users\\LNikiforov\\Desktop\\fileToRemove.txt", "ip": "10.125.124.10"}
+  ```
+  ### Answer
+  In either case, the user will receive a response:
+  ```json
+    {
+       data: {
+           "ip": "10.125.124.7",
+           "filehash": "18c4d4773e3d5714cebfdba5f1431e9f"
+       },
+       "start_time": "05.05.22 12:06:21",
+       "actions": [
+           "file_remover.SOLDR_Respond_Action_FileRemove_ByName"
+       ],
+       "event": "****"
+    }
+  ```
+  Depending on the success of the action, event can take the following values:
+  - `SOLDR_Respond_Event_FileRemove_Success`: The file was removed successfully
+  - `SOLDR_Respond_Event_FileRemove_Fail`: An error occurred while deleting a file
+
+
+
+  ## Delete by hash
+  ### Inquiry
+  **Input parameters:**
+  - `filehash`: md5 hash of the file
+  - `ip`: ipv4 endpoint address
+
+  ```json
+    {"filehash": "18c4d4773e3d5714cebfdba5f1431e9f", "ip": "10.125.124.10"}
+  ```
+
+  ### Answer
+  In either case, the user will receive a response:
+  ```json
+    {
+       data: {
+           "ip": "10.125.124.7",
+           "filehash": "18c4d4773e3d5714cebfdba5f1431e9f"
+       },
+       "start_time": "05.05.22 12:06:21",
+       "actions": [
+           "file_remover.SOLDR_Respond_Action_FileRemove_ByHash"
+       ],
+       "event": "****"
+    }
+  ```
+  Depending on the success of the action, event can take the following values:
+  - `SOLDR_Respond_Event_FileRemove_Pending`: hash was not found in cache but queued to pending hash
+  - `SOLDR_Respond_Event_FileRemove_Success`: The file was removed successfully
+  - `SOLDR_Respond_Event_FileRemove_Fail`: An error occurred while deleting a file
+
+  ### Restrictions
+  1. Sysmon does not look at all files, but at those for which it is configured: exe files, special directories, etc. All this is tuned in the sysmon's config in the desired policy. Therefore, we can pass a hash of a file that sysmon will never see with the current config and we will never know about it.
+  2. An attacker can rename an exe file to an extension that is not visible to sysmon, copy the file to the target machine, and rename it back to exe. Such a file will never get into the cache and cannot be deleted by the module.

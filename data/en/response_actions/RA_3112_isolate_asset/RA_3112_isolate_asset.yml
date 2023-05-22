@@ -1,0 +1,15 @@
+title: RA_3112_isolate_asset
+id: RA3112
+description: >
+  Isolate machine via EDR
+author: '@SEC'
+creation_date: 2023/05/20
+stage: containment
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf
+extended_description: |
+  If possible, isolate the machine via EDR
+  Or
+  If the machine is not considered critical for your company and can be disconnected, shut the machine
+  down the hard way, removing its power plug. If it is a laptop with a battery on, just push the “off” button
+  for some seconds until the computer switches off.

@@ -8,6 +8,6 @@ creation_date: 2020/05/06
 stage: preparation
 references:
   - https://attack.mitre.org/mitigations/M1017/
-workflow: |
+extended_description: |
   Train users to to be aware of access or manipulation attempts by an adversary to reduce the risk of
   successful spearphishing, social engineering, and other techniques that involve user interaction.

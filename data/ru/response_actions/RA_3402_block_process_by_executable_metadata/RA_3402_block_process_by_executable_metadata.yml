@@ -1,14 +1,9 @@
 title: RA_3402_block_process_by_executable_metadata
 id: RA3402
 description: >
-  Block a process execution by its executable metadata (i.e. signature, permissions, MAC times)
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Блокировать выполнение процесса на основе его метаданных (например, подписи, разрешений, времени MAC)
+author: bpopovich
+creation_date: 2023/04/27
 stage: containment
-references:
-  - https://example.com
-requirements:
-  - DN_zeek_conn_log # placeholder
-workflow: |
-  Description of the workflow for single Response Action in markdown format.
-  Here newlines will be saved.
+extended_description: |
+  Блокировка выполнения процесса на основе его метаданных с помощью средств защиты информации и иных автоматизированных средств

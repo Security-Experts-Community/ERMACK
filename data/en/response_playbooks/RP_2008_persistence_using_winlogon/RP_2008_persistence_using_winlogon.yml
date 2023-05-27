@@ -45,7 +45,7 @@ extended_description: |
         - Winlogon\Shell - points to explorer.exe, the system shell executed when a user logs on
 
 workflow: |
-    <img src="../RP2007.png" alt="WORKFLOW"/>
+    <img src="../RP2008.png" alt="WORKFLOW"/>
 
 
     *For better triage and response actions result you need to identify and analyze artifacts from use case.*

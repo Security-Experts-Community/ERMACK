@@ -15,4 +15,6 @@ identification:
   - RA_2112_identify_transferred_data
   - RA_2304_list_files_downloaded
 workflow: |
+  <img src="../RP1003.png" alt="WORKFLOW"/>
+
   1. TODO: create workflow

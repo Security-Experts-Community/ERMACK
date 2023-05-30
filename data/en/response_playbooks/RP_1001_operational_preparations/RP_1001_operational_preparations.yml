@@ -18,4 +18,6 @@ preparation:
   - RA_1015_define_teams_and_roles
   - RA_1016_define_escalation_path
 workflow: |
+  <img src="../RP1001.png" alt="WORKFLOW"/>
+
   1. Execute Response Actions step by step.

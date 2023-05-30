@@ -13,4 +13,6 @@ identification:
   - RA_2002_list_host_vulnerabilities
   - RA_2121_identiry_useful_security_systems
 workflow: |
+  <img src="../RP1004.png" alt="WORKFLOW"/>
+
   1. TODO: create workflow

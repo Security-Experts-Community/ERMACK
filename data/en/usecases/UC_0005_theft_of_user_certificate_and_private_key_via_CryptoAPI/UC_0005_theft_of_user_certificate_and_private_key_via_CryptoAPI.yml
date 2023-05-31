@@ -7,6 +7,7 @@ severity: M
 tags:
   - windows
   - attack.credential_access
+  - attack.t1649
 linked_response_playbooks:
   - RP0005
 linked_artifacts:
@@ -69,7 +70,6 @@ extended_description: |
   2. Export certificate and private key as pfx file
 
   #### Example this attack
-  1.
   ```
   mimikatz # crypto::capi
   mimikatz # crypto::certificates /export

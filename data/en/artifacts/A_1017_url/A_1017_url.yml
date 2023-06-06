@@ -1,0 +1,12 @@
+title: URL
+id: A1017
+description: This artifact describes URL entity
+author: 'Alexander Komissarov, @fatalick'
+creation_date: 2023/05/27
+modification_date: 2023/05/27
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:URL/
+mapping:
+  - d3f:URL
+extended_description: |
+  A Uniform Resource Locator (URL), commonly informally termed a web address (a term which is not defined identically) is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it.A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably. A URL implies the means to access an indicated resource, which is not true of every URI. URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto), database access (JDBC), and many other applications.

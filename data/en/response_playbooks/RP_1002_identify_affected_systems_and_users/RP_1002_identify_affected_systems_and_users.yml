@@ -25,4 +25,6 @@ identification:
   - RA_2105_analyse_ip
   - RA_2106_analyse_uri
 workflow: |
+  <img src="../RP1002.png" alt="WORKFLOW"/>
+
   1. TODO: create workflow

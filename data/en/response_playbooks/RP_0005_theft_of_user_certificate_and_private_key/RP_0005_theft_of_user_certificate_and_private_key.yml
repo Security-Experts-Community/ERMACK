@@ -3,21 +3,31 @@ description: Response playbook for "Theft of user certificate and private key" a
 id: RP0005
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/31
-modification_date: 2023/05/31
+modification_date: 2023/06/06
 linked_artifacts:
   - A1001
   - A1005
   - A1011
+  - A4001
 tags:
   - status.stable
   - severity.high
+  - tlp.amber
+  - pap.white
   - windows
 preparation:
   - RP_1001_operational_preparations
-  - RA_1602_get_ability_to_lock_user_account
 identification:
+  - RA_2301_list_files_created
+  - RA_2304_list_files_downloaded
+  - RA_2309_find_file_by_format  
+  - RA_2401_list_processes_executed
+  - RA_2406_find_process_by_executable_content_pattern
+  - RP_1003_identify_compromised_data
   - RP_1002_identify_affected_systems_and_users
+  - RA_2003_put_compromised_accounts_on_monitoring
 containment:
+  - RA_3405_block_process_by_executable_content_pattern
   - RP_0009_compromised_active_directory_account
   - RP_0008_windows_host_compromise
 eradication:
@@ -28,16 +38,20 @@ lessons_learned:
   - RA_6001_develop_incident_report
   - RA_6002_conduct_lessons_learned_exercise
 
-#ToDo: create workflow
+
 extended_description: |
   Attackers can theft certificate and private key to authenticate on behalf of the certificate owner using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension. Successful "Theft of user certificate and private key" attack quite dangerous, because attackers gets credentials alternative to the password
 workflow: |
     <img src="../RP0005.png" alt="WORKFLOW"/>
-  
-    1. On identification stage need find <[domain account]>(A_1001) whose certificate were theft and <[host]>(A_1005) where these certificates were stored 
-    2. On containment stage, when you found an <[account]>(A_1001) that was attacked go to [compromised active directory account](/response_playbooks/RP_0009_compromised_active_directory_account/entity) response playbook
-    3. On containment stage, when you found the <[host]>(A_1005) where these certificates were stored go to [windows host compromised](/response_playbooks/RP_0008_windows_host_compromise/entity) response playbook
-    4. On eradication stage need **revoke all <[certificates]>(A_1011)** that were stored on the <[host]>(A_1005)
+        
+    1. Identify detected IOCs (tools, commands) used in certificate theft, for find specific artifacts. View the list of created and downloaded files to find stolen certificates or programs used in the attack. Search processes executed with "specific" flags. For example:
+
+        - processes started with args "dump", "exportPFX" or "certificates"
+        - process started with well-known flags: crypto::capi, crypto::certificates
+
+    2. Find <[domain account]>(A_1001) whose certificate were theft and <[host]>(A_1005) where these certificates were stored. If it is not possible to identify which certificates were stolen, consider revoking **all certificates** that are stored on the compromised host
+    3. When you found <[account]>(A_1001) whose certificate were theft go to [compromised active directory account](/response_playbooks/RP_0009_compromised_active_directory_account/entity) response playbook
+    4. When you found <[host]>(A_1005) where these certificates were stored go to [windows host compromised](/response_playbooks/RP_0008_windows_host_compromise/entity) response playbook
     5. On recovery stage, reissue revoked previously <[certificate]>(A_1011)
     6. Save all <[timestamps]> of implemented actions in Incident Report draft on the fly, it will save a lot of time
   
@@ -45,5 +59,5 @@ workflow: |
 
     | ARTIFACT                                       | RESPONSE ACTION                                                                                                  | RESPONSE ACTION OBSERVABLES                                                                        |
     | :----------------------------------------------| :----------------------------------------------------------------------------------------------------------------| :-------------------------------------------------------------------------------------------------|
-    | <[Certificate]>(A_1011) | Find .pfx and .der files on compromised host | Thefted certificates |
-  
+    | <[Certificate]>(A_1011) | [Find file by format](#identification) <br> *Find .pfx, .cer, .pem and .der files on compromised host.* <br> | Thefted certificates |
+    | <[Process]>(A_4001) | [Find process by executable content pattern](#identification) <br> *Find tools used in the attack.* <br>  | Identified certificate theft tool |

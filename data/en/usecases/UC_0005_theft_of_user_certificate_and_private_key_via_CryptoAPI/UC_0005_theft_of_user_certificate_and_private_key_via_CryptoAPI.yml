@@ -2,7 +2,7 @@ title: 'Theft of user certificate and private key via CryptoAPI'
 id: UC0005
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/29
-modification_date: 2023/05/29
+modification_date: 2023/06/06
 severity: M
 tags:
   - windows
@@ -16,7 +16,7 @@ linked_artifacts:
   - A3002
   - A1005
   - A1001
-description: Attackers can theft certificate and private key to authenticate on behalf of the certificate owner using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension.
+description: Attackers can theft certificate and private key via CryptoAPI to authenticate on behalf of the certificate owner using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension.
 extended_description: |
   Attackers can theft certificate and private key to authenticate on behalf of the certificate owner using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension. 
   

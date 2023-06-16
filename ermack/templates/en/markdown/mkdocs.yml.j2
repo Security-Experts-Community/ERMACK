@@ -83,7 +83,7 @@ nav:
     {{'\n'}}        - '[Playbooks List]': ./response_playbooks.md
     {{'\n'}}        - '[Sub-Playbooks List]': ./sub_response_playbooks.md
     {%- for playbook_title, playbook_path, playbook_tags in response_playbooks['value'] -%}
-        {%- if "sub-playbook" not in playbook_tags -%}
+        {%- if playbook_tags is not none and "sub-playbook" not in playbook_tags -%}
             {{'\n'}}        - "{{playbook_title}}": ./response_playbooks/{{playbook_path}}/entity
         {%- endif -%}
     {%- endfor -%}

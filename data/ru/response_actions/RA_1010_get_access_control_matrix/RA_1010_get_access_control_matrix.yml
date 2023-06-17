@@ -2,8 +2,8 @@ title: Получите матрицу контроля доступа
 id: RA1010
 description: >
   Получите матрицу контроля доступа. Обычно ей управляет команда Сетевой безопасности. Это поможет выявить возможности злоумышленников по "боковому" перемещению и повышению привелегий
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+author: @ermack_community
+creation_date: 2023/06/17
 stage: preparation
 automation:
   - thehive/phantom/demisto/etc

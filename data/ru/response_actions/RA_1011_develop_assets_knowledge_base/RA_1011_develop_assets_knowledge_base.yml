@@ -3,8 +3,8 @@ id: RA1011
 description: >
   Создайте свою базу знаний об активностях. С помощью нее вы сможете соотнести рассматриваемую вами в данный момент активность 
   с нормальной активность хостов, пользователей, сегментов сети
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+author: @ermack_community
+creation_date: 2023/06/17
 stage: preparation
 automation:
   - thehive/phantom/demisto/etc

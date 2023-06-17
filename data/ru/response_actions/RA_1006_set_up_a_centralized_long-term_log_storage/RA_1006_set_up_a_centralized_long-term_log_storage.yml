@@ -1,9 +1,10 @@
-title: RA_1006_set_up_a_centralized_long-term_log_storage
+title: Хранение логов
 id: RA1006
 description: >
-  Set up a centralized long-term log storage. This is one of the most critical problems companies have nowadays. Even if there is such a system, in most of the cases it stores irrelevant data or has too small retention period
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Сформируйте цетрализованное долговременное хранилище для логов. Данная проблема является одной из самых критичных для большинства компаний. 
+  Даже если такая система и есть, нередко в ней хранится либо неактуальная информация, либо же период хранения слишком мало
+author: Willenst
+creation_date: 2023/06/17
 stage: preparation
 automation:
   - thehive/phantom/demisto/etc

@@ -1,9 +1,9 @@
-title: RA_1012_check_analysis_toolset
+title: Проверяйте инструментарий
 id: RA1012
 description: >
-  Make sure your toolset for analysis and management is updated and fully operational. Make sure that all the required permissions have been granted as well
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Убедитесь, что весь ваш инструментарий для анализа и менеджмента событий обновлен и полностьью работает. Также убедитесь, что вы раздали все необходимые привелегии оперирования инструментарием
+author: Willenst
+creation_date: 2023/06/17
 stage: preparation
 automation:
   - thehive/phantom/demisto/etc

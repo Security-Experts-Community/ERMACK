@@ -2,8 +2,8 @@ title: Получите карту сети
 id: RA1009
 description: >
   Получите карту сетевой архитектуры. Обычно ее контроль осуществляется командой Сетевой защиты. Он поможет вам построить стратегию по поддержанию защиты сети, например через сегментирование
-author: Willenst
-creation_date: 2023/06/19
+author: @ermack_community
+creation_date: 2023/06/17
 stage: preparation
 automation:
   - thehive/phantom/demisto/etc

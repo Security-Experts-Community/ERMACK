@@ -1,4 +1,4 @@
-title: RA_2318_analyse_script
+title: Анализировать скрипт
 id: RA2318
 description: >
   Проанализировать запускаемые скрипты (Powershell, Batch, VBSript, Bash, Python и т.д.)

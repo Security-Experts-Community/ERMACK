@@ -1,7 +1,7 @@
-title: RA_2306_find_file_by_path
+title: Найти файл по заданному пути
 id: RA2306
 description: >
-  Find a file by its path (including its name)
+  Найдите файл по заданному пути (включая его имя)
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

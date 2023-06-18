@@ -1,7 +1,7 @@
-title: RA_2305_list_files_with_tampered_timestamps
+title: Вывести список файлов, с подделанными времеными метками
 id: RA2305
 description: >
-  List files with tampered timestamps
+  Выведите список файлов, с подделанными времеными метками
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

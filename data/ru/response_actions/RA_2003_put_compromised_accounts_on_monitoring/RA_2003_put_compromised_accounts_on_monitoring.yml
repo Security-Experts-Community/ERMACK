@@ -1,10 +1,10 @@
-title: RA_2003_put_compromised_accounts_on_monitoring
+title: Поместить под наблюдение скомпромитированные аккаунты
 id: RA2003
-description: Put (potentially) compromised accounts on monitoring
-author: '@atc_project'
+description: Поместите под наблюдение (потенциально) скомпромитированные аккаунты.
+author:  '@atc_project'
 creation_date: 2019/01/31
-stage: identification
+stage: Идентификация
 extended_description: |
-  Start monitoring for authentification attempts and all potentially harmful actions from (potentially) compromised accounts.
-  Look for anomalies, unusual network connections, unusual geolocation/time of work, actions that were never executed before.
-  Keep in touch with the real users and, in case of need, ask them if they executing some suspicious actions by themselves or not.
+  Начните отслеживать попытки аутентификации и все потенциально вредоносные действия со стороны (потенциально) скомпрометированных учетных записей.
+  Ищите аномалии, необычные сетевые подключения, необычное геолокационное местоположение/время работы, действия, которые никогда ранее не выполнялись.
+  Поддерживайте связь с реальными пользователями и, в случае необходимости, спрашивайте их, совершают ли они какие-либо подозрительные действия самостоятельно или нет.

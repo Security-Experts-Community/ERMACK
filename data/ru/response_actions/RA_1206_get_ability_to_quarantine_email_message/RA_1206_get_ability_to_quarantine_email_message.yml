@@ -1,7 +1,7 @@
-title: RA_1206_get_ability_to_quarantine_email_message
+title: Получение возможности помещать сообщения электронной почты в карантин
 id: RA1206
 description: >
-  Make sure you have the ability to quarantine an email message
+  Убедитесь, что у вас есть возможность поместить сообщение электронной почты в карантин
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: preparation
@@ -11,4 +11,4 @@ references:
 requirements:
   - MS_email_server
 extended_description: |
-  Make sure you have the ability to quarantine an email message on an Email Server using its native functionality.
+  Убедитесь, что у вас есть возможность поместить сообщение электронной почты в карантин на почтовом сервере, используя его встроенные функции

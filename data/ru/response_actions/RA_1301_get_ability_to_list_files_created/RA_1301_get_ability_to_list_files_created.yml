@@ -1,7 +1,7 @@
-title: RA_1301_get_ability_to_list_files_created
+title: Получение возможности просматривать список созданных файлов
 id: RA1301
 description: >
-  Make sure you have the ability to list files that have been created at a particular time in the past
+  Убедитесь, что у вас есть возможность просматривать список файлов, которые были созданы ранее
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

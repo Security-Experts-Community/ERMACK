@@ -1,7 +1,7 @@
-title: RA_1106_access_external_dns_logs
+title: Доступ к DNS-журналам внутренней коммуникационной сети
 id: RA1106
 description: >
-  Make sure you have access to external communication DNS logs
+  Убедитесь, что у вас есть доступ к DNS-журналам внутренней коммуникационной сети
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: preparation
@@ -12,10 +12,10 @@ requirements:
   - MS_dns_server
   - DN_zeek_dns_log
 extended_description: |
-  Make sure that there is a collection of DNS logs for external communication (from corporate assets to the Internet) configured.
-  If there is no option to configure it on a network device/DNS Server, you can install a special software on each endpoint and collect it from them.
+  Убедитесь, что настроена система DNS-журналов для внутренней связи (от корпоративных ресурсов до Интернета).
+Если нет возможности настроить его на сетевом устройстве, вы можете установить специальное программное обеспечение на каждую конечную точку и получить его от них.
 
-  Warning:
+Warning:
 
   - Make sure that there are both DNS query and answer logs collected. It's quite hard to configure such a collection on MS Windows DNS server and ISC BIND. Sometimes it much easier to use 3rd party solutions to fulfill this requirement.
   - Make sure that DNS traffic to the external (public) DNS servers is blocked by the Border Firewall. This way, corporate DNS servers is the only place assets can resolve the domain names.

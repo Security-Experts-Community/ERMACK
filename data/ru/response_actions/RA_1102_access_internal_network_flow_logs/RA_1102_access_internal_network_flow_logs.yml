@@ -1,7 +1,7 @@
-title: RA_1102_access_internal_network_flow_logs
+title: Доступ к журналам логов внутренней сети
 id: RA1102
 description: >
-  Make sure you have access to internal communication Network Flow logs
+  Убедитесь, что у вас есть доступ к журналам с логами внутренней коммуникационной сети
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

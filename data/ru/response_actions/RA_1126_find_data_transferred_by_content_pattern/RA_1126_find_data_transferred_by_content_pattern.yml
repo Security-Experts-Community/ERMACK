@@ -1,7 +1,7 @@
-title: RA_1126_find_data_transferred_by_content_pattern
+title: Поиск данных, передаваемых по шаблону содержимого
 id: RA1126
 description: >
-  Make sure you have the ability to find the data that is being transferred at the moment or at a particular time in the past by its content pattern
+  Убедитесь, что у вас есть возможность найти данные, которые передаются в данный момент или были переданы ранее, по шаблону их содержимого
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

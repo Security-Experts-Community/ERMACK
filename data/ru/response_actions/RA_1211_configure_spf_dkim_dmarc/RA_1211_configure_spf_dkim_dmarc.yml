@@ -1,4 +1,4 @@
-title: RA_1211_configure_spf_dkim_dmarc
+title: Настройка spf dkim dmarc
 id: RA1211
 description: >
   Настроить DKIM, DMARC, SPF для корпоративного почтового домена и поддоменов

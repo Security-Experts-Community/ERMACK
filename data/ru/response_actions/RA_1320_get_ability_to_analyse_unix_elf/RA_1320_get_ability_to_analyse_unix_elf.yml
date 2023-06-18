@@ -1,7 +1,7 @@
-title: RA_1320_get_ability_to_analyse_unix_elf
+title: Получить возможность анализа исполняемого файла UNIX-подобных систем формата ELF 
 id: RA1320
 description: >
-  Make sure you have the ability to analyse a UNIX ELF file
+  Убедитесь, что вы можете проанализировать исполняемый файл UNIX-подобных систем формата ELF 
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

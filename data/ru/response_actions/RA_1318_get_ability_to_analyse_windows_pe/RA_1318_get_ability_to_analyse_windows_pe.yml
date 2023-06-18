@@ -1,7 +1,7 @@
-title: RA_1318_get_ability_to_analyse_windows_pe
+title: Получить возможность анализа исполняемого файла операционной системы Windows
 id: RA1318
 description: >
-  Make sure you have the ability to analyse a Windows Portable Executable file
+  Убедитесь, что вы можете проанализировать исполняемый файл операционной системы Windows
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

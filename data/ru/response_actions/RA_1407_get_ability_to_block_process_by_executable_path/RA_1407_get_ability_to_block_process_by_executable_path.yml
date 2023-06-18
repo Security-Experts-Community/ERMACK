@@ -1,7 +1,7 @@
-title: RA_1407_get_ability_to_block_process_by_executable_path
+title: Получить возможность блокировки процесса по пути исполняемого файла
 id: RA1407
 description: >
-  Make sure you have the ability to block process by its executable path (including its name)
+  Убедитесь, что вы можете заблокировать процесс по пути его исполняемого файла
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

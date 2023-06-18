@@ -1,7 +1,7 @@
-title: RA_3101_block_external_ip_address
+title: Блокировка внешнего IP-адреса
 id: RA3101
 description: >
-  Block an external IP address from being accessed by corporate assets
+  Заблокируйте доступ к внешнему IP-адресу со стороны корпоративных ресурсов
 author: '@atc_project'
 creation_date: 2019/01/31
 stage: containment
@@ -12,8 +12,8 @@ requirements:
   - MS_border_ngfw
   - MS_host_firewall
 extended_description: |
-  Block an external IP address from being accessed by corporate assets, using the most efficient way.
+  Заблокируйте доступ к внешнему IP-адресу со стороны корпоративных ресурсов, используя наиболее эффективный способ.
 
-  Warning:
+  Предупреждение:
 
-  - Be careful blocking IP addresses. Make sure it's not a cloud provider or a hoster. If you would like to block something that is hosted on a well-known cloud provider or on a big hoster IP address, you should block (if applicable) a specific URL using alternative Response Action
+  - Будьте осторожны, блокируя IP-адреса. Убедитесь, что это не облачный провайдер или хостер. Если вы хотите заблокировать что-либо, размещенное на хорошо известном облачном провайдере или на IP-адресе крупного хостера, вам следует заблокировать (если применимо) определенный URL-адрес, используя альтернативное действие ответа

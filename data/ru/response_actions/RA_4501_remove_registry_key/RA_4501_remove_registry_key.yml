@@ -1,7 +1,7 @@
-title: RA_4501_remove_registry_key
+title: Удаление раздела реестра
 id: RA4501
 description: >
-  Remove a registry key
+  Удалите раздел реестра
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: eradication

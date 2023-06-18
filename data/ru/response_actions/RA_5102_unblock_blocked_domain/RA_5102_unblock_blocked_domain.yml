@@ -1,7 +1,7 @@
-title: RA_5102_unblock_blocked_domain
+title: Разблокирование домена
 id: RA5102
 description: >
-  Unblock a blocked domain name
+  Разблокируйте доменное имя
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: recovery
@@ -14,4 +14,4 @@ requirements:
   - MS_intranet_ngfw
   - MS_dns_server
 extended_description: |
-  Unblock a blocked domain name in the system(s) used to block it.
+  Разблокируйте доменное имя в системе (системах), используемой для его блокировки

@@ -17,12 +17,12 @@ requirements:
       cpe-fs: 'cpe:2.3:a:microsoft:powershell:0.5.0:*:*:*:*:*:*:*'
     targets_of_action:
     - ID: S3001
-      cpe-fs: 'cpe:2.3:a:microsoft:active_directory'
+      cpe-fs: 'cpe:2.3:a:microsoft:active_directory:-:*:*:*:*:*:*:*'
 extended_description: |
   Данное действие реагирования предназначено для получения информации об атрибутах учетной записи Active Directory при помощи PowerShell команды
 
   ## Требования к средствам воздействия
-  - Windows PowerShell 5  
+  - Windows PowerShell 5
   - ActiveDirectory powershell модуль
 
   ## Ожидаемый результат
@@ -41,7 +41,7 @@ extended_description: |
   <summary><b>Powershell</b></summary>
 
   ```powershell linenums="1"
-    Get-ADUser -identity $USER -Properties * 
+    Get-ADUser -identity $USER -Properties *
   ```
   </details>
 
@@ -51,7 +51,7 @@ extended_description: |
   <summary><b>Пример запуска</b></summary>
 
   ```powershell linenums="1"
-  PS> Get-ADUser -identity $USER -Properties * 
+  PS> Get-ADUser -identity $USER -Properties *
   ```
   </details>
 

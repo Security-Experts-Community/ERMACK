@@ -1,12 +1,21 @@
 title: RA_2114_list_hosts_communicated_with_external_ip
 id: RA2114
 description: >
-  List hosts communicated with an external IP address
-author: '@atc_project'
-creation_date: 2020/05/06
+  Определить узлы корпоративной сети, взаимодействовавшие с внешним IP-адресом
+author: enikulina
+creation_date: 2023/02/06
 stage: identification
+automation:
+  - ids/ips
+  - nta/ndr
+  - siem
 requirements:
+  - MS_border_firewall
+  - MS_border_proxy
+  - MS_border_ips
+  - MS_border_ngfw
   - DN_network_flow_log
-  - DN_zeek_conn_log
-extended_description: |
-  List hosts communicated with an external IP address using the most efficient way.
+  - DN_proxy_log
+  - DN_firewall_log
+workflow: |
+  Найдите все хосты в инфраструктуре, с которых были обращения к внешнему подозрительному IP-адресу.

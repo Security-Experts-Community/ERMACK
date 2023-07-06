@@ -1,14 +1,16 @@
 title: RA_5105_unblock_blocked_user
 id: RA5105
 description: >
-  Unblock a blocked user
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Разблокировать учетную запись пользователя
+author: avasiltsov, enikulina
+creation_date: 2023/04/26
 stage: recovery
-references:
-  - https://example.com
-requirements:
-  - DN_zeek_conn_log # placeholder
-extended_description: |
-  Description of the extended_description for single Response Action in markdown format.
-  Here newlines will be saved.
+automation:
+  - edr/xdr
+  - irp/soar
+linked_artifacts:
+  - A1001
+  - A1003
+  - A1004
+workflow: |
+  Разблокируйте ранее заблокированную учетную запись пользователя, предварительно убедившись в успешной смене пароля и разрыве активных до блокировки сессий.

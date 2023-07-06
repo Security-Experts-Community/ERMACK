@@ -1,14 +1,15 @@
 title: RA_1602_get_ability_to_lock_user_account
 id: RA1602
 description: >
-  Make sure you have the ability to lock user account from being used
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Проверить возможность блокировки учетных записей пользователей
+author: enikulina
+creation_date: 2023/02/09
 stage: preparation
-references:
-  - https://example.com
+automation:
+  - xdr
+  - soar/irp
 requirements:
-  - DN_zeek_conn_log # placeholder
-extended_description: |
-  Description of the extended_description for single Response Action in markdown format.
-  Here newlines will be saved.
+  - active directory
+workflow: |
+  Убедитесь, что при необходимости вы можете оперативно заблокировать как локальную учетную запись, так и учетную запись в домене организации. 
+  Опираясь на выработанную ранее процедуру реагирования, убедитесь, что ответственные за реагирование имеют необходимые для блокировки УЗ доступы к СЗИ и IT-системам либо контакты соответствующих подразделений.

@@ -1,14 +1,14 @@
 title: RA_2001_list_victims_of_security_alert
 id: RA2001
 description: >
-  List victims of a security alert
-author: name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Составить список затронутых инцидентом ИБ объектов инфраструктуры.
+author: avasiltsov
+creation_date: 2023/04/27
 stage: identification
 automation:
-  - thehive
-references:
-  - https://example.com
-extended_description: |
-  Description of the extended_description for the Response Action in markdown format.
-  Here newlines will be saved.
+  - siem/irp
+linked_artifacts:
+  - A1004
+  - A1005
+workflow: |
+  Определите затронутые инцидентом объекты корпоративной инфраструктуры: пострадавшие хосты, учетные записи и т.п.

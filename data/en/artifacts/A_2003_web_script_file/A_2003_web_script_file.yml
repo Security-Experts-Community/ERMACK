@@ -1,0 +1,12 @@
+title: Web script file
+id: A2003
+description: This artifact describes web script file entity
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/10
+modification_date: 2023/07/10
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:WebScriptFile/
+mapping:
+  - d3f:WebScriptFile
+extended_description: |
+  A file containing a script in a web-scripting programming language. Web scripts may be present and run on the client or on the server side.

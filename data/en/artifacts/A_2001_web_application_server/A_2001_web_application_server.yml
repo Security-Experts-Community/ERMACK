@@ -1,0 +1,12 @@
+title: Web application server
+id: A2001
+description: This artifact describes web application server entity
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/10
+modification_date: 2023/07/10
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:WebApplicationServer/
+mapping:
+  - d3f:WebApplicationServer
+extended_description: |
+  A web application server is a web server that hosts applications. Application server frameworks are software frameworks for building application servers. An application server framework provides both facilities to create web applications and a server environment to run them. In the case of Java application servers, the server behaves like an extended virtual machine for running applications, transparently handling connections to the database on one side, and, often, connections to the Web client on the other.

@@ -1,0 +1,9 @@
+title: RA_4004_update_sensitive_data
+id: RA4004
+description: >
+  Update sensitive data
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+stage: eradication
+extended_description: |
+  Attackers can change or read some sensitive data (passwords, database keys, etc.). This is usually done to persisted in the system. Update any sensitive data that has been read or modified.

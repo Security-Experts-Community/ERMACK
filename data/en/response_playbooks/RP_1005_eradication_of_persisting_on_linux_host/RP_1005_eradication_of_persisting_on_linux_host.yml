@@ -1,0 +1,14 @@
+title: Eradication of persisting on linux host
+id: RP1005
+description: Sub-playbook "eradication of persisting on linux host"
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+modification_date: 2023/07/12
+severity: M
+tlp: AMBER
+pap: WHITE
+tags:
+  - sub-playbook
+workflow: |
+  1. TODO: create response actions
+  2. TODO: create workflow

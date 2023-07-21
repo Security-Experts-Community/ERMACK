@@ -17,8 +17,8 @@ preparation:
     - RA_1001_practice
     - RA_1002_take_trainings
     - RA_1012_check_analysis_toolset
-    - RA_1015_implement_ids_ips_firewalls
-    - RA_1016_check_lan_communication
+    - RA_1017_implement_ids_ips_firewalls
+    - RA_1018_check_lan_communication
     - RA_1104_access_external_http_logs
     - RA_1110_access_external_packet_capture_data
     - RA_1111_get_ability_to_block_external_ip_address

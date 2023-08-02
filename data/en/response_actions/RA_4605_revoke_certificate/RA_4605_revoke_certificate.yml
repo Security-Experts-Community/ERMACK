@@ -5,6 +5,6 @@ description: >
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/12
 stage: eradication
-workflow: |
+extended_description: |
   Revocation of an issued certificate.
   To revoke a certificate, you must uniquely identify it. It is better to do this using the value of the certificate thumbprint

@@ -1,19 +1,18 @@
-title: RA_5101_unblock_blocked_ip
+title: RA_5101_unblock_blocked_internal_ip
 id: RA5101
 description: >
-  Unblock a blocked IP address
-author: '@atc_project'
-creation_date: 2020/05/06
+  Ввести изолированный узел обратно в сеть
+author: enikulina
+creation_date: 2023/02/06
 stage: recovery
+automation:
+  - edr/xdr
+  - soar
 requirements:
-  - MS_border_firewall
-  - MS_border_proxy
-  - MS_border_ips
-  - MS_border_ngfw
   - MS_intranet_firewall
   - MS_intranet_proxy
   - MS_intranet_ips
   - MS_intranet_ngfw
   - MS_host_firewall
-extended_description: |
-  Unblock a blocked IP address in the system(s) used to block it.
+workflow: |
+  Введите изолированный ранее хост обратно в сеть, предварительно убедившись в устранении угрозы и отсутствии признаков нелегитимной активности.

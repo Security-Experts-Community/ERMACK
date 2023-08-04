@@ -1,5 +1,5 @@
-title: Domain user enumarate attack using the Kerberos protocol without a domain account
-description: Response playbook for domain user enumarate attack using the Kerberos protocol without a domain account
+title: Атака перечислением с использование протокола Kerberos без учетной записи в домене
+description: Сценарий реагирования на атаку перечислением с использование протокола Kerberos без учетной записи в домене
 id: RP0002
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/03/12
@@ -32,16 +32,16 @@ lessons_learned:
   - RA_6001_develop_incident_report
   - RA_6002_conduct_lessons_learned_exercise
 extended_description: |
-  | Artifact                                | Response action                                                                                                                                                                                     | Possible discovered entity                                                                                                 |
-  | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :--------------------------------------------------------------------------------------------------------------------------|
-  | <[Domain account]>(A_1001) username     | Find domain usernames that successfully enumed. Check that these accounts have not been compromised                                                                                                 | Find the usernames to which the Authentication service returned KDC_ERR_PREAUTH_REQUIRED message                           |
-  | <[Host]>(A_1005)                        | Look on hosts with suspicious activity and go to <[Compromised Host]> response playbook                                                                                                             | Attack tools to carry out an attack or suspicious external network connections                                             |
-  | <[IP Address]>(A_1007)                  | Look on IP Address with suspicious network activity and go to <[Compromised Host]> response playbook                                                                                                | KRB_AS_REQ messages without pre-authentication and with atypical usernames for this IP Address or non-existent username    |
-  | <[Kerberos network traffic]>(A_1009)    | Look on suspiciously large number KRB_AS_REQ messages without pre-authentication and KDC_ERR_C_PRINCIPAL_UNKNOWN messages. Spot host from with sends this message and go to <[Compromised Host]>    | Many KRB_AS_REQ messages without pre-authentication and KDC_ERR_C_PRINCIPAL_UNKNOWN messages                               |
+  | Artifact                                | Response action                                                                                                                                                                                                      | Possible discovered entity                                                                                                   |
+  | :-------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| :--------------------------------------------------------------------------------------------------------------------------  |
+  | <[Domain account]>(A_1001) username     | Найдите аккаунты пользователий обнаруженные атакой. Проверьте, не были ли они скомпроментированы                                                                                                                     | Аккаунты, на который сервисом аутентификации было отправлено сообщение KDC_ERR_PREAUTH_REQUIRED                              |
+  | <[Host]>(A_1005)                        | Если обнаружились хосты с подозрительной активностью, перейдите к сценарию <[Compromised Host]>                                                                                                                      | Следы инструментов для атаки, либо подозрительный внешний траффик                                                            |
+  | <[IP Address]>(A_1007)                  | Если обнаружились IP адреса с подозрительной активностью, перейдите к сценарию <[Compromised Host]>                                                                                                                  | Неавторизованные сообщения KRB_AS_REQ, нетипичные имена пользователей для IP адресов, либо несуществующие имена пользователей|
+  | <[Kerberos network traffic]>(A_1009)    | При обнаружении большого числа сообщений типа KRB_AS_REQ без предварительной аутентификации, или сообщений KDC_ERR_C_PRINCIPAL_UNKNOWN найдите хост, который их отправлял и перейдите к сценарию <[Compromised Host]>| Неавторизованные сообщения KRB_AS_REQ в большом числе, и сообщения типа KDC_ERR_C_PRINCIPAL_UNKNOWN messages                 |
 
 workflow: |
-    1. On identification stage need find <[host or hosts]>(A_1005) from which the attack occur. This is can be hosts with suspicious external network connections or attackers footprints (such as attack tools). This is can be <[IP Addreses]>(A_1007) with many KRB_AS_REQ messages without pre-authentication and with atypical usernames for this IP Address or non-existent username
-    2. On identification stage need find <[domain account]>(A_1001) usernames which success enumed. This is usernames on which authorization service returned KDC_ERR_PREAUTH_REQUIRED message
-    3. After the successfully enumerated users have been found, put this accounts on monitoring
-    4. After the compromised hosts have been found, go to <[Compromised Host]> Response Playbook
-    5. Save all <[timestamps]> of implemented actions in Incident Report draft on the fly, it will save a lot of time
+    1. На стадии identification надо обнаружить <[host or hosts]>(A_1005) с которых происходила атака. Это могут быть хосты с подозрительными соединениями во внешнюю сеть, либо какие либо следы атаки (например инструментарий атакующего и следы его работы). Например, это может быть <[IP Addreses]>(A_1007) с большим числом сообщений KRB_AS_REQ без предварительной аутентификации и с нетепичных для этого IP адреса имен, либо вовсе - несуществующих имен
+    2. O На стадии identification надо обнаружить <[domain account]>(A_1001) логичны, которые злоумшленнику удалось обнаружить. Это логины, которым сервис авторизации отправил сообщение KDC_ERR_PREAUTH_REQUIRED
+    3. После выяснения обнаруженных злоумышленником аккаунтов, следует уделить пристальное внимание их мониторингу, поискать следы проникновения
+    4. После обнаружения скомпроментированных хостов - перейти к сценарию реагирования <[Compromised Host]>
+    5. Сохраните все <[timestamps]> обнаруженных вами подозрительных действий, отразите ваши действия в отчете, это поможет в будущем

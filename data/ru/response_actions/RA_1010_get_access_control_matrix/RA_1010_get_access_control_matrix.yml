@@ -1,9 +1,9 @@
-title: RA_1010_get_access_control_matrix
+title: Получите матрицу контроля доступа
 id: RA1010
 description: >
-  Get Access Control Matrix. Usually, its managed by the Network security team. It will help you to identify adversary opportunities, such as laterally movement and so on
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Получите матрицу контроля доступа. Обычно ей управляет команда Сетевой безопасности. Это поможет выявить возможности злоумышленников по "боковому" перемещению и повышению привелегий
+author: @ermack_community
+creation_date: 2023/06/17
 stage: preparation
 automation:
   - thehive/phantom/demisto/etc

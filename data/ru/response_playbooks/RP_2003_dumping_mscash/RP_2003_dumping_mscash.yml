@@ -1,4 +1,4 @@
-title: Dumping mscash
+title: Дамп mscash
 id: RP2003
 author: '@Cyberok'
 creation_date: 2023/02/03
@@ -38,42 +38,42 @@ lessons_learned:
   - RA_6001_develop_incident_report
   - RA_6002_conduct_lessons_learned_exercise
 
-description: Response playbook for detected dumping MScash activity.
+description: Сценарий реагирования на активность связанную с дампом MScash.
 extended_description: |
-   Adversaries may attempt to dump credentials to obtain account login information in the form of a hash. These hashes can be cracked or leveraged for lateral movement.
-
-   These stored credentials do not expire, but they **cannot** be used for pass-the-hash attacks, so attackers must crack the password hash to recover the plaintext passwords
+   Атакующие могут считать хэш суммы учетных данных для входа в систему посредством дампа MScash. Эти хэши могут быть послужить для брутфорса учетных данных или использованы для продвижения по инфраструктуре сети 
+   
+   Добытые в процессе учетные данные не могут быть использованы в атаке pass-the-hash, так что атакующему в любом случае необходим брутфорсить пароли по хэш сумме.
 workflow: |
-    *For better triage and response actions result you need to identify and analyze artifacts from use case.*
+    *Для более эффективного выявления и реагирования на инциденты необходимо идентифицировать необычные события в процессе*
 
-    1. Identify detected IOCs (programms, tools, commands) used in credential dumping, it helps to find specific artifacts. List created/modified/downloaded file and search processes executed with "specific" flags. For example:
+    1. Определите обнаруженные IOCs (Свидетельство компроментации системы: програмы, инструменты злоумышленника, использованные команды в консоли) использованные для получения учетных данных, это поможет найти подозритеотные события. Просмотрите созданные/измененные/загруженные файлы и поищите процесс, запущенные со "специфичными" атрибутами. Например:
 
-        - processes started with processes args:(ShadowHashData or "-dump")
-        - processes accessed *hklm\sam hklm\system hklm\security* registry hives
-        - processes with well-known flags (*privilege::debug, token::elevate, lsadump::cache*)
+        - процессы запущенные с аргемнтами:(ShadowHashData или "-dump")
+        - процессы, обращающиеся к разделам регистра *hklm\sam hklm\system hklm\security*
+        - процессы, с часто применяемыми злоумышленниками параметрами (*privilege::debug, token::elevate, lsadump::cache*)
 
-    2. As said this hash cannot be used in PTH attack, so more likely file with credentials should be created and dropped to attackers machine for further cracking. List created/modified/downloaded file to identify source of attack (ip, host, etc...).
-    3. Take any containment action depending on the situation and level of asset's criticality. For example if privilege escalation suspected to be succesfull, initiate procedure to block compromised users or use block process action in automatic scenarios:
-        - Block process by executable content pattern
-        - Lock user account
-    4. Take any eradication action depending on the situation and level of asset's criticality. For example credential can be used as arguments to malicous commands:
-        - Revoke authentication credentials
-    5. Take recovery action depending on previous containment and eradication actions:
-        - Unblock blocked user (if needed)
-        - Change user's credential
-    6. Report incident, remove security breaches, conduct lessons learned exercises.
+    2. Как уже сказано, полученные данные не используемые для атаки Pass-the-Hash, следовательно, скорее всего злоумышленник загрузит файл с дампами на свою машину. Просмотрите созданные/измененные/загруженные файлы для идентификации источника атаки (ip, host, etc...).
+    3. Примите меры по ограничению в зависимости от ситуации и важности ресурса. Например, если у вас есть подозрения на повышение привелегий, заблокируйте подозрительного пользователя или процесс посредством автоматических сценариев блокировки:
+        - Заблокируйте процесс по патернам поведения
+        - Заблокируйте аккаунт пользователя
+    4. Примите меры по ликвидации в зависимости от ситуации и важности ресурса. Например, учетные данные могут быть использованы как аргумент для вредоносной команды:
+        - Отзовите учетные данные для входа
+    5. В зависимости от действий по ликвидации и ограничению, совершите действия по восстановлению:
+        - Разблокируйте заблокированного пользователя (если необходимо)
+        - Смените учетные данные пользователей
+    6. Сообщите об инциденте, устраните последствия нарушения, извлеките уроки.
 
     ## Response discovery mapping
 
     | ARTIFACT                  | RESPONSE ACTION                                                                                | RESPONSE ACTION OBSERVABLES                                                    |
     | ------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-    | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | [List registry key accessed]() <br> *Look for reg save commands*                | Credential dump attempt |
-    | [Process](/artifacts/A_4001_process/entity) | [Find process by executable content pattern]() <br>*Search possible tool's artifacts to define fact of credential dump* | Identified credential dump tool |
-    | [Encrypted Credential](A_5005_encrypted_credential/entity/) | [Examine content]() <br>*Define which user credentials were dumped, it depends on how much users credential were cached at the compomised host.* | List potentially compromised users |
-    | [Password](/artifacts/A_5008_password/entity/) | [Revoke authentication credentials]() <br>[Reset password]() <br>*Depends on needed context.* | Compomised/New password |
+    | [Windows Registry](/artifacts/A_5002_windows_registry/entity)                   | [Список использованных ключей реестра]() <br> *Искать команды сохранение реестра*                | Попытка сбора учетных данных |
+    | [Process](/artifacts/A_4001_process/entity) | [Поиск процесса по патерну]() <br>*Ищите необычные события, свидетельствующие о применении хакерского инструментария* | Обнаружен инструмент сбора учетных данных |
+    | [Encrypted Credential](A_5005_encrypted_credential/entity/) | [Изучение событий]() <br>*Определить, какие учетные данные пользователей были собраны, это зависит от того, сколько учетных данных пользователей было кэшировано хосте.* | Список потенциально скомпрометированных пользователей |
+    | [Password](/artifacts/A_5008_password/entity/) | [Отозвать учетные данные для авторизации]() <br>[Обнулить пароль]() <br>*Зависит от котекста.* | Скомпроментированный/Новый пароль |
 
 
-    *P.S. Artifacts from "Attack Prerequisites" section ( in this case : [Host]() and [File]() ) should be used in [Operational Preparations]() and as incoming arguments for other response actions, for example*
+    *P.S. Артефакты из "Attack Prerequisites" ( в данном случе : [Host]() и [File]() ) должны быть использованы в [Operational Preparations]() и в качестве аргументов для других входных действий, например:*
     <details>
     <summary><b>response action: list processes executed</b></summary>
     ```

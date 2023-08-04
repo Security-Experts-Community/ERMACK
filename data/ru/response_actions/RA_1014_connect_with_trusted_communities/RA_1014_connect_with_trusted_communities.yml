@@ -1,6 +1,6 @@
-title: RA_1014_connect_with_trusted_communities
+title: Связь с сообществом
 id: RA1014
-description: Connect with trusted communities for information exchange
+description: С целью обмена информацией следует наладить связь с людьми и сообществами, которым можно верить.
 author: Andreas Hunkeler (@Karneades)
 creation_date: 2020/05/14
 stage: preparation
@@ -11,4 +11,4 @@ requirements:
   - Mailing list
   - Slack channel
 extended_description: |
-  Contact other companies or information providers for getting on a ML or get connected to other MISP instances.
+  Связывайтесь с другими команиями или различными информационными сервисами. Вступайте в открытые сообщества по обмену данными об угрозах, по типу MISP

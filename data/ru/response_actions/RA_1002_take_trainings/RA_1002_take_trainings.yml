@@ -1,18 +1,18 @@
 title: Повышение квалификации
 id: RA1002
-description: Проходите курсы повышения квалификации для накопления необходимых знаний
+description: Проходите курсы повышения квалификации для накопления необходимых знаний.
 author: '@atc_project'
 creation_date: 2020/04/08
 stage: preparation
 extended_description: |
-  > We do not rise to the level of our expectations. We fall to the level of our training.
+  > Наш успех зависит не от того, что мы от себя ожидаем. Он опредяется уровнем нашей подготовки.
 
-  Here are some relevant training courses that will help you in the Incident Response activities:
+  Например, можно пройти ряд следующих актуальных обучающих курсов по реагированию на инциденты:
 
-  1. [Investigation Theory](https://chrissanders.org/training/investigationtheory/) by Chris Sanders. We recommend you to have it as a mandatory training for every member of your Incident Response team
-  2. [Offensive Security](https://www.offensive-security.com/courses-and-certifications/) trainings. We recommend [PWK](https://www.offensive-security.com/pwk-oscp/) to begin with
-  3. [SANS Digital Forensics & Incident Response](https://digital-forensics.sans.org/training/courses) trainings
+  1. [Теория расследования](https://chrissanders.org/training/investigationtheory/) by Chris Sanders. Рекомендуем использовать его как основополагающий для каждого члена вашей команды реагирования на инциденты.
+  2. [Наступательная защита](https://www.offensive-security.com/courses-and-certifications/) - курсы по пентесту. Рекомендуем начать с [PWK](https://www.offensive-security.com/pwk-oscp/)
+  3. [SANS Digital Forensics & Incident Response](https://digital-forensics.sans.org/training/courses) - курсы по форензике и реагированию на инциденты от SANS.
 
-  Offensive Security trainings are in the list because to fight a threat, you need to understand their motivation, tactics, and techniques.
+  Курсы по наступательной защите также входят в список, посколько для защиты от угроз будет полезным понимать мотивацию атакующих, их тактики и методы.
 
-  At the same time, we assume that you already have a strong technical background in fundamental disciplines — Networking, Operating Systems, and Programming.
+  В то же время, мы предполагаем, что вы уже имеете сильную техническую базу в фундаметальном понимании в области устройства сетей, операционных систем и програмировании.

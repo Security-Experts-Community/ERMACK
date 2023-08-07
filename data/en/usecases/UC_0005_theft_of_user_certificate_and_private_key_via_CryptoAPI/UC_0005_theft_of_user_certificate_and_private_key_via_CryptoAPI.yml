@@ -1,0 +1,85 @@
+title: 'Theft of user certificate and private key via CryptoAPI'
+id: UC0005
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/29
+modification_date: 2023/06/06
+severity: M
+tags:
+  - windows
+  - attack.credential_access
+  - attack.t1649
+linked_response_playbooks:
+  - RP0005
+linked_artifacts:
+  - A1011
+  - A1012
+  - A3002
+  - A1005
+  - A1001
+description: Attackers can theft certificate and private key via CryptoAPI to authenticate on behalf of the certificate owner using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension.
+extended_description: |
+  Attackers can theft certificate and private key to authenticate on behalf of the certificate owner using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension. 
+  
+  To extract the certificate and private key, attackers can use CryptoAPI - an interface that provides work with cryptographic providers. In particular, CryptoAPI allows you to work with certificates and their private keys.
+  
+  The private key of a certificate can be marked as exportable or non-exportable. If the private key is marked as non-exportable, the attacker will need additional steps to extract it.
+  
+  ## Attack mapping 
+
+  | ARTIFACT | OBJECT | DESCRIPTION |
+  | :--------| :------| :-----------|
+  | **Attack Prerequisites**        |
+  | <[Host]>(A_1005) | Compromised host | Host where the certificate and private key are stored and on which attackers can execute code from the user's context |
+  | <[Active directory account]>(A_1001) | Certificate owner user | The user who owns the certificate and from whose context code execution is available |
+  | **Side Observables**            |
+  | <[File]>(A_3002) | PKCS#12 format file (.pfx or .p12) | File with a certificate and an associated private key |
+  | <[File]>(A_3002) | Executable or script file | Executable or script file that attackers use to carry out an attack (e.g. mimikatz.exe) |
+
+  ## Attack result
+
+  The result of this attack is a user certificate and an associated private key, which the attacker can use to carry out further attacks (e.g. [Pass the certificate](/usecases/UC_0004_pass_the_certificate/entity/))
+
+  | RESOURCE | DESCRIPTION | 
+  | :--------| :-----------|
+  | **Attack Prerequisites** |
+  | <[Host]>(A_1005) | Compromised host on which attackers can execute code from the user's context |
+  | <[Active directory account]>(A_1001) | The user from whose context code execution is available |
+  | **Result Consequences** |
+  | <[Certificate]>(A_1011)     | User certificate that is stored on the machine |
+  | <[Private key]>(A_1012) | Private key associated with the user certificate |
+
+  ## Attack progress
+  
+  Depending on whether the private key is exportable or non-exportable, there can be two attack options. In the case where the private key is exportable, the attacker simply extracts the certificate and the private key using, for example, Export-PfxCertificate Powershell scriptlet. If the private key is non-exportable, the attacker first patches the memory to bypass the non-exportability of the private key and then extracts the certificate and private key.
+
+  ### First option - Private key is exportable
+
+  1. Create password for save pfx file  
+  2. Export certificate and private key as pfx file
+
+  #### Example this attack
+  ```
+  PS> $pwd = ConvertTo-SecureString '123' -Force -AsPlainText
+  PS> Get-ChildItem -Path Cert:\CurrentUser\My\certificate_thumbprint | Export-PfxCertificate -FilePath C:\cert.pfx -Password $pwd
+  ```
+  <img src="../SimpleExport.PNG" alt="Export-PfxCertificate"/>
+  
+  ### Second option - Private key is non-exportable
+
+  1. Patching memory to bypass non-exportability private key
+  2. Export certificate and private key as pfx file
+
+  #### Example this attack
+  ```
+  mimikatz # crypto::capi
+  mimikatz # crypto::certificates /export
+  ```
+  <img src="../TryExport.PNG" alt="TryExport"/>
+  <img src="../PatchMemoryAndExport.PNG" alt="mimikatz"/>
+  
+  ## Attack-flow diagram
+  <img src="../UC0005.png" alt="Attack-flow"/>
+
+  ## References
+  1. <https://posts.specterops.io/certified-pre-owned-d95910965cd2>
+  2. <https://github.com/gentilkiwi/mimikatz>

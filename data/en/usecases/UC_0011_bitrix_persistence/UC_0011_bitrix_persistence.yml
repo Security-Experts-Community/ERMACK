@@ -10,10 +10,8 @@ tags:
 linked_response_playbooks:
   - RP0011
 linked_artifacts:
-  - A1008
   - A2001
   - A2002
-  - A2003
 #targets:
 #  - ID: S3004
 #    cpe_from: 'cpe:2.3:a:bitrix24:bitrix24:-:*:*:*:*:*:*:*'
@@ -30,8 +28,11 @@ extended_description: |
   | ARTIFACT/RESOURCE | DESCRIPTION |
   | :-----------------| :-----------|
   | **Attack Prerequisites** |
-  | Code execution on <[Web server]>(A_2002) | Possibility of code execution on the web server hosting Bitrix |
+  | Code execution on <[Web server]>(A_2002) | Possibility of code execution on the web server hosting <[Bitrix]>(A_2001) |
   | **Attack Consequences** |
-  | Persistence on <[Web server]>(A_2002) | Persistence on the web server hosting Bitrix |
+  | Persistence on <[Web server]>(A_2002) | Persistence on the web server hosting <[Bitrix]>(A_2001) |
   | **Side Observables** |
   | |
+  
+  ## References
+  1. <https://www.cyberok.ru/docs/CyberOK-Bitrix_web_1.1.pdf>

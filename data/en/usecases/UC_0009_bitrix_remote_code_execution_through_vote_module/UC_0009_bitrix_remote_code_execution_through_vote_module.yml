@@ -1,0 +1,51 @@
+title: 'Remote code execution in Bitrix using vote module'
+id: UC0009
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/08/07
+modification_date: 2023/08/07
+severity: H
+tags:
+  - attack.initial_access
+  - attack.t1190
+  - bitrix
+linked_response_playbooks:
+  - RP0011
+linked_artifacts:
+  - A1008
+  - A2001
+  - A2002
+  - A2003
+#targets:
+#  - ID: S3004
+#    cpe_from: 'cpe:2.3:a:bitrix24:bitrix24:20.0.0:*:*:*:*:*:*:*'
+#    cpe_to: 'cpe:2.3:a:bitrix24:bitrix24:20.0.975:*:*:*:*:*:*:*'
+
+description: Attackers can use vulnerabilities in vote module in Bitrix CMS to remote code execution
+extended_description: |
+  For remote code execution attackers can exploiting vulnerabilities in modules **vote** in Bitrix CMS
+  
+  Insufficient validation of user input in vote module Bitrix CMS allow attackers to arbitrary object instantiation which leads to arbitrary file write and remote code execution.
+  To exploit this vulnerability, attackers form a special POST request to the endpoint */bitrix/tools/vote/uf.php*
+  This vulnerability exist in the vote module Bitrix site manager up to version 22.0.400 of all editions except start.
+  This vulnerability has been assigned an identifier CVE-2022-27228.
+  
+  An example of an entry in the web server logs indicating that this vulnerability was successfully exploited:
+  
+  ```
+  POST /bitrix/tools/vote/uf.php?attachId[ENTITY_TYPE]=CFileUploader&attachId[ENTITY_ID][events][onFileIsStarted][]=CAllAgent&attachId[ENTITY_ID][events][onFileIsStarted][]=Update&attachId[MODULE_ID]=vote&action=vote HTTP/1.0" 200
+  ```
+  
+  ## Attack mapping
+  
+  | ARTIFACT/RESOURCE | DESCRIPTION |
+  | :----------------| :----------|
+  | **Attack Prerequisites** |
+  | <[Bitrix]>(A_2001) network available | Network availability of CMS Bitrix |
+  | **Attack Consequences** |
+  | Remote code execution on <[Web server]>(A_2002) | Possibility of remote code execution on the web server hosting Bitrix |
+  | **Side Observables** |
+  | <[Log]>(A_1008) | Log entry about a successful POST request to a vulnerable */bitrix/tools/vote/uf.php* <[file]>(A_2003) |
+  
+  ## References
+  1. <https://www.cyberok.ru/docs/CyberOK-Bitrix_web_1.1.pdf>
+  2. <https://github.com/cr1f/writeups/blob/main/attacking_bitrix.pdf>

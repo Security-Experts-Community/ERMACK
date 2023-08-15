@@ -17,8 +17,11 @@ linked_artifacts:
   - A2003
 #targets:
 #  - ID: S3004
-#    cpe_from: 'cpe:2.3:a:bitrix24:bitrix24:-:*:*:*:*:*:*:*'
-#    cpe_to: 'cpe:2.3:a:bitrix24:bitrix24:-:*:*:*:*:*:*:*'
+#    cpe_from: 'cpe:2.3:a:bitrix:bitrix:-:*:*:*:*:*:*:*'
+#    cpe_to: 'cpe:2.3:a:bitrix:bitrix:-:*:*:*:*:*:*:*'
+#  - ID: S0100
+#    cpe_from: 'cpe:2.3:o:debian:debian_linux:-:*:*:*:*:*:*:*'
+#    cpe_to: 'cpe:2.3:o:debian:debian_linux:-:*:*:*:*:*:*:*'
 
 description: Attackers can use vulnerabilities in fileman module in Bitrix CMS to remote code execution
 extended_description: |

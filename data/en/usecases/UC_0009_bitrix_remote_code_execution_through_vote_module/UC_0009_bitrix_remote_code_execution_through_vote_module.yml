@@ -17,8 +17,11 @@ linked_artifacts:
   - A2003
 #targets:
 #  - ID: S3004
-#    cpe_from: 'cpe:2.3:a:bitrix24:bitrix24:20.0.0:*:*:*:*:*:*:*'
-#    cpe_to: 'cpe:2.3:a:bitrix24:bitrix24:20.0.975:*:*:*:*:*:*:*'
+#    cpe_from: 'cpe:2.3:a:bitrix:bitrix:20.0.0:*:*:*:*:*:*:*'
+#    cpe_to: 'cpe:2.3:a:bitrix:bitrix:20.0.975:*:*:*:*:*:*:*'
+#  - ID: 3004
+#    cpe_from: 'cpe:2.3:a:bitrix:vote:-:*:*:*:*:*:*:*'
+#    cpe_to: 'cpe:2.3:a:bitrix:vote:-:*:*:*:*:*:*:*'
 
 description: Attackers can use vulnerabilities in vote module in Bitrix CMS to remote code execution
 extended_description: |
@@ -40,7 +43,7 @@ extended_description: |
   | ARTIFACT/RESOURCE | DESCRIPTION |
   | :----------------| :----------|
   | **Attack Prerequisites** |
-  | <[Bitrix]>(A_2001) network available | Network availability of CMS Bitrix |
+  | <[Bitrix]>(A_2001) network available | Network availability of CMS Bitrix with enabled vote module |
   | **Attack Consequences** |
   | Remote code execution on <[Web server]>(A_2002) | Possibility of remote code execution on the web server hosting Bitrix |
   | **Side Observables** |

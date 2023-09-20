@@ -1,0 +1,9 @@
+title: Сервер MySQL
+id: S3011
+brief: Система управления реляционными базами данных MySQL Server
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 20/09/2023
+capabilities: []
+description: |
+references: []

@@ -1,0 +1,9 @@
+title: Сервер Gitlab
+id: S3010
+brief: Сервер для управления кодом и совместной разработки
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 20/09/2023
+capabilities: []
+description: |
+references: []

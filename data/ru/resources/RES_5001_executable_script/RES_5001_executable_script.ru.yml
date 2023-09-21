@@ -1,0 +1,13 @@
+title: Исполняемый сценарий
+id: RES5001
+brief: Этот ресурс представляет исполняемый сценарий
+authors: '@Cyberok'
+creation_date: 03/02/2023
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:ExecutableScript
+description: |
+  Исполняемый скрипт - это код, написанный на скриптовом языке. Такой код интерпретируется в процессе исполнения, 
+  в отличие от исполняемого файла, который содержит машинные инструкции для процессора или байт-код для некоторой виртуальной машины.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/

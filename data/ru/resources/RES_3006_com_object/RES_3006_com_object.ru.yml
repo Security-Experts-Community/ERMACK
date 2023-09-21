@@ -1,0 +1,13 @@
+title: COM-объект
+id: RES3006
+brief: Этот ресурс описывает COM-объект
+authors: '@Cyberok'
+creation_date: 03/02/2023
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:COMObjectFile
+description: |
+  Microsoft Component Object Model (COM) - это платформонезависимая, распределённая, объектно-ориентированная система 
+  для создания взаимодействующих компонентов ПО. COM является базовой системой для таких технологий как OLE, ActiveX, а также ряда других.
+references:
+  - https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model

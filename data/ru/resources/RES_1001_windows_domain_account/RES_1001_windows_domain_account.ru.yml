@@ -1,0 +1,12 @@
+title: Учётная запись Active Directory
+id: RES1001
+brief: Ресурс описывает сущность учётной записи Windows Active Directory
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:DomainUserAccount
+description: |
+  Доменная учётная запись позволяет пользователю получать доступ к ресурсам и сервисам внутри домена Active Directory.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:DomainUserAccount/

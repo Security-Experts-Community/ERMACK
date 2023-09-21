@@ -1,0 +1,13 @@
+title: Журнал событий
+id: RES1008
+brief: Место хранения определённого набора событий
+authors: '@Cyberok'
+creation_date: 02/03/2023
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:Log
+description: |
+  В журнале фиксируются события в порядке их появления. 
+  Обычно указывается временная метка и основная информация по каждому событию.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Log/

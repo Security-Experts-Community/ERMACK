@@ -1,0 +1,12 @@
+title: Образ памяти процесса
+id: RES4002
+brief: Этот ресурс представляет образ памяти процесса
+authors: '@Cyberok'
+creation_date: 25/10/2022
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:ProcessImage
+description: |
+  Образ памяти процесса - это копия оперативной памяти, которая выделена процессу в некоторый момент времени.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:ProcessImage/

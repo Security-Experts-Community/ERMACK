@@ -1,0 +1,12 @@
+title: Сетевой DNS-трафик
+id: RES1002
+brief: Этот ресурс описывает сущность сетевого DNS-трафикa
+authors: '@ERMACK_COMMUNITY'
+creation_date: 25/10/2022
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:DNSNetworkTraffic
+description: |
+  Сетевой трафик, который генерируется во время работы протокола DNS.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:DNSNetworkTraffic/

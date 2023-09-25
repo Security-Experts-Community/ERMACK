@@ -1,0 +1,17 @@
+title: Разработка базы знаний о ресурсах
+id: RA1011
+stage: RS0001
+brief: Развивайте базу знаний о ресурсах
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Разработка отдельной базы знаний о всех ресурсах поможет Вам сравнить наблюдаемую активность 
+  с обычным профилем активности для конкретного хоста, пользователя или сегмента сети.
+references: []

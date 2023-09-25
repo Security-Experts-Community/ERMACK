@@ -1,0 +1,18 @@
+title: Повышение осведомленности персонала
+id: RA1003
+stage: RS0001
+brief: Регулярно проводите мероприятия по повышению осведомленности сотрудников в вопросах ИБ
+authors: enikulina
+creation_date: 05/02/2023
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Регулярно проводите обучение сотрудников базовым мерам защиты от целевого фишинга, социальной инженерии и др. техник атакующих,
+  направленных на взаимодействие с пользователями.
+references:
+  - https://attack.mitre.org/mitigations/M1017/

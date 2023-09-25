@@ -1,0 +1,15 @@
+title: Отключение системной службы
+id: RA3501
+stage: RS0003
+brief: Отключите системную службу
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

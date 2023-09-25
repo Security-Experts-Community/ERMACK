@@ -1,0 +1,15 @@
+title: Включение неактивного сервиса
+id: RA5501
+stage: RS0005
+brief: Включите неактивный сервис
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

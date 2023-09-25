@@ -1,0 +1,15 @@
+title: Получение возможности перечисления созданных сервисов
+id: RA1506
+stage: RS0001
+brief: Убедитесь, что Вы можете вывести список сервисов, созданных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

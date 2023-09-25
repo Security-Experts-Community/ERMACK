@@ -1,0 +1,15 @@
+title: Удаление службы
+id: RA4502
+stage: RS0004
+brief: Удалите службу
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Вывод списка удаленных ключей реестра
+id: RA2502
+stage: RS0002
+brief: Выведите список ключей реестра, удаленных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

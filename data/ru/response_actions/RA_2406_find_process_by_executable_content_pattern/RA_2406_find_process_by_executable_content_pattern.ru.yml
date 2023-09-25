@@ -1,0 +1,15 @@
+title: Поиск процесса по шаблону содержимого исполняемого файла
+id: RA2406
+stage: RS0002
+brief: Найдите процесс, исполняемый в данный момент или в определенное время в прошлом по шаблону содержимого его исполняемого файла (т. е. по конкретной строке, ключевому слову, двоичному шаблону и т. д.)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Разблокировка учетной записи пользователя
+id: RA5601
+stage: RS0005
+brief: Разблокируйте учетную запись пользователя
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

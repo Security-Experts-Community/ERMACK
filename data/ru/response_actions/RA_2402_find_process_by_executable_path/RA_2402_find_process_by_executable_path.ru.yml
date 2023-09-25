@@ -1,0 +1,15 @@
+title: Поиск процесса по пути исполняемого файла
+id: RA2402
+stage: RS0002
+brief: Найдите процесс, исполняемый в данный момент или в определенное время в прошлом по пути его исполняемого файла (включая его имя)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

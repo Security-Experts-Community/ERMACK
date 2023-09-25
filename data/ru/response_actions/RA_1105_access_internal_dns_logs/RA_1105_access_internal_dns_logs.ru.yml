@@ -1,0 +1,15 @@
+title: Доступ к DNS-журналам внутренней коммуникационной сети
+id: RA1105
+stage: RS0001
+brief: Убедитесь, что у Вас есть доступ к логам внутренней коммуникации DNS
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,18 @@
+title: Получение возможности блокировать домен электронной почты
+id: RA1203
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность заблокировать домен электронной почты
+authors: '@atc_project'
+creation_date: 07/05/2020
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что у Вас есть возможность заблокировать домен электронной почты на почтовом сервере, 
+  используя его встроенную функцию фильтрации.
+references:
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide

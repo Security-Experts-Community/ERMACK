@@ -1,0 +1,15 @@
+title: Удаление учетной записи пользователя
+id: RA4602
+stage: RS0004
+brief: Удалите учетную запись пользователя
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

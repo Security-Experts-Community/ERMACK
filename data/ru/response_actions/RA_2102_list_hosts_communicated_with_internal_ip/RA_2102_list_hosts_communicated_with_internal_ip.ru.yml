@@ -1,0 +1,15 @@
+title: Возможность перечисления хостов, с которыми взаимодействовали по внутренним IP-адресам
+id: RA2102
+stage: RS0002
+brief: Выведите список хостов, взаимодействовавших с внутренним IP-адресом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

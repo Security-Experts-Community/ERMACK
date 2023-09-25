@@ -1,0 +1,18 @@
+title: Доступ к внешним http-журналам
+id: RA1104
+stage: RS0001
+brief: Убедитесь, что у Вас есть доступ к HTTP-журналам внешней коммуникационной сети
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что настроен сбор логов HTTP-соединений для внешних коммуникаций (от корпоративных активов в Интернет).
+references:
+  - https://docs.zeek.org/en/current/examples/httpmonitor/
+  - https://en.wikipedia.org/wiki/Common_Log_Format

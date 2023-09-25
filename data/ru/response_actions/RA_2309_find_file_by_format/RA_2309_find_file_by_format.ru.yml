@@ -1,0 +1,15 @@
+title: Поиск файла по формату
+id: RA2309
+stage: RS0002
+brief: Найдите файл по его формату
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Получение возможности просматривать список удаленных файлов
+id: RA1303
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность просмотреть список файлов, которые были удалены ранее
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

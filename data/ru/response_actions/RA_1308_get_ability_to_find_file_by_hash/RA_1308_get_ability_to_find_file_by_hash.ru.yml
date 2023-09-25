@@ -1,0 +1,15 @@
+title: Получение возможности поиска файла по хешу
+id: RA1308
+stage: RS0001
+brief: Убедитесь, что Вы можете найти файл по его хешу
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

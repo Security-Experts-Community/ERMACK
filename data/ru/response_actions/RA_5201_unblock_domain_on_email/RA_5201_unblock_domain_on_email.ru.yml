@@ -1,0 +1,17 @@
+title: Разблокировка домена электронной почты
+id: RA5201
+stage: RS0005
+brief: Разблокируйте домен электронной почты
+authors: '@atc_project'
+creation_date: 07/05/2020
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Разблокируйте домен электронной почты на почтовом сервере, используя его встроенные функции.
+references:
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide

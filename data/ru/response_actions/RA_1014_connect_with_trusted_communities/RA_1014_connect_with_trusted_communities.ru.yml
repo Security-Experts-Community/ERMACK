@@ -1,0 +1,18 @@
+title: Общение с надежными сообществами
+id: RA1014
+stage: RS0001
+brief: Присоединяйтесь к надежным сообществам для обмена информацией
+authors: Andreas Hunkeler (@Karneades)
+creation_date: 14/05/2020
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Свяжитесь с другими компаниями или провайдерами, чтобы получить доступ к ML 
+  или подключиться к другим инстанциям MISP.
+references:
+  - https://www.misp-project.org/

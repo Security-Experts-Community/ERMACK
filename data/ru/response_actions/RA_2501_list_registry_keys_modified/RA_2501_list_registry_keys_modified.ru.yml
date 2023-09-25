@@ -1,0 +1,15 @@
+title: Вывод списка модифицированных ключей реестра
+id: RA2501
+stage: RS0002
+brief: Выведите список ключей реестра, модифицированных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

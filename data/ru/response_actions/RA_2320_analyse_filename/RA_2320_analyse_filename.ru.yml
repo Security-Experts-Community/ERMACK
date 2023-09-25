@@ -1,0 +1,19 @@
+title: Анализ имени файла
+id: RA2320
+stage: RS0002
+brief: Проанализируйте имя файла
+authors: ayakovlev
+creation_date: 17/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Проверьте имя файла на доступных анализаторах.
+references:
+  - https://any.run
+  - https://hybrid-analysis.com
+  - https://www.virustotal.com

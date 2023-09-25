@@ -1,0 +1,18 @@
+title: Вывод списка аккаунтов пользователей
+id: RA2602
+stage: RS0002
+brief: Выведите список аккаунтов пользователей на конкретной системе
+authors: Andreas Hunkeler (@Karneades)
+creation_date: 21/05/2021
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Выведите список аккаунтов пользователей на конкретной системе, чтобы получить обзор доступных учетных записей.
+references:
+  - Валидные аккаунты, https://attack.mitre.org/techniques/T1078/
+  - Манипуляции с учетной записью, https://attack.mitre.org/techniques/T1098/

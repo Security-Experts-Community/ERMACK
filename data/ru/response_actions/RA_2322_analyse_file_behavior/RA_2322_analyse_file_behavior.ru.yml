@@ -1,0 +1,18 @@
+title: Анализ поведения исполняемого файла
+id: RA2322
+stage: RS0002
+brief: Проанализируйте поведение исполняемого файла
+authors: ayakovlev
+creation_date: 07/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Проверьте поведение исполняемого файла на доступных анализаторах.
+references:
+  - https://any.run
+  - https://hybrid-analysis.com

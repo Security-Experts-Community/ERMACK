@@ -1,0 +1,17 @@
+title: Выявление скомпрометированных пользователей
+id: RA2606
+stage: RS0002
+brief: Определите скомпрометированные учётные записи
+authors: '@ERMACK_COMMUNITY'
+creation_date: 07/05/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Найдите учётные записи, от имени которых была подозрительная активность. 
+  Подозрительную активность можно обнаружить по трафику и журналу событий.
+references: []

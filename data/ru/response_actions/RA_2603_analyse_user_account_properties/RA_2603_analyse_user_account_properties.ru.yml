@@ -1,0 +1,23 @@
+title: Анализ информации об учетной записи пользователя
+id: RA2603
+stage: RS0002
+brief: Проанализируйте информацию об учетной записи пользователя
+authors: enikulina
+creation_date: 08/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Cоберите и проанализируйте информацию об учетной записи пользователя с помощью доступных корпоративных систем (Windows Active Directory, корпоративный портал и др.).
+  
+  Необходимо проверить:
+  - Атрибуты УЗ пользователя
+  - Членство в группах УЗ пользователя
+  - должность пользователя, которому принадлежит УЗ
+references:
+  - https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-aduser?view=windowsserver2022-ps
+  - https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-adprincipalgroupmembership?view=windowsserver2022-ps

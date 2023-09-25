@@ -1,0 +1,15 @@
+title: Получение возможности перечисления учетных записей пользователей
+id: RA1606
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность перечислить учетные записи пользователей на определенной системе
+authors: '@atc_project'
+creation_date: 27/06/2021
+modification_date: 24/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

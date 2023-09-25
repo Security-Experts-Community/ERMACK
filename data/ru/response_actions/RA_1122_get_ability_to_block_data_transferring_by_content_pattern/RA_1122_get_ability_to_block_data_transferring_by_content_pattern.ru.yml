@@ -1,0 +1,15 @@
+title: Возможность блокировать передачу данных по шаблону их содержимого
+id: RA1122
+stage: RS0001
+brief: Убедитесь, что у вас есть возможность блокировать передачу данных по шаблону их содержимого (т.е. конкретной строке, ключевому слову, двоичному шаблону и т. д.)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

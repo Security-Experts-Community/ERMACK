@@ -1,0 +1,15 @@
+title: Вывод списка правил брандмауэра
+id: RA2118
+stage: RS0002
+brief: Выведите список правил брандмауэра
+authors: Andreas Hunkeler (@Karneades)
+creation_date: 21/05/2021
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Получение возможности блокировки процесса по шаблону содержимого исполняемого файла
+id: RA1411
+stage: RS0001
+brief: Убедитесь, что Вы можете заблокировать процесс по шаблону содержимого его исполняемого файла (по конкретной строке, ключевому слову, двоичному шаблону и т. д.)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

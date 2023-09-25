@@ -1,0 +1,16 @@
+title: Блокировка внутреннего IP-адреса
+id: RA3102
+stage: RS0003
+brief: Изолируйте внутренний узел от локальной и внешней сетей
+authors: enikulina
+creation_date: 03/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Изолируйте скомпрометированный внутренний хост от локальной и внешней сетей для прекращения распространения атаки.
+references: []

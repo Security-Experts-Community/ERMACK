@@ -1,0 +1,18 @@
+title: Получение возможности блокировать отправителя электронной почты
+id: RA1204
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность заблокировать отправителя письма электронной почты
+authors: enikulina
+creation_date: 05/02/2023
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Следует убедиться, что у Вас есть возможность заблокировать на почтовом сервере 
+  прием электронных писем на корпоративные адреса от определенного отправителя.
+references:
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide

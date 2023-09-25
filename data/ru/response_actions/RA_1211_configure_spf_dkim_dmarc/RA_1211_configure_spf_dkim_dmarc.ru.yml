@@ -1,0 +1,26 @@
+title: Настройка SPF, DKIM, DMARC
+id: RA1211
+stage: RS0001
+brief: Настройте DKIM, DMARC, SPF для корпоративного почтового домена и поддоменов
+authors: enikulina
+creation_date: 06/02/2023
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Настройте DKIM, DMARC, SPF для корпоративного почтового домена с поддоменами и проверку входящих писем с использованием этих технологий:
+  1. DKIM (DomainKeys Identified Mail) — это метод e-mail аутентификации, основанный на проверке подлинности цифровой подписи. 
+  Публичный ключ хранится TXT записи домена. DKIM необходим для того, чтобы почтовые сервисы могли проверять, является ли отправитель достоверным или нет. 
+  Т.е. защищает получателя письма от различных мошеннических писем (которые отправлены с подменой адреса отправителя).
+  2. SPF (Sender Policy Framework) — это подпись, содержащая информацию о серверах, которые могут отправлять почту с вашего домена.
+  3. DMARC (Domain-based Message Authentication, Reporting and Conformance) - это механизм, который позволяет определять политику взаимодействия с письмами,
+  которые не прошли проверку. DMARC использует DKIM и SPF. Если отправленное сообщение не прошло проверку DKIM и SPF, то оно не пройдет и DMARC. 
+  Если же сообщение успешно прошло хотя бы одну проверку (DKIM или SPF), то и проверку DMARC сообщение пройдет успешно. DMARC добавляется только после того, как настроены записи SPF и DKIM.
+references:
+  - https://dkimcore.org/tools/
+  - https://support.google.com/a/answer/10683907?hl=ru
+  - https://help.mail.ru/developers/notes/dmarc

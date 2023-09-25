@@ -1,0 +1,15 @@
+title: Получение возможности перечисления удаленных ключей реестра
+id: RA1503
+stage: RS0001
+brief: Убедитесь, что Вы можете вывести удаленные в определенное время ключи реестра
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

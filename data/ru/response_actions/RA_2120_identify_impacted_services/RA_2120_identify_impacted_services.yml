@@ -1,8 +1,0 @@
-title: Определение вовлечённых сервисов
-id: RA2120
-description: Определите какие IT-сервисы вовлечены в инцидент
-author: "@ermack_community"
-creation_date: 2019/01/31
-stage: identification
-extended_description: |
-  Определите для каждого сервиса: IP-адрес, DNS-имя, владельцев и тип воздействия.

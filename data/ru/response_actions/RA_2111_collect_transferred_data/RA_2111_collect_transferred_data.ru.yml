@@ -1,0 +1,15 @@
+title: Сбор отправленной информации
+id: RA2111
+stage: RS0002
+brief: Произведите сбор информации, передающейся в данный момент или в определенное время в прошлом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

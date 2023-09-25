@@ -1,0 +1,15 @@
+title: Переустановка хоста из золотого образа
+id: RA5001
+stage: RS0005
+brief: Переустановите ОС хоста с золотого образа
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

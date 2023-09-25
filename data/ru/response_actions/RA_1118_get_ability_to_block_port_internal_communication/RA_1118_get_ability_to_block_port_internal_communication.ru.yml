@@ -1,0 +1,15 @@
+title: Получение возможности блокировать порт для внутренней сети
+id: RA1118
+stage: RS0001
+brief: Убедитесь, что Вы можете заблокировать сетевой порт для внутренних коммуникаций
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

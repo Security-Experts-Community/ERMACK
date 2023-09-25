@@ -1,0 +1,15 @@
+title: Вывод списка аутентифицированных пользователей
+id: RA2601
+stage: RS0002
+brief: Выведите список пользователей, аутентифицированных в определенное время на конкретной системе
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Размещение файла в карантин по его формату
+id: RA3301
+stage: RS0003
+brief: Поместите файл в карантин по его формату
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

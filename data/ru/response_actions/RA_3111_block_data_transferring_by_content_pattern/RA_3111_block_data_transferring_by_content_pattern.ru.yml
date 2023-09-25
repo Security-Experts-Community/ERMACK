@@ -1,0 +1,15 @@
+title: Блокировка передачи данных по шаблону содержимого
+id: RA3111
+stage: RS0003
+brief: Краткое описание действия реагирования в одну строку
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

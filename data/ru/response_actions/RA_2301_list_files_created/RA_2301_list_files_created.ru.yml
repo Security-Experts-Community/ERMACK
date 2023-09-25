@@ -1,0 +1,15 @@
+title: Вывод списка созданных файлов
+id: RA2301
+stage: RS0002
+brief: Выведите список файлов, созданных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

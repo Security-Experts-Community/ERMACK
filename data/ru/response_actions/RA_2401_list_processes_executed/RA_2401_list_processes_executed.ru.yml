@@ -1,0 +1,15 @@
+title: Вывод списка исполняемых процессов
+id: RA2401
+stage: RS0002
+brief: Выведите список процессов, которые исполняются в данный момент или в определенное время в прошлом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

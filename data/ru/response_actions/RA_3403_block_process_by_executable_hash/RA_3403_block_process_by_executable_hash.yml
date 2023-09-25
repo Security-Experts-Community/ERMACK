@@ -1,9 +1,0 @@
-title: RA_3403_block_process_by_executable_hash
-id: RA3403
-description: >
-  Блокировать выполнение процесса по его контрольной сумме (хешу)
-author: bpopovich
-creation_date: 2023/04/27
-stage: containment
-extended_description: |
-  Блокировать выполнение процесса по его контрольной сумме (хешу) средствами защиты информации или иными средствами автоматизации

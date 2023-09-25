@@ -1,0 +1,18 @@
+title: Получение возможности составить список пользователей, открывших электронное сообщение
+id: RA1201
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность составления списка пользователей, которые открыли конкретное электронное сообщение
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что у Вас есть возможность составления списка пользователей, которые 
+  открыли/прочитали конкретное электронное сообщение с использованием функциональности почтового сервера.
+references:
+  - https://practical365.com/exchange-server/tracking-read-email-messages-exchange-server/

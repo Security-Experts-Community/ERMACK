@@ -1,0 +1,15 @@
+title: Поиск процесса по хешу исполняемого файла
+id: RA2404
+stage: RS0002
+brief: Найдите процесс, исполняемый в данный момент или в определенное время в прошлом по хешу его исполняемого файла
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

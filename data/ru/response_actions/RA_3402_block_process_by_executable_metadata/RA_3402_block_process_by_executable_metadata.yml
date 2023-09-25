@@ -1,9 +1,0 @@
-title: RA_3402_block_process_by_executable_metadata
-id: RA3402
-description: >
-  Блокировать выполнение процесса на основе его метаданных (например, подписи, разрешений, времени MAC)
-author: bpopovich
-creation_date: 2023/04/27
-stage: containment
-extended_description: |
-  Блокировка выполнения процесса на основе его метаданных с помощью средств защиты информации и иных автоматизированных средств

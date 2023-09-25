@@ -1,0 +1,16 @@
+title: Восстановление письма электронной почты, находящегося в карантине
+id: RA5203
+stage: RS0005
+brief: Восстановите письмо электронной почты, находящееся в карантине
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Восстановите письмо электронной почты, находящееся в карантине на почтовом сервере, используя его встроенный функционал.
+references: []

@@ -1,0 +1,16 @@
+title: Вывод списка хостов, взаимодействовавших с внешним URL
+id: RA2115
+stage: RS0002
+brief: Выведите список хостов, взаимодействовавших с внешним URL
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Выведите список хостов, взаимодействовавших с внешним URL, используя самый эффективный способ.
+references: []

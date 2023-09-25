@@ -1,0 +1,15 @@
+title: Получение возможности отображать список измененных файлов
+id: RA1302
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность просматривать список файлов, которые были изменены ранее
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

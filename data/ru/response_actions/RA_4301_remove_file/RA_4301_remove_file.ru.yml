@@ -1,0 +1,15 @@
+title: Удаление файла
+id: RA4301
+stage: RS0004
+brief: Удалите определенный файл с (удаленного) хоста или системы
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

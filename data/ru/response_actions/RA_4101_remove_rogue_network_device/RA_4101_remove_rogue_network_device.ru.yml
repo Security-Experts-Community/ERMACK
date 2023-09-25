@@ -1,0 +1,15 @@
+title: Удаление несанкционированного сетевого устройства
+id: RA4101
+stage: RS0004
+brief: Удалите несанкционированное сетевое устройство
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

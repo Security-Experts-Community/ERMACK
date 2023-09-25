@@ -1,0 +1,17 @@
+title: Получение матрицы контроля доступа
+id: RA1010
+stage: RS0001
+brief: Получите матрицу контроля доступа
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Обычно этим занимается команда сетевой безопасности. 
+  Это поможет вам определить возможности злоумышленника, такие как боковое перемещение и т. д.
+references: []

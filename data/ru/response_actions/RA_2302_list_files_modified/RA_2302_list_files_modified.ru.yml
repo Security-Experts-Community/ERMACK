@@ -1,0 +1,15 @@
+title: Вывод списка измененных файлов
+id: RA2302
+stage: RS0002
+brief: Выведите список файлов, измененных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

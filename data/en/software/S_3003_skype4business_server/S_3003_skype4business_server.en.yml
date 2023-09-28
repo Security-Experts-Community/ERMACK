@@ -1,0 +1,11 @@
+title: Skype for Business Server
+id: S3003
+brief: Skype for Business Server
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  The server solution provided by Microsoft that enables business communication within a corporate environment.
+  It encompasses features such as instant messaging, video conferencing, file sharing, and voice calls.
+references: []

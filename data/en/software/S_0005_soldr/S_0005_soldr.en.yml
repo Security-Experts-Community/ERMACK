@@ -1,0 +1,12 @@
+title: SOLDR
+id: S0005
+brief: System of Orchestration, Lifecycle control, Detection and Response
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/30
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  SOLDR, which stands for System of Orchestration, Lifecycle control, Detection, and Response, is a powerful
+  and versatile platform designed to address the complex challenges of modern IT operations, security, and incident response.
+references:
+  - https://github.com/vxcontrol/soldr

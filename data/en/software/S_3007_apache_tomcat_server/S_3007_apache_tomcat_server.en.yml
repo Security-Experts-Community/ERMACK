@@ -1,0 +1,9 @@
+title: Apache Tomcat Server
+id: S3007
+brief: A server for running web applications in the Java programming language
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+references: []

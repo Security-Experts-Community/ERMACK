@@ -1,0 +1,13 @@
+title: Weblogic Server
+id: S3008
+brief: Oracle server for Java applications
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  Oracle WebLogic Server is a unified, extensible platform for developing, deploying, and running enterprise applications,
+  such as Java, in both on-premises and cloud environments. 
+  WebLogic Server boasts a powerful, high-tech, scalable set of features
+  for comprehensive Java Enterprise Edition (EE) and Jakarta EE deployment.
+references: []

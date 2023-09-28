@@ -1,0 +1,9 @@
+title: MS DNS Server
+id: S5001
+brief: Microsoft Windows Server 2019 with DNS role
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+references: []

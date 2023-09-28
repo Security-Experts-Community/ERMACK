@@ -1,0 +1,15 @@
+title: Название ресурса
+id: RES0000
+brief: Краткое описание ресурса в одну строку
+authors: Ваше имя / Никнейм / Аккаунт в социальной сети
+creation_date: ДД/ММ/ГГГГ
+modification_date: ДД/ММ/ГГГГ
+ontology_mapping: # Cоответствия данного ресурса в онтологии или классификации
+  - example1
+  - example2
+description: |
+  Подробное описание ресурса и его возможностей в формате [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  Здесь будут сохранены новые строки.
+references:
+  - https://example1.com
+  - https://example2.com

@@ -1,0 +1,12 @@
+title: Email Message
+id: RES3001
+brief: This resource describes email message entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:Email
+description: |
+  An email, or email message, is a document that is sent between computer users across computer networks.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Email/

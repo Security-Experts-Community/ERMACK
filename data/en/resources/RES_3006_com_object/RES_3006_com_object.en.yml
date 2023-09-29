@@ -1,0 +1,13 @@
+title: The Component Object Model
+id: RES3006
+brief: This resource describes COM object entity
+authors: 'e6e6e@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/09/29
+ontology_mapping: []
+description: |
+  The Microsoft Component Object Model (COM) is a platform-independent, distributed, object-oriented system 
+  for creating binary software components that can interact. COM is the foundation technology for Microsoft's OLE 
+  (compound documents), ActiveX (Internet-enabled components), as well as others.
+references:
+  - https://learn.microsoft.com/en-us/windows/win32/com/the-component-object-model

@@ -1,0 +1,12 @@
+title: DNS Network Traffic
+id: RES1002
+brief: This resource describes user DNS Network Traffic entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/25
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:DNSNetworkTraffic
+description: |
+  This resource describes user DNS Network Traffic entity.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:DNSNetworkTraffic/

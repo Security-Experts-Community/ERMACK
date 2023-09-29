@@ -1,0 +1,12 @@
+title: Remote Session
+id: RES4003
+brief: This resource describes remote session entity
+authors: '@Cyberok'
+creation_date: 2023/03/22
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:RemoteSession
+description: |
+  A remote login session is a login session where a client has logged in from their local host machine to a server via a network.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:RemoteSession/

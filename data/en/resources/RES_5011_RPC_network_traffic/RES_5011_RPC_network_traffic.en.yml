@@ -1,0 +1,13 @@
+title: RPC Network Traffic
+id: RES5011
+brief: This resource describes service entity
+authors: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:RPCNetworkTraffic
+description: |
+  RPC network traffic is network traffic related to remote procedure calls between network nodes. 
+  This includes only network traffic conforming to a standard RPC protocol; not custom protocols.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:RPCNetworkTraffic/

@@ -1,0 +1,17 @@
+title: Host
+id: RES1005
+brief: This resource describes host entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/25
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:Host
+description: |
+  A host is a computer or other device, typically connected to a computer network. 
+  A network host may offer information resources, services, and applications to users or other nodes on the network. 
+  A network host is a network node that is assigned a network layer host address. 
+  Network hosts that participate in applications that use the client-server model of computing, 
+  are classified as server or client systems. Network hosts may also function
+  as nodes in peer-to-peer applications, in which all nodes share and consume resources in an equipotent manner.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Host

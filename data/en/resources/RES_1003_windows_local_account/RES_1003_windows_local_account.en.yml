@@ -1,0 +1,12 @@
+title: Local Windows Account
+id: RES1003
+brief: This resource describes Local Windows Account entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:LocalUserAccount
+description: |
+  A user account on a given Windows host is a local user account for that specific host.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:LocalUserAccount/

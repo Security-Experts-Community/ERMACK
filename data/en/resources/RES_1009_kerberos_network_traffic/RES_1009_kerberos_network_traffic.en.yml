@@ -1,0 +1,10 @@
+title: Kerberos Network Traffic
+id: RES1009
+brief: This resource describes Kerberos Network Traffic entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+modification_date: 2023/09/29
+ontology_mapping: []
+description: |
+  This resource describes Kerberos Network Traffic entity.
+references: []

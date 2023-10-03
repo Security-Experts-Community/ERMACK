@@ -1,0 +1,16 @@
+title: Restore modified file
+id: RA5302
+stage: RS0005
+brief: Restore all files that could have been altered by the attacker
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

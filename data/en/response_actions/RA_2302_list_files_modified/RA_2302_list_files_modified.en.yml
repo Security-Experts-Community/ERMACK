@@ -1,0 +1,15 @@
+title: List files modified
+id: RA2302
+stage: RS0002
+brief: List files that have been modified at a particular time in the past
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

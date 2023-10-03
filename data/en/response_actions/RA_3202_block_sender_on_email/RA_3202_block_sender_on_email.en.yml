@@ -1,0 +1,17 @@
+title: Block sender on email
+id: RA3202
+stage: RS0003
+brief: Block an email sender on the Email-server
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Block an email sender on an Email Server using its native filtering functionality.
+references:
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide

@@ -1,0 +1,18 @@
+title: Set up relevant data collection
+id: RA1005
+stage: RS0001
+brief: Data collection is managed by Log Management/Security Monitoring/Threat Detection teams
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  You need to provide them with a list of data that is critically important for IR process. Most of
+  the time, data like DNS and DHCP logs are not being collected, as their value for detection is
+  relatively low. You can refer to the existing Response Actions (Preparation stage) to develop the list.
+references: []

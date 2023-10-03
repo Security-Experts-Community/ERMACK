@@ -1,0 +1,15 @@
+title: Quarantine file by format
+id: RA3301
+stage: RS0003
+brief: Quarantine a file by its format
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

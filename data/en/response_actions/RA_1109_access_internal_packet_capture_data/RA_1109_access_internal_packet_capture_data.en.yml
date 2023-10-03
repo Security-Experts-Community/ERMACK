@@ -1,0 +1,15 @@
+title: Access internal packet capture data
+id: RA1109
+stage: RS0001
+brief: Make sure you have access to internal communication Packet Capture data
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

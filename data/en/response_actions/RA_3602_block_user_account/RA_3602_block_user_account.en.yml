@@ -1,0 +1,15 @@
+title: Block user account
+id: RA3602
+stage: RS0003
+brief: Block an user account
+authors: '@SEC'
+creation_date: 2023/05/18
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

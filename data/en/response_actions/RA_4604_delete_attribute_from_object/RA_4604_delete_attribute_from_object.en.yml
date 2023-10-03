@@ -1,0 +1,15 @@
+title: Delete attribute from object
+id: RA4604
+stage: RS0004
+brief: Remove a record from object attribute
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/07
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

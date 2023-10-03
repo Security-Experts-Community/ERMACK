@@ -1,0 +1,15 @@
+title: Analyse email address
+id: RA2206
+stage: RS0002
+brief: Analyse an email address
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

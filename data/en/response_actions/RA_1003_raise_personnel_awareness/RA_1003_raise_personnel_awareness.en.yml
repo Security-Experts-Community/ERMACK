@@ -1,0 +1,18 @@
+title: Raise personnel awareness
+id: RA1003
+stage: RS0001
+brief: Raise personnel awareness regarding phishing, ransomware, social engineering, and other attacks that involve user interaction
+authors: '@atc_project, ported from @MITREattack'
+creation_date: 2020/05/06
+modification_date: 2023/09/30
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Train users to to be aware of access or manipulation attempts by an adversary to reduce the risk of
+  successful spearphishing, social engineering, and other techniques that involve user interaction.
+references:
+  - https://attack.mitre.org/mitigations/M1017/

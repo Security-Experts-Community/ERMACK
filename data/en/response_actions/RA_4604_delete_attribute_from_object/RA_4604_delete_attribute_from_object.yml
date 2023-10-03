@@ -1,9 +1,0 @@
-title: RA_4604_delete_attribute_from_object
-id: RA4604
-description: >
-  Remove a record from object attribute
-author: '@ERMACK_COMMUNITY'
-creation_date: 2023/05/07
-stage: eradication
-extended_description: |
-  Delete record from object attribute

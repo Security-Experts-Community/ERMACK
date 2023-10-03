@@ -1,0 +1,18 @@
+title: List registry keys created
+id: RA2504
+stage: RS0002
+brief: List registry keys that have been created at a particular time in the past
+authors: 'Alex@Cyberok'
+creation_date: 2023/03/22
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  ## Working with registry keys
+  You need to get information about all the created Windows registry nags for the required period of time.
+references:
+  - https://learn.microsoft.com/en-us/powershell/scripting/samples/working-with-registry-keys?view=powershell-7.3

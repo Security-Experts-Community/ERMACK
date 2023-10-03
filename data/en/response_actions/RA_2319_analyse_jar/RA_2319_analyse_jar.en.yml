@@ -1,0 +1,15 @@
+title: Analyse JAR
+id: RA2319
+stage: RS0002
+brief: Analyse a JAR file
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: List registry keys modified
+id: RA2501
+stage: RS0002
+brief: List registry keys modified at a particular time in the past
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,17 @@
+title: Revoke certificate
+id: RA4605
+stage: RS0004
+brief: Revocation of an issued certificate
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/12
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Revocation of an issued certificate.
+  To revoke a certificate, you must uniquely identify it. It is better to do this using the value of the certificate thumbprint.
+references: []

@@ -1,0 +1,15 @@
+title: Reinstall host from golden image
+id: RA5001
+stage: RS0005
+brief: Reinstall host OS from a golden image
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

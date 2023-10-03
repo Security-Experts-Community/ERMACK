@@ -1,0 +1,15 @@
+title: List services modified
+id: RA2506
+stage: RS0002
+brief: List services that have been modified at a particular time in the past
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

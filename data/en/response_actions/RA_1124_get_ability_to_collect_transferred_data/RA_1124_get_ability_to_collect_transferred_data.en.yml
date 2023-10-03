@@ -1,0 +1,15 @@
+title: Get ability to collect transferred data
+id: RA1124
+stage: RS0001
+brief: Make sure you have the ability to collect the data that is being transferred at the moment or at a particular time in the past
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: List hosts communicated with internal ip
+id: RA2102
+stage: RS0002
+brief: List hosts communicated with an internal IP address
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

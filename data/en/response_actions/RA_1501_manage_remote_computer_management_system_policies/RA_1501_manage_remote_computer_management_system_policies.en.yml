@@ -1,0 +1,15 @@
+title: Manage remote computer management system policies
+id: RA1501
+stage: RS0001
+brief: Make sure you can manage Remote Computer Management system policies
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

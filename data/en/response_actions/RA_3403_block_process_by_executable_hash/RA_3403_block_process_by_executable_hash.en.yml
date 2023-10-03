@@ -1,0 +1,15 @@
+title: Block process by executable hash
+id: RA3403
+stage: RS0003
+brief: Block a process execution by its executable hash
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

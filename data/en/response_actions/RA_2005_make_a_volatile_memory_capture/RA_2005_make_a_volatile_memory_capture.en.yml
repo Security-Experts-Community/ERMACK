@@ -1,0 +1,27 @@
+title: Make a volatile memory capture
+id: RA2005
+stage: RS0002
+brief: Make a volatile memory capture
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  By downloading and running FTK Imager, winpmem or another utility from an external drive.
+  Volatile data provides valuable forensic information and is straightforward to acquire.
+  
+  ## Volatile data
+  Volatile data is useful to perform analysis on command line history, network connections, etc.
+  Use “Volatility” if possible.
+  Take a triage image
+  - Use tools like EDR, FastIR, DFIR Orc, KAPE with preconfigured profiles.
+  
+  Or full disk copy image
+  - With tools like dd, FTKImager, etc
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

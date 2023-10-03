@@ -1,0 +1,16 @@
+title: Find compromised user
+id: RA2604
+stage: RS0002
+brief: Find compromised user
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/07
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Find user with suspicious activity. Check it on logs or on network traffic.
+references: []

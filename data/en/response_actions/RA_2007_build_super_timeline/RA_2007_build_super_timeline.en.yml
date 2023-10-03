@@ -1,0 +1,19 @@
+title: Build super timeline
+id: RA2007
+stage: RS0002
+brief: Build super timeline
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Super-Timeline:
+  - Process evidence and generate a super-timeline with tools like Log2timeline
+  - Analyze the generated timeline with TimelineExplorer or glogg for example
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

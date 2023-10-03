@@ -1,0 +1,17 @@
+title: Unblock domain on email
+id: RA5201
+stage: RS0005
+brief: Unblock a domain on email
+authors: '@atc_project'
+creation_date: 2020/05/07
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Unblock an email domain on an Email Server using its native functionality.
+references:
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide

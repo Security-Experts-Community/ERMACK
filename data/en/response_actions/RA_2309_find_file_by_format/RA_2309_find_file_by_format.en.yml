@@ -1,0 +1,15 @@
+title: Find file by format
+id: RA2309
+stage: RS0002
+brief: Find a file by its format
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

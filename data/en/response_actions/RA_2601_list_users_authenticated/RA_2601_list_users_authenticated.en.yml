@@ -1,0 +1,15 @@
+title: List users authenticated
+id: RA2601
+stage: RS0002
+brief: List users authenticated at a particular time in the past on a particular system
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

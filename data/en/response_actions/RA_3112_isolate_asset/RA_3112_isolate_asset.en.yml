@@ -1,0 +1,23 @@
+title: Isolate asset
+id: RA3112
+stage: RS0003
+brief: Isolate machine via EDR
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  If possible, isolate the machine via EDR
+  
+  Or
+  
+  If the machine is not considered critical for your company and can be disconnected, shut the machine
+  down the hard way, removing its power plug. If it is a laptop with a battery on, just push the “off” button
+  for some seconds until the computer switches off.
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

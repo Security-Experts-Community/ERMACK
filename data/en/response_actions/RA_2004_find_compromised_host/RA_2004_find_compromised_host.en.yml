@@ -1,0 +1,15 @@
+title: Make a volatile memory capture
+id: RA2005
+stage: RS0002
+brief: Make a volatile memory capture
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

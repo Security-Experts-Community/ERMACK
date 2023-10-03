@@ -1,0 +1,19 @@
+title: Remove file
+id: RA4301
+stage: RS0004
+brief: Remove a specific file from a (remote) host or a system
+authors: Alex@Cyberok
+creation_date: 2023/03/22
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Deleting a file removes it from the location where it is stored. If the storage location is your hard disk, the file is moved to the Recycle Bin. If the storage location is a disk, CD, or network location, the file is destroyed.
+  
+  To take immediate action on known and suspected malicious files, you can search and destroy the files. After you identify the presence of a malicious file, you can immediately destroy the file from any or all endpoints on which the file exists.
+references:
+  - https://docs-cortex.paloaltonetworks.com/r/Cortex-XDR/Cortex-XDR-Pro-Administrator-Guide/Search-and-Destroy-Malicious-Files

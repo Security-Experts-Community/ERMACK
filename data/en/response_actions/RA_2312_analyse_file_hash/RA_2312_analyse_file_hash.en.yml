@@ -1,0 +1,15 @@
+title: Analyse file hash
+id: RA2312
+stage: RS0002
+brief: Analise a hash of a file
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

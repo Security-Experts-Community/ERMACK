@@ -1,0 +1,18 @@
+title: Access external http logs
+id: RA1104
+stage: RS0001
+brief: Make sure you have access to external communication HTTP logs
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/02
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Make sure that there is a collection of HTTP connections logs for external communication (from corporate assets to the Internet) configured.
+references:
+  - https://docs.zeek.org/en/current/examples/httpmonitor/
+  - https://en.wikipedia.org/wiki/Common_Log_Format

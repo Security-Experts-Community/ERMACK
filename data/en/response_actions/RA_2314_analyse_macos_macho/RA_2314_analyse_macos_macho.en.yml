@@ -1,0 +1,15 @@
+title: Analyse macos macho
+id: RA2314
+stage: RS0002
+brief: Analise macOS Mach-O
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

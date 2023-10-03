@@ -1,0 +1,15 @@
+title: Block process by executable metadata
+id: RA3402
+stage: RS0003
+brief: Block a process execution by its executable metadata (i.e. signature, permissions, MAC times)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

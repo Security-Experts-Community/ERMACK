@@ -1,0 +1,15 @@
+title: Remove rogue network device
+id: RA4101
+stage: RS0004
+brief: Remove a rogue network device
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

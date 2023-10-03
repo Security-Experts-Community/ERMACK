@@ -1,0 +1,15 @@
+title: Find process by executable path
+id: RA2402
+stage: RS0002
+brief: Find a process that is being executed at the moment or at a particular time in the past by its executable path (including its name)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

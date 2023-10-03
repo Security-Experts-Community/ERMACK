@@ -1,0 +1,16 @@
+title: Remove persistence mechanisms
+id: RA4503
+stage: RS0004
+brief: Remove persistence mechanisms
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

@@ -1,0 +1,15 @@
+title: Analyse script
+id: RA2318
+stage: RS0002
+brief: Analyse a script file (i.e. Python, PowerShell, Bash src etc)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

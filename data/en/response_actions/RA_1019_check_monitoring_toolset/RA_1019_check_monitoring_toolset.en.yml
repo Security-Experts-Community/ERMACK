@@ -1,0 +1,15 @@
+title: Check monitoring toolset
+id: RA1019
+stage: RS0001
+brief: Make sure monitoring tools are working and up to date
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/01
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

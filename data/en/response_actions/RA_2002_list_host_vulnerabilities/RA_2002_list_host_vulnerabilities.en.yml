@@ -1,0 +1,15 @@
+title: List host vulnerabilities
+id: RA2002
+stage: RS0002
+brief: Get information about a specific host existing vulnerabilities, or about vulnerabilities it had at a particular time in the past
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

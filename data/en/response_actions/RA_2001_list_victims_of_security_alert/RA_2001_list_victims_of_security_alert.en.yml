@@ -1,0 +1,15 @@
+title: List victims of security alert
+id: RA2001
+stage: RS0002
+brief: List victims of a security alert
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

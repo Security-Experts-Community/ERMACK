@@ -1,0 +1,15 @@
+title: Disable system service
+id: RA3501
+stage: RS0003
+brief: Disable a system service
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

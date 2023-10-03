@@ -1,0 +1,15 @@
+title: Get ability to analyse macos macho
+id: RA1319
+stage: RS0001
+brief: Make sure you have the ability to analyse a macOS Mach-O file
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

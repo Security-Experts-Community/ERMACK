@@ -1,0 +1,17 @@
+title: Find successfully enumerated users
+id: RA2603
+stage: RS0002
+brief: Find successfully enumerated users
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Find out by network traffic which users were successfully enumerated.
+references:
+  - Account Discovery, https://attack.mitre.org/techniques/T1087/

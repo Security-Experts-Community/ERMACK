@@ -1,0 +1,15 @@
+title: Prepare golden images
+id: RA1017
+stage: RS0001
+brief: Prepare golden images for servers and workstations
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/01
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

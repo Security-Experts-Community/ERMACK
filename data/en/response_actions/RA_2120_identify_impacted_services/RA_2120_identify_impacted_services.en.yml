@@ -1,0 +1,16 @@
+title: Identify impacted services
+id: RA2120
+stage: RS0002
+brief: Identify the IT services being impacted
+authors: "@ermack_community"
+creation_date: 2019/01/31
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Identify services by IP and DNS, their owners and impact.
+references: []

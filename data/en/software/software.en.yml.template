@@ -1,0 +1,13 @@
+title: Software name
+id: S0000
+brief: A brief description of the software in one line
+authors: Your name / Nickname / Social media account
+creation_date: YYYY/MM/DD
+modification_date: YYYY/MM/DD
+capabilities: [] # Here you can list the main features or functions of the software
+description: |
+  Description of the resource and it`s capabilities in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
+  Here newlines will be saved.
+references:
+  - https://example1.com
+  - https://example2.com

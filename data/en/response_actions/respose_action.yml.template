@@ -1,22 +1,19 @@
-title: RA_0000_some_name_here
-id: RA0000  # define the ID based on this guideline: https://github.com/atc-project/atc-react#response-action
-owner: demisto # define theHive task Asignee
-description: >
-  Response Action for doing something.
-  This part will be merged into one line.
-author: your name/nickname/twitter
+title: The title of the response action
+id: RA0000          # Unique identifier of the response action
+stage: RS0000       # Response stage identifier
+brief: A brief description of the response action in one line
+authors: Your name / Nickname / Social media account
 creation_date: YYYY/MM/DD
-stage: identification # preparation / containment / eradication / recovery / lessons_learned
-automation:
-  - thehive
-  - demisto
-  - phantom
-  - etc
-references:
-  - https://example.com
-requirements:
-  - MS_something # link to the Mitigation System required for the Response Action
-  - DN_something # link to the Data Needed entity, required for the Response Action
-workflow: |
+modification_date: YYYY/MM/DD
+requirements: []    # Identifiers of response actions that need to be performed during the preparation stage
+resources:          # Resources associated with the current response action
+  prerequisites: [] # Resources required for the successful execution of the response action
+  results:          # Resources that are created or modified as a result of executing the response action
+    main: []        # Resources that are the main result of the current response action
+    side: []        # Resources that are the side result of the current response action
+description: |
   Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
   Here newlines will be saved.
+references:
+  - https://example1.com
+  - https://example2.com

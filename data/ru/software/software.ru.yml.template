@@ -1,0 +1,13 @@
+title: Название ПО
+id: S0000
+brief: Краткое описание ПО в одну строку
+authors: Ваше имя / Никнейм / Аккаунт в социальной сети
+creation_date: ДД/ММ/ГГГГ
+modification_date: ДД/ММ/ГГГГ
+capabilities: [] # Здесь можно перечислить основные возможности или функции ПО
+description: |
+  Подробное описание ресурса и его возможностей в формате [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+  Здесь будут сохранены новые строки.
+references:
+  - https://example1.com
+  - https://example2.com

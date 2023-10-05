@@ -1,0 +1,12 @@
+title: Postfix Server
+id: S3002
+brief: Почтовый сервер Postfix Server
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 20/09/2023
+capabilities: []
+description: |
+  Postfix — почтовый сервер с открытым исходным кодом, который чаще всего
+  используется как почтовый сервер для веб-сайтов. После установки Postfix 
+  уже готов к выполнению своей основной задачи — работе с почтовыми сообщениями.
+references: []

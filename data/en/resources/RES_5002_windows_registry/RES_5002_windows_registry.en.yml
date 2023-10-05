@@ -1,0 +1,14 @@
+title: Windows Registry
+id: RES5002
+brief: This resource describes windows registry entity
+authors: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:WindowsRegistry
+description: |
+  The Windows Registry is a hierarchical database that stores low-level settings for the Microsoft Windows operating system 
+  and for applications that opt to use the registry. The kernel, device drivers, services, Security Accounts Manager, 
+  and user interface can all use the registry. The registry also allows access to counters for profiling system performance.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:WindowsRegistry/

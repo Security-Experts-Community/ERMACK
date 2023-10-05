@@ -1,0 +1,12 @@
+title: File
+id: RES3002
+brief: This resource describes file entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:File
+description: |
+  This artifact describes computer file entity.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:File/

@@ -1,0 +1,13 @@
+title: Private key
+id: RES1013
+brief: This resource describes private key
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/04
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:PrivateKey
+description: |
+  A private key can be used to decrypt messages encrypted using the corresponding public key, 
+  or used to sign a message that can be authenticated with the corresponding public key.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:PrivateKey/

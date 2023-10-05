@@ -1,0 +1,10 @@
+title: OWA Web Token
+id: RES1006
+brief: This resource describes Outlook Web Access web token entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/29
+ontology_mapping: []
+description: |
+  This artifact describes Outlook Web Access web token entity.
+references: []

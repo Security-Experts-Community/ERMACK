@@ -1,0 +1,13 @@
+title: Operating System Executable File
+id: RES3003
+brief: This resource describes executable files (exe, dll, etc)
+authors: '@Cyberok'
+creation_date: 2023/03/02
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:OperatingSystemExecutableFile
+description: |
+  An operating system executable is a critical executable that is part of the operating system, 
+  and without which, the operating system may not operate correctly.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:File/

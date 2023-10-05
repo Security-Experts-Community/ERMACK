@@ -1,0 +1,13 @@
+title: Service Application
+id: RES5010
+brief: This resource describes service entity
+authors: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:ServiceApplication
+description: |
+  An application that provides a set of software functionalities so that multiple clients 
+  who can reuse the functionality, provided they are authorized for use of the service.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:ServiceApplication/

@@ -1,0 +1,19 @@
+title: Remote Procedure Call
+id: RES5012
+brief: This resource describes RPC entity
+authors: 'Alex@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:RemoteProcedureCall
+description: |
+  In distributed computing a remote procedure call (RPC) is when a computer program causes a procedure (subroutine)
+  to execute in another address space (commonly on another computer on a shared network), 
+  which is coded as if it were a normal (local) procedure call, without the programmer explicitly coding 
+  the details for the remote interaction. That is, the programmer writes essentially the same code whether 
+  the subroutine is local to the executing program, or remote. This is a form of client-server interaction 
+  (caller is client, executor is server), typically implemented via a request-response message-passing system. 
+  The object-oriented programming analog is remote method invocation (RMI). 
+  The RPC model implies a level of location transparency.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/

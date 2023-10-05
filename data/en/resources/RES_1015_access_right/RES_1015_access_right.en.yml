@@ -1,0 +1,10 @@
+title: Access right
+id: RES1015
+brief: This resource describes Access right entity
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/04
+modification_date: 2023/09/29
+ontology_mapping: []
+description: |
+  Access right is the right of the subject to certain access (e.g. read or write) to the object.
+references: []

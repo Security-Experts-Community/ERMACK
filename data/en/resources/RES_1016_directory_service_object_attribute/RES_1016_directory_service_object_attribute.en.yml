@@ -1,0 +1,10 @@
+title: Directory Service object attribute
+id: RES1016
+brief: This resource describes Directory Service object attribute
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/04
+modification_date: 2023/09/29
+ontology_mapping: []
+description: |
+  Directory Service object attribute is a attribute of the certain object.
+references: []

@@ -1,0 +1,13 @@
+title: Executable Script
+id: RES5001
+brief: This resource describes executable script entity
+authors: '@Cyberok'
+creation_date: 2023/02/03
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:ExecutableScript
+description: |
+  An executable script is written in a scripting language and interpreted at run time. This is in contrast with
+  an executable binary, which contains machine code instructions for a physical CPU or byte code for a virtual machine.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:ExecutableScript/

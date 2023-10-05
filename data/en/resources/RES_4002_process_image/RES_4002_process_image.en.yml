@@ -1,0 +1,13 @@
+title: Process Image
+id: RES4002
+brief: This resource describes process entity
+authors: '@Cyberok'
+creation_date: 2022/10/25
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:ProcessImage
+description: |
+  A process image is a copy of a given process's state at a given point in time. 
+  It is often used to create persistence within an otherwise volatile system.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:ProcessImage/

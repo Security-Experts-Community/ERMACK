@@ -1,0 +1,15 @@
+title: Resource name
+id: RES0000
+brief: A brief description of the resource in one line
+authors: Your name / Nickname / Social media account
+creation_date: YYYY/MM/DD
+modification_date: YYYY/MM/DD
+ontology_mapping: # Mappings of this resource in the ontology or classification
+  - example1
+  - example2
+description: |
+  Description of the resource and it`s capabilities in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
+  Here newlines will be saved.
+references:
+  - https://example1.com
+  - https://example2.com

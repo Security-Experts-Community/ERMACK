@@ -1,0 +1,12 @@
+title: Log
+id: RES1008
+brief: Chronology
+authors: '@Cyberok'
+creation_date: 2023/03/02
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:Log
+description: |
+  A record of events in the order of their occurrence.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:Log/

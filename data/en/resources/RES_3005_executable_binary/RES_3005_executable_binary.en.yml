@@ -1,0 +1,14 @@
+title: Executable Binary
+id: RES3005
+brief: This resource describes executable binary entity
+authors: 'Cyberok'
+creation_date: 2023/03/06
+modification_date: 2023/09/29
+ontology_mapping:
+  - d3f:ExecutableBinary
+description: |
+  An executable binary contains machine code instructions for a physical CPU. 
+  D3FEND also considers byte code for a virtual machine to be binary code. 
+  This is in contrast to executable scripts written in a scripting language.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:ExecutableBinary/

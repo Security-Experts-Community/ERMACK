@@ -1,0 +1,11 @@
+title: Windows PowerShell
+id: S0004
+brief: Windows PowerShell Interpreter
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  Windows PowerShell is a powerful command-line shell and scripting language
+  designed for system administrators and power users.
+references: []

@@ -1,0 +1,11 @@
+title: Checkpoint Firewall
+id: S1001
+brief: Check Point Quantum Security Gateways
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  Check Point Firewall, also known as Check Point Quantum Security Gateways, is a leading cybersecurity solution
+  designed to provide robust network security, threat prevention, and advanced firewall capabilities for organizations of all sizes.
+references: []

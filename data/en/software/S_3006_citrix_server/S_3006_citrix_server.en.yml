@@ -1,0 +1,9 @@
+title: Citrix Server
+id: S3006
+brief: The server for remote access and application virtualization provided by Citrix
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+references: []

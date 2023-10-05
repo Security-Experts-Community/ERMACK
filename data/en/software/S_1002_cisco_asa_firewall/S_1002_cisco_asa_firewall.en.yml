@@ -1,0 +1,11 @@
+title: Cisco ASA Firewall
+id: S1002
+brief: Cisco ASA 5500-X
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  A hardware-based next-generation firewall that provides comprehensive security,
+  prevents large-scale network attacks, and neutralizes malicious software.
+references: []

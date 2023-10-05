@@ -1,0 +1,10 @@
+title: Linux
+id: S0100
+brief: Any Linux distribution
+authors: '@ACTION_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  Any Linux distribution with standard command line utilities.
+references: []

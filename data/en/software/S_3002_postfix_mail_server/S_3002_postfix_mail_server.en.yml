@@ -1,0 +1,11 @@
+title: Postfix Server
+id: S3002
+brief: Postfix Server
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2022/10/22
+modification_date: 2023/09/28
+capabilities: []
+description: |
+  Postfix is an open-source mail server that is most commonly used as a mail server for websites. 
+  After installation, Postfix is ready to perform its primary task, which is handling email messages.
+references: []

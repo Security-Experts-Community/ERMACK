@@ -1,0 +1,13 @@
+title: Токен доступа
+id: RES5004
+brief: Этот ресурс представляет токен доступа
+authors: '@Cyberok'
+creation_date: 03/02/2023
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:AccessToken
+description: |
+  Предоставляет авторизованному пользователю или приложению право доступа к определенным ресурсам 
+  или функциональности в рамках информационной системы или сервиса.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:AccessToken/

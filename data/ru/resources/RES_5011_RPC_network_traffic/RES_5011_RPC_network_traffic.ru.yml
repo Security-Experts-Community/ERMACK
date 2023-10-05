@@ -1,0 +1,12 @@
+title: Трафик протокола RPC
+id: RES5011
+brief: Этот ресурс описывает трафик протокола RPC
+authors: 'Alex@Cyberok'
+creation_date: 03/02/2023
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:RPCNetworkTraffic
+description: |
+  Трафик протокола RPC - это сетевой трафик, который отвечает за передачу сообщений для удалёного вызова процедур между узлами сети.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:RPCNetworkTraffic/

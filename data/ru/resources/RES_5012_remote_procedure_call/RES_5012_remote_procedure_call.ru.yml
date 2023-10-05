@@ -1,0 +1,12 @@
+title: Удалённый вызов процедур
+id: RES5012
+brief: Этот ресурс описывает RPC-вызовы
+authors: 'Alex@Cyberok'
+creation_date: 03/02/2023
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:RemoteProcedureCall
+description: |
+  RPC позволяет вызывать удаленные процедуры, передавать им параметры и получать результаты их выполнения. 
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:RemoteProcedureCall/

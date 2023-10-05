@@ -1,0 +1,13 @@
+title: Системный исполняемый файл
+id: RES3003
+brief: Этот ресурс описывает сущность системных исполняемых файлов
+authors: '@Cyberok'
+creation_date: 02/03/2023
+modification_date: 21/09/2023
+ontology_mapping:
+  - d3f:OperatingSystemExecutableFile
+description: |
+  Системный исполняемый файл - это исполняемый файл, который является частью операционной системы. 
+  Обычно такие файлы являются критическими и отутствие или повреждение такого файла может привести к некорректной работе ОС.
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:File/

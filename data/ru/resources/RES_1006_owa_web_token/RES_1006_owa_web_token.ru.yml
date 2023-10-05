@@ -1,0 +1,11 @@
+title: Веб-токен OWA
+id: RES1006
+brief: Этот ресурс описывает сущность токена аутентификации в сервисе Outlook Web Access
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 21/09/2023
+ontology_mapping: []
+description: |
+  Является ценным инструментом для специалистов по безопасности и администраторов, работающих с Outlook Web Access. 
+  Помогает лучше понять и управлять аутентификацией и доступом пользователей к данным.
+references: []

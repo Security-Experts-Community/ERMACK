@@ -1,0 +1,15 @@
+title: Блокировка процесса по формату исполняемого файла
+id: RA3404
+stage: RS0003
+brief: Заблокируйте процесс по формату исполняемого файла
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Контроль политик системы управления удаленными компьютерами
+id: RA1501
+stage: RS0001
+brief: Убедитесь, что Вы можете контролировать политики системы управления удаленными компьютерами
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

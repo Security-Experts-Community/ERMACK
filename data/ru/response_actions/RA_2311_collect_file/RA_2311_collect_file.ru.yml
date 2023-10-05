@@ -1,0 +1,15 @@
+title: Получение файла
+id: RA2311
+stage: RS0002
+brief: Заполучите конкретный файл с (удаленного) хоста или системы
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

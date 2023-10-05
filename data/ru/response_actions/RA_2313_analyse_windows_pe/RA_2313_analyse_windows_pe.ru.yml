@@ -1,0 +1,15 @@
+title: Анализ Windows PE
+id: RA2313
+stage: RS0002
+brief: Проанализируйте исполняемый файл операционной системы Windows
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

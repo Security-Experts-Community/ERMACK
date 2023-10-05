@@ -1,0 +1,15 @@
+title: Удаление ключа реестра
+id: RA4501
+stage: RS0004
+brief: Удалите ключ реестра
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

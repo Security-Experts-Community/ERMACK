@@ -1,0 +1,18 @@
+title: Размещение электронного письма в карантин
+id: RA3203
+stage: RS0003
+brief: Поместите электронное письмо в карантин
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Поместите сообщение электронной почты в карантин на почтовом сервере, используя его встроенные функции.
+references:
+  - https://support.google.com/a/answer/6104172?hl=en
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/quarantine-email-messages?view=o365-worldwide

@@ -1,0 +1,15 @@
+title: Возможность перечисления хостов, с которыми взаимодействовали внутри внутренней доменной сети
+id: RA2101
+stage: RS0002
+brief: Выведите список хостов, взаимодействовавших с внутренним доменом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

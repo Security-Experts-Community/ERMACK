@@ -1,0 +1,24 @@
+title: Вывод списка дочерних процессов
+id: RA2410
+stage: RS0002
+brief: Определите дочерние процессы исследуемого процесса
+authors: enikulina
+creation_date: 09/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Определите процессы-потомки исследуемого процесса.
+  
+  Соберите и проанализируйте информацию о них:
+  - пути к исполняемым файлам дочерних процессов
+  - имена дочерних процессов
+  - аргументы командной строки дочерних процессов (необходимо проанализировать и собрать артефакты в рамках соответствующего RA)
+  - PID-ы
+  - ProcessGUID-ы, если настроен аудит событий Sysmon (может потребоваться, если система переопределила ProcessID, поскольку их число ограничено).
+references:
+  - https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventid=90001

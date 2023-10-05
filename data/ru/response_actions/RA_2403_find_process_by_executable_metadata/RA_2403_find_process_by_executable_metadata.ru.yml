@@ -1,0 +1,15 @@
+title: Поиск процесса по метаданным исполняемого файла
+id: RA2403
+stage: RS0002
+brief: Найдите процесс, исполняемый в данный момент или в определенное время в прошлом по метаданным его исполняемого файла (т.е. по подписи, разрешениям, MAC-времени)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

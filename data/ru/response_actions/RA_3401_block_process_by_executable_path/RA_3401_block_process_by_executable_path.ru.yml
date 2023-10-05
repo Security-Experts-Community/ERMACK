@@ -1,0 +1,15 @@
+title: Блокировка процесса по пути к исполняемому файлу
+id: RA3401
+stage: RS0003
+brief: Заблокируйте выполнение процесса по пути к его исполняемому файлу (включая его имя)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

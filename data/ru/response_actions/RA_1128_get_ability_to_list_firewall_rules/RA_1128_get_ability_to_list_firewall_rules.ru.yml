@@ -1,0 +1,16 @@
+title: Получение возможности составить список правил брандмауэра
+id: RA1128
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность составления списка правил брандмауэра
+authors: '@atc_project'
+creation_date: 27/06/2021
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что у Вас есть возможность составления списка правил брандмауэра на конкретном брандмауэре.
+references: []

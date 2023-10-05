@@ -1,0 +1,15 @@
+title: Определение полезных СЗИ
+id: RA2121
+stage: RS0002
+brief: Определите набор средств, используемых для выявления инцидента
+authors: "@ermack_community"
+creation_date: 31/01/2019
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

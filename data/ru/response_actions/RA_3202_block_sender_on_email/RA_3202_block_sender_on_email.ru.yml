@@ -1,0 +1,17 @@
+title: Блокировка отправителя в электронной почте
+id: RA3202
+stage: RS0003
+brief: Заблокируйте отправителя электронной почты на почтовом сервере
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Заблокируйте отправителя электронной почты на почтовом сервере, используя его встроенную функцию фильтрации.
+references:
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide

@@ -1,0 +1,15 @@
+title: Разблокировка заблокированного порта
+id: RA5104
+stage: RS0005
+brief: Разблокируйте заблокированный порт
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

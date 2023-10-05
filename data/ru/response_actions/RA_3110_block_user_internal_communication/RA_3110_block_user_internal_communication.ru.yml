@@ -1,0 +1,16 @@
+title: Блокировка внутренних соединений для пользователя
+id: RA3110
+stage: RS0003
+brief: Заблокируйте внутренние соединения для пользователя
+authors: '@atc_project'
+creation_date: 31/01/2019
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Заблокируйте внутренние соединения для пользователя, используя наиболее эффективный способ.
+references: []

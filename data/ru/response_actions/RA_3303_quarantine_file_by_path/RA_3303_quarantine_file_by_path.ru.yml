@@ -1,0 +1,15 @@
+title: Размещение файла в карантин по его пути
+id: RA3303
+stage: RS0003
+brief: Поместите файл в карантин по его пути
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Анализ файла MS Office 
+id: RA2316
+stage: RS0002
+brief: Проанализируйте файл MS Office
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

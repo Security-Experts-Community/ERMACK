@@ -1,0 +1,15 @@
+title: Получение возможности блокировать выполнение процессов по пути к исполняемому файлу
+id: RA1407
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность блокировать выполнение процессов по их пути к исполняемому файлу, включая имя файла
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

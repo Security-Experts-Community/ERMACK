@@ -1,0 +1,18 @@
+title: Получение возможности составлять список получателей сообщений электронной почты
+id: RA1202
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность найти всех потенциальных получателей письма электронной почты
+authors: enikulina
+creation_date: 02/02/2023
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что у Вас есть возможность найти всех потенциальных получателей письма электронной почты 
+  с помощью встроенных функций почтового сервера либо специализированных СЗИ.
+references:
+  - https://docs.microsoft.com/en-us/powershell/module/exchange/mail-flow/get-messagetrackinglog?view=exchange-ps

@@ -1,0 +1,15 @@
+title: Разблокировка внутреннего почтового ящика
+id: RA5204
+stage: RS0005
+brief: Разблокируйте скомпрометированный внутренний почтовый ящик для входа пользователя
+authors: enikulina
+creation_date: 02/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

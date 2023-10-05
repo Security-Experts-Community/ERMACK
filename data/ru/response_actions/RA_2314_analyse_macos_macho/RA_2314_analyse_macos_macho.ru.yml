@@ -1,0 +1,15 @@
+title: Анализ macOS Mach-O
+id: RA2314
+stage: RS0002
+brief: Проанализируйте исполняемый файл формата Mach-O операционной системы Mac OS
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

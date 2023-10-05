@@ -1,0 +1,15 @@
+title: Вывод списка созданных ключей реестра
+id: RA2504
+stage: RS0002
+brief: Выведите список ключей реестра, созданных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

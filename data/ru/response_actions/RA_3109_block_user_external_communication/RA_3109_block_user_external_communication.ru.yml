@@ -1,0 +1,16 @@
+title: Блокировка внешних соединений для пользователя
+id: RA3109
+stage: RS0003
+brief: Заблокируйте внешние соединения для пользователя
+authors: '@atc_project'
+creation_date: 31/01/2019
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Заблокируйте внешние соединения для пользователя, используя наиболее эффективный способ.
+references: []

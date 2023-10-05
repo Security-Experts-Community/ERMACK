@@ -1,0 +1,19 @@
+title: Получение возможности помещать сообщения электронной почты в карантин
+id: RA1206
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность поместить сообщение электронной почты в карантин
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что у Вас есть возможность поместить сообщение электронной почты в карантин 
+  на почтовом сервере, используя его встроенные функции.
+references:
+  - https://support.google.com/a/answer/6104172?hl=en
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/quarantine-email-messages?view=o365-worldwide

@@ -1,0 +1,15 @@
+title: Получение возможности составления списка созданных файлов
+id: RA1301
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность просматривать список файлов, которые были созданы ранее
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

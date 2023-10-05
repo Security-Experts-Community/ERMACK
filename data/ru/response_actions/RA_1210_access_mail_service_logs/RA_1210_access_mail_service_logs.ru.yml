@@ -1,0 +1,16 @@
+title: Доступ к журналам почтовой службы
+id: RA1210
+stage: RS0001
+brief: Убедитесь, что у Вас есть доступ к журналам событий сервиса электронной почты
+authors: enikulina
+creation_date: 02/02/2023
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что у Вас настроено логгирование событий сервиса электронной почты.
+references: []

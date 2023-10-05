@@ -1,0 +1,16 @@
+title: Разблокировка заблокированного внутреннего IP
+id: RA5101
+stage: RS0005
+brief: Введите внутренний узел обратно в сеть
+authors: enikulina
+creation_date: 06/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Введите изолированный ранее хост обратно в сеть, если угрозы были устранены.
+references: []

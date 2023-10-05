@@ -1,0 +1,29 @@
+title: Повышение квалификации
+id: RA1002
+stage: RS0001
+brief: Проходите курсы повышения квалификации для накопления необходимых знаний
+authors: '@atc_project'
+creation_date: 08/04/2020
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  >Мы не поднимаемся на уровень наших ожиданий. Мы падаем на уровень нашей подготовки.  
+  
+  Вот несколько актуальных курсов обучения, которые помогут Вам в деятельности по реагированию на инциденты:
+  1. [Теория расследования](https://chrissanders.org/training/investigationtheory/) от Криса Сандерса. Мы рекомендуем Вам сделать его обязательным для каждого члена вашей команды по реагированию на инциденты.
+  2. [Обучение от Offensive Security](https://www.offensive-security.com/courses-and-certifications/). Мы рекомендуем начать с [PWK](https://www.offensive-security.com/pwk-oscp/).
+  3. [Обучение SANS](https://digital-forensics.sans.org/training/courses) по цифровой криминалистике и реагированию на инциденты.
+  
+  Обучение от Offensive Security включено в список, т. к. для борьбы с угрозой Вам необходимо понимать мотивацию, тактику и методы злоумышленников.
+  
+  В то же время, мы предполагаем, что у Вас уже есть крепкие технические навыки в фундаментальных областях - сетевых технологиях, операционных системах и программировании.
+references:
+  - https://chrissanders.org/training/investigationtheory/
+  - https://www.offensive-security.com/courses-and-certifications/
+  - https://www.offensive-security.com/pwk-oscp/
+  - https://digital-forensics.sans.org/training/courses

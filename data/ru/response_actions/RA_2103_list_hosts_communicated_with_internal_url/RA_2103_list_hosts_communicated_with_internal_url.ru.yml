@@ -1,0 +1,15 @@
+title: Возможность перечисления хостов, с которыми взаимодействовали по внутренним URL-адресам
+id: RA2103
+stage: RS0002
+brief: Выведите список хостов, взаимодействовавших с внутренним URL
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

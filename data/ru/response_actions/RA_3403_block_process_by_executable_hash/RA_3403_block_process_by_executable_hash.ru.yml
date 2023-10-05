@@ -1,0 +1,16 @@
+title: Блокировка выполнения процесса по его хешу
+id: RA3403
+stage: RS0003
+brief: Заблокируйте выполнение процесса по его контрольной сумме (хешу)
+authors: bpopovich
+creation_date: 27/04/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Заблокируйте выполнение процесса по его контрольной сумме (хешу) средствами защиты информации или иными средствами автоматизации.
+references: []

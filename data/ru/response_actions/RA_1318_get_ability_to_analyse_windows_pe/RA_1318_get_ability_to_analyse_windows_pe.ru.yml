@@ -1,0 +1,15 @@
+title: Получение возможности анализа файлов в формате Windows PE
+id: RA1318
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность анализа файла Windows Portable Executable (PE)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

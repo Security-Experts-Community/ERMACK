@@ -1,0 +1,15 @@
+title: Вывод хостов, подключенных к интранету
+id: RA2109
+stage: RS0002
+brief: Выведите список хостов, подключенных к внутренней сети в данный момент или в определенное время в прошлом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

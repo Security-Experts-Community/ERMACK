@@ -1,0 +1,15 @@
+title: Получение возможности поиска файла по шаблону содержимого
+id: RA1310
+stage: RS0001
+brief: Убедитесь, что Вы можете найти файл по шаблону содержимого (т. е. по конкретной строке, ключевому слову, двоичному шаблону и т. д.)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Получение возможности перечисления измененных ключей реестра
+id: RA1502
+stage: RS0001
+brief: Убедитесь, что Вы можете вывести измененные в определенное время ключи реестра
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

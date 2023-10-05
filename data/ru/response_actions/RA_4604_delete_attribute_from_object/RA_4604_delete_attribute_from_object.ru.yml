@@ -1,0 +1,16 @@
+title: Удаление атрибута объекта
+id: RA4604
+stage: RS0004
+brief: Удалите атрибут объекта
+authors: '@ERMACK_COMMUNITY'
+creation_date: 07/05/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Удалите запись из атрибутов объекта.
+references: []

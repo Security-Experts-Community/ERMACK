@@ -1,0 +1,15 @@
+title: Восстановление файла, находящегося в карантине
+id: RA5301
+stage: RS0005
+brief: Восстановите файл, находящийся в карантине
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

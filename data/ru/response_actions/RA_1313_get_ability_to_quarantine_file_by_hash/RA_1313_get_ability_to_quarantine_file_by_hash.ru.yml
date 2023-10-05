@@ -1,0 +1,15 @@
+title: Получение возможности помещать файл в карантин по его хешу
+id: RA1313
+stage: RS0001
+brief: Убедитесь, что Вы можете заблокировать доступ к файлу по его хешу
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

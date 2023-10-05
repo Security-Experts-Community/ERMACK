@@ -1,0 +1,17 @@
+title: Связь с пользователем
+id: RA2605
+stage: RS0002
+brief: Получите от пользователя разъяснения по поводу исследуемой активности
+authors: ayakovlev
+creation_date: 17/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Обратитесь к пользователю, под которым производится исследуемая активность или 
+  к пользователю хоста для установления легитимности данной активности.
+references: []

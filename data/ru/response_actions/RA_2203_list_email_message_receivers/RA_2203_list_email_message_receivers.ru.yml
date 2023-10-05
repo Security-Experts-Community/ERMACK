@@ -1,0 +1,17 @@
+title: Поиск всех потенциальных получателей письма
+id: RA2203
+stage: RS0002
+brief: Найдите всех потенциальных получателей письма
+authors: enikulina
+creation_date: 02/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Найдите всех потенциальных получателей письма электронной почты с помощью встроенных функций почтового сервера или специализированных СЗИ.
+references:
+  - https://docs.microsoft.com/en-us/powershell/module/exchange/mail-flow/get-messagetrackinglog?view=exchange-ps

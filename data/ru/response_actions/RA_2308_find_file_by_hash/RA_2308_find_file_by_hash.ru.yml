@@ -1,0 +1,15 @@
+title: Поиск файла по хешу
+id: RA2308
+stage: RS0002
+brief: Найдите файл по его хешу
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

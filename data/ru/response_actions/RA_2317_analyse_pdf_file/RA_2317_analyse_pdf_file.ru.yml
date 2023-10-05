@@ -1,0 +1,15 @@
+title: Анализ PDF файла
+id: RA2317
+stage: RS0002
+brief: Проанализируйте PDF файл
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

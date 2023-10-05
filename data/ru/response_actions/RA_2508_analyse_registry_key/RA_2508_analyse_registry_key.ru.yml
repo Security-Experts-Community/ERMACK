@@ -1,0 +1,15 @@
+title: Анализ ключа реестра
+id: RA2508
+stage: RS0002
+brief: Проанализируйте ключ реестра
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

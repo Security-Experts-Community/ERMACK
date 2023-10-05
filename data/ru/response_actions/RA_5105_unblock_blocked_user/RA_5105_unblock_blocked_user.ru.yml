@@ -1,0 +1,15 @@
+title: Разблокировка заблокированного пользователя
+id: RA5105
+stage: RS0005
+brief: Разблокируйте заблокированного пользователя
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

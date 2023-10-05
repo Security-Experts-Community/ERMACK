@@ -1,0 +1,16 @@
+title: Блокировка учетной записи пользователя
+id: RA3601
+stage: RS0003
+brief: Заблокируйте учетную запись пользователя
+authors: enikulina
+creation_date: 03/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Заблокируйте учетную запись пользователя с разрывом всех активных сессий и обязательной сменой пароля.
+references: []

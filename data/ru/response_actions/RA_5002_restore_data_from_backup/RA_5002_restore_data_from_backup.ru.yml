@@ -1,0 +1,15 @@
+title: Восстановление данных из резервной копии
+id: RA5002
+stage: RS0005
+brief: Восстановите данные из резервной копии
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

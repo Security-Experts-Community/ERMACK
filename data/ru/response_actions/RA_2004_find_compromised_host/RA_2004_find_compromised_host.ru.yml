@@ -1,0 +1,16 @@
+title: Поиск скомпрометированного узла
+id: RA2004
+stage: RS0002
+brief: Найдите скомпрометированный узел
+authors: '@ERMACK_COMMUNITY'
+creation_date: 13/03/2023
+modification_date: 24/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Найдите узел с подозрительной активностью. Проверьте журналы событий и сетевой трафик.
+references: []

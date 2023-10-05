@@ -1,0 +1,15 @@
+title: Получение возможности находить процессы по хеш-сумме исполняемого файла
+id: RA1404
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность находить процессы, выполненные в определенное время в прошлом по хеш-сумме исполняемого файла
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

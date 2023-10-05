@@ -1,0 +1,15 @@
+title: Идентификация переданной информации
+id: RA2112
+stage: RS0002
+brief: Идентифицируйте информацию, передающуюся в данный момент или в определенное время в прошлом (т.е. определите её содержание, значения)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

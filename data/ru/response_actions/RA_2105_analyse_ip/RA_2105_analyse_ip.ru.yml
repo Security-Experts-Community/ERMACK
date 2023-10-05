@@ -1,0 +1,26 @@
+title: Анализ IP-адреса
+id: RA2105
+stage: RS0002
+brief: Проанализируйте IP-адрес
+authors: enikulina
+creation_date: 02/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Требуется собрать и проанализировать информацию об обнаруженном ранее IP-адресе с помощью различных доступных ресурсов:
+  - https://www.abuseipdb.com/
+  - whois
+  - https://app.any.run
+  - https://www.virustotal.com/
+  - https://otx.alienvault.com/
+references:
+  - https://docs.microsoft.com/en-us/sysinternals/downloads/whois
+  - https://www.abuseipdb.com/
+  - https://app.any.run
+  - https://www.virustotal.com/
+  - https://otx.alienvault.com/

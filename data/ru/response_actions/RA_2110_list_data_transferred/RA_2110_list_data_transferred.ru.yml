@@ -1,0 +1,15 @@
+title: Вывод списка переданной информации
+id: RA2110
+stage: RS0002
+brief: Выведите список информации, передающейся в данный момент или в определенное время в прошлом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

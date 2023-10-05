@@ -1,0 +1,15 @@
+title: Размещение файла в карантин по шаблону его содержимого
+id: RA3304
+stage: RS0003
+brief: Поместите файл в карантин по шаблону его содержимого
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

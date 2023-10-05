@@ -1,0 +1,15 @@
+title: Поиск данных, передаваемых по шаблону содержимого
+id: RA1126
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность найти данные по шаблону их содержимого, которые передаются в данный момент или были переданы ранее
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

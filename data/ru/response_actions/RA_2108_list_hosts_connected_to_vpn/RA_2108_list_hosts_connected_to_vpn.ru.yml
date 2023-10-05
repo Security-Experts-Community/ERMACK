@@ -1,0 +1,15 @@
+title: Вывод списка хостов, подключенных к VPN
+id: RA2108
+stage: RS0002
+brief: Выведите список хостов, подключенных к VPN в данный момент или в определенное время в прошлом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Поиск файла по заданному пути
+id: RA2306
+stage: RS0002
+brief: Найдите файл по заданному пути (включая его имя)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

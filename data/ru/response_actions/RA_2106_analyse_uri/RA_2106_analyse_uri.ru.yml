@@ -1,0 +1,15 @@
+title: Анализ URI
+id: RA2106
+stage: RS0002
+brief: Проанализируйте URI
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

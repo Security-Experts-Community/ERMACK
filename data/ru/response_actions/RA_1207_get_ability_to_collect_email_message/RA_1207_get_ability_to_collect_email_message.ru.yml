@@ -1,0 +1,16 @@
+title: Получение возможности выгрузить сообщения электронной почты
+id: RA1207
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность выгрузить письмо электронной почты 
+authors: enikulina
+creation_date: 02/02/2023
+modification_date: 23/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Убедитесь, что у Вас есть возможность выгрузить письмо электронной почты и собрать из него все необходимые сведения.
+references: []

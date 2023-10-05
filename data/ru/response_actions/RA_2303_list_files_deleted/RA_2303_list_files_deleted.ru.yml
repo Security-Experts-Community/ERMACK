@@ -1,0 +1,15 @@
+title: Вывод списка удаленных файлов
+id: RA2303
+stage: RS0002
+brief: Выведите список файлов, удаленных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

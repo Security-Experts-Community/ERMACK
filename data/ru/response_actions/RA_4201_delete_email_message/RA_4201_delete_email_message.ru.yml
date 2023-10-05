@@ -1,0 +1,16 @@
+title: Удаление письма с почтового сервера
+id: RA4201
+stage: RS0004
+brief: Удалите письмо c почтового сервера и из почтовых ящиков пользователей
+authors: enikulina
+creation_date: 02/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Удалите письмо c почтового сервера и из почтовых ящиков затронутых внутренних пользователей.
+references: []

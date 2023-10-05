@@ -1,0 +1,16 @@
+title: Исследование данных
+id: RA2999
+stage: RS0002
+brief: Абстрактное действие для извлечения полезной информации
+authors: Alex@Cyberok
+creation_date: 22/03/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references:
+  - https://en.wikipedia.org/wiki/Content_analysis

@@ -1,0 +1,16 @@
+title: Вывод списка хостов, взаимодействовавших с внешним IP-адресом
+id: RA2114
+stage: RS0002
+brief: Выведите список хостов, взаимодействовавших с внешним IP-адресом
+authors: '@atc_project'
+creation_date: 06/05/2020
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Выведите список хостов, взаимодействовавших с внешним IP-адресом, используя самый эффективный способ.
+references: []

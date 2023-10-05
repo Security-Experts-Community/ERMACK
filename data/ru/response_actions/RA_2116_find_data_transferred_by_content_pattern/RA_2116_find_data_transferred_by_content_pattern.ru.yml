@@ -1,0 +1,15 @@
+title: Поиск переданной информации по шаблону содержимого
+id: RA2116
+stage: RS0002
+brief: Найдите данные, которые передаются в данный момент или в определенное время в прошлом по шаблону их содержимого (конкретная строка, ключевое слово, двоичный шаблон и т. д.)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

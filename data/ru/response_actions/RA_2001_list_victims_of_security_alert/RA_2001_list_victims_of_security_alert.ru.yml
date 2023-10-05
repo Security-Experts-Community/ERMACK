@@ -1,0 +1,15 @@
+title: Вывод перечня жертв предупреждений системы безопасности
+id: RA2001
+stage: RS0002
+brief: Выведите перечень жертв предупреждений системы безопасности
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

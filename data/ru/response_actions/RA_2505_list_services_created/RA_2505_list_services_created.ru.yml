@@ -1,0 +1,15 @@
+title: Вывод списка созданных сервисов
+id: RA2505
+stage: RS0002
+brief: Выведите список сервисов, созданных в определенное время
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

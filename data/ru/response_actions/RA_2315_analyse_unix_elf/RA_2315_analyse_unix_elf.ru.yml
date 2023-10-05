@@ -1,0 +1,15 @@
+title: Анализ Unix ELF
+id: RA2315
+stage: RS0002
+brief: Проанализируйте исполняемый файл UNIX-подобных систем формата ELF
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

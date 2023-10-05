@@ -1,0 +1,15 @@
+title: Вывод списка уязвимостей хоста
+id: RA2002
+stage: RS0002
+brief: Проведите сбор информации о существующих или ранее существовавших уязвимостях в определенные периоды времени на конкретном хосте
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

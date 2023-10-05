@@ -1,0 +1,15 @@
+title: Получение возможности составления списка переданных данных
+id: RA1123
+stage: RS0001
+brief: Убедитесь, что у Вас есть возможность составить список данных, которые передавались в данный момент или в определенное время в прошлом
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Поиск файла по метаданным
+id: RA2307
+stage: RS0002
+brief: Найдите файл по его метаданным (т.е. подпись, разрешения, MAC-время)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

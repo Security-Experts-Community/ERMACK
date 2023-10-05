@@ -1,0 +1,20 @@
+title: Анализ хеша файла
+id: RA2312
+stage: RS0002
+brief: Проанализируйте хеш файла
+authors: ayakovlev
+creation_date: 17/02/2023
+modification_date: 25/09/2023
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Проверьте хеш на доступных анализаторах. Если хеш вредоносный, то определите семейство вредоносного ПО. 
+  При этом необходимо учитывать, что некоторые антивирусы могут ложно определять ПО как вредоносное. Опирайтесь также на мнение сообщества и комментарии.
+references:
+  - https://www.virustotal.com
+  - https://any.run
+  - https://hybrid-analysis.com

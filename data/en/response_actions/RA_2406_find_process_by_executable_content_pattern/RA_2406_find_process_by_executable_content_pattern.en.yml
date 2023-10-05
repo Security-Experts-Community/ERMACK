@@ -1,0 +1,15 @@
+title: Find process by executable content pattern
+id: RA2406
+stage: RS0002
+brief: Find a process that is being executed at the moment or at a particular time in the past by its executable content (i.e. specific string, keyword, binary pattern etc)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

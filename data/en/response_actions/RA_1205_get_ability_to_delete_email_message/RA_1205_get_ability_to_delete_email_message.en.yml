@@ -1,0 +1,18 @@
+title: Get ability to delete email message
+id: RA1205
+stage: RS0001
+brief: Make sure you have the ability to delete an email message
+authors: '@atc_project'
+creation_date: 2020/05/07
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Make sure you have the ability to delete an email message from an Email Server and users' email boxes using its native functionality.
+references:
+  - https://docs.microsoft.com/en-us/microsoft-365/compliance/search-for-and-delete-messages-in-your-organization?view=o365-worldwide
+  - https://support.google.com/a/answer/7581662?hl=en

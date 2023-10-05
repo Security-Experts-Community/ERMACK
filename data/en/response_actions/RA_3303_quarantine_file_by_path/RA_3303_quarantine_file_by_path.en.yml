@@ -1,0 +1,15 @@
+title: Quarantine file by path
+id: RA3303
+stage: RS0003
+brief: Quarantine a file by its path
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

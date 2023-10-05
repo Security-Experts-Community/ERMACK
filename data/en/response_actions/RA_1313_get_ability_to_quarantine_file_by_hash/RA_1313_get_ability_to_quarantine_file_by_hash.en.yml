@@ -1,0 +1,15 @@
+title: Get ability to quarantine file by hash
+id: RA1313
+stage: RS0001
+brief: Make sure you have the ability to block a file from being accessed by its hash
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

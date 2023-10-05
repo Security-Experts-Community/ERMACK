@@ -1,0 +1,19 @@
+title: The title of the response action
+id: RA0000          # Unique identifier of the response action
+stage: RS0000       # Response stage identifier
+brief: A brief description of the response action in one line
+authors: Your name / Nickname / Social media account
+creation_date: YYYY/MM/DD
+modification_date: YYYY/MM/DD
+requirements: []    # Identifiers of response actions that need to be performed during the preparation stage
+resources:          # Resources associated with the current response action
+  prerequisites: [] # Resources required for the successful execution of the response action
+  results:          # Resources that are created or modified as a result of executing the response action
+    main: []        # Resources that are the main result of the current response action
+    side: []        # Resources that are the side result of the current response action
+description: |
+  Description of the workflow in the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format.
+  Here newlines will be saved.
+references:
+  - https://example1.com
+  - https://example2.com

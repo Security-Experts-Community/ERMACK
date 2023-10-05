@@ -1,0 +1,15 @@
+title: Access external packet capture data
+id: RA1110
+stage: RS0001
+brief: Make sure you have access to external communication Packet Capture data
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

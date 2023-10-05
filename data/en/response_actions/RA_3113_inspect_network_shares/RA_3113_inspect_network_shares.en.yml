@@ -1,0 +1,17 @@
+title: Inspect network shares
+id: RA3113
+stage: RS0003
+brief: Inspect network shares
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Inspect network shares or any publicly accessible folders shared with other users to see if the malware has spread through it.
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

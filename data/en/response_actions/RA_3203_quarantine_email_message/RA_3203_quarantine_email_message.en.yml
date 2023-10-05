@@ -1,0 +1,18 @@
+title: Quarantine email message
+id: RA3203
+stage: RS0003
+brief: Quarantine an email message
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Quarantine an email message on an Email Server using its native functionality.
+references:
+  - https://support.google.com/a/answer/6104172?hl=en
+  - https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/quarantine-email-messages?view=o365-worldwide

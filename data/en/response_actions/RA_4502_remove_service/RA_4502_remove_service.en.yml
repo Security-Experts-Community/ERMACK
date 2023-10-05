@@ -1,0 +1,15 @@
+title: Remove service
+id: RA4502
+stage: RS0004
+brief: Remove a service
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Find file by path
+id: RA2306
+stage: RS0002
+brief: Find a file by its path (including its name)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

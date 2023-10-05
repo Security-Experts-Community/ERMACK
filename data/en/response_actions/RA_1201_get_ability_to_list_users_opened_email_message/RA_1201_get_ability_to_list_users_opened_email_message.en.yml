@@ -1,0 +1,17 @@
+title: Get ability to list users opened email message
+id: RA1201
+stage: RS0001
+brief: Make sure you have the ability to list users who opened a particular email message
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Make sure you have the ability to list users who opened/read a particular email message using the Email Server's functionality.
+references:
+  - https://practical365.com/exchange-server/tracking-read-email-messages-exchange-server/

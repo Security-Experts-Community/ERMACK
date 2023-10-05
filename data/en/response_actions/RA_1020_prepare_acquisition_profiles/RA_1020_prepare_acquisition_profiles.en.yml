@@ -1,0 +1,17 @@
+title: Prepare acquisition profiles
+id: RA1020
+stage: RS0001
+brief: Prepare acquisition profiles
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/01
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Acquisition profiles for EDR or tools like FastIR, DFIR Orc, KAPE must be prepared.
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

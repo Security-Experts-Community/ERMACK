@@ -1,0 +1,15 @@
+title: List hosts communicated with internal domain
+id: RA2101
+stage: RS0002
+brief: List hosts communicated with an internal domain
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Identify transferred data
+id: RA2112
+stage: RS0002
+brief: Identify the data that is being transferred at the moment or at a particular time in the past (i.e. its content, value)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

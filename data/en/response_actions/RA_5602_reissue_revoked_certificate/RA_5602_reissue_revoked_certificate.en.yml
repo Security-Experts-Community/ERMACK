@@ -1,0 +1,17 @@
+title: Reissue revoked certificate
+id: RA5602
+stage: RS0005
+brief: Reissue revoked certificate
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/05/12
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Reissue revoked certificate.
+  To reissue a certificate, use the revoked certificate as a template.
+references: []

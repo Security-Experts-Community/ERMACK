@@ -1,0 +1,17 @@
+title: Apply prevention mode for iocs
+id: RA4002
+stage: RS0004
+brief: Apply security solution prevention mode for all identified IOCs
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Apply security solution prevention mode for all identified IOCs.
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

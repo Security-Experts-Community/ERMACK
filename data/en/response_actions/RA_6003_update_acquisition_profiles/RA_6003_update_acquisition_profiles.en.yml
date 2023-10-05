@@ -1,0 +1,15 @@
+title: Update acquisition profiles
+id: RA6003
+stage: RS0006
+brief: Update acquisition profiles
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

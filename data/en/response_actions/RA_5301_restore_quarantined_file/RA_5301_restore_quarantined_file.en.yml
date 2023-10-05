@@ -1,0 +1,15 @@
+title: Restore quarantined file
+id: RA5301
+stage: RS0005
+brief: Restore a quarantined file
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

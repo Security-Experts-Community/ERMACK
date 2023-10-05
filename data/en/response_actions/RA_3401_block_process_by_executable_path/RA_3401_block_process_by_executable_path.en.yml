@@ -1,0 +1,31 @@
+title: Block process by executable path
+id: RA3401
+stage: RS0003
+brief: Block a process execution by its executable path (including its name)
+authors: Alex@Cyberok
+creation_date: 2023/02/03
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  A process is a program in execution and it is more than a program code called as text section and this concept works under all the operating system because all the task perform by the operating system needs a process to perform the task. The process executes when it changes state. The state of a process is defined by the current activity of the process.
+  
+  Each process may be any one of the following states:
+  
+  + **New** − The process is being created.
+  + **Running** − In this state the instructions are being executed.
+  + **Waiting** − The process is in waiting state until an event is occur like I/O operation completion or receiving a signal.
+  + **Ready** − The process is waiting to be assigned to a processor.
+  + **Terminated** − the process has finished execution.
+  
+  *Process Termination*
+  
+  Whenever the process finishes executing its final statement and asks the operating system to delete it by using exit() system call. At that point of time the process may return the status value to its parent process with the help of wait() system call. All the resources of the process including physical and virtual memory, open files, I/O buffers are deallocated by the operating system.
+  
+  Some systems, including VMS, do not allow a child to exist if its parent has terminated. In such systems, if a process terminates either normally or abnormally, then all its children have to be terminated. This concept is referred to as cascading termination.
+references:
+  - https://docs.trellix.com/ru-RU/bundle/mvision-endpoint-detection-and-response-product-guide/page/GUID-4CF5D992-5315-4C2D-829A-5ADFA7A2559B.html

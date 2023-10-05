@@ -1,0 +1,15 @@
+title: Analyse pdf file
+id: RA2317
+stage: RS0002
+brief: Analise PDF file
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,17 @@
+title: Make personnel report suspicious activity
+id: RA1004
+stage: RS0001
+brief: Make sure that personnel will report suspicious activity i.e. suspicious emails, links, files, activity on their computers, etc
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/09/30
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Develop a simplified, company wide-known way to contact IR team in case of suspicious activity on the user system.
+  Make sure that the personnel is aware of it, can and will use it.
+references: []

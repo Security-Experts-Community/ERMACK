@@ -1,0 +1,16 @@
+title: Prepare IOCs list
+id: RA2008
+stage: RS0002
+brief: Prepare IOCs list
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

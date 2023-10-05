@@ -1,0 +1,20 @@
+title: Define Escalation Path
+id: RA1016
+stage: RS0001
+brief: Define Escalation Path
+authors: '@ermack_community'
+creation_date: 2020/04/08
+modification_date: 2023/10/01
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Create Escalation Document for your teams:
+  - Internal Path
+  - External Path
+  
+  Follow instructions in your escalation document.
+references: []

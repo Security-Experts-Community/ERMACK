@@ -1,0 +1,16 @@
+title: List hosts communicated with external ip
+id: RA2114
+stage: RS0002
+brief: List hosts communicated with an external IP address
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  List hosts communicated with an external IP address using the most efficient way.
+references: []

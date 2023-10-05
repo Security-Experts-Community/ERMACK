@@ -1,0 +1,17 @@
+title: List users opened email message
+id: RA2201
+stage: RS0002
+brief: List users that have opened am email message
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  List users who opened/read a particular email message using the Email Server's functionality.
+references:
+  - https://practical365.com/exchange-server/tracking-read-email-messages-exchange-server/

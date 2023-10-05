@@ -1,0 +1,15 @@
+title: Get ability to block port internal communication
+id: RA1118
+stage: RS0001
+brief: Make sure you can block a network port for internal communications
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

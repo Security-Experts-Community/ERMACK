@@ -1,0 +1,16 @@
+title: Delete email message
+id: RA4201
+stage: RS0004
+brief: Delete an email message from an Email Server and users' email boxes
+authors: '@atc_project'
+creation_date: 2019/01/31
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Delete an email message from an Email Server and users' email boxes using its native functionality.
+references: []

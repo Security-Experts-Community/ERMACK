@@ -1,0 +1,24 @@
+title: Access external network flow logs
+id: RA1101
+stage: RS0001
+brief: Make sure you have access to external communication Network Flow logs
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/02
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Make sure that there is a collection of Network Flow logs for external communication (from corporate assets to the Internet) configured.
+  If there is no option to configure it on a network device, you can install a special software on each endpoint and collect it from them.
+  
+  __Warning:__
+  - There is a feature called ["NetFlow Sampling"](https://www.plixer.com/blog/how-accurate-is-sampled-netflow/), 
+  that eliminates the value of the Network Flow logs for some of the tasks, such as "check if some host communicated to an external IP". 
+  Make sure it's disabled or you have an alternative way to collect Network Flow logs.
+references:
+  - https://en.wikipedia.org/wiki/NetFlow
+  - https://www.plixer.com/blog/how-accurate-is-sampled-netflow/

@@ -1,0 +1,15 @@
+title: List services created
+id: RA2505
+stage: RS0002
+brief: List services that have been created at a particular time in the past
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

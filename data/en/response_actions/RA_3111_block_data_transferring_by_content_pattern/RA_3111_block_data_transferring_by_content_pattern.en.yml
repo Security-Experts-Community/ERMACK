@@ -1,0 +1,15 @@
+title: Block data transferring by content pattern
+id: RA3111
+stage: RS0003
+brief: Block data transferring by its content pattern (i.e. specific string, keyword, binary pattern etc)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

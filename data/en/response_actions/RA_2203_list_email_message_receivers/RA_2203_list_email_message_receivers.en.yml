@@ -1,0 +1,17 @@
+title: List email message receivers
+id: RA2203
+stage: RS0002
+brief: List receivers of a particular email message
+authors: '@atc_project'
+creation_date: 2020/05/06
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  List receivers of a particular email message using the Email Server's functionality.
+references:
+  - https://docs.microsoft.com/en-us/powershell/module/exchange/mail-flow/get-messagetrackinglog?view=exchange-ps

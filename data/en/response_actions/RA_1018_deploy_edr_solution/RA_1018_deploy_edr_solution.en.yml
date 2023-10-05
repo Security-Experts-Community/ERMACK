@@ -1,0 +1,20 @@
+title: Deploy edr solution
+id: RA1018
+stage: RS0001
+brief: Deploy an EDR agents on servers and workstations
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/01
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Deploy an EDR solution on endpoints and servers:
+  - This tool became one of the cornerstones of the incident response in case of ransomware or in large scale compromise, facilitating identification, containment, and remediation phases.
+  - Launch EDR Search and AV scan with IOC explicit rules and get first indicators for remediation progress following.
+  - Set your EDR policies in prevent mode.
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

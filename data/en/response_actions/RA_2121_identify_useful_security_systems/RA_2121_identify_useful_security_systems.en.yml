@@ -1,0 +1,16 @@
+title: Identify userful security systems
+id: RA2121
+stage: RS0002
+brief: Identify the tools used to detect the incident and useful for investigation
+authors: "@ermack_community"
+creation_date: 2019/01/31
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Search IOCs in all your security systems.
+references: []

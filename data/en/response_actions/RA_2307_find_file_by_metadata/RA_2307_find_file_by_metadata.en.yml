@@ -1,0 +1,15 @@
+title: Find file by metadata
+id: RA2307
+stage: RS0002
+brief: Find a file by its metadata (i.e. signature, permissions, MAC times)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

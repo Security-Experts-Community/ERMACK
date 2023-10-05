@@ -1,0 +1,15 @@
+title: Remove user account
+id: RA4602
+stage: RS0004
+brief: Remove a user account
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

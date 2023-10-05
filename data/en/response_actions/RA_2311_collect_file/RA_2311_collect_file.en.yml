@@ -1,0 +1,25 @@
+title: Collect file
+id: RA2311
+stage: RS0002
+brief: Collect a specific file from a (remote) host or a system
+authors: Cyberok
+creation_date: 2023/03/03
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  File Collection lets you collect objects directly from any host. Basically there is dozen ways to collect file, conditionally , they can be divided into two groups:
+  + manually performed
+  1. SCP
+  2. SFTP
+  3. Powershell and etc...
+  + automated
+  1. XDR solution
+  2. SOAR implementation
+  3. Scripted selfmade solution and etc...
+references:
+  - https://cloudone.trendmicro.com/docs/workload-security/file-collection/

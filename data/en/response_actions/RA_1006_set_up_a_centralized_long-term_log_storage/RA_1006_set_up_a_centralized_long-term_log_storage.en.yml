@@ -1,0 +1,16 @@
+title: Set up a centralized long-term log storage
+id: RA1006
+stage: RS0001
+brief: This is one of the most critical problems companies have nowadays
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Even if there is such a system, in most of the cases it stores irrelevant data or has too small retention period.
+references: []

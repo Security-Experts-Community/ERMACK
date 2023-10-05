@@ -1,0 +1,15 @@
+title: Unlock locked user account
+id: RA5601
+stage: RS0005
+brief: Unlock a locked user account
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

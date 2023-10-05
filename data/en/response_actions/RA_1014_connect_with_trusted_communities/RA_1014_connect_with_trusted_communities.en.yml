@@ -1,0 +1,17 @@
+title: Connect with trusted communities
+id: RA1014
+stage: RS0001
+brief: Connect with trusted communities for information exchange
+authors: Andreas Hunkeler (@Karneades)
+creation_date: 2020/05/14
+modification_date: 2023/10/01
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Contact other companies or information providers for getting on a ML or get connected to other MISP instances.
+references:
+  - https://www.misp-project.org/

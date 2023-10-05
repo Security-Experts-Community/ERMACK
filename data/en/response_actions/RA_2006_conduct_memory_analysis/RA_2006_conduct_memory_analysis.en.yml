@@ -1,0 +1,23 @@
+title: Conduct memory analysis
+id: RA2006
+stage: RS0002
+brief: Conduct memory analysis
+authors: '@ERMACK_COMMUNITY'
+creation_date: 2023/03/13
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Memory analysis:
+  - Look for rogue processes
+  - Review process DLLs and handles
+  - Check network artifacts
+  - Look for code injection
+  - Check the presence of rootkits
+  - Dump suspicious processes for further analysis
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

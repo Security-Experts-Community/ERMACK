@@ -1,0 +1,15 @@
+title: Access dhcp logs
+id: RA1108
+stage: RS0001
+brief: Make sure you have access to DHCP logs
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

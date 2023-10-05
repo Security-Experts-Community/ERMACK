@@ -1,0 +1,15 @@
+title: List hosts connected to intranet
+id: RA2109
+stage: RS0002
+brief: List hosts connected to the internal network at the moment or at a particular time in the past
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

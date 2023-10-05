@@ -1,0 +1,15 @@
+title: Analyse registry key
+id: RA2508
+stage: RS0002
+brief: Analyse a registry key
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

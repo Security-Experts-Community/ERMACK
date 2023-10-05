@@ -1,0 +1,15 @@
+title: Lock user account
+id: RA3601
+stage: RS0003
+brief: Lock an user account
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,15 @@
+title: Access internal network flow logs
+id: RA1102
+stage: RS0001
+brief: Make sure you have access to internal communication Network Flow logs
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

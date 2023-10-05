@@ -1,0 +1,15 @@
+title: Find data transferred by content pattern
+id: RA2116
+stage: RS0002
+brief: Find the data that is being transferred at the moment or at a particular time in the past by its content pattern (i.e. specific string, keyword, binary pattern etc)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

@@ -1,0 +1,19 @@
+title: Prepare network activity profiles
+id: RA1130
+stage: RS0001
+brief: Prepare network activity profiles
+authors: '@SEC'
+creation_date: 2023/05/20
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  A good knowledge of the usual network activity of the machine/server is needed.
+  You should have a file on a secure place describing the usual port activity,
+  to compare efficiently to the current state.
+references:
+  - https://github.com/certsocietegenerale/IRM/blob/main/EN/IRM-2-WindowsIntrusion.pdf

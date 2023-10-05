@@ -1,0 +1,24 @@
+title: Make sure email message is phishing
+id: RA2204
+stage: RS0002
+brief: Make sure that an email message is a phishing attack
+authors: '@atc_project'
+creation_date: 2019/01/31
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Check an email and its metadata for evidences of phishing attack:
+  - **Impersonalisation attempts**: sender is trying to identify himself as somebody he is not
+  - **Suspicious askings or offers**: download "invoice", click on link with something important etc
+  - **Psychological manipulations**: invoking a sense of urgency or fear is a common phishing tactic
+  - **Spelling mistakes**: legitimate messages usually don't have spelling mistakes or poor grammar
+  
+  Explore references of the article to make yourself familiar with phishing attacks history and examples.
+references:
+  - https://en.wikipedia.org/wiki/Phishing
+  - http://www.phishing.org/phishing-examples

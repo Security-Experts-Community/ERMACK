@@ -1,0 +1,15 @@
+title: Analyse filename
+id: RA2320
+stage: RS0002
+brief: Analyse a filename
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

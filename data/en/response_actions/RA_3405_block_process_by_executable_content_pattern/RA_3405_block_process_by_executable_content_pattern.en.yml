@@ -1,0 +1,15 @@
+title: Block process by executable content pattern
+id: RA3405
+stage: RS0003
+brief: Block a process execution by its executable content pattern (i.e. specific string, keyword, binary pattern etc)
+authors:
+creation_date:
+modification_date:
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+references: []

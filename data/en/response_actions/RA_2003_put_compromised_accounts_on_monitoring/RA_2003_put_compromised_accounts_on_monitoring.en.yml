@@ -1,0 +1,18 @@
+title: Put compromised accounts on monitoring
+id: RA2003
+stage: RS0002
+brief: Put (potentially) compromised accounts on monitoring
+authors: '@atc_project'
+creation_date: 2019/01/31
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Start monitoring for authentification attempts and all potentially harmful actions from (potentially) compromised accounts.
+  Look for anomalies, unusual network connections, unusual geolocation/time of work, actions that were never executed before.
+  Keep in touch with the real users and, in case of need, ask them if they executing some suspicious actions by themselves or not.
+references: []

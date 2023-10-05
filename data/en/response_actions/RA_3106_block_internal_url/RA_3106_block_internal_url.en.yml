@@ -1,0 +1,16 @@
+title: Block internal url
+id: RA3106
+stage: RS0003
+brief: Block an internal URL from being accessed by corporate assets
+authors: '@atc_project'
+creation_date: 2019/01/31
+modification_date: 2023/10/03
+requirements: []
+resources:
+  prerequisites: []
+  results:
+    main: []
+    side: []
+description: |
+  Block an internal URL from being accessed by corporate assets, using the most efficient way.
+references: []

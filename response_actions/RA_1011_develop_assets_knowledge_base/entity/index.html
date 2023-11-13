@@ -1,0 +1,6297 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
+    
+    
+      
+        <title>RA1011: Develop Assets Knowledge Base - ERM&CK (Enterprise Response Model & Common Knowledge)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ra1011-develop-assets-knowledge-base" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ERM&amp;CK (Enterprise Response Model &amp; Common Knowledge)" class="md-header__button md-logo" aria-label="ERM&CK (Enterprise Response Model & Common Knowledge)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ERM&CK (Enterprise Response Model & Common Knowledge)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RA1011: Develop Assets Knowledge Base
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Security-Experts-Community/ERMACK" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ERM&amp;CK (Enterprise Response Model &amp; Common Knowledge)" class="md-nav__button md-logo" aria-label="ERM&CK (Enterprise Response Model & Common Knowledge)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ERM&CK (Enterprise Response Model & Common Knowledge)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Security-Experts-Community/ERMACK" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../infrastructure_profile.md" class="md-nav__link">
+        Infrastructure Profile
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Usecases
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Usecases
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/" class="md-nav__link">
+        [Usecases List]
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0003_adding_shadow_credential/entity" class="md-nav__link">
+        Adding shadow credential
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0002_as_req_domain_user_enumerate/entity" class="md-nav__link">
+        Domain user enumeration attack using the Kerberos protocol without a domain account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0031_dumping_and_cracking_mscash/entity" class="md-nav__link">
+        Dumping and Cracking mscash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0032_forcing_wdigest_to_store_credential_in_plaintext/entity" class="md-nav__link">
+        Forcing WDigest to store credentials in plaintext
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0012_load_dll_via_com_abuse/entity" class="md-nav__link">
+        Forcing load a malicious DLL via COM Abuse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0052_hijacking_default_file_extension/entity" class="md-nav__link">
+        Hijacking Default File Extension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0041_lateral_movement_via_service_configuration_manager/entity" class="md-nav__link">
+        Lateral movement via Service Configuration Manager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0004_pass_the_certificate/entity" class="md-nav__link">
+        Pass the certificate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0021_priv_esc_through_named_pipe/entity" class="md-nav__link">
+        Privilege escalation via named pipe impersonation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0006_owa_password_spraying/entity" class="md-nav__link">
+        Successfull OWA Password Spraying attack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0005_theft_of_user_certificate_and_private_key_via_CryptoAPI/entity" class="md-nav__link">
+        Theft of user certificate and private key via CryptoAPI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0042_winrm_for_lateral_movement/entity" class="md-nav__link">
+        WinRM or Powershell Remoting for Lateral Movement
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usecases/UC_0051_persistense_windows_logon_helper/entity" class="md-nav__link">
+        Windows Logon Helper Persistense
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Response Playbooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Response Playbooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/" class="md-nav__link">
+        [Playbooks List]
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sub_response_playbooks/" class="md-nav__link">
+        [Sub-Playbooks List]
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0003_adding_shadow_credential/entity" class="md-nav__link">
+        Adding shadow credential
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0009_compromised_active_directory_account/entity" class="md-nav__link">
+        Compromised active directory account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0002_as_req_domain_user_enumerate/entity" class="md-nav__link">
+        Domain user enumarate attack using the Kerberos protocol without a domain account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2003_dumping_mscash/entity" class="md-nav__link">
+        Dumping mscash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0001_external_phishing_email/entity" class="md-nav__link">
+        External Phishing Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2005_hijack_default_fle_extension/entity" class="md-nav__link">
+        Hijack default file extension
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2007_lateral_movement_winrm_pwsh/entity" class="md-nav__link">
+        Lateral Movement using WinRM or Powershell Remoting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2006_lateral_movement_using_scm/entity" class="md-nav__link">
+        Lateral movement using SCM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2001_dll_load_via_com_abuse/entity" class="md-nav__link">
+        Load malicious Dll load via COM abuse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0007_malware_outbrake/entity" class="md-nav__link">
+        Malware Outbrake
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0004_pass_the_certificate/entity" class="md-nav__link">
+        Pass the certificate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2008_persistence_using_winlogon/entity" class="md-nav__link">
+        Persistense using Windows Logon Helper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2002_priv_esc_through_named_pipe/entity" class="md-nav__link">
+        Privilege escalation via named pipe impersonation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0006_successfull_owa_password_spraying/entity" class="md-nav__link">
+        Successfull OWA Password Spraying attack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0005_theft_of_user_certificate_and_private_key/entity" class="md-nav__link">
+        Theft of user certificate and private key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_2004_wdigest_credential_access/entity" class="md-nav__link">
+        Wdigest credential access
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_playbooks/RP_0008_windows_host_compromise/entity" class="md-nav__link">
+        Windows host compromise
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Response Actions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Response Actions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_stages/" class="md-nav__link">
+        [Stages List]
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Preparation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Preparation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1001_practice/entity" class="md-nav__link">
+        Practice
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1002_take_trainings/entity" class="md-nav__link">
+        Take Trainings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1003_raise_personnel_awareness/entity" class="md-nav__link">
+        Raise Personnel Awareness
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1004_make_personnel_report_suspicious_activity/entity" class="md-nav__link">
+        Make Personnel Report Suspicious Activity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1005_set_up_relevant_data_collection/entity" class="md-nav__link">
+        Set Up Relevant Data Collection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1006_set_up_a_centralized_long-term_log_storage/entity" class="md-nav__link">
+        Set Up A Centralized Long
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1007_develop_communication_map/entity" class="md-nav__link">
+        Develop Communication Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1008_make_sure_there_are_backups/entity" class="md-nav__link">
+        Make Sure There Are Backups
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1009_get_network_architecture_map/entity" class="md-nav__link">
+        Get Network Architecture Map
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1010_get_access_control_matrix/entity" class="md-nav__link">
+        Get Access Control Matrix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="." class="md-nav__link">
+        Develop Assets Knowledge Base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1012_check_analysis_toolset/entity" class="md-nav__link">
+        Check Analysis Toolset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1013_access_vulnerability_management_system_logs/entity" class="md-nav__link">
+        Access Vulnerability Management System Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1014_connect_with_trusted_communities/entity" class="md-nav__link">
+        Connect With Trusted Communities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1015_define_teams_and_roles/entity" class="md-nav__link">
+        Define Teams and Roles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1016_define_escalation_path/entity" class="md-nav__link">
+        Define Escalation Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1017_prepare_golden_images/entity" class="md-nav__link">
+        Prepare Golden Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1018_deploy_edr_solution/entity" class="md-nav__link">
+        Deploy Edr Solution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1019_check_monitoring_toolset/entity" class="md-nav__link">
+        Check Monitoring Toolset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1020_prepare_acquisition_profiles/entity" class="md-nav__link">
+        Prepare Acquisition Profiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1021_prepare_golden_image_comparsion_tool/entity" class="md-nav__link">
+        Prepare Golden Image Comparsion Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1101_access_external_network_flow_logs/entity" class="md-nav__link">
+        Access External Network Flow Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1102_access_internal_network_flow_logs/entity" class="md-nav__link">
+        Access Internal Network Flow Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1103_access_internal_http_logs/entity" class="md-nav__link">
+        Access Internal Http Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1104_access_external_http_logs/entity" class="md-nav__link">
+        Access External Http Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1105_access_internal_dns_logs/entity" class="md-nav__link">
+        Access Internal Dns Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1106_access_external_dns_logs/entity" class="md-nav__link">
+        Access External Dns Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1107_access_vpn_logs/entity" class="md-nav__link">
+        Access Vpn Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1108_access_dhcp_logs/entity" class="md-nav__link">
+        Access Dhcp Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1109_access_internal_packet_capture_data/entity" class="md-nav__link">
+        Access Internal Packet Capture Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1110_access_external_packet_capture_data/entity" class="md-nav__link">
+        Access External Packet Capture Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1111_get_ability_to_block_external_ip_address/entity" class="md-nav__link">
+        Get Ability To Block External Ip Address
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1112_get_ability_to_block_internal_ip_address/entity" class="md-nav__link">
+        Get Ability To Block Internal Ip Address
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1113_get_ability_to_block_external_domain/entity" class="md-nav__link">
+        Get Ability To Block External Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1114_get_ability_to_block_internal_domain/entity" class="md-nav__link">
+        Get Ability To Block Internal Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1115_get_ability_to_block_external_url/entity" class="md-nav__link">
+        Get Ability To Block External Url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1116_get_ability_to_block_internal_url/entity" class="md-nav__link">
+        Get Ability To Block Internal Url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1117_get_ability_to_block_port_external_communication/entity" class="md-nav__link">
+        Get Ability To Block Port External Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1118_get_ability_to_block_port_internal_communication/entity" class="md-nav__link">
+        Get Ability To Block Port Internal Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1119_get_ability_to_block_user_external_communication/entity" class="md-nav__link">
+        Get Ability To Block User External Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1120_get_ability_to_block_user_internal_communication/entity" class="md-nav__link">
+        Get Ability To Block User Internal Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1121_get_ability_to_find_data_transferred_by_content_pattern/entity" class="md-nav__link">
+        Get Ability To Find Data Transferred By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1122_get_ability_to_block_data_transferring_by_content_pattern/entity" class="md-nav__link">
+        Get Ability To Block Data Transferring By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1123_get_ability_to_list_data_transferred/entity" class="md-nav__link">
+        Get Ability To List Data Transferred
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1124_get_ability_to_collect_transferred_data/entity" class="md-nav__link">
+        Get Ability To Collect Transferred Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1125_get_ability_to_identify_transferred_data/entity" class="md-nav__link">
+        Get Ability To Identify Transferred Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1126_find_data_transferred_by_content_pattern/entity" class="md-nav__link">
+        Find Data Transferred By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1127_get_ability_to_analyse_user-agent/entity" class="md-nav__link">
+        Get Ability To Analyse User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1128_get_ability_to_list_firewall_rules/entity" class="md-nav__link">
+        Get Ability To List Firewall Rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1129_make_sure_all_hosts_get_setting_on_same_ntp/entity" class="md-nav__link">
+        Make Sure All Hosts Get Setting On Same Ntp
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1130_prepare_network_activity_profiles/entity" class="md-nav__link">
+        Prepare Network Activity Profiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1201_get_ability_to_list_users_opened_email_message/entity" class="md-nav__link">
+        Get Ability To List Users Opened Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1202_get_ability_to_list_email_message_receivers/entity" class="md-nav__link">
+        Get Ability To List Email Message Receivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1203_get_ability_to_block_email_domain/entity" class="md-nav__link">
+        Get Ability To Block Email Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1204_get_ability_to_block_email_sender/entity" class="md-nav__link">
+        Get Ability To Block Email Sender
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1205_get_ability_to_delete_email_message/entity" class="md-nav__link">
+        Get Ability To Delete Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1206_get_ability_to_quarantine_email_message/entity" class="md-nav__link">
+        Get Ability To Quarantine Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1207_get_ability_to_collect_email_message/entity" class="md-nav__link">
+        Get Ability To Collect Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1208_get_ability_to_analyse_email_address/entity" class="md-nav__link">
+        Get Ability To Analyse Email Address
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1301_get_ability_to_list_files_created/entity" class="md-nav__link">
+        Get Ability To List Files Created
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1302_get_ability_to_list_files_modified/entity" class="md-nav__link">
+        Get Ability To List Files Modified
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1303_get_ability_to_list_files_deleted/entity" class="md-nav__link">
+        Get Ability To List Files Deleted
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1304_get_ability_to_list_files_downloaded/entity" class="md-nav__link">
+        Get Ability To List Files Downloaded
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1305_get_ability_to_list_files_with_tampered_timestamps/entity" class="md-nav__link">
+        Get Ability To List Files With Tampered Timestamps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1306_get_ability_to_find_file_by_path/entity" class="md-nav__link">
+        Get Ability To Find File By Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1307_get_ability_to_find_file_by_metadata/entity" class="md-nav__link">
+        Get Ability To Find File By Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1308_get_ability_to_find_file_by_hash/entity" class="md-nav__link">
+        Get Ability To Find File By Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1309_get_ability_to_find_file_by_format/entity" class="md-nav__link">
+        Get Ability To Find File By Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1310_get_ability_to_find_file_by_content_pattern/entity" class="md-nav__link">
+        Get Ability To Find File By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1311_get_ability_to_collect_file/entity" class="md-nav__link">
+        Get Ability To Collect File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1312_get_ability_to_quarantine_file_by_path/entity" class="md-nav__link">
+        Get Ability To Quarantine File By Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1313_get_ability_to_quarantine_file_by_hash/entity" class="md-nav__link">
+        Get Ability To Quarantine File By Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1314_get_ability_to_quarantine_file_by_format/entity" class="md-nav__link">
+        Get Ability To Quarantine File By Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1315_get_ability_to_quarantine_file_by_content_pattern/entity" class="md-nav__link">
+        Get Ability To Quarantine File By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1316_get_ability_to_remove_file/entity" class="md-nav__link">
+        Get Ability To Remove File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1317_get_ability_to_analyse_file_hash/entity" class="md-nav__link">
+        Get Ability To Analyse File Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1318_get_ability_to_analyse_windows_pe/entity" class="md-nav__link">
+        Get Ability To Analyse Windows Pe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1319_get_ability_to_analyse_macos_macho/entity" class="md-nav__link">
+        Get Ability To Analyse Macos Macho
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1320_get_ability_to_analyse_unix_elf/entity" class="md-nav__link">
+        Get Ability To Analyse Unix Elf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1321_get_ability_to_analyse_ms_office_file/entity" class="md-nav__link">
+        Get Ability To Analyse Ms Office File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1322_get_ability_to_analyse_pdf_file/entity" class="md-nav__link">
+        Get Ability To Analyse Pdf File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1323_get_ability_to_analyse_script/entity" class="md-nav__link">
+        Get Ability To Analyse Script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1324_get_ability_to_analyse_jar/entity" class="md-nav__link">
+        Get Ability To Analyse Jar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1325_get_ability_to_analyse_filename/entity" class="md-nav__link">
+        Get Ability To Analyse Filename
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1401_get_ability_to_list_processes_executed/entity" class="md-nav__link">
+        Get Ability To List Processes Executed
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1402_get_ability_to_find_process_by_executable_path/entity" class="md-nav__link">
+        Get Ability To Find Process By Executable Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1403_get_ability_to_find_process_by_executable_metadata/entity" class="md-nav__link">
+        Get Ability To Find Process By Executable Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1404_get_ability_to_find_process_by_executable_hash/entity" class="md-nav__link">
+        Get Ability To Find Process By Executable Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1405_get_ability_to_find_process_by_executable_format/entity" class="md-nav__link">
+        Get Ability To Find Process By Executable Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1406_get_ability_to_find_process_by_executable_content_pattern/entity" class="md-nav__link">
+        Get Ability To Find Process By Executable Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1407_get_ability_to_block_process_by_executable_path/entity" class="md-nav__link">
+        Get Ability To Block Process By Executable Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1408_get_ability_to_block_process_by_executable_metadata/entity" class="md-nav__link">
+        Get Ability To Block Process By Executable Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1409_get_ability_to_block_process_by_executable_hash/entity" class="md-nav__link">
+        Get Ability To Block Process By Executable Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1410_get_ability_to_block_process_by_executable_format/entity" class="md-nav__link">
+        Get Ability To Block Process By Executable Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1411_get_ability_to_block_process_by_executable_content_pattern/entity" class="md-nav__link">
+        Get Ability To Block Process By Executable Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1412_prepare_process_activity_profiles/entity" class="md-nav__link">
+        Prepare Process Activity Profiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1501_manage_remote_computer_management_system_policies/entity" class="md-nav__link">
+        Manage Remote Computer Management System Policies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1502_get_ability_to_list_registry_keys_modified/entity" class="md-nav__link">
+        Get Ability To List Registry Keys Modified
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1503_get_ability_to_list_registry_keys_deleted/entity" class="md-nav__link">
+        Get Ability To List Registry Keys Deleted
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1504_get_ability_to_list_registry_keys_accessed/entity" class="md-nav__link">
+        Get Ability To List Registry Keys Accessed
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1505_get_ability_to_list_registry_keys_created/entity" class="md-nav__link">
+        Get Ability To List Registry Keys Created
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1506_get_ability_to_list_services_created/entity" class="md-nav__link">
+        Get Ability To List Services Created
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1507_get_ability_to_list_services_modified/entity" class="md-nav__link">
+        Get Ability To List Services Modified
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1508_get_ability_to_list_services_deleted/entity" class="md-nav__link">
+        Get Ability To List Services Deleted
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1509_get_ability_to_remove_registry_key/entity" class="md-nav__link">
+        Get Ability To Remove Registry Key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1510_get_ability_to_remove_service/entity" class="md-nav__link">
+        Get Ability To Remove Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1511_get_ability_to_analyse_registry_key/entity" class="md-nav__link">
+        Get Ability To Analyse Registry Key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1601_manage_identity_management_system/entity" class="md-nav__link">
+        Manage Identity Management System
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_109" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2_109" id="__nav_5_2_109_label" tabindex="0">
+          Get Ability To Lock User Account
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_109_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2_109">
+          <span class="md-nav__icon md-icon"></span>
+          Get Ability To Lock User Account
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1602_get_ability_to_lock_user_account/entity" class="md-nav__link">
+        💡 Get Ability To Lock User Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_1602_0001_preparing_to_block_user_account_via_powershell/entity" class="md-nav__link">
+        ⮩ Preparing to block user account via Powershell
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1603_get_ability_to_list_users_authenticated/entity" class="md-nav__link">
+        Get Ability To List Users Authenticated
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1604_get_ability_to_revoke_authentication_credentials/entity" class="md-nav__link">
+        Get Ability To Revoke Authentication Credentials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1605_get_ability_to_remove_user_account/entity" class="md-nav__link">
+        Get Ability To Remove User Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_1606_get_ability_to_list_user_accounts/entity" class="md-nav__link">
+        Get Ability To List User Accounts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Identification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Identification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2001_list_victims_of_security_alert/entity" class="md-nav__link">
+        List Victims Of Security Alert
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2002_list_host_vulnerabilities/entity" class="md-nav__link">
+        List Host Vulnerabilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2003_put_compromised_accounts_on_monitoring/entity" class="md-nav__link">
+        Put Compromised Accounts On Monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2004_find_compromised_host/entity" class="md-nav__link">
+        Make A Volatile Memory Capture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2006_conduct_memory_analysis/entity" class="md-nav__link">
+        Conduct Memory Analysis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2007_build_super_timeline/entity" class="md-nav__link">
+        Build Super Timeline
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2008_prepare_iocs_list/entity" class="md-nav__link">
+        Prepare Iocs List
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2009_scan_with_iocs_and_rules/entity" class="md-nav__link">
+        Scan With Iocs And Rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2101_list_hosts_communicated_with_internal_domain/entity" class="md-nav__link">
+        List Hosts Communicated With Internal Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2102_list_hosts_communicated_with_internal_ip/entity" class="md-nav__link">
+        List Hosts Communicated With Internal Ip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2103_list_hosts_communicated_with_internal_url/entity" class="md-nav__link">
+        List Hosts Communicated With Internal Url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2104_analyse_domain_name/entity" class="md-nav__link">
+        Analyse Domain Name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2105_analyse_ip/entity" class="md-nav__link">
+        Analyse Ip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2106_analyse_uri/entity" class="md-nav__link">
+        Analyse Uri
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2107_list_hosts_communicated_by_port/entity" class="md-nav__link">
+        List Hosts Communicated By Port
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2108_list_hosts_connected_to_vpn/entity" class="md-nav__link">
+        List Hosts Connected To Vpn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2109_list_hosts_connected_to_intranet/entity" class="md-nav__link">
+        List Hosts Connected To Intranet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2110_list_data_transferred/entity" class="md-nav__link">
+        List Data Transferred
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2111_collect_transferred_data/entity" class="md-nav__link">
+        Collect Transferred Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2112_identify_transferred_data/entity" class="md-nav__link">
+        Identify Transferred Data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2113_list_hosts_communicated_with_external_domain/entity" class="md-nav__link">
+        List Hosts Communicated With External Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2114_list_hosts_communicated_with_external_ip/entity" class="md-nav__link">
+        List Hosts Communicated With External Ip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2115_list_hosts_communicated_with_external_url/entity" class="md-nav__link">
+        List Hosts Communicated With External Url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2116_find_data_transferred_by_content_pattern/entity" class="md-nav__link">
+        Find Data Transferred By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2117_analyse_user-agent/entity" class="md-nav__link">
+        Analyse User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2118_list_firewall_rules/entity" class="md-nav__link">
+        List Firewall Rules
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2120_identify_impacted_services/entity" class="md-nav__link">
+        Identify impacted services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2121_identify_useful_security_systems/entity" class="md-nav__link">
+        Identify userful security systems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2201_list_users_opened_email_message/entity" class="md-nav__link">
+        List Users Opened Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2202_collect_email_message/entity" class="md-nav__link">
+        Collect Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2203_list_email_message_receivers/entity" class="md-nav__link">
+        List Email Message Receivers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2204_make_sure_email_message_is_phishing/entity" class="md-nav__link">
+        Make Sure Email Message Is Phishing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2205_extract_observables_from_email_message/entity" class="md-nav__link">
+        Extract Observables From Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2206_analyse_email_address/entity" class="md-nav__link">
+        Analyse Email Address
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2301_list_files_created/entity" class="md-nav__link">
+        List Files Created
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2302_list_files_modified/entity" class="md-nav__link">
+        List Files Modified
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2303_list_files_deleted/entity" class="md-nav__link">
+        List Files Deleted
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2304_list_files_downloaded/entity" class="md-nav__link">
+        List Files Downloaded
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2305_list_files_with_tampered_timestamps/entity" class="md-nav__link">
+        List Files With Tampered Timestamps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2306_find_file_by_path/entity" class="md-nav__link">
+        Find File By Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2307_find_file_by_metadata/entity" class="md-nav__link">
+        Find File By Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2308_find_file_by_hash/entity" class="md-nav__link">
+        Find File By Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2309_find_file_by_format/entity" class="md-nav__link">
+        Find File By Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2310_find_file_by_content_pattern/entity" class="md-nav__link">
+        Find File By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_45" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_45" id="__nav_5_3_45_label" tabindex="0">
+          Collect File
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_45_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_45">
+          <span class="md-nav__icon md-icon"></span>
+          Collect File
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2311_collect_file/entity" class="md-nav__link">
+        💡 Collect File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_2311_0001_soldr_file_collection/entity" class="md-nav__link">
+        ⮩ Collect file via SOLDR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2312_analyse_file_hash/entity" class="md-nav__link">
+        Analyse File Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_47" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_47" id="__nav_5_3_47_label" tabindex="0">
+          Analyse Windows Pe
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_47_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_47">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse Windows Pe
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2313_analyse_windows_pe/entity" class="md-nav__link">
+        💡 Analyse Windows Pe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_2313_0001_soldr_pe_analysis_with_a_sandbox/entity" class="md-nav__link">
+        ⮩ Perform malware analysis via SOLDR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2314_analyse_macos_macho/entity" class="md-nav__link">
+        Analyse Macos Macho
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2315_analyse_unix_elf/entity" class="md-nav__link">
+        Analyse Unix Elf
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2316_analyse_ms_office_file/entity" class="md-nav__link">
+        Analyse Ms Office File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2317_analyse_pdf_file/entity" class="md-nav__link">
+        Analyse Pdf File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2318_analyse_script/entity" class="md-nav__link">
+        Analyse Script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2319_analyse_jar/entity" class="md-nav__link">
+        Analyse Jar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2320_analyse_filename/entity" class="md-nav__link">
+        Analyse Filename
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2401_list_processes_executed/entity" class="md-nav__link">
+        List Processes Executed
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2402_find_process_by_executable_path/entity" class="md-nav__link">
+        Find Process By Executable Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2403_find_process_by_executable_metadata/entity" class="md-nav__link">
+        Find Process By Executable Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2404_find_process_by_executable_hash/entity" class="md-nav__link">
+        Find Process By Executable Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2405_find_process_by_executable_format/entity" class="md-nav__link">
+        Find Process By Executable Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2406_find_process_by_executable_content_pattern/entity" class="md-nav__link">
+        Find Process By Executable Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2501_list_registry_keys_modified/entity" class="md-nav__link">
+        List Registry Keys Modified
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2502_list_registry_keys_deleted/entity" class="md-nav__link">
+        List Registry Keys Deleted
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2503_list_registry_keys_accessed/entity" class="md-nav__link">
+        List Registry Keys Accessed
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_64" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_64" id="__nav_5_3_64_label" tabindex="0">
+          List Registry Keys Created
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_64_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_64">
+          <span class="md-nav__icon md-icon"></span>
+          List Registry Keys Created
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2504_list_registry_keys_created/entity" class="md-nav__link">
+        💡 List Registry Keys Created
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_2504_0001_powershell_list_registry_keys/entity" class="md-nav__link">
+        ⮩ Listing registry keys with Powershell
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2505_list_services_created/entity" class="md-nav__link">
+        List Services Created
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2506_list_services_modified/entity" class="md-nav__link">
+        List Services Modified
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2507_list_services_deleted/entity" class="md-nav__link">
+        List Services Deleted
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2508_analyse_registry_key/entity" class="md-nav__link">
+        Analyse Registry Key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2601_list_users_authenticated/entity" class="md-nav__link">
+        List Users Authenticated
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2602_list_user_accounts/entity" class="md-nav__link">
+        List User Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2603_find_successfully_enumerated_users/entity" class="md-nav__link">
+        Find successfully enumerated users
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3_72" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3_72" id="__nav_5_3_72_label" tabindex="0">
+          Find Compromised User
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_3_72_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3_72">
+          <span class="md-nav__icon md-icon"></span>
+          Find Compromised User
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2604_find_compromised_user/entity" class="md-nav__link">
+        💡 Find Compromised User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_2604_0001_find_account_with_shadow_credential_via_powershell/entity" class="md-nav__link">
+        ⮩ Find account with shadow credential via Powershell
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_2999_examine_content/entity" class="md-nav__link">
+        Examine Content
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Containment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Containment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3001_patch_vulnerability/entity" class="md-nav__link">
+        Patch Vulnerability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3101_block_external_ip_address/entity" class="md-nav__link">
+        Block External Ip Address
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3102_block_internal_ip_address/entity" class="md-nav__link">
+        Block Internal Ip Address
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3103_block_external_domain/entity" class="md-nav__link">
+        Block External Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3104_block_internal_domain/entity" class="md-nav__link">
+        Block Internal Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3105_block_external_url/entity" class="md-nav__link">
+        Block External Url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3106_block_internal_url/entity" class="md-nav__link">
+        Block Internal Url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3107_block_port_external_communication/entity" class="md-nav__link">
+        Block Port External Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3108_block_port_internal_communication/entity" class="md-nav__link">
+        Block Port Internal Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3109_block_user_external_communication/entity" class="md-nav__link">
+        Block User External Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3110_block_user_internal_communication/entity" class="md-nav__link">
+        Block User Internal Communication
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3111_block_data_transferring_by_content_pattern/entity" class="md-nav__link">
+        Block Data Transferring By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3112_isolate_asset/entity" class="md-nav__link">
+        Isolate Asset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3113_inspect_network_shares/entity" class="md-nav__link">
+        Inspect Network Shares
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3201_block_domain_on_email/entity" class="md-nav__link">
+        Block Domain On Email
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3202_block_sender_on_email/entity" class="md-nav__link">
+        Block Sender On Email
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3203_quarantine_email_message/entity" class="md-nav__link">
+        Quarantine Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3301_quarantine_file_by_format/entity" class="md-nav__link">
+        Quarantine File By Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3302_quarantine_file_by_hash/entity" class="md-nav__link">
+        Quarantine File By Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_20" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_20" id="__nav_5_4_20_label" tabindex="0">
+          Quarantine File By Path
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_20_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_20">
+          <span class="md-nav__icon md-icon"></span>
+          Quarantine File By Path
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3303_quarantine_file_by_path/entity" class="md-nav__link">
+        💡 Quarantine File By Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_3303_0001_soldr_quarantine_file/entity" class="md-nav__link">
+        ⮩ Perform quarantine file via SOLDR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3304_quarantine_file_by_content_pattern/entity" class="md-nav__link">
+        Quarantine File By Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_22" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_22" id="__nav_5_4_22_label" tabindex="0">
+          Block Process By Executable Path
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_22_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_22">
+          <span class="md-nav__icon md-icon"></span>
+          Block Process By Executable Path
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3401_block_process_by_executable_path/entity" class="md-nav__link">
+        💡 Block Process By Executable Path
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_3401_0001_soldr_terminate_process/entity" class="md-nav__link">
+        ⮩ Terminate process via SOLDR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3402_block_process_by_executable_metadata/entity" class="md-nav__link">
+        Block Process By Executable Metadata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3403_block_process_by_executable_hash/entity" class="md-nav__link">
+        Block Process By Executable Hash
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3404_block_process_by_executable_format/entity" class="md-nav__link">
+        Block Process By Executable Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3405_block_process_by_executable_content_pattern/entity" class="md-nav__link">
+        Block Process By Executable Content Pattern
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3501_disable_system_service/entity" class="md-nav__link">
+        Disable System Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_28" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_28" id="__nav_5_4_28_label" tabindex="0">
+          Lock User Account
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_28_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_28">
+          <span class="md-nav__icon md-icon"></span>
+          Lock User Account
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3601_lock_user_account/entity" class="md-nav__link">
+        💡 Lock User Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_3601_0002_powershell_disable_ad_user/entity" class="md-nav__link">
+        ⮩ Powershell disable AD user
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_29" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_29" id="__nav_5_4_29_label" tabindex="0">
+          Block User Account
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_29_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_29">
+          <span class="md-nav__icon md-icon"></span>
+          Block User Account
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_3602_block_user_account/entity" class="md-nav__link">
+        💡 Block User Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_3602_0001_block_domain_user_account_via_powershell/entity" class="md-nav__link">
+        ⮩ Block domain user account via Powershell
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Eradication
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Eradication
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4001_report_incident_to_external_companies/entity" class="md-nav__link">
+        Report Incident To External Companies
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4002_apply_prevention_mode_for_iocs/entity" class="md-nav__link">
+        Apply Prevention Mode For Iocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4101_remove_rogue_network_device/entity" class="md-nav__link">
+        Remove Rogue Network Device
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4201_delete_email_message/entity" class="md-nav__link">
+        Delete Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_5" id="__nav_5_5_5_label" tabindex="0">
+          Remove File
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Remove File
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4301_remove_file/entity" class="md-nav__link">
+        💡 Remove File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_4301_0001_powershell_delete_file/entity" class="md-nav__link">
+        ⮩ Deleting a file from Windows with Powershell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_4301_0002_soldr_delete_file/entity" class="md-nav__link">
+        ⮩ Deleting a file from Windows via SOLDR
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_6" id="__nav_5_5_6_label" tabindex="0">
+          Remove Registry Key
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Remove Registry Key
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4501_remove_registry_key/entity" class="md-nav__link">
+        💡 Remove Registry Key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_4501_0001_powershell_remove_registry_key/entity" class="md-nav__link">
+        ⮩ Remove Windows registry key with Powershell
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4502_remove_service/entity" class="md-nav__link">
+        Remove Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4503_remove_persistence_mechanisms/entity" class="md-nav__link">
+        Remove Persistence Mechanisms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4601_revoke_authentication_credentials/entity" class="md-nav__link">
+        Revoke Authentication Credentials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4602_remove_user_account/entity" class="md-nav__link">
+        Remove User Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4603_reset_authentication_credentials/entity" class="md-nav__link">
+        Reset Authentication Credentials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5_12" id="__nav_5_5_12_label" tabindex="0">
+          Delete Attribute From Object
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_5_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5_12">
+          <span class="md-nav__icon md-icon"></span>
+          Delete Attribute From Object
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4604_delete_attribute_from_object/entity" class="md-nav__link">
+        💡 Delete Attribute From Object
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_4604_0001_powershell_delete_attribute_from_object/entity" class="md-nav__link">
+        ⮩ Powershell clear attribute from AD object
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_4605_revoke_certificate/entity" class="md-nav__link">
+        Revoke Certificate
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+          Recovery
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Recovery
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5001_reinstall_host_from_golden_image/entity" class="md-nav__link">
+        Reinstall Host From Golden Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5002_restore_data_from_backup/entity" class="md-nav__link">
+        Restore Data From Backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5101_unblock_blocked_ip/entity" class="md-nav__link">
+        Unblock Blocked Ip
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5102_unblock_blocked_domain/entity" class="md-nav__link">
+        Unblock Blocked Domain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5103_unblock_blocked_url/entity" class="md-nav__link">
+        Unblock Blocked Url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5104_unblock_blocked_port/entity" class="md-nav__link">
+        Unblock Blocked Port
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6_7" id="__nav_5_6_7_label" tabindex="0">
+          Unblock Blocked User
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_6_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6_7">
+          <span class="md-nav__icon md-icon"></span>
+          Unblock Blocked User
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5105_unblock_blocked_user/entity" class="md-nav__link">
+        💡 Unblock Blocked User
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_5105_0001_unblock_domain_account_via_powershell/entity" class="md-nav__link">
+        ⮩ Unblock domain account via powershell
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5201_unblock_domain_on_email/entity" class="md-nav__link">
+        Unblock Domain On Email
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5202_unblock_sender_on_email/entity" class="md-nav__link">
+        Unblock Sender On Email
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5203_restore_quarantined_email_message/entity" class="md-nav__link">
+        Restore Quarantined Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5301_restore_quarantined_file/entity" class="md-nav__link">
+        Restore Quarantined File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5302_restore_modified_file/entity" class="md-nav__link">
+        Restore Modified File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5401_unblock_blocked_process/entity" class="md-nav__link">
+        Unblock Blocked Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5501_enable_disabled_service/entity" class="md-nav__link">
+        Enable Disabled Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6_15" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6_15" id="__nav_5_6_15_label" tabindex="0">
+          Unlock Locked User Account
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_6_15_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6_15">
+          <span class="md-nav__icon md-icon"></span>
+          Unlock Locked User Account
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5601_unlock_locked_user_account/entity" class="md-nav__link">
+        💡 Unlock Locked User Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../response_actions_implementations/RAI_5601_0001_powershell_unlock_ad_user/entity" class="md-nav__link">
+        ⮩ Powershell enable AD user
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_5602_reissue_revoked_certificate/entity" class="md-nav__link">
+        Reissue Revoked Certificate
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+          Lessons Learned
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Lessons Learned
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_6001_develop_incident_report/entity" class="md-nav__link">
+        Develop Incident Report
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_6002_conduct_lessons_learned_exercise/entity" class="md-nav__link">
+        Conduct Lessons Learned Exercise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_6003_update_acquisition_profiles/entity" class="md-nav__link">
+        Update Acquisition Profiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_6004_update_network_profiles/entity" class="md-nav__link">
+        Update Network Profiles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../RA_6005_update_process_profiles/entity" class="md-nav__link">
+        Update Process Profiles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Software
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Software
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/" class="md-nav__link">
+        [Software List]
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3007_apache_tomcat_server/entity" class="md-nav__link">
+        Apache Tomcat Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3004_bitrix_server/entity" class="md-nav__link">
+        Bitrix Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_1001_check_point_firewall/entity" class="md-nav__link">
+        Checkpoint Firewall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_1002_cisco_asa_firewall/entity" class="md-nav__link">
+        Cisco ASA Firewall
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3006_citrix_server/entity" class="md-nav__link">
+        Citrix Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3010_gitlab_server/entity" class="md-nav__link">
+        Gitlab Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_0100_linux/entity" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_5001_ms_dns_server/entity" class="md-nav__link">
+        MS DNS Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3001_ms_exchange_server/entity" class="md-nav__link">
+        MS Exchange Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_6001_ms_domain_controller_server/entity" class="md-nav__link">
+        MS Server 2019 with Active Directory role
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3005_ms_sharepoint_server/entity" class="md-nav__link">
+        MS Sharepoint Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3011_mysql_server/entity" class="md-nav__link">
+        MySQL Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3002_postfix_mail_server/entity" class="md-nav__link">
+        Postfix Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3012_postgresql_server/entity" class="md-nav__link">
+        PostgreSQL Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_0005_soldr/entity" class="md-nav__link">
+        SOLDR
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3003_skype4business_server/entity" class="md-nav__link">
+        Skype for Business Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3008_weblogic_server/entity" class="md-nav__link">
+        Weblogic Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_0003_windows_host/entity" class="md-nav__link">
+        Windows Host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_0004_windows_powershell/entity" class="md-nav__link">
+        Windows PowerShell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../software/S_3009_zabbix_server/entity" class="md-nav__link">
+        Zabbix Server
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Artifacts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Artifacts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/" class="md-nav__link">
+        [Artifacts List]
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5004_access_token/entity" class="md-nav__link">
+        Access Token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1014_access_right/entity" class="md-nav__link">
+        Access right
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1001_windows_domain_account/entity" class="md-nav__link">
+        Active Directory Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1010_authentication_service/entity" class="md-nav__link">
+        Authentication service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1011_certificate/entity" class="md-nav__link">
+        Certificate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1013_certificate_authority/entity" class="md-nav__link">
+        Certificate authority
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5006_credential/entity" class="md-nav__link">
+        Credential
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1002_dns_traffic/entity" class="md-nav__link">
+        DNS Network Traffic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1015_directory_service_object_attribute/entity" class="md-nav__link">
+        Directory Service object attribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_3001_email_message/entity" class="md-nav__link">
+        Email Message
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5005_encrypted_credential/entity" class="md-nav__link">
+        Encrypted Credential
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_3005_executable_binary/entity" class="md-nav__link">
+        Executable Binary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5001_executable_script/entity" class="md-nav__link">
+        Executable Script
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_3002_file/entity" class="md-nav__link">
+        File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1005_host/entity" class="md-nav__link">
+        Host
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1007_ip_address/entity" class="md-nav__link">
+        IP Address
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1016_kerberos_ticket_granting_tickets/entity" class="md-nav__link">
+        Kerberos Ticket Granting Tickets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1004_linux_local_account/entity" class="md-nav__link">
+        Linux Local Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1003_windows_local_account/entity" class="md-nav__link">
+        Local Windows Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1008_log/entity" class="md-nav__link">
+        Log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_3007_login_session/entity" class="md-nav__link">
+        Login Session
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1006_owa_web_token/entity" class="md-nav__link">
+        OWA Web Token
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_3004_object_file/entity" class="md-nav__link">
+        Object File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_3003_operating_system_executable_file/entity" class="md-nav__link">
+        Operating System Executable File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5008_password/entity" class="md-nav__link">
+        Password
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5009_password_file/entity" class="md-nav__link">
+        Password file
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5003_windows_pipe/entity" class="md-nav__link">
+        Pipe
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1012_private_key/entity" class="md-nav__link">
+        Private key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1009_privileged_user_account/entity" class="md-nav__link">
+        Privileged User Account
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_4001_process/entity" class="md-nav__link">
+        Process
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_4002_process_image/entity" class="md-nav__link">
+        Process Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5011_RPC_network_traffic/entity" class="md-nav__link">
+        RPC Network Traffic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5012_remote_procedure_call/entity" class="md-nav__link">
+        Remote Procedure Call
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5007_remote_session/entity" class="md-nav__link">
+        Remote Session
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_4003_remote_session/entity" class="md-nav__link">
+        Remote Session
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5010_service_application/entity" class="md-nav__link">
+        Service Application
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_3006_com_object/entity" class="md-nav__link">
+        The Component Object Model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_1017_url/entity" class="md-nav__link">
+        URL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../artifacts/A_5002_windows_registry/entity" class="md-nav__link">
+        Windows Registry
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ra1011-develop-assets-knowledge-base">RA1011: Develop Assets Knowledge Base</h1>
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>ID</strong></th>
+<th align="left">RA1011</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>Brief Description</strong></td>
+<td align="left">Develop assets knowledge base. It will help you to compare observed activity with a normal activity profile for a specific host, user or network segment</td>
+</tr>
+<tr>
+<td align="center"><strong>Author</strong></td>
+<td align="left">your name/nickname/twitter</td>
+</tr>
+<tr>
+<td align="center"><strong>Creation Date</strong></td>
+<td align="left">YYYY/MM/DD</td>
+</tr>
+<tr>
+<td align="center"><strong>References</strong></td>
+<td align="left"><ul style="list-style: none"><li><a href="https://example.com"><span class="twemoji external_link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L20.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M3.25 4a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 .75.75v3.19l3.72-3.72a.75.75 0 0 1 .53-.22h10a.25.25 0 0 0 .25-.25v-6a.75.75 0 0 1 1.5 0v6a1.75 1.75 0 0 1-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 0 1 5 21.043V18.5H3.25a1.75 1.75 0 0 1-1.75-1.75V4.25c0-.966.784-1.75 1.75-1.75h11a.75.75 0 0 1 0 1.5h-11Z"/></svg></span> https://example.com</a></li></ul></td>
+</tr>
+<tr>
+<td align="center"><strong>Response Stage</strong></td>
+<td align="left"><a href="../../../response_stages/RS0001/entity">Preparation</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="description">Description</h2>
+<p>Description of the extended_description for the Response Action in markdown format.
+Here newlines will be saved.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "content.code.annotate", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+
+
+    
+      <script src="../../../assets/javascripts/bundle.ce72ebac.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

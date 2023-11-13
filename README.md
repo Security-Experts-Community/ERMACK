@@ -4,7 +4,7 @@
 
 > **ERM&CK - фреймворк и база знаний для описания реагирования на компьютерные инциденты.**
 
-Ознакомиться с публичной версией базы знаний можно по ссылке: https://security-experts-community.github.io/ERMACK.
+Ознакомиться с публичной версией базы знаний можно по ссылке: [Публичный билд ERM&CK](https://security-experts-community.github.io/ERMACK)  
 Процесс запуска локальной копии подробно описан в файле [INSTALLATION.md](INSTALLATION.md)
 
 

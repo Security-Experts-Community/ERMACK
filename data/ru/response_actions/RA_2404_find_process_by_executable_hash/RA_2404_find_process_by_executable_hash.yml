@@ -1,7 +1,7 @@
-title: RA_2404_find_process_by_executable_hash
+title: Найти процесс по хешу исполняемого файла
 id: RA2404
 description: >
-  Find a process that is being executed at the moment or at a particular time in the past by its executable hash
+  Найдите процесс, исполняемый в данный момент или в определенное время в прошлом по хешу его исполняемого файла
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

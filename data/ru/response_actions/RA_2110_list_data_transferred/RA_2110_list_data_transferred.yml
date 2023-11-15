@@ -1,7 +1,7 @@
-title: RA_2110_list_data_transferred
+title: Вывести список переданной информации
 id: RA2110
 description: >
-  List the data that is being transferred at the moment or at a particular time in the past
+  Выведите список информации, передающейся в данный момент или в определенное время в прошлом
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

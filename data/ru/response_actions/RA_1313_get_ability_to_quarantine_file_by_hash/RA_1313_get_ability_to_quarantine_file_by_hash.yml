@@ -1,7 +1,7 @@
-title: RA_1313_get_ability_to_quarantine_file_by_hash
+title: Получить возможность изолировать файл по хешу
 id: RA1313
 description: >
-  Make sure you have the ability to block a file from being accessed by its hash
+  Убедитесь, что вы можете заблокировать доступ к файлу по его хешу
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

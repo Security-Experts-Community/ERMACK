@@ -1,7 +1,7 @@
-title: RA_2508_analyse_registry_key
+title: Анализировать ключ реестра
 id: RA2508
 description: >
-  Analyse a registry key
+  Анализируйте ключ реестра
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

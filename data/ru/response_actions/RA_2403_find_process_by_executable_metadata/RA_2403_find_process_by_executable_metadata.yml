@@ -1,7 +1,7 @@
-title: RA_2403_find_process_by_executable_metadata
+title: Найти процесс по метадате исполняемого файла
 id: RA2403
 description: >
-  Find a process that is being executed at the moment or at a particular time in the past by its executable metadata (i.e. signature, permissions, MAC times)
+  Найдите процесс, исполняемый в данный момент или в определенное время в прошлом по метадате его исполняемого файла (т.е. по подписи, разрешениям, MAC-времени)
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

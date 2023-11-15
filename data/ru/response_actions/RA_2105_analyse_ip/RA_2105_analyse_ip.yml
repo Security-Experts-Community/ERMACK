@@ -1,7 +1,7 @@
-title: RA_2105_analyse_IP
+title: Анализировать IP-адрес
 id: RA2105
 description: >
-  Проанализировать IP-адрес
+  Проанализируйте IP-адрес
 author: enikulina
 creation_date: 2023/02/02
 stage: identification

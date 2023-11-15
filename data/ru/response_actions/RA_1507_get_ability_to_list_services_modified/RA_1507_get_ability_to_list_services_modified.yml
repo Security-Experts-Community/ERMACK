@@ -1,7 +1,7 @@
-title: RA_1507_get_ability_to_list_services_modified
+title: Получить возможность вывода измененных сервисов
 id: RA1507
 description: >
-  Make sure you have the ability to list services that have been modified at a particular time in the past
+  Убедитесь, что вы можете вывести список сервисов, измененных в определенное время
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

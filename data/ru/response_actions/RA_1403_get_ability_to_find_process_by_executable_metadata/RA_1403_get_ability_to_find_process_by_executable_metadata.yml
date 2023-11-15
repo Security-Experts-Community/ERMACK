@@ -1,7 +1,7 @@
-title: RA_1403_get_ability_to_find_process_by_executable_metadata
+title: Получить возможность поиска процесса по метадате исполняемого файла
 id: RA1403
 description: >
-  Make sure you have the ability to find process executed at a particular time in the past by its executable metadata (i.e. signature, permissions, MAC times)
+  Убедитесь, что вы можете найти процесс, исполненный в определенное время, по метадате его исполняемого файла (т.е. по подписи, разрешениям, MAC-времени)
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

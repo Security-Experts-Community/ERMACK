@@ -1,7 +1,7 @@
-title: RA_2312_analyse_file_hash
+title: Проанализировать хеш файла
 id: RA2312
 description: >
-  Проанализировать хэш файла
+  Проанализировать хеш файла
 author: ayakovlev
 creation_date: 2023/02/17
 stage: identification

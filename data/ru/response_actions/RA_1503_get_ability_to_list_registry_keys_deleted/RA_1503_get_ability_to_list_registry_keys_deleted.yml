@@ -1,7 +1,7 @@
-title: RA_1503_get_ability_to_list_registry_keys_deleted
+title: Получить возможность вывода удаленных ключей реестра
 id: RA1503
 description: >
-  Make sure you have the ability to list registry keys deleted at a particular time in the past
+  Убедитесь, что вы можете вывести удаленные в определенное время ключи реестра
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

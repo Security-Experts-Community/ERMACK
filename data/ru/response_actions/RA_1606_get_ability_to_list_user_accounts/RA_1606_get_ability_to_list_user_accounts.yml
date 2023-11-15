@@ -1,6 +1,6 @@
-title: RA_1606_get_ability_to_list_user_accounts
+title: Получить возможность вывода учетных записей пользователей
 id: RA1606
-description: Make sure you have the ability to list user accounts on a particular system
+description: Убедитесь, что вы можете вывести учетные записи пользователей
 author: '@atc_project'
 creation_date: 2021/06/27
 stage: preparation

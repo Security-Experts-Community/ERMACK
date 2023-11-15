@@ -1,7 +1,7 @@
-title: RA_1504_get_ability_to_list_registry_keys_accessed
+title: Получить возможность вывода ключей реестра, к которым был получен доступ
 id: RA1504
 description: >
-  Make sure you have the ability to list registry keys accessed at a particular time in the past
+   Убедитесь, что вы можете вывести список ключей реестра, к которым был получен доступ в определенное время
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

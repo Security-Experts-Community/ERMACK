@@ -1,7 +1,7 @@
-title: RA_1501_manage_remote_computer_management_system_policies
+title: Контроль политик системы управления удаленными компьютерами
 id: RA1501
 description: >
-  Make sure you can manage Remote Computer Management system policies
+  Убедитесь, что вы можете контролировать политики системы управления удаленными компьютерами
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

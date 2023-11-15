@@ -2,10 +2,11 @@ title: 'Pass the certificate'
 id: UC0004
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/10
-modification_date: 2023/05/10
+modification_date: 2023/05/27
 severity: M
 tags:
   - attack.lateral_movement
+  - attack.persistence
 linked_response_playbooks:
   - RP0004
 linked_artifacts:
@@ -17,7 +18,7 @@ linked_artifacts:
   - A3002
 description: Attackers can use valid certificate and associated private key for get Ticket Granting Tickets (TGT)
 extended_description: |
-  Attackers can use valid certificate and associated private key for get TGT using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension.
+  Attackers can use valid certificate and associated private key for get TGT using Public Key Cryptography for Initial Authentication (PKINIT) Kerberos extension. 
 
   ## Attack mapping 
 
@@ -26,10 +27,11 @@ extended_description: |
   | **Attack Prerequisites**        |
   | <[Certificate Authority]>(A_1013)     | Server in domain with Certificate Authority Role | Server with Active Directory Certificate Services and Certificate Authority configured |
   | <[Authentication Service]>(A_1010)     | Authentication service on domain controller | Authentication Service must have a certificate for Server Authentication for PKINIT |
-  | <[Certificate]>(A_1011)     | Certificate signed with the attacker's private key | Certificate signed with the attacker's private key which will be checked during authentication |
-  | <[Private key]>(A_1012) | Attackers private key | Attackers private key with which they sign the certificate |
+  | <[Certificate]>(A_1011)     | Certificate signed with the private key | Certificate signed with the private key which will be checked during authentication |
+  | <[Private key]>(A_1012) | Private key associated with the certificate | Private key with which they sign the certificate. Attackers can have access to the private key as a file, or the ability to perform cryptographic operations with the private key without direct access to it (usually this requires code execution from the user context) |
   | **Side Observables**            |
   | <[File]>(A_3002) | PKCS#12 format file (.pfx or .p12) | File with a certificate and an associated private key which is needed to obtain TGT |
+  | <[File]>(A_3002) | Executable or script file | Executable or script file that attackers use to carry out an attack (e.g. Rubeus.exe) |
 
   ## Attack result
 
@@ -38,16 +40,21 @@ extended_description: |
   | RESOURCE | DESCRIPTION | 
   | :--------| :-----------|
   | **Attack Prerequisites** |
-  | <[Certificate]>(A_1011)     | Certificate signed with the attacker's private key which will be checked during authentication |
-  | <[Private key]>(A_1012) | Attackers private key with which they sign the certificate |
+  | <[Certificate]>(A_1011)     | Certificate signed with the private key which will be checked during authentication |
+  | <[Private key]>(A_1012) | Private key with which they sign the certificate. Attackers can have access to the private key as a file, or the ability to perform cryptographic operations with the private key without direct access to it (usually this requires code execution from the user context) |
   | **Result Consequences** |
   | <[Ticket Granting Tickets]>(A_1016) | Ticket Granting Tickets which the attacker can use  |
 
   ## Attack progress
+
+  Depending on access to the private key (as a file or as the ability to perform cryptographic operations with it), there are two options for attacking
+
+  ### First option - access to the private key as a file
+
   1. From certificate and an associated private key create PKCS#12 format file
   2. Request TGT with PKCS#12 format file using PKINIT
 
-  ## Some tools for carry out this attack
+  #### Some tools for carry out this attack
   1.
   ```
   Rubeus.exe asktgt /user:USER /certificate:certwithkey.pfx /password:pfx_file_password
@@ -56,6 +63,17 @@ extended_description: |
   ```
   certipy auth -pfx certwithkey.pfx -dc-ip 172.16.126.128 -no-hash
   ```
+
+  ### Second option - access to the private key as the ability to perform cryptographic operations with it
+
+  1. From user context, request tgt with specific certificate
+
+  #### Some tools for carry out this attack
+  1.
+  ```
+  Rubeus.exe asktgt /user:USER /certificate:certificate_thumbprint
+  ```
+
 
   ## References
   1. <https://www.thehacker.recipes/ad/movement/kerberos/pass-the-certificate>

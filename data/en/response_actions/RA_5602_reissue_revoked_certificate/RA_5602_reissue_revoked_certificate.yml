@@ -5,6 +5,6 @@ description: >
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/05/12
 stage: recovery
-workflow: |
+extended_description: |
   Reissue revoked certificate.
   To reissue a certificate, use the revoked certificate as a template

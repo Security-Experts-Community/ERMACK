@@ -1,7 +1,7 @@
-title: RA_5201_unblock_domain_on_email
+title: Разблокирование домена электронной почты
 id: RA5201
 description: >
-  Unblock a domain on email
+  Разблокируйте домен электронной почты
 author: '@atc_project'
 creation_date: 2020/05/07
 stage: recovery
@@ -10,4 +10,4 @@ references:
 requirements:
   - MS_email_server
 extended_description: |
-  Unblock an email domain on an Email Server using its native functionality.
+  Разблокируйте домен электронной почты на почтовом сервере, используя его встроенные функции

@@ -1,7 +1,7 @@
-title: RA_3304_quarantine_file_by_content_pattern
+title: Размещение файла в карантин по шаблону его содержимого
 id: RA3304
 description: >
-  Quarantine a file by its content pattern
+  Поместите файл в карантин по шаблону его содержимого
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: containment

@@ -1,7 +1,7 @@
-title: RA_5501_enable_disabled_service
+title: Включение сервиса
 id: RA5501
 description: >
-  Enable a disabled service
+  Включите сервис
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: recovery

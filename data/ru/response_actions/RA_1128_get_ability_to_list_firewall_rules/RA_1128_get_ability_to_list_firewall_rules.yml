@@ -1,6 +1,6 @@
-title: RA_1128_get_ability_to_list_firewall_rules
+title: Получение возможности перечислять правила брандмауэра
 id: RA1128
-description: Make sure you have the ability to list firewall rules
+description: Убедитесь, что у вас есть возможность перечислять правила брандмауэра
 author: '@atc_project'
 creation_date: 2021/06/27
 stage: preparation

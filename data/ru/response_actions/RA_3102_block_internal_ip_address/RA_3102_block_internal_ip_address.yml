@@ -1,4 +1,4 @@
-title: RA_3102_block_internal_ip_address
+title: Блокировка внутреннего IP-адреса
 id: RA3102
 description: >
   Изолировать внутренний узел от локальной и внешней сетей

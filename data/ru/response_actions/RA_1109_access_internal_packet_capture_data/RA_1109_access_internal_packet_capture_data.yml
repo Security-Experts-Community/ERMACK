@@ -1,7 +1,7 @@
-title: RA_1109_access_internal_packet_capture_data
+title: Доступ к данным захвата пакетов внутренней связи
 id: RA1109
 description: >
-  Make sure you have access to internal communication Packet Capture data
+  Убедитесь, что у вас есть доступ к данным захвата пакетов внутренней связи
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

@@ -1,7 +1,7 @@
-title: RA_5103_unblock_blocked_url
+title: Разблокирование URL
 id: RA5103
 description: >
-  Unblock a blocked URL
+  Разблокируйте URL
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: recovery
@@ -13,4 +13,4 @@ requirements:
   - MS_intranet_ips
   - MS_intranet_ngfw
 extended_description: |
-  Unblock a blocked URL in the system(s) used to block it.
+  Разблокируйте URL-адрес в системе (системах), используемой для его блокировки

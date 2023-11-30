@@ -1,7 +1,7 @@
-title: RA_1101_access_external_network_flow_logs
+title: Доступ к журналам логов внешней сети
 id: RA1101
 description: >
-  Make sure you have access to external communication Network Flow logs
+  Убедитесь, что у вас есть доступ к журналам с логами внешней коммуникационной сети
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: preparation
@@ -13,8 +13,8 @@ requirements:
   - MS_border_ngfw
   - DN_zeek_conn_log
 extended_description: |
-  Make sure that there is a collection of Network Flow logs for external communication (from corporate assets to the Internet) configured.
-  If there is no option to configure it on a network device, you can install a special software on each endpoint and collect it from them.
+  Убедитесь, что настроена система журналов сетевых логов для внешней связи (от корпоративных ресурсов до Интернета).
+Если нет возможности настроить его на сетевом устройстве, вы можете установить специальное программное обеспечение на каждую конечную точку и получить его от них.
 
   Warning:
 

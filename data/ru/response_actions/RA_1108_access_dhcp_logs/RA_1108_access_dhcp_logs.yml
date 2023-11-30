@@ -1,7 +1,7 @@
-title: RA_1108_access_dhcp_logs
+title: Доступ к DHCP-журналам
 id: RA1108
 description: >
-  Make sure you have access to DHCP logs
+  Убедитесь, что у вас есть доступ к DHCP-журналам
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

@@ -1,7 +1,7 @@
-title: RA_3203_quarantine_email_message
+title: Размещение электронного письма в карантин
 id: RA3203
 description: >
-  Quarantine an email message
+  Поместите электронное письмо в карантин
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: containment
@@ -11,4 +11,4 @@ references:
 requirements:
   - MS_email_server
 extended_description: |
-  Quarantine an email message on an Email Server using its native functionality.
+  Поместите сообщение электронной почты в карантин на почтовом сервере, используя его встроенные функции

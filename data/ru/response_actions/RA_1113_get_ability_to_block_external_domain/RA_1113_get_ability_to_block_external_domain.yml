@@ -1,7 +1,7 @@
-title: RA_1113_get_ability_to_block_external_domain
+title: Получение возможности блокировать внешний домен
 id: RA1113
 description: >
-  Make sure you have the ability to block an external domain name from being accessed by corporate assets
+  Убедитесь, что у вас есть возможность заблокировать доступ к внешнему доменному имени со стороны корпоративных ресурсов
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: preparation
@@ -13,8 +13,8 @@ requirements:
   - MS_border_ngfw
   - MS_dns_server
 extended_description: |
-  Make sure you have the ability to create a policy rule or a specific configuration in one of the listed Mitigation Systems that will you to block an external domain name from being accessed by corporate assets.
+  Убедитесь, что у вас есть возможность создать правило политики или определенную конфигурацию в одной из перечисленных систем защиты, которые позволят вам заблокировать доступ к внешнему доменному имени со стороны корпоративных ресурсов
 
-  Warning:
+Warning:
 
-  - Make sure that using the listed systems (1 or multiple) you can control access to the internet of all assets in the infrastructure. In some cases, you will need a guaranteed way to block an external domain name from being accessed by corporate assets completely. If some of the assets are not under the management of the listed Mitigation Systems, (so they can access the internet bypassing these systems), you will not be able to fully achieve the final objective of the Response Action.
+  - Убедитесь, что с помощью перечисленных систем (1 или нескольких) вы можете контролировать доступ к Интернету для всех ресурсов инфраструктуры. В некоторых случаях вам понадобится гарантированный способ полностью заблокировать доступ к внешнему доменному имени со стороны корпоративных ресурсов. Если некоторые ресурсы не находятся под управлением перечисленных "Систем смягчения последствий" (таким образом, они могут получить доступ к Интернету в обход этих систем), вы не сможете полностью достичь конечной цели ответных действий.

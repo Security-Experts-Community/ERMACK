@@ -1,0 +1,37 @@
+title: Killing a process using standard Linux utilities
+id: RAI4401_0001
+description: Killing a process in Linux using standard Linux utilities
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/14
+modification_date: 2023/07/14
+linked_software:
+  - S0100
+linked_response_actions: RA4401
+tags:
+  - linux
+linked_artifacts:
+  - A4001
+requirements:
+  software:
+    means_of_action:
+      - ID: S0100
+        cpe-fs: 'cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*'
+    targets_of_action:
+      - ID: S0100
+        cpe-fs: 'cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*'
+extended_description: |
+  To kill the process in Linux system we can use standard utilities such as **kill**
+  For example we have a process with name proc and with process ID 123
+  
+  To kill a process use below command.
+  ```
+  kill 123
+  ```
+  
+  To kill a process that is listening on port 22 we can use standard utilities such as **fuser**
+  For example we have a process that is listening on tcp port 22
+  
+  To kill a process use below command.
+  ```
+  fuser -k 22/tcp
+  ```

@@ -1,0 +1,12 @@
+title: RA_3002_restrict_access_to_vulnerable_components
+id: RA3002
+description: >
+  Restrict access to vulnerable components
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+stage: containment
+automation:
+  - firewall
+  - EDR
+extended_description: |
+  If at the moment it is not possible to update/disable the system or there are no updates yet, restrict access to vulnerable components. Review the vulnerability description and recommended mitigation measures.

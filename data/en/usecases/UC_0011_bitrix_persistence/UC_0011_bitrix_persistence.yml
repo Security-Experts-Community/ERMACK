@@ -1,0 +1,38 @@
+title: 'Persistence on web server with bitrix'
+id: UC0011
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/08/11
+modification_date: 2023/08/11
+severity: H
+tags:
+  - attack.persistence
+  - bitrix
+linked_response_playbooks:
+  - RP0011
+linked_artifacts:
+  - A2001
+  - A2002
+#targets:
+#  - ID: S3004
+#    cpe_from: 'cpe:2.3:a:bitrix24:bitrix24:-:*:*:*:*:*:*:*'
+#    cpe_to: 'cpe:2.3:a:bitrix24:bitrix24:-:*:*:*:*:*:*:*'
+
+description: Attackers can use bitrix functionality to persist on the host
+extended_description: |
+  
+  Attackers can use bitrix functionality to persist on the host. Bitrix has a functionality called agents. Agents are a technology that allows you to run official PHP functions at a specified frequency.
+  Attackers can create new or modify existing agents to persist on the host. 
+  
+  ## Attack mapping
+  
+  | ARTIFACT/RESOURCE | DESCRIPTION |
+  | :-----------------| :-----------|
+  | **Attack Prerequisites** |
+  | Code execution on <[Web server]>(A_2002) | Possibility of code execution on the web server hosting <[Bitrix]>(A_2001) |
+  | **Attack Consequences** |
+  | Persistence on <[Web server]>(A_2002) | Persistence on the web server hosting <[Bitrix]>(A_2001) |
+  | **Side Observables** |
+  | |
+  
+  ## References
+  1. <https://www.cyberok.ru/docs/CyberOK-Bitrix_web_1.1.pdf>

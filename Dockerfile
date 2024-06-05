@@ -11,7 +11,6 @@ WORKDIR /ermack
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-COPY config.yml config.yml
 COPY main.py main.py
 COPY README.md README.md
 COPY *.md .

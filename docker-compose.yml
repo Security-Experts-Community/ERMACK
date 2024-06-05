@@ -7,5 +7,6 @@ services:
       - 8000:8000
     volumes:
       - ./ermack:/ermack/ermack
+      - ./config.yml:/ermack/config.yml
       - ./data:/ermack/data
       - ./assets:/ermack/assets

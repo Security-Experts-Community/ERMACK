@@ -189,11 +189,11 @@ class EntitiesMap:
 
     def get_entities_by_name(self, entity_name):
         if entity_name not in self.entities:
-            return None
+            return {}
 
         entities = self.entities[entity_name]["instances"]
         if len(entities.keys()) == 0:
-            return None
+            return {}
         else:
             return entities
 

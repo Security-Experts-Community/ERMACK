@@ -140,6 +140,8 @@ Sorry, this {entity_name} is not implemented yet!""",
         :rtype: bool
         """
         template = env.get_template(config.get("entities_table_md_template"))
+        if len(entities) == 0:
+            return
         entity_name = self.__get_entities_name(entities)
         entities_list = []
         for entity_id in entities:
@@ -175,6 +177,8 @@ Sorry, this {entity_name} is not implemented yet!""",
         :rtype: bool
         """
         template = env.get_template(config.get("entities_table_md_template"))
+        if len(entities) == 0:
+            return
         entity_name = self.__get_entities_name(entities)
         entities_list = []
         for entity_id in entities:

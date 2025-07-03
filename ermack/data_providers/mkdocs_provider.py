@@ -178,6 +178,8 @@ class MkdocsProvider(MarkdownProvider):
                 "response_actions": [],
             }
             counter += 1
+            if stage_id not in self.entities_map.entities_relations_mapping["RS->RA"]:
+                continue 
             correspond_response_actions = self.entities_map.entities_relations_mapping[
                 "RS->RA"
             ][stage_id]

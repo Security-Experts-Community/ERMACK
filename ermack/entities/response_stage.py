@@ -57,7 +57,9 @@ class ResponseStage(Entity):
     def __get_correspond_entities(
         self, mapping: dict, relation: str, class_id: str
     ) -> dict:
-        return mapping[relation][class_id]
+        if class_id in mapping[relation]: 
+            return mapping[relation][class_id]
+        return []
 
     def generate_stage_actions_tree(self, template_type: TemplateTypes) -> list[dict]:
         """Generate actions' tree for current stage

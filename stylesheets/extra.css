@@ -1,0 +1,58 @@
+
+.response_action_impl {
+  color: #00b067;
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.response_action {
+  color: #ccbc02;
+}
+.response_playbook {
+  color: #00b067;
+}
+.unimplemented {
+  color: #d40641;
+}
+.threat {
+  color: #d40641;
+}
+.software {
+  color: #ccbc02;
+}
+.artifact {
+  color: #00b067;
+}
+.external_link {
+  color:  #807d7e;
+}
+.tag {
+  color:  #ccbc02;
+}
+.requirements {
+  color: #00b067;
+}
+.severity_high {
+  color: #d40641;
+}
+.severity_medium {
+  color: #d18d04;
+}
+.severity_other {
+  color:  #807d7e;
+}
+.status_testing {
+  color: #d18d04;
+}
+.status_buggy {
+  color: #d40641;
+}
+.status_approved {
+  color: #00b067;
+}
+.status_other {
+  color:  #807d7e;
+}
+    

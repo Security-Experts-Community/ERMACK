@@ -1,7 +1,7 @@
-title: RA_4301_remove_file
+title: Удаление файла
 id: RA4301
 description: >
-  Remove a specific file from a (remote) host or a system
+  Удалите определенный файл с (удаленного) хоста или системы
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: eradication

@@ -1,7 +1,7 @@
-title: RA_3111_block_data_transferring_by_content_pattern
+title: Блокировка передачи данных по шаблону содержимого
 id: RA3111
 description: >
-  Block data transferring by its content pattern (i.e. specific string, keyword, binary pattern etc)
+  Блокируйте передачу данных по шаблону их содержимого (т.е. конкретной строке, ключевому слову, двоичному шаблону и т.д.)
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: containment

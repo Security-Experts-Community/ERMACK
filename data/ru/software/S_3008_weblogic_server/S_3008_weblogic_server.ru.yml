@@ -1,0 +1,13 @@
+title: Сервер Weblogic
+id: S3008
+brief: Сервер для Java-приложений Oracle
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 20/09/2023
+capabilities: []
+description: |
+  Oracle WebLogic Server — единая, расширяемая платформа для разработки, развертывания и запуска 
+  корпоративных приложений, таких как Java, в локальной и облачной среде. WebLogic Server 
+  обладает мощным, высокотехнологичным, масштабируемым набором функций для полноценного 
+  внедрения Java Enterprise Edition (EE) и Jakarta EE.
+references: []

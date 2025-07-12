@@ -1,7 +1,7 @@
-title: RA_3202_block_sender_on_email
+title: Блокировка отправителя на электронной почте
 id: RA3202
 description: >
-  Block an email sender on the Email-server
+  Заблокируйте отправителя электронной почты на почтовом сервере
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: containment
@@ -10,4 +10,4 @@ references:
 requirements:
   - MS_email_server
 extended_description: |
-  Block an email sender on an Email Server using its native filtering functionality.
+  Заблокируйте отправителя электронной почты на почтовом сервере, используя его встроенную функцию фильтрации

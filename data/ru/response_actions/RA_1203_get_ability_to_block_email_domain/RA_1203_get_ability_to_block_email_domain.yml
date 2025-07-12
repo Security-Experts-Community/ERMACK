@@ -1,7 +1,7 @@
-title: RA_1203_get_ability_to_block_email_domain
+title: Получение возможности блокировать домен электронной почты
 id: RA1203
 description: >
-  Make sure you have the ability to block an email domain
+  Убедитесь, что у вас есть возможность заблокировать домен электронной почты
 author: '@atc_project'
 creation_date: 2020/05/07
 stage: preparation
@@ -10,4 +10,4 @@ references:
 requirements:
   - MS_email_server
 extended_description: |
-  Make sure you have the ability to block an email domain on an Email Server using its native filtering functionality.
+  Убедитесь, что у вас есть возможность заблокировать домен электронной почты на почтовом сервере, используя его встроенную функцию фильтрации

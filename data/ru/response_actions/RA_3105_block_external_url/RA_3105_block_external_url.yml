@@ -1,7 +1,7 @@
-title: RA_3105_block_external_url
+title: Блокировка внешнего URL-адреса
 id: RA3105
 description: >
-  Block an external URL from being accessed by corporate assets
+  Заблокируйте доступ к внешнему URL-адресу для корпоративных ресурсов
 author: '@atc_project'
 creation_date: 2019/01/31
 stage: containment
@@ -11,4 +11,4 @@ requirements:
   - MS_border_ngfw
   - MS_dns_server
 extended_description: |
-  Block an external URL from being accessed by corporate assets, using the most efficient way.
+  Заблокируйте доступ корпоративных ресурсов к внешнему URL-адресу, используя наиболее эффективный способ

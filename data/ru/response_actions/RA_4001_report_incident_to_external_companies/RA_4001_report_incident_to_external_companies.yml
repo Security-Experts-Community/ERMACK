@@ -1,6 +1,6 @@
-title: RA_4001_report_incident_to_external_companies
+title: Сообщение об инциденте внешним компаниям
 id: RA4001
-description: Report incident to external companies
+description: Сообщите об инциденте внешним компаниям
 author: '@atc_project'
 creation_date: 2019/01/31
 stage: eradication
@@ -16,8 +16,8 @@ references:
   - https://www.crowdstrike.com/blog/indicators-attack-vs-indicators-compromise/
   - https://mitre.github.io/unfetter/about/
 extended_description: |
-  Report incident to external security companites, i.e. [National Computer Security Incident Response Teams (CSIRTs)](https://www.sei.cmu.edu/education-outreach/computer-security-incident-response-teams/national-csirts/).
-  Provide all Indicators of Compromise and Indicators of Attack that have been observed.
+  Сообщите об инциденте внешним компаниям, т.е. [Национальным группам реагирования на инциденты в области компьютерной безопасности (CSIRTs)](http://www.sei.cmu.edu/education-outreach/computer-security-incident-response-teams/national-csirts/).
+Укажите все показатели компрометации и признаки атаки, которые были замечены.
 
   A phishing attack could be reported to:
 

@@ -1,0 +1,12 @@
+title: Брандмауэр Cisco ASA
+id: S1002
+brief: Cisco ASA 5500-X
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 20/09/2023
+capabilities: []
+description: |
+  Аппаратный межсетевой экран, относящийся к новейшему поколению защитных платформ.
+  Обеспечивает комплексную безопасность, предотвращает массированные атаки на сеть 
+  и нейтрализует вредоносное ПО.
+references: []

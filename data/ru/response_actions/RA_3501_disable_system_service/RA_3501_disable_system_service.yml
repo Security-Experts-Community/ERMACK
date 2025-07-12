@@ -1,7 +1,7 @@
-title: RA_3501_disable_system_service
+title: Отключение системной службы
 id: RA3501
 description: >
-  Disable a system service
+  Отключите системную службу
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: containment

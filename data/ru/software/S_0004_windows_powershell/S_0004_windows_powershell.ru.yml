@@ -1,0 +1,11 @@
+title: Windows PowerShell
+id: S0004
+brief: Интерпретатор Windows PowerShell
+authors: '@ERMACK_COMMUNITY'
+creation_date: 22/10/2022
+modification_date: 20/09/2023
+capabilities: []
+description: |
+  Представляет собой программу или среду, которая интерпретирует и выполняет команды и сценарии,
+  написанные на языке PowerShell в операционной системе Windows.
+references: []

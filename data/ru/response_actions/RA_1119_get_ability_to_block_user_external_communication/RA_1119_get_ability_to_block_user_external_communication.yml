@@ -1,7 +1,7 @@
-title: RA_1119_get_ability_to_block_user_external_communication
+title: Получение возможности блокировать пользователя для внешней сети
 id: RA1119
 description: >
-  Make sure you can block a user for external communications
+  Убедитесь, что вы можете заблокировать пользователя для внешних коммуникаций
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

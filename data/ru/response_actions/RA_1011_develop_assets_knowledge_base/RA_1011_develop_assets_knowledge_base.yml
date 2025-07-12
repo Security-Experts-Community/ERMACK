@@ -1,7 +1,7 @@
-title: RA_1011_develop_assets_knowledge_base
+title: Разработка базы знаний о ресурсах
 id: RA1011
 description: >
-  Develop assets knowledge base. It will help you to compare observed activity with a normal activity profile for a specific host, user or network segment
+  Развивайте базу знаний о ресурсах. Это поможет вам сравнить наблюдаемую активность с обычным профилем активности для конкретного хоста, пользователя или сегмента сети
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

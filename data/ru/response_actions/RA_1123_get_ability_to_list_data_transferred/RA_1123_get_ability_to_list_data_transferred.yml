@@ -1,7 +1,7 @@
-title: RA_1123_get_ability_to_list_data_transferred
+title: Получение возможности выводить переданные данные
 id: RA1123
 description: >
-  Make sure you have the ability to list the data that is being transferred at the moment or at a particular time in the past
+  Убедитесь, что у вас есть возможность выводить данные, которые передаются в данный момент или были переданы ранее
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

@@ -1,7 +1,7 @@
-title: RA_1304_get_ability_to_list_files_downloaded
+title: Получение возможности просматривать список загруженных файлов
 id: RA1304
 description: >
-  Make sure you have the ability to list files that have been downloaded from the internet at a particular time in the past
+  Убедитесь, что у вас есть возможность просматривать список файлов, которые были загружены из Интернета ранее
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

@@ -1,4 +1,4 @@
-title: RA_3403_block_process_by_executable_hash
+title: Блокировка выполнения процесса по его хешу
 id: RA3403
 description: >
   Блокировать выполнение процесса по его контрольной сумме (хешу)

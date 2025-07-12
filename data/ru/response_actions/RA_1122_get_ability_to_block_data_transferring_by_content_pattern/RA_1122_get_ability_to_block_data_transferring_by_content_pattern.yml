@@ -1,7 +1,7 @@
-title: RA_1122_get_ability_to_block_data_transferring_by_content_pattern
+title: Возможность блокировать передачу данных по шаблону их содержимого
 id: RA1122
 description: >
-  Make sure you have the ability to block data transferring by its content pattern (i.e. specific string, keyword, binary pattern etc)
+  Убедитесь, что у вас есть возможность блокировать передачу данных по шаблону их содержимого (т.е. конкретной строке, ключевому слову, двоичному шаблону и т.д.).
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

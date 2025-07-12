@@ -1,11 +1,11 @@
-title: RA_5202_unblock_sender_on_email
+title: Разблокирование отправителя на почте
 id: RA5202
 description: >
-  Unblock a sender on email
+  Разблокируйте отправителя на почте
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: recovery
 requirements:
   - MS_email_server
 extended_description: |
-  Unblock an email sender on an Email Server using its native functionality.
+  Разблокируйте отправителя на почтовом сервере, используя его встроенный функционал

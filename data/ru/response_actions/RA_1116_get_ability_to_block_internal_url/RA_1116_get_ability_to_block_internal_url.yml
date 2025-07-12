@@ -1,7 +1,7 @@
-title: RA_1116_get_ability_to_block_internal_url
+title: Получение возможности блокировать внутренний URL
 id: RA1116
 description: >
-  Make sure you can block an internal URL from being accessed by corporate assets
+  Убедитесь, что у вас есть возможность заблокировать внутренний URL для доступа из корпоративной сети
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

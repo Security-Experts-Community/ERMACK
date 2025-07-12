@@ -1,7 +1,7 @@
-title: RA_1201_get_ability_to_list_users_opened_email_message
+title: Получение возможности просматривать список открытых пользователями сообщений электронной почты
 id: RA1201
 description: >
-  Make sure you have the ability to list users who opened a particular email message
+  Убедитесь, что у вас есть возможность составить список пользователей, которые открыли определенное сообщение электронной почты
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: preparation
@@ -10,4 +10,4 @@ references:
 requirements:
   - MS_email_server
 extended_description: |
-  Make sure you have the ability to list users who opened/read a particular email message using the Email Server's functionality.
+  Убедитесь, что у вас есть возможность составить список пользователей, которые открыли /прочитали конкретное сообщение электронной почты, используя функциональность почтового сервера

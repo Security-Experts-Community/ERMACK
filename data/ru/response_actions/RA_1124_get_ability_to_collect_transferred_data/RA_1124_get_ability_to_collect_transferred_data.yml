@@ -1,7 +1,7 @@
-title: RA_1124_get_ability_to_collect_transferred_data
+title: Получение возможности собирать передаваемые данные
 id: RA1124
 description: >
-  Make sure you have the ability to collect the data that is being transferred at the moment or at a particular time in the past
+  Убедитесь, что у вас есть возможность собирать данные, которые передаются в данный момент или были переданы ранее
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

@@ -1,7 +1,7 @@
-title: RA_5601_unlock_locked_user_account
+title: Разблокирование учетной записи пользователя
 id: RA5601
 description: >
-  Unlock a locked user account
+  Разблокируйте учетную запись пользователя
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: recovery

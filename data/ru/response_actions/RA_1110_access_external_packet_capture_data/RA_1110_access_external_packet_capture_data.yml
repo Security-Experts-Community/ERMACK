@@ -1,7 +1,7 @@
-title: RA_1110_access_external_packet_capture_data
+title: Доступ к данным захвата пакетов внешней связи
 id: RA1110
 description: >
-  Make sure you have access to external communication Packet Capture data
+  Убедитесь, что у вас есть доступ к данным захвата пакетов внешней связи
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

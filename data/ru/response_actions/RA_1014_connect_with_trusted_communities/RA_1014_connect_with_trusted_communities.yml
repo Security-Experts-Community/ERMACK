@@ -1,6 +1,6 @@
-title: RA_1014_connect_with_trusted_communities
+title: Общение с надежными сообществами
 id: RA1014
-description: Connect with trusted communities for information exchange
+description: Присоединяйтесь к надежным сообществам для обмена информацией
 author: Andreas Hunkeler (@Karneades)
 creation_date: 2020/05/14
 stage: preparation
@@ -11,4 +11,4 @@ requirements:
   - Mailing list
   - Slack channel
 extended_description: |
-  Contact other companies or information providers for getting on a ML or get connected to other MISP instances.
+  Свяжитесь с другими компаниями или провайдерами, чтобы получить доступ к ML или подключиться к другим инстанциям MISP

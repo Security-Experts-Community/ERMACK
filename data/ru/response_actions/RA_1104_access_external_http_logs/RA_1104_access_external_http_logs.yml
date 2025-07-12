@@ -1,7 +1,7 @@
-title: RA_1104_access_external_http_logs
+title: Доступ к внешним http-журналам
 id: RA1104
 description: >
-  Make sure you have access to external communication HTTP logs
+  Убедитесь, что у вас есть доступ к HTTP-журналам внешней коммуникационной сети
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: preparation

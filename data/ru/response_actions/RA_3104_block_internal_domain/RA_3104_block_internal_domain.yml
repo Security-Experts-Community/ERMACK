@@ -1,7 +1,7 @@
-title: RA_3104_block_internal_domain
+title: Блокировка внутреннего домена
 id: RA3104
 description: >
-  Block an internal domain name from being accessed by corporate assets
+  Заблокируйте доступ к внутреннему доменному имени со стороны корпоративных ресурсов
 author: '@atc_project'
 creation_date: 2019/01/31
 stage: containment
@@ -15,4 +15,4 @@ requirements:
   - MS_intranet_ngfw
   - MS_dns_server
 extended_description: |
-  Block an internal domain name from being accessed by corporate assets, using the most efficient way.
+  Заблокируйте доступ к внутреннему доменному имени со стороны корпоративных ресурсов, используя наиболее эффективный способ

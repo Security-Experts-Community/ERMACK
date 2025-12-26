@@ -1,8 +1,8 @@
-title: RA_2005_make_a_volatile_memory_capture
-id: RA2005
-description: Make a volatile memory capture
+title: RA_2004_find_compromised_host
+id: RA2004
+description: Find compromised host
 author: '@ERMACK_COMMUNITY'
 creation_date: 2023/03/13
 stage: identification
 extended_description: |
-  Make a volatile memory capture
+  Find host with suspicious activity. Check it on logs or on network traffic

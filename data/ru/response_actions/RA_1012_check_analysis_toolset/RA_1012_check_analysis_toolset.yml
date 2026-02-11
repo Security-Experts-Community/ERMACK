@@ -1,14 +1,9 @@
 title: RA_1012_check_analysis_toolset
 id: RA1012
 description: >
-  Make sure your toolset for analysis and management is updated and fully operational. Make sure that all the required permissions have been granted as well
-author: your name/nickname/twitter
-creation_date: YYYY/MM/DD
+  Убедиться, что средства защиты информации, мониторинга и автоматизации, необходимые в работе, обновлены и полностью работоспособны
+author: bpopovich
+creation_date: 2023/04/29
 stage: preparation
-automation:
-  - thehive/phantom/demisto/etc
-references:
-  - https://example.com
-extended_description: |
-  Description of the extended_description for the Response Action in markdown format.
-  Here newlines will be saved.
+workflow: |
+  Убедитесь, что ваши средства защиты информации, мониторинга и автоматизации, необходимые в работе, обновлены и полностью работоспособны. Убедитесь, что все необходимые доступы к ним предоставлены.

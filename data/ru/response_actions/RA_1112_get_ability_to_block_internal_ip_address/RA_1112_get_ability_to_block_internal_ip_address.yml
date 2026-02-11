@@ -1,15 +1,18 @@
 title: RA_1112_get_ability_to_block_internal_ip_address
 id: RA1112
 description: >
-  Убедитесь, что у вас есть возможность изолировать внутренний узел от корпоративной и внешней сетей
+  Проверить возможность изоляции хостов от внутренней и внешней сетей
 author: enikulina
 creation_date: 2023/02/02
 stage: preparation
+automation:
+  - edr/xdr
+  - soar
 requirements:
   - MS_intranet_firewall
   - MS_intranet_proxy
   - MS_intranet_ips
   - MS_intranet_ngfw
   - MS_host_firewall
-extended_description: |
-  Убедитесь, что у вас есть возможность изолировать внутренний узел от корпоративной и внешней сетей.
+workflow: |
+  Убедитесь в наличии, доступности средств защиты информации и администрирования для сетевой изоляции (блокировки сетевой активности) узлов корпоративной сети.

@@ -1,15 +1,18 @@
 title: RA_3102_block_internal_ip_address
 id: RA3102
 description: >
-  Изолировать внутренний узел от локальной и внешней сетей
+  Изолировать узел от внутренней и внешней сетей
 author: enikulina
 creation_date: 2023/02/03
 stage: containment
+automation:
+  - edr/xdr
+  - soar
 requirements:
   - MS_intranet_firewall
   - MS_intranet_proxy
   - MS_intranet_ips
   - MS_intranet_ngfw
   - MS_host_firewall
-extended_description: |
-  Изолировать скомпрометированный внутренний хост от локальной и внешней сетей для прекращения распространения атаки.
+workflow: |
+  Изолируйте скомпрометированный хост от корпоративной и внешней сетей.

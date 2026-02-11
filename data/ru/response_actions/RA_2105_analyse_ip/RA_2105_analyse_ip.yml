@@ -8,14 +8,21 @@ stage: identification
 references:
   - https://docs.microsoft.com/en-us/sysinternals/downloads/whois
   - https://www.abuseipdb.com/
+  - https://ipinfo.io/
   - https://app.any.run
   - https://www.virustotal.com/
   - https://otx.alienvault.com/
-extended_description: |
-  Собрать и проанализировать информацию об обнаруженном ранее IP-адресе с помощью различных доступных ресурсов:
+workflow: |
+  Соберите и проанализируйте информацию об обнаруженном IP-адресе с помощью различных доступных ресурсов.
   
-  - https://www.abuseipdb.com/
-  - whois
-  - https://app.any.run
-  - https://www.virustotal.com/
-  - https://otx.alienvault.com/
+  - Проверка репутации, GeoIP, ASN, Range
+    - https://www.abuseipdb.com/check/ (проверка репутации, географической принадлежности, типа использования адреса (например, хостинг), отчетов);
+    - https://www.virustotal.com/ (проверка репутации, детектов АВ, отчетов, статистики по DNS/Files);
+    - https://app.any.run
+    - https://otx.alienvault.com/
+    - https://ipinfo.io/ (проверка географической принадлежности, типа использования адреса, ASN, Range, Company).
+  
+  - Проверка анонимизации (VPN, TOR, Proxy)
+    - https://ipinfo.io/products/proxy-vpn-detection-api
+    - https://spur.us/context/<ip_address>
+    - https://getipintel.net/free-proxy-vpn-tor-ip-lookup/#web  

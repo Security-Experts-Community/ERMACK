@@ -1,0 +1,16 @@
+title: RA_2321_scan_on_suspicious_files
+id: RA2321
+description: >
+  Scan file system for suspicious files(created or modified)
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+stage: identification
+automation:
+  - antivirus
+  - EDR
+references:
+  - https://github.com/sroberts/awesome-iocs
+extended_description: |
+  Scan file system for suspicious files(created or modified). Often these are files that should not be there (in the standard delivery of the system) where they are.
+  In the case of a web server, check that there are no extraneous files in directories that have external access. To successfully search for suspicious files, use databases of known IOCs (see references for example).
+  Also, some systems (such as content management systems) have functionality to scan for suspicious files.

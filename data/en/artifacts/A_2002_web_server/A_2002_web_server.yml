@@ -1,0 +1,15 @@
+title: Web server
+id: A2002
+description: This artifact describes web server entity
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/10
+modification_date: 2023/07/10
+references:
+  - https://d3fend.mitre.org/dao/artifact/d3f:WebServer/
+mapping:
+  - d3f:WebServer
+extended_description: |
+  A web server is server software, or hardware dedicated to running this software, that can satisfy client requests on the World Wide Web.
+  A web server can, in general, contain one or more websites. A web server processes incoming network requests over HTTP and several other related protocols.
+  While the major function is to serve content, a full implementation of HTTP also includes ways of receiving content from clients.
+  This feature is used for submitting web forms, including uploading of files.

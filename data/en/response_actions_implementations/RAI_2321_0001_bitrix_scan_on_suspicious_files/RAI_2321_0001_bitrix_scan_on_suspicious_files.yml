@@ -1,0 +1,30 @@
+title: Bitrix scan on suspicious files
+id: RAI2321_0001
+description: Scan on suspicious files using bitrix
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/14
+modification_date: 2023/07/14
+linked_response_actions: RA2321
+tags:
+  - CMS
+linked_software:
+  - S3004
+linked_artifacts:
+  - A3002
+requirements:
+  software:
+    means_of_action:
+    - ID: S3004
+      cpe-fs: 'cpe:2.3:a:bitrix:bitrix_site_manager:-:*:*:*:*:*:*:*'
+    targets_of_action:
+extended_description: |
+  To search for suspicious files in the system, use the bitrix.xscan Bitrix module. 
+  This is a graphical tool for finding suspicious files. As input, it takes the initial path from which the scan will begin.
+  
+  Directory scan example:
+  <img src="../bitrix1.png" alt="Directory scan"/>
+  
+  An example of outputting the contents of a suspicious file:
+  <img src="../bitrix2.png" alt="Suspicious file content"/>
+
+  [bitrix.xscan](https://marketplace.1c-bitrix.ru/solutions/bitrix.xscan/)

@@ -1,0 +1,12 @@
+title: RA_2010_ensure_successful_attack
+id: RA2010
+description: >
+  Verify that the attack was successful
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+stage: identification
+references:
+  - https://github.com/sroberts/awesome-iocs
+  - https://www.cve.org/
+extended_description: |
+  Verify that the attack was successful. To do this, use the official reports on a specific attack and its IOCs. 

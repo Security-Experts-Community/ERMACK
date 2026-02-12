@@ -1,0 +1,28 @@
+title: Find process via Linux
+id: RAI2402_0001
+description: Find process by executable path via Linux standard command line utilities
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/14
+modification_date: 2023/07/14
+linked_response_actions: RA2402
+tags:
+  - linux
+linked_software:
+  - S0100
+linked_artifacts:
+  - A3002
+requirements:
+  software:
+    means_of_action:
+    - ID: S0100
+      cpe-fs: 'cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*'
+    targets_of_action:
+extended_description: |
+  To search for a process by its executable path, we can use standard Linux utilities such as **ps** and **grep**.
+  For example, if we need to find all processes whose path contains 'php' we can use the following command:
+  
+  ``` ps aux | grep 'php' ```
+  
+  To display only the PID of the found processes, we can use the utility **awk**:
+  
+  ``` ps aux | grep 'php' | awk '{print $2}'```

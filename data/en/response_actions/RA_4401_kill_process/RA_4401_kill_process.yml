@@ -1,0 +1,11 @@
+title: RA_4401_kill_process
+id: RA4401
+description: >
+  Kill the process
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+stage: eradication
+automation:
+  - EDR
+extended_description: |
+  Kill process. To do this, use the operating system tools or Endpoint Detection & Response(EDR) solutions

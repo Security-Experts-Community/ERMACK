@@ -1,0 +1,9 @@
+title: RA_5003_check_service_on_correct_work
+id: RA5003
+description: >
+  Check service on correct work
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+stage: eradication
+extended_description: |
+  After containing and eradicating, check the resource for correct operation

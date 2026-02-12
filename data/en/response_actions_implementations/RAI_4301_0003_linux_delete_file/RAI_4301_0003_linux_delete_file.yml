@@ -1,0 +1,37 @@
+title: Deleting a file using standard Linux utilities
+id: RAI4301_0003
+description: Removing a file from Linux using standard Linux utilities
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/14
+modification_date: 2023/07/14
+linked_software:
+  - S0100
+linked_response_actions: RA4301
+tags:
+  - linux
+linked_artifacts:
+  - A3002
+requirements:
+  software:
+    means_of_action:
+      - ID: S0100
+        cpe-fs: 'cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*'
+    targets_of_action:
+      - ID: S0100
+        cpe-fs: 'cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*'
+extended_description: |
+  To delete the file in Linux system we can use standard utilities such as **rm**
+  For example we have the file with path: /home/user/test.txt
+  
+  To delete the file use below command.
+  ```
+  rm '/hone/user/test.txt'
+  ```
+  
+  We can also delete a file by its hash using utilities such as **rm**, **find**, **md5sum**, **xargs**, **grep** and **awk**
+  For example, we have a file with md5 hash '62e0eeb44c135199947b619de59dc640' in the directory /home/user/test
+  
+  To delete the file use below command.
+  ```
+  find /home/user/test -type f -print | xargs md5sum | grep '62e0eeb44c135199947b619de59dc640' | awk '{print $2}' | xargs rm
+  ```

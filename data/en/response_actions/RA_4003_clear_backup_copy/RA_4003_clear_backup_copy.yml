@@ -1,0 +1,9 @@
+title: RA_4003_clear_backup_copy
+id: RA4003
+description: >
+  Clear backup copy
+author: '@ERMACK_COMMUNITY'
+creation_date: 2023/07/12
+stage: eradication
+extended_description: |
+  Before restoring data from a backup, check that it is not infected and eradicate malicious data.

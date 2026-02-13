@@ -1,7 +1,7 @@
-title: RA_1408_get_ability_to_block_process_by_executable_metadata
+title: Получить возможность блокировки процесса по метадате исполняемого файла
 id: RA1408
 description: >
-  Make sure you have the ability to block process by its executable metadata (i.e. signature, permissions, MAC times)
+  Убедитесь, что вы можете заблокировать процесс по метадате его исполняемого файла (т.е. по подписи, разрешениям, MAC-времени)
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

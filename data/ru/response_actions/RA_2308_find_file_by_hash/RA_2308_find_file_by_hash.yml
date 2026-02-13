@@ -1,7 +1,7 @@
-title: RA_2308_find_file_by_hash
+title: Найти файл по хешу
 id: RA2308
 description: >
-  Find a file by its hash
+  Найдите файл по его хешу
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

@@ -1,10 +1,10 @@
-title: RA_2002_list_host_vulnerabilities
+title: Вывести список уязвимостей хоста
 id: RA2002
 description: >
-  Get information about a specific host existing vulnerabilities, or about vulnerabilities it had at a particular time in the past
-author: your name/nickname/twitter
+  Проведите сбор информации о существующих или ранее существовавших уязвимостях, в определенные периоды времени, на конкретном хосте.
+author:  reterlor
 creation_date: YYYY/MM/DD
-stage: identification
+stage: Идентификация
 automation:
   - thehive/phantom/demisto/etc
 references:
@@ -12,3 +12,4 @@ references:
 extended_description: |
   Description of the extended_description for the Response Action in markdown format.
   Here newlines will be saved.
+

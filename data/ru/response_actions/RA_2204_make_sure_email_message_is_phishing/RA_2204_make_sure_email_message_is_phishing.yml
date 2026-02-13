@@ -1,6 +1,6 @@
-title: RA_2204_make_sure_email_message_is_phishing
+title: Убедиться, что письмо электронной почты является фишинг-атакой
 id: RA2204
-description: Make sure that an email message is a phishing attack
+description: Убедитесь, что письмо электронной почты является фишинг-атакой
 author: '@atc_project'
 creation_date: 2019/01/31
 stage: identification

@@ -1,7 +1,7 @@
-title: RA_2101_list_hosts_communicated_with_internal_domain
+title: Вывести список хостов, взаимодействовавших с внутренним доменом 
 id: RA2101
 description: >
-  List hosts communicated with an internal domain
+  Выведите список хостов, взаимодействовавших с внутренним доменом 
 author: name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

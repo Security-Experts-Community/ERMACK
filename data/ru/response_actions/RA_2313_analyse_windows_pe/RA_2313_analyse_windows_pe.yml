@@ -1,7 +1,7 @@
-title: RA_2313_analyse_windows_pe
+title: Анализировать исполняемый файл операционной системы Windows
 id: RA2313
 description: >
-  Analise MS Windows Portable Executable
+  Анализируйте исполняемый файл операционной системы Windows
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

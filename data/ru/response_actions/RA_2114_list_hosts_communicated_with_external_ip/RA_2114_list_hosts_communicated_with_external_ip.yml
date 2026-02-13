@@ -1,7 +1,7 @@
-title: RA_2114_list_hosts_communicated_with_external_ip
+title: Вывести список хостов, взаимодействовавших с внешним IP-адресом
 id: RA2114
 description: >
-  List hosts communicated with an external IP address
+  Выведите список хостов, взаимодействовавших с внешним IP-адресом
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: identification
@@ -9,4 +9,4 @@ requirements:
   - DN_network_flow_log
   - DN_zeek_conn_log
 extended_description: |
-  List hosts communicated with an external IP address using the most efficient way.
+  Выведите список хостов, взаимодействовавших с внешним IP-адресом используя самый эффективный способ.

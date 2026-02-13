@@ -1,7 +1,7 @@
-title: RA_2503_list_registry_keys_accessed
+title: Вывести список ключей реестра к которым был получен доступ
 id: RA2503
 description: >
-  List registry keys that have been accessed at a particular time in the past
+  Выведите список ключей реестра, к которым был получен доступ в определенное время
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

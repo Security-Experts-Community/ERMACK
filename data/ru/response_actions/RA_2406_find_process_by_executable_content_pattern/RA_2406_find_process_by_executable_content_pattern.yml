@@ -1,7 +1,7 @@
-title: RA_2406_find_process_by_executable_content_pattern
+title: Найти процесс по шаблону содержимого исполняемого файла
 id: RA2406
 description: >
-  Find a process that is being executed at the moment or at a particular time in the past by its executable content (i.e. specific string, keyword, binary pattern etc)
+  Найдите процесс, исполняемый в данный момент или в определенное время в прошлом по шаблону содержимого его исполняемого файла (т.е. по конкретной строке, ключевому слову, двоичному шаблону и т.д.)
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

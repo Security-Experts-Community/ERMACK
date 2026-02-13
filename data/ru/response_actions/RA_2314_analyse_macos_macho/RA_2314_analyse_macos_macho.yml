@@ -1,7 +1,7 @@
-title: RA_2314_analyse_macos_macho
+title: Анализировать исполняемый файл операционной системы Mac OS формата Mach-O
 id: RA2314
 description: >
-  Analise macOS Mach-O
+  Анализируйте исполняемый файл формата Mach-O операционной системы Mac OS
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

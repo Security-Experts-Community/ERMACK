@@ -1,7 +1,7 @@
-title: RA_1402_get_ability_to_find_process_by_executable_path
+title: Получить возможность поиска процесса по пути исполняемого файла
 id: RA1402
 description: >
-  Make sure you have the ability to find process executed at a particular time in the past by its executable path (including its name)
+  Убедитесь, что вы можете найти процесс, исполненный в определенное время, по пути его исполняемого файла
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

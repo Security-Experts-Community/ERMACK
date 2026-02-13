@@ -1,7 +1,7 @@
-title: RA_2115_list_hosts_communicated_with_external_url
+title: Вывести список хостов, взаимодействовавших с внешним URL
 id: RA2115
 description: >
-  List hosts communicated with an external URL
+  Выведите список хостов, взаимодействовавших с внешним URL
 author: '@atc_project'
 creation_date: 2020/05/06
 stage: identification
@@ -9,4 +9,4 @@ requirements:
   - DN_zeek_http_log
   - DN_proxy_log
 extended_description: |
-  List hosts communicated with an external URL using the most efficient way.
+  Выведите список хостов, взаимодействовавших с внешним URL используя самый эффективный способ.

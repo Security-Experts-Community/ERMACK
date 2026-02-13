@@ -1,7 +1,7 @@
-title: RA_2117_analyse_user-agent
+title: Анализ пользовательского агента
 id: RA2117
 description: >
-  Analyse an User-Agent request header for indications of suspicious activity
+  Проанализируйте заголовок запроса пользовательского агента на наличие признаков подозрительной активности
 author: Patrick Abraham
 creation_date: 2020/12/11
 stage: identification

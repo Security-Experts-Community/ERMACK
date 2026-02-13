@@ -1,7 +1,7 @@
-title: RA_2103_list_hosts_communicated_with_internal_url
+title: Вывести список хостов, взаимодействовавших с внутренним URL
 id: RA2103
 description: >
-  List hosts communicated with an internal URL
+  Выведите список хостов, взаимодействовавших с внутренним URL
 author: name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

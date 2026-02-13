@@ -1,7 +1,7 @@
-title: RA_2315_analyse_unix_elf
+title: Анализировать исполняемый файл UNIX-подобных систем формата ELF 
 id: RA2315
 description: >
-  Analise Unix ELF
+  Анализируйте исполняемый файл UNIX-подобных систем формата ELF 
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

@@ -1,7 +1,7 @@
-title: RA_2601_list_users_authenticated
+title: Вывести список аутентифицированных пользователей
 id: RA2601
 description: >
-  List users authenticated at a particular time in the past on a particular system
+  Выведите список пользователей, аутентифицированных в определенное время на конкретной системе
 author: name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

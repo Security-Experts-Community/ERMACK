@@ -1,7 +1,7 @@
-title: RA_2502_list_registry_keys_deleted
+title: Вывести список удаленных ключей реестра
 id: RA2502
 description: >
-  List registry keys that have been deleted at a particular time in the past
+  Выведите список ключей реестра, удаленных в определенное время
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

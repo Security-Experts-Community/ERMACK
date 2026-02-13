@@ -1,7 +1,7 @@
-title: RA_2506_list_services_modified
+title: Вывести список измененных сервисов
 id: RA2506
 description: >
-  List services that have been modified at a particular time in the past
+  Выведите список сервисов, измененных в определенное время
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

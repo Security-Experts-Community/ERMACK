@@ -1,7 +1,7 @@
-title: RA_2505_list_services_created
+title: Вывести список созданных сервисов
 id: RA2505
 description: >
-  List services that have been created at a particular time in the past
+  Выведите список сервисов, созданных в определенное время
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

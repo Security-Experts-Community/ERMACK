@@ -1,7 +1,7 @@
-title: RA_1601_manage_identity_management_system
+title: Контроль системы управления учётными данными
 id: RA1601
 description: >
-  Make sure you can manage Identity Management System, i.e. remove/block users, revoke credentials, and execute other Response Actions
+  Убедитесь, что вы можете контролировать системой управления учётными данными, т.е. удалять/блокировать пользователей, отзывать учетные данные и выполнять другие действия реагирования
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: preparation

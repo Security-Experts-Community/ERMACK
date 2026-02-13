@@ -1,7 +1,7 @@
-title: RA_2104_analyse_domain_name
+title: Анализировать имя домена
 id: RA2104
 description: >
-  Analyse a domain name
+  Проанализируйте имя домена
 author: name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification

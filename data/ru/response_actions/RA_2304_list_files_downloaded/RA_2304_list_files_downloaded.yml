@@ -1,7 +1,7 @@
-title: RA_2304_list_files_downloaded
+title: Вывести список загруженных файлов
 id: RA2304
 description: >
-  List files that have been downloaded at a particular time in the past
+  Выведите список файлов, загруженных в определенное время
 author: your name/nickname/twitter
 creation_date: YYYY/MM/DD
 stage: identification
